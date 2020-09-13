@@ -1,0 +1,83 @@
+
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Media Style start
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+@media only screen and (max-width: 1279px) {
+    .left-wrp{ width: 300px;margin-top: 65px;-webkit-box-shadow: none; box-shadow: none;}
+    .dashboard-left{-ms-flex: 0 0 300px;flex: 0 0 300px;}
+    .dashboard-left1{-ms-flex: 0 0 300px;flex: 0 0 300px;}
+}
+
+@media only screen and (max-width: 1023px){
+    .dashboard-left{display: none;}
+}
+@media only screen and (max-width: 1023px) {
+    .d-flex-none-mob{ display: block !important; }
+    .dash-mob-navlist{display: block;}
+    .header-dashboard{display: none;}
+    .dashboard-left, .left-wrp, .dashboard-right, .cost-block{ width: 100%; }
+    .dashboard-left1 { width: 100%;}
+    .left-wrp{ height: 100%; position: static; }
+    .circuit-list {margin-bottom: 0px;}
+    .dashboard-right {padding: 30px;}
+    .dashboard-content .page-title, .order-count span{ font-size: 28px; }
+    .order-section h3{ font-size: 14px; }
+    /*
+        .popup .get-started-btn3{margin-left: 25px;}
+    */
+    .popup .buy-btn.get-started-btn3{margin-right: 6px;}
+    .popup .buy-btn.get-started-btn3{margin-left: 6px;} 
+    .popup .confirm-btn.get-started-btn3{margin-right: 6px;}
+    .popup .confirm-btn.get-started-btn3{margin-left: 6px;}
+    .popup .sell-btn.get-started-btn3{margin-left: 6px;}
+    .popup .sell-btn.get-started-btn3{margin-right: 6px;}
+    .popup .cancel-btn.get-started-btn3{margin-left: 6px;}
+    .popup .mkt-btn.get-started-btn3{margin-left: 6px;}
+    .mkt-btn.get-started-btn3{margin-left: 6px;}
+    /* .overlay{z-index: 9999;} */
+}
+
+@media only screen and (max-width: 767px) {
+    .d-flex-none-mob-news{display: block !important;}
+    .cost-block-left{ margin-bottom: 30px; }
+    .company-values-detail{overflow-x: scroll;}
+    .dashboard-right{padding: 15px;}
+    .order-table{overflow-y: auto;}
+    .news-block{ text-align: center; }
+    .news-img{ margin-bottom: 20px; }
+    .news-content p{ margin: 0; }
+    .depth-table .order-price{width: 180px;}
+    .depth-table th.orders{width: 150px;}
+    .header-right a i{font-size: 26px;}
+}
+
+@media only screen and (max-width: 567px) {
+
+    .info-tool-tip{top: -23px;right: 17px;}
+    .field-common label{font-size: 10px;}
+    .depth-table .order-price{width: 130px;}
+    .depth-table th.orders{width: 130px;}
+}
+
+
+
+/*
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+End Media Style
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+

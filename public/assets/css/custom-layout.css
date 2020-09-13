@@ -1,0 +1,218 @@
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Custom layout css start  
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* .header-dashboard .container{ -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.1);box-shadow: 0 1px 5px 0 rgba(0,0,0,.1); } */
+
+.container.container-dash-header{ max-width: 1366px; margin: 0 auto; }
+.header-right a{ color: #45464d; text-transform: uppercase; font-size: 14px;}
+.header-right a i{font-size: 18px;display: inline-block; vertical-align: middle;}
+.header-right a:hover{ color: #15D295; }
+.header-right span{vertical-align: middle;}
+.nav-menu a { text-transform: uppercase; }
+.nav-menu ul li:first-child { padding-left:0; }
+.dashboard-left{ background-color: #fff;}
+.dashboard-left1{ background-color: #fff;
+                  /* width: 30%; */
+}
+.left-wrp{ height: 100vh;
+           overflow: auto;
+           position: fixed;
+           width: 28vw;
+           top: 0;
+           margin-top: 61px;}
+.header-dashboard{ position: fixed; width: 100%; top: 0;-webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.1);
+                   box-shadow: 0 1px 5px 0 rgba(0,0,0,.1); 
+}
+.header-dashboard-wrp{padding-right: 20px;}
+.main-dashboard{ margin-top: 61px; }
+.search-section{border-bottom:1px solid #f1f1f1 ;}
+.search-section input { width: 100%; border: none; padding: 10px 0 10px 45px;background: url(../img/search-icon.png) no-repeat;background-size: 25px;
+                        background-position: 10px center}
+.circuit-list {margin-bottom: 100px;}
+.circuit-list ul{ padding: 0; margin: 0;}
+.circuit-list li {width: 100%; list-style: none; position: relative; border-bottom: 1px solid #f1f1f1;}
+.circuit-list li:hover .list-icons{ display: block; }
+.circuit-list li:hover .list-name a{color: #15D295;}
+.list-icons {position: absolute ; top: 50%; right: 0; margin-top: -15px; display: none;}
+.list-icons ul { display: flex; -webkit-display: flex; }
+.list-icons li {  padding: 0 5px; text-align: center; border: none;}
+.list-icons li a {font-size: 14px; font-weight: 600; border: 1px solid transparent; color: #fff; display: inline-block; height: 30px; width: 30px; padding: 3px; background-color: #ff0000; border-radius: 25px;}
+.list-icons li a:hover {font-size: 14px; font-weight: 600; border: 1px solid transparent; color: #fff; display: inline-block; height: 30px; width: 30px; padding: 3px; background-color: #D00000; border-radius: 25px;}
+
+.list-name a{ display: block; padding: 13px 15px; color: #45464D;  font-size: 14PX; font-family: open sans;
+              -webkit-touch-callout: none;
+              -webkit-user-select: none;
+              -khtml-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none;}
+.list-name a:hover{color: #15D295;   font-size: 14PX;
+                   -webkit-touch-callout: none;
+                   -webkit-user-select: none;
+                   -khtml-user-select: none;
+                   -moz-user-select: none;
+                   -ms-user-select: none;
+                   user-select: none;}
+.list-icons li.icon-buy a{background: #009900;}.list-icons li.icon-buy a:hover{background: #007900;}
+.list-icons li.icon-bg-blank a{ background: #fff; border-color: #45464d; color: #000; }
+.list-icons li.icon-bg-blank a:hover{ background: #45464d; border-color: #45464d; color: #fff; }
+
+.dashboard-right{ padding: 30px 30px 30px 30px;
+                  /* width: 70%;  */
+}
+.dashboard-content .page-title { border-bottom: 1px solid #f1f1f1;margin-bottom: 0;padding-bottom: 20px; }
+
+.order-section {
+    display: flex; -webkit-display: flex;
+    justify-content: space-between;
+}
+.order-section h3{font-size: 20px; margin-bottom: 0; padding-bottom: 5px; border-bottom: 1px solid #f1f1f1;}
+.order-section-block { width: 50%; }
+.order-section-block.order-section-right h3{ text-align: right; }
+.order-count span { display: block; font-size: 30px; padding: 10px 20px;}
+.order-section-block.order-section-right .order-count span{ text-align: center; }
+.dashboard-content-title{ font-size: 20px; margin-bottom: 0; padding-bottom: 5px; border-bottom: 1px solid #f1f1f1;}
+.cost-block{ width: 50%; }
+.cal-icon i{ font-size: 42px; background: linear-gradient(45deg, #15D295 20%, #45464B 100%);
+             background-clip: border-box;
+             -webkit-background-clip: text;
+             -webkit-text-fill-color: transparent; }
+.cal-content{ margin-left: 30px; }
+.radio-form input{ margin-left: 10px; }
+.input-from input { margin-bottom: 15px; }
+/* .input-from label { font-size: 12px; } */
+.news-content p{ margin-left: 30px; }
+.news-block { margin-bottom: 30px; }
+.news-img img { max-width: 100px; }
+
+.dash-mob-navlist{display: none;;}
+.header-dash-mobile{background-color: #fff; padding: 17px 20px; position: fixed; width: 100%; top: 0;-webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.1);
+                    box-shadow: 0 1px 5px 0 rgba(0,0,0,.1); z-index: 99; }
+.dash-mob-navlist ul{ list-style: none; margin: 0; padding: 0; }
+.dash-mob-navlist ul li a{ display: block; padding: 0px 10px; color: #45464D;}
+.dash-mob-navlist ul li a:hover{ color: #15D295; }
+.dash-mob-navlist ul li:first-child > a {padding-left: 0;}
+.dash-mob-navlist ul li a i{ font-size: 26px; }
+
+.depth-table th{border: none; font-size: 11px; color: #9b9b9b; text-transform: uppercase;   
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;}
+.depth-table td { font-size: 14px; border: none;   
+                  -webkit-touch-callout: none;
+                  -webkit-user-select: none;
+                  -khtml-user-select: none;
+                  -moz-user-select: none;
+                  -ms-user-select: none;
+                  user-select: none;}
+.depth-table td.rate{text-align: left !important;}
+.depth-table .order-price { text-align: left; }
+.orders { text-align: right; }
+#market-depth .popup{ width: 560px; }
+.depth-table .buy td{ color: #009900; font-family: open sans; padding: 4px 15px 4px 15px; }
+.depth-table .sell td { color: #FF0000; font-family: open sans; padding: 4px 15px 4px 15px;}
+.buy-sell-btn{ justify-content: center;}
+table.buy, table.sell{border: none;}
+
+.buy-popup .popup { width: 500px; font-family: open sans;}
+.popup-header { border-bottom: 1px solid #f1f1f1; padding-bottom: 15px; }
+.popup-header span {font-size: 14px; text-transform: uppercase;}
+.buy-btn-wrp .buy-btn, .buy-btn-wrp .sell-btn{margin-left: 0;}
+
+.circuit-section span {font-size: 12px;}
+.circuit-section label{margin: 0 0 0 10px;}
+
+.field-common label{display: block;
+                    z-index: 5;
+                    position: absolute;
+                    top: -8px;
+                    background: #fff;
+                    padding: 0 5px;
+                    margin-left: 10px; font-size: 12px;}
+.form-field-section .form-control{ max-width: 100px; }
+.form-field-section .form-control:focus{box-shadow: none;}
+
+.sc-last dl{margin: 0; font-size: 12px; font-weight: normal;}
+.sc-last dt{ font-weight: normal;}
+.sc-last dd{margin: 0 5px 0 0;}
+.sc-last .info-tool-tip{position: inherit;}
+
+
+/* Deshboard css end  */
+
+/* More Detail page CSS start  */
+
+.content-header{border-bottom: 1px solid #f1f1f1;}
+.content-header h3{font-size: 18px;margin-bottom: 0;}
+.content-header span{font-size: 14px;}
+
+.company-data{border: 1px solid #f1f1f1; padding: 10px;}
+.company-data-header span{font-size: 12px;}
+.company-details label{color: #acacac;font-size: 12px;}
+.company-details span{font-size: 12px; display: block;}
+
+.company-details, .company-values{border-bottom: 1px solid #f1f1f1; padding-bottom: 20px;}
+.company-peers-details span{font-size: 12px;}
+.company-peers{border-bottom: 1px solid #f1f1f1; padding-bottom: 20px;}
+.company-annual-detail a img{max-width: 36px;}
+.company-annual-detail a span{display: block; color: #acacac;font-size: 12px;}
+
+.company-values span{font-size: 12px;}
+.company-values-detail table { margin: 20px auto 0; }
+
+.current-order h2{ text-transform: uppercase; font-size: 18px; }
+.order-id span{font-size: 12px; color: #acacac;}
+.b-style {background-color: #4184f3; height: 20px; width: 20px; border-radius: 3px; color: #fff;
+          display: inline-block;
+          text-align: center;
+          font-size: 14px;}
+.order-table td{text-align: center;}
+
+/* More Detail page CSS end  */
+
+.dashboard-wrp{min-height: 100vh; margin: 0 auto; max-width: 1366px;}
+.dashboard-left{-webkit-box-flex: 0;
+                -ms-flex: 0 0 350px;
+                flex: 0 0 350px;
+                -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,.15);
+                box-shadow: 0 0 5px 0 rgba(0,0,0,.15);}
+.dashboard-left1{-webkit-box-flex: 0;
+                 -ms-flex: 0 0 350px;
+                 flex: 0 0 350px;
+                 -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,.15);
+                 box-shadow: 0 0 5px 0 rgba(0,0,0,.15);}
+.left-wrp{position: fixed;
+          height: 100%;
+          width: 350px;
+          z-index: 1;
+          overflow-y: auto;
+          /* -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,.1);
+           box-shadow: 0 0 5px 0 rgba(0,0,0,.1);*/
+}
+.dashboard-right{-webkit-box-flex: 1;
+                 -ms-flex: 1 1;
+                 flex: 1 1;    
+                 max-width: 1016px;
+                 overflow-y: auto;
+                 -webkit-box-shadow: 5px 0px 5px -5px rgba(0,0,0,.15);
+                 box-shadow: 5px 0px 5px -5px rgba(0,0,0,.15);
+}
+
+.dashboard-right .order-custom-table{border-collapse: collapse !important;}
+.order-custom-table th{font-size: 14px; font-family: open sans;}
+.order-custom-table td{font-size: 14px; font-family: open sans;}
+.dataTables_paginate .paginate_button{ font-size: 12px; }
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+End Custom layout css start  
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+

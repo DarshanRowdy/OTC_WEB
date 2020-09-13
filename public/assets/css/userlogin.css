@@ -1,0 +1,200 @@
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------
+login signup css start
+----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.brand-wrapper {
+    padding-top: 7px;
+    padding-bottom: 8px; 
+}
+.brand-wrapper .logo {
+    height: 40px; 
+}
+
+.login-section-wrapper {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    padding: 68px 100px;
+    background-color: #fff; }
+
+@media (max-width: 991px) {
+    .login-section-wrapper {
+        padding-left: 50px;
+        padding-right: 50px; } 
+}
+
+@media (max-width: 575px) {
+    .login-section-wrapper {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        min-height: 100vh; } 
+}
+
+.login-wrapper {
+    width: 300px;
+    max-width: 100%;
+    padding-top: 50px;
+    padding-bottom: 24px; 
+}
+
+@media (max-width: 575px) {
+    .login-wrapper {
+        width: 100%; 
+    } 
+}
+
+@media 
+only screen and (max-width: 1020px)  {
+    .login-img{
+        display:none;
+    }
+
+
+}
+
+.form-group .form-control{
+    background-color: #f2f2f2;
+    border-color: transparent;
+}
+.form-group .form-control:focus{
+    background-color: #fff;
+
+}
+
+.form-group {
+    color:#999;
+    font-weight: 600;
+    font-family: montserrat;
+}
+
+
+.login-wrapper .form-control::-webkit-input-placeholder {
+    color: #b0adad; }
+.login-wrapper .form-control::-moz-placeholder {
+    color: #b0adad; }
+.login-wrapper .form-control:-ms-input-placeholder {
+    color: #b0adad; }
+.login-wrapper .form-control::-ms-input-placeholder {
+    color: #b0adad; }
+.login-wrapper .form-control::placeholder {
+    color: #b0adad; }
+.login-wrapper .login-btn {
+    padding: 5px 10px;
+    background-color: #15D295;
+    border-radius: 0;
+    font-size: 18px;
+    border-radius:5px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 15px; }
+.login-wrapper .login-btn:hover {
+    text-decoration: none;
+    background-color: #45464B;
+    color: #fff; }
+.login-wrapper a.forgot-password-link {
+    color: #aaa;
+    font-size: 12px;
+    text-decoration: underline;
+    display: inline-block;
+    margin-bottom: 30px; }
+@media (max-width: 575px) {
+    .login-wrapper a.forgot-password-link {
+        margin-bottom: 5px; 
+        margin-top: 5px;}
+} 
+.login-page-btn:hover{
+    text-decoration: none;
+}
+
+
+.login-wrapper-footer-text {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 0;
+}
+.login-wrapper-footer-text .text-reset{
+    color: #15D295;
+}
+.login-wrapper-footer-text .text-reset:hover{
+    color:#000;
+}
+
+.login-title {
+    font-size: 22px;
+    color: #45464D;
+    font-weight: bold;
+    margin-bottom: 25px; 
+    position: relative;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+.login-title:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #15D295;
+    bottom: 0;
+    left: 0;
+}
+
+.login-img {
+    /*
+      width: 50%;
+    */
+    height: 60vh;
+    width: 60vh;
+    margin-top: 15vh;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: left;
+    object-position: left; }
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+
+.login-wrapper .login-btn2 {
+    padding: 5px 10px;
+    background-color: #45464D;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 15px; }
+.login-wrapper .login-btn2:hover {
+
+    background-color: #15D295;
+    color: #fff; }
+/* .login-wrapper a.forgot-password-link {
+  color: #aaa;
+  font-size: 12px;
+  text-decoration: underline;
+  display: inline-block;
+  margin-bottom: 30px; 
+} */
+.login-wrapper a.forgot-password-link:hover{
+    color: #15D295;
+}
+@media (max-width: 575px) {
+    .login-wrapper a.forgot-password-link {
+        margin-bottom: 5px; 
+        margin-top: 5px;
+    }
+} 
+
+/*# sourceMappingURL=login.css.map */
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------
+login signup css end
+----------------------------------------------------------------------------------------------------------------------------------------------------------------*/

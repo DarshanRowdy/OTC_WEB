@@ -1,0 +1,520 @@
+/* ----------------------------------
+
+Name:style.css
+Version:1.0.0
+
+----------------------------------
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Common css start  
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ===================================
+    Reset
+====================================== */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary { display:block; }
+
+html { -webkit-font-smoothing:antialiased; }
+
+
+body { margin: 0; padding: 0; -webkit-text-size-adjust: none;  }
+
+* { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
+*:before, 
+*:after { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
+
+.clearfix:before, 
+.clearfix:after, 
+.container:before, 
+.container:after, 
+.row:before, 
+.row:after, 
+.nav:before, 
+.nav:after { display:table; content:" "; }
+
+.clearfix:after, 
+.container:after, 
+.row:after, .nav:after { clear:both; }
+
+.hide { display:none !important; }
+.show { display:block !important; }
+
+.text-left { text-align:left; }
+.text-right { text-align:right; }
+.text-center { text-align:center; }
+
+img { vertical-align:middle; border:0; outline: none; }
+a img { outline: none; }
+
+a { color:#15D295;  }
+a:hover, a:active, a:focus {
+    color: #45464D;
+    outline: none;
+    text-decoration: none;
+}
+a[href^=tel] { color:inherit; text-decoration:none; }
+
+ul, ol {  }
+ul li, ol li {  }
+
+input, 
+select, 
+textarea { -webkit-appearance: none; -moz-appearance: none; appearance: none; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; }
+input[type="checkbox"] { -webkit-appearance: checkbox; -moz-appearance:checkbox; appearance: checkbox; }
+input[type="radio"] { -webkit-appearance: radio; -moz-appearance:radio; appearance: radio; }
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+button, 
+input[type="button"], 
+input[type="reset"], 
+input[type="submit"] { -webkit-appearance:button; cursor:pointer; }
+
+table,
+th,
+td{ border: 1px solid #dddddd; padding: 10px 15px; }
+
+/*
+order table modification
+*/
+.child .dtr-title {width:150px;}
+/*
+order table modification end
+*/
+.container { }
+
+/* ===================================
+    Reset END
+====================================== */
+
+/* ===================================
+    Typography
+====================================== */
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 { font-family: "Montserrat", sans-serif;
+     font-weight: 400;
+     margin: 0 0 20px 0;
+     padding: 0; }
+
+h1 { font-size: 34px; }
+h2 { font-size: 24px; }
+h3 { font-size: 22px; }
+h4 { font-size: 20px; }
+h5 { font-size: 20px; }
+h6 { font-size: 18px; }
+p { font-size: 16px; margin: 0 0 30px 0; }
+
+/* ===================================
+    Typography END
+====================================== */
+
+/* ===================================
+    Float, Display, Margin, Padding and position
+====================================== */
+/*Float*/
+.pull-left { float:left !important; }
+.pull-right { float:right !important; }
+.no-float { float:none !important;}
+
+/*Display*/
+.display-inline { display: inline;}
+.display-inline-block { display: inline-block; }
+.display-block { display: block; }
+.display-table { display: table; }
+
+/*Margin*/
+.no-margin { margin: 0; }
+.no-margin-left { margin-left: 0; }
+.no-margin-top { margin-top: 0; }
+.no-margin-right { margin-right: 0; }
+.no-margin-bottom { margin-bottom: 0; }
+
+.margin-5 { margin: 5px; }
+.margin-left-5 { margin-left: 5px; }
+.margin-top-5 { margin-top: 5px; }
+.margin-right-5 { margin-right: 5px; }
+.margin-bottom-5 { margin-bottom: 5px; }
+
+.margin-10 { margin: 10px; }
+.margin-left-10 { margin-left: 10px; }
+.margin-top-10 { margin-top: 10px; }
+.margin-right-10 { margin-right: 10px; }
+.margin-bottom-10 { margin-bottom: 10px; }
+.margin-15 { margin: 15px; }
+.margin-left-15 { margin-left: 15px; }
+.margin-top-15 { margin-top: 15px; }
+.margin-right-15 { margin-right: 15px; }
+.margin-bottom-15 { margin-bottom: 15px; }
+.margin-20 { margin: 20px; }
+.margin-left-20 { margin-left: 20px; }
+.margin-top-20 { margin-top: 20px; }
+.margin-right-20 { margin-right: 20px; }
+.margin-bottom-20 { margin-bottom: 20px; }
+.margin-30 { margin: 30px; }
+.margin-left-30 { margin-left: 30px; }
+.margin-top-30 { margin-top: 30px; }
+.margin-right-30 { margin-right: 30px; }
+.margin-bottom-30 { margin-bottom: 30px; }
+.margin-40 { margin: 40px; }
+.margin-left-40 { margin-left: 40px; }
+.margin-top-40 { margin-top: 40px; }
+.margin-right-40 { margin-right: 40px; }
+.margin-bottom-40 { margin-bottom: 40px; }
+.margin-50 { margin: 50px; }
+.margin-left-50 { margin-left: 50px; }
+.margin-top-50 { margin-top: 50px; }
+.margin-right-50 { margin-right: 50px; }
+.margin-bottom-50 { margin-bottom: 50px; }
+
+
+/*Padding*/
+.no-padding { padding: 0; }
+.no-padding-left { padding-left: 0; }
+.no-padding-top { padding-top: 0; }
+.no-padding-right { padding-right: 0; }
+.no-padding-bottom { padding-bottom: 0; }
+.padding-5 { padding: 5px; }
+.padding-left-5 { padding-left: 5px; }
+.padding-top-5 { padding-top: 5px; }
+.padding-right-5 { padding-right: 5px; }
+.padding-bottom-5 { padding-bottom: 5px; }
+.padding-10 { padding: 10px; }
+.padding-left-10 { padding-left: 10px; }
+.padding-top-10 { padding-top: 10px; }
+.padding-right-10 { padding-right: 10px; }
+.padding-bottom-10 { padding-bottom: 10px; }
+.padding-15 { padding: 15px; }
+.padding-left-15 { padding-left: 15px; }
+.padding-top-15 { padding-top: 15px; }
+.padding-right-15 { padding-right: 15px; }
+.padding-bottom-15 { padding-bottom: 15px; }
+.padding-20 { padding: 20px; }
+.padding-left-20 { padding-left: 20px; }
+.padding-top-20 { padding-top: 20px; }
+.padding-right-20 { padding-right: 20px; }
+.padding-bottom-20 { padding-bottom: 20px; }
+.padding-30 { padding: 30px; }
+.padding-left-30 { padding-left: 30px; }
+.padding-top-30 { padding-top: 30px; }
+.padding-right-30 { padding-right: 30px; }
+.padding-bottom-30 { padding-bottom: 30px; }
+.padding-40 { padding: 40px; }
+.padding-left-40 { padding-left: 40px; }
+.padding-top-40 { padding-top: 40px; }
+.padding-right-40 { padding-right: 40px; }
+.padding-bottom-40 { padding-bottom: 40px; }
+.padding-50 { padding: 50px; }
+.padding-left-50 { padding-left: 50px; }
+.padding-top-50 { padding-top: 50px; }
+.padding-right-50 { padding-right: 50px; }
+.padding-bottom-50 { padding-bottom: 50px; }
+.padding-60 { padding: 60px; }
+.padding-tb-60 { padding-top: 60px; padding-bottom: 60px; }
+.padding-left-60 { padding-left: 60px; }
+.padding-top-60 { padding-top: 60px; }
+.padding-right-60 { padding-right: 60px; }
+.padding-bottom-60 { padding-bottom: 60px; }
+
+
+/* position */
+.position-relative{ position: relative !important; z-index: 5; }
+.position-absolute {position: absolute !important;}
+.position-static { position: static !important; }
+.position-inherit { position: inherit !important; }
+.position-fixed { position: fixed !important; }
+
+/* ===================================
+    Typography END
+====================================== */
+
+/* ===================================
+    Wordpress default insert image classess 
+====================================== */
+
+.alignnone { margin: 0 15px 15px 0 !important; display: inline-block !important;}
+.aligncenter{ margin:auto auto 15px auto; display:inline-block; }
+.alignright { float: right; margin: 0 15px 15px 0 !important;  }
+.alignleft { float: left; margin: 0 0 15px 15px !important;  }
+
+
+/* ===================================
+    Wordpress default insert image classess  END
+====================================== */
+
+
+/* ===================================
+    Page titles
+====================================== */
+
+/* page titles */
+.page-title { }
+.page-title h1 { }
+.page-title span {}
+
+.section-title{
+    font-size: 24px;
+    color: #45464B;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 20px;
+}
+.section-title:before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #15D295;
+    bottom: 0;
+    left: 0;
+}
+
+/* ===================================
+    Page titles END
+====================================== */
+
+/* ===================================
+    Button
+====================================== */
+
+.button {}
+.button:hover {}
+
+.button-small {}
+.button-small:hover {}
+
+.button-large {}
+.button-large:hover {}
+
+.button-outline {}
+.button-outline:hover {}
+
+.buy-btn.get-started-btn3{background-color: #009900; border: 2px solid #009900;}
+.buy-btn.get-started-btn3:hover{background-color: #fff; color: #009900;border: 2px solid #009900;}
+.confirm-btn.get-started-btn3{background-color: #fff; color:#000; border: 2px solid #000;}
+.confirm-btn.get-started-btn3:hover{background-color: #000; color: #fff;border: 2px solid #000;}
+.sell-btn.get-started-btn3{background-color: #ff0000; border: 2px solid #ff0000;}
+.sell-btn.get-started-btn3:hover{background-color: #fff; color: #ff0000; border: 2px solid #ff0000;}
+.cancel-btn.get-started-btn3{background-color: #fff; color: #45464d;border: 2px solid #45464d;}
+.cancel-btn.get-started-btn3:hover{background-color: #45464d; color: #fff;border: 2px solid #45464d;}
+.mkt-btn.get-started-btn3{background-color: #fff; color: #45464d;border: 2px solid #45464d;}
+.mkt-btn.get-started-btn3:hover{background-color: #45464d; color: #fff;border: 2px solid #45464d;}
+
+/*
+.get-started-btn3{border: 2px solid transparent;}
+*/
+
+/* ===================================
+    Button END
+====================================== */
+
+/* Popup common  start*/
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    /* transition: opacity 500ms; */
+    visibility: hidden;
+    opacity: 0;
+    z-index: 999;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 0;
+    padding: 30px 20px 20px;
+    background: #fff;
+    border-radius: 15px;
+    width: 400px;
+    max-height: 90%;
+    max-width: 95%;
+    min-height: 334px;
+    position: relative;
+
+    z-index: 100;
+    left: 50%;
+    right: 0;
+    top: 50%!important;
+    transform: translate(-50%,-50%);
+    overflow: auto;
+}
+
+.popup .close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    /* transition: all 200ms; */
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    z-index: 99;
+
+    height: 30px;
+    width: 30px;
+    text-align: center;
+}
+.popup .close:hover {   
+    background: #f3f3f3;
+    border-radius: 30px;
+} 
+.popup .content {
+    max-height: 30%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.popup .content p {
+    color: #45464d;
+    font-weight: 600;
+    font-size: 14px;
+    padding-bottom: 0px;
+}
+.resend-link{padding-top: 25px;}
+
+/* Popup common end*/
+
+/* otc heading start */
+
+.popup .otc-heading{ margin-bottom: 50px; }
+.otc-heading{color: #4c4f55; font-family: "Orbitron"; font-weight: bold;}
+.otc-heading span{ color: #15D295; }
+.popup .login-title{ margin-bottom: 50px; }
+
+/* otc heading end */
+
+/* Popup form input style start  */
+
+.popup-form .form-control{ border-radius: 0; border: none; border-bottom: 1px solid #ced4da; margin-bottom: 30px;}
+.popup-form .form-control:focus{box-shadow: none; -webkit-box-shadow: none; border-bottom-color:#15D295;}
+
+/* Popup form input style end  */
+
+/* tooltip style start  */
+
+/* .popover {
+  color: #fff; background-color: #000;
+} */
+
+/* tooltip style end  */
+
+/* switch button style  */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    margin: 0;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ececec;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #009900;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #ececec;
+}
+input:checked + .slider::before{ background-color: red;}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #ececec;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Information tool tip styel  */
+
+.info-tool-tip{display: inline-block; 
+               position: absolute; top: -10px; right: 30px;font-size: 12px;  color: #45464d; 
+}
+
+.info-tool-tip2{display: inline-block; 
+                position: absolute; top: 10px; right: 30px;font-size: 12px;  color: #45464d; 
+}
+
+
+.popover{background-color:rgba(0, 0, 0, 1); border-color: transparent;}
+.popover-body{color: #fff;}
+.bs-popover-top>.arrow::after{border-top-color: #000;}
+.bs-popover-bottom>.arrow::after{border-bottom-color: #000;}
+
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Common css end  
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
