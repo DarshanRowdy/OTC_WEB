@@ -10,15 +10,14 @@ class ScriptsController extends BaseApiController
 {
     public function index(ScriptsRequest $request)
     {
-        $limit = isset($request->limit) ? $request->limit : config('app.default_limit');
         try{
-            $tbl_scripts = Scripts::latest();
-            $arrtbl_scripts = $tbl_scripts->paginate($limit);
+            $tbl_scripts = Scripts::query();
+            $scripts = $tbl_scripts->get();
+            $response = ['scripts' => $scripts];
+            $this->_sendResponse($response, 'Scripts listing Success');
         } catch (\Exception $exception){
             $this->_sendErrorResponse(500);
         }
-        $response = ['Scripts' => $arrtbl_scripts];
-        $this->_sendResponse($response, 'Scripts listing Success');
     }
 
     public function store(ScriptsRequest $request)

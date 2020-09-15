@@ -24,4 +24,8 @@ Route::namespace('Api')->group(function () {
     Route::post('verify-otp', 'AppController@verifyOtp')->name('verify-otp');
     Route::post('change-password', 'AppController@resetPassword')->name('change-password');
     Route::get('init', 'AppController@init')->name('init');
+
+//    Route::group(['middleware' => 'api.auth'], function() {
+        Route::resource('scripts', 'ScriptsController', ['only' => 'index']);
+//    });
 });

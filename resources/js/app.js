@@ -1,6 +1,11 @@
 import "./bootstrap"
 import Vue from "vue"
+// import Vuex from "vuex"
 import vuetify from '@/js/plugins/vuetify'
+import Vuelidate from "vuelidate";
+
+Vue.use(Vuelidate);
+// Vue.use(Vuex);
 
 //Route Information from Vue Router
 import Route from '@/js/routes.js'

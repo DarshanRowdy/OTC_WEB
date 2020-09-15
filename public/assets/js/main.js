@@ -18,13 +18,13 @@
     return false;
   });
 
-    
-    
+
+
   // Stick the header at top on scroll
-  $("#header").sticky({
+/*  $("#header").sticky({
     topSpacing: 0,
     zIndex: '50'
-  });
+  });*/
 
   // Intro background carousel
   $("#intro-carousel").owlCarousel({
@@ -46,7 +46,7 @@
     speed: 700
   });
 
-    
+
       if ($('.nav-menu').length) {
     var $mobile_nav = $('.nav-menu').clone().prop({
       class: 'mobile-nav d-lg-none'
@@ -116,7 +116,7 @@
       }
     }
   });
-    
+
   // Activate smooth scroll on page load with hash links in the url
   $(document).ready(function() {
     if (window.location.hash) {
@@ -170,9 +170,9 @@
       }
     }
   });
-    
-    
-    
+
+
+
     // Intro2 carousel
   var introCarousel = $(".carousel");
   var introCarouselIndicators = $(".carousel-indicators");
@@ -187,8 +187,8 @@
     $(this).find('p, .btn-get-started').addClass('animate__animated animate__fadeInUp');
   });
 
-    
-    
+
+
 
   // Clients carousel (uses the Owl Carousel library)
   $(".clients-carousel").owlCarousel({
@@ -242,5 +242,5 @@
     loop: true,
     items: 1
   });
-   
+
 })(jQuery);

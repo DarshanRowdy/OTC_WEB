@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad78d497-6ee3-44fc-899a-1d01e02b08b4" name="Default Changelist" comment="" />
+    <list default="true" id="ad78d497-6ee3-44fc-899a-1d01e02b08b4" name="Default Changelist" comment="first init commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ScriptsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ScriptsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/Auth/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Auth/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +42,9 @@
         <option value="Vue Single File Component" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -166,11 +193,38 @@
       <workItem from="1599582145822" duration="13375000" />
       <workItem from="1599667845676" duration="7671000" />
       <workItem from="1599841091149" duration="11089000" />
+      <workItem from="1600006769139" duration="14800000" />
+      <workItem from="1600130574469" duration="5841000" />
+      <workItem from="1600136980496" duration="3423000" />
     </task>
+    <task id="LOCAL-00001" summary="first init commit">
+      <created>1600007025647</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600007025647</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first init commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first init commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1779" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599672648337">
@@ -181,22 +235,26 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1829" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1599668738872" />
-    <state width="1323" height="204" key="GridCell.Tab.0.bottom" timestamp="1599852692171">
+    <state x="1366" y="0" key="FileDocumentManager.FileCacheConflict" timestamp="1600134538963">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="204" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1599852692171" />
-    <state width="1323" height="204" key="GridCell.Tab.0.center" timestamp="1599852692170">
+    <state x="1366" y="0" key="FileDocumentManager.FileCacheConflict/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600134538963" />
+    <state width="1323" height="198" key="GridCell.Tab.0.bottom" timestamp="1600023391930">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="204" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1599852692170" />
-    <state width="1323" height="204" key="GridCell.Tab.0.left" timestamp="1599852692170">
+    <state width="1323" height="198" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600023391930" />
+    <state width="1323" height="198" key="GridCell.Tab.0.center" timestamp="1600023391930">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="204" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1599852692170" />
-    <state width="1323" height="204" key="GridCell.Tab.0.right" timestamp="1599852692171">
+    <state width="1323" height="198" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600023391930" />
+    <state width="1323" height="198" key="GridCell.Tab.0.left" timestamp="1600023391930">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="204" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1599852692171" />
+    <state width="1323" height="198" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600023391930" />
+    <state width="1323" height="198" key="GridCell.Tab.0.right" timestamp="1600023391930">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="198" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600023391930" />
     <state x="1883" y="287" key="NewPhpFileDialog" timestamp="1599672166449">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
@@ -205,21 +263,25 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1550" y="8" key="SettingsEditor/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1599500184327" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1599847197737">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1600135557581">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1599847197737" />
-    <state x="1458" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599852494076">
+    <state width="498" height="446" key="SwitcherDM/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600135557581" />
+    <state x="1641" y="96" key="Vcs.Push.Dialog.v2" timestamp="1600007053689">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state x="1458" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1599852494076" />
-    <state x="1755" y="68" width="587" height="592" key="find.popup" timestamp="1599595537650">
+    <state x="1641" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600007053688" />
+    <state x="1458" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600015452988">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state x="1755" y="68" width="587" height="592" key="find.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1599595537650" />
-    <state x="1705" y="17" width="672" height="678" key="search.everywhere.popup" timestamp="1599591413770">
+    <state x="1458" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600015452988" />
+    <state x="1803" y="136" width="587" height="592" key="find.popup" timestamp="1600135263133">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state x="1705" y="17" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1599591413770" />
+    <state x="1803" y="136" width="587" height="592" key="find.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600135263133" />
+    <state x="1705" y="17" width="672" height="678" key="search.everywhere.popup" timestamp="1600137882691">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1705" y="17" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600137882691" />
   </component>
 </project>

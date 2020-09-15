@@ -7,7 +7,7 @@
                 </div>
                 <div class="login-wrapper my-auto">
                     <h1 class="login-title">LOG IN</h1>
-                    <form v-on:submit.prevent="onSubmit">
+                    <form @submit.prevent="onSubmit">
                         <div class="alert alert-danger" v-if="errors.length">
                             <ul class="mb-0">
                                 <li v-for="(error, index) in errors" :key="index">{{ error }}</li>
@@ -33,13 +33,16 @@
                     <p class="login-wrapper-footer-text">New User?
                         <router-link to="/register" class="text-reset1">Register</router-link>
                     </p>
-                    <ForgotPassword :from_where="login" v-show="isForgotPasswordVisible" @close="closeForgotPasswordModal" />
+                    <ForgotPassword :from_where="login" v-show="isForgotPasswordVisible"
+                                    @close="closeForgotPasswordModal"/>
 
-                    <VerifyOtp :mobile="mobile" :from_where="login" v-show="isVerifyOtpVisible" @close="closeVerifyOtpModal" />
+                    <VerifyOtp :mobile="mobile" :from_where="login" v-show="isVerifyOtpVisible"
+                               @close="closeVerifyOtpModal"/>
 
-                    <NewPassword :mobile="mobile" v-show="isNewPasswordVisible" @close="closeNewPasswordModal" />
+                    <NewPassword :mobile="mobile" v-show="isNewPasswordVisible" @close="closeNewPasswordModal"/>
 
-                    <ConfirmationPopup :from_where="login" v-show="isConfirmationVisible" @close="closeConfirmationModal" />
+                    <ConfirmationPopup :from_where="login" v-show="isConfirmationVisible"
+                                       @close="closeConfirmationModal"/>
 
                 </div>
             </div>
@@ -55,6 +58,7 @@ import ForgotPassword from "./ForgotPassword.vue";
 import VerifyOtp from "./VerifyOtp.vue";
 import NewPassword from "./NewPassword.vue";
 import ConfirmationPopup from "./ConfirmationPopup.vue";
+import { required } from "vuelidate/lib/validators";
 
 export default {
     name: "Login",
@@ -74,8 +78,12 @@ export default {
             isVerifyOtpVisible: false,
             isNewPasswordVisible: false,
             isConfirmationVisible: false,
-            errors: []
+            errors: [],
         }
+    },
+    validations: {
+        mobile: { required },
+        password: { required }
     },
     methods: {
         showForgotPasswordModal() {
@@ -108,7 +116,7 @@ export default {
         closeConfirmationModal() {
             this.isConfirmationVisible = false;
         },
-        LoginWithOtp(){
+        LoginWithOtp() {
             this.login = 'login_with_otp';
             this.isForgotPasswordVisible = true;
         },
@@ -128,7 +136,9 @@ export default {
                 };
 
                 axios.post('api/login', data).then(response => {
-                    alert(response.data.message);
+                    let userObj = JSON.stringify(response.data.data.user)
+                    localStorage.setItem('userObj', userObj);
+                    this.$router.push('/');
                 }).catch(error => {
                     this.errors.push(error.response.data.message)
                 });
@@ -139,5 +149,27 @@ export default {
 </script>
 
 <style scoped>
+#visa {
+    margin: 20px auto;
+    max-width: 700px;
+    margin-bottom: 28px;
+}
 
+label {
+    display: block;
+    margin: 20px 0 10px;
+}
+
+span {
+    padding-top: 0px;
+    margin-top: 0px;
+    font-size: 12px;
+    color: red;
+}
+
+input {
+    font-size: 30px;
+    border: 1px double rgb(102, 97, 96);
+    border-radius: 4px;
+}
 </style>

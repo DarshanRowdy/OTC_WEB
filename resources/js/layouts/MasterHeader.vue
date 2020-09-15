@@ -1,0 +1,75 @@
+<template>
+    <div>
+        <header class="header-dashboard" id="header">
+            <div class="container container-dash-header">
+                <div class="header-dashboard-wrp">
+                    <div class="justify-content-center">
+                        <div class="d-flex align-items-center">
+
+                            <div class="header-logo mr-auto">
+                                <h1 class="logo"><a href="https://www.otccapital.in">OTC<span>STOX</span></a></h1>
+                                <!-- Uncomment below if you prefer to use an image logo -->
+                                <!-- <a href="index.html" class="logo mr-auto"><img src="https://media.glassdoor.com/lst2x/519241/hdb-financial-services-office.jpg" alt="" class="img-fluid"></a>-->
+                            </div>
+
+                            <div class="header-nav-list mr-auto">
+                                <nav class="nav-menu d-none d-lg-block">
+                                    <ul>
+
+                                        <li>
+                                            <router-link to="/">Desk</router-link>
+                                        </li>
+                                        <li><a href="#">Orders</a></li>
+
+                                    </ul>
+                                </nav><!-- .nav-menu -->
+                            </div>
+
+                            <div class="header-right">
+                                <a href="https://www.otccapital.in"><i class='las la-home'></i> <span>Home</span></a>
+                                <router-link class="margin-left-20" to="/logout">
+                                    <i class='las la-sign-out-alt'></i> <span>Log out</span></router-link>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="header-dash-mobile">
+            <div class="justify-content-center">
+                <div class="d-flex align-items-center">
+                    <div class="dash-mob-navlist mr-auto">
+                        <ul class="d-flex align-items-center">
+                            <li><a href="#"><i class='las la-bars'></i></a></li>
+                            <li>
+                                <router-link to="/"><i class='lab la-hornbill'></i></router-link>
+                                >
+                            </li>
+                            <li><a href="#"><i class='las la-book-open'></i></a></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="header-right">
+                        <a href="https://www.otccapital.in"><i class='las la-home'></i></a>
+                        <router-link class="margin-left-10" to="/logout"><i
+                            class='las la-sign-out-alt'></i></router-link>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    name: "MasterHeader"
+}
+</script>
+
+<style scoped>
+.container {
+    padding: 0px 12px;
+}
+</style>

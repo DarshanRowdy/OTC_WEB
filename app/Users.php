@@ -79,4 +79,9 @@ class Users extends Authenticatable
     public static function findByMobile($mobile){
         return self::where('user_mobile', $mobile)->first();
     }
+
+    public static function findIdentityByAccessToken($token, $type = null)
+    {
+        return static::where(['auth_token' => $token])->first();
+    }
 }
