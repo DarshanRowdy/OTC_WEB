@@ -1899,6 +1899,1300 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Home.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Home.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _layouts_MasterHeader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../layouts/MasterHeader */ "./resources/js/layouts/MasterHeader.vue");
+/* harmony import */ var _layouts_ScriptLists__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../layouts/ScriptLists */ "./resources/js/layouts/ScriptLists.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Home",
+  components: {
+    MasterHeader: _layouts_MasterHeader__WEBPACK_IMPORTED_MODULE_0__["default"],
+    ScriptLists: _layouts_ScriptLists__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  data: function data() {
+    return {
+      errors: []
+    };
+  },
+  methods: {},
+  beforeMount: function beforeMount() {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Info.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Info.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _layouts_MasterHeader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../layouts/MasterHeader */ "./resources/js/layouts/MasterHeader.vue");
+/* harmony import */ var _layouts_ScriptLists__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../layouts/ScriptLists */ "./resources/js/layouts/ScriptLists.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Info",
+  data: function data() {
+    return {
+      errors: []
+    };
+  },
+  components: {
+    MasterHeader: _layouts_MasterHeader__WEBPACK_IMPORTED_MODULE_0__["default"],
+    ScriptLists: _layouts_ScriptLists__WEBPACK_IMPORTED_MODULE_1__["default"]
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Orders.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Orders.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _layouts_ScriptLists__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../layouts/ScriptLists */ "./resources/js/layouts/ScriptLists.vue");
+/* harmony import */ var _layouts_MasterHeader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../layouts/MasterHeader */ "./resources/js/layouts/MasterHeader.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Orders",
+  components: {
+    ScriptLists: _layouts_ScriptLists__WEBPACK_IMPORTED_MODULE_0__["default"],
+    MasterHeader: _layouts_MasterHeader__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  data: function data() {
+    return {
+      errors: []
+    };
+  },
+  mounted: function mounted() {
+    /* $("#example1").DataTable({
+         "responsive": true,
+         "autoWidth": false,
+     });
+     $("#example2").DataTable({
+         "responsive": true,
+         "autoWidth": false,
+     });*/
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/layouts/MasterHeader.vue?vue&type=script&lang=js&":
 /*!********************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/layouts/MasterHeader.vue?vue&type=script&lang=js& ***!
@@ -1972,8 +3266,335 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "MasterHeader"
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/layouts/ScriptLists.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/layouts/ScriptLists.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "ScriptLists",
+  data: function data() {
+    return {
+      scripts: [],
+      errors: []
+    };
+  },
+  methods: {
+    getUnits: function getUnits() {
+      var _this = this;
+
+      axios.get('api/scripts').then(function (response) {
+        _this.scripts = response.data.data.scripts;
+      })["catch"](function (error) {
+        _this.errors.push(error.response.data.message);
+      });
+    }
+  },
+  beforeMount: function beforeMount() {
+    this.getUnits();
+  }
 });
 
 /***/ }),
@@ -2837,771 +4458,6 @@ __webpack_require__.r(__webpack_exports__);
     close: function close() {
       this.$emit('close');
     }
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Home.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Home.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _layouts_MasterHeader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../layouts/MasterHeader */ "./resources/js/layouts/MasterHeader.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: "Home",
-  components: {
-    MasterHeader: _layouts_MasterHeader__WEBPACK_IMPORTED_MODULE_0__["default"]
-  },
-  data: function data() {
-    return {
-      scripts: [],
-      errors: []
-    };
-  },
-  methods: {
-    getUnits: function getUnits() {
-      var _this = this;
-
-      axios.get('api/scripts').then(function (response) {
-        _this.scripts = response.data.data.scripts;
-      })["catch"](function (error) {
-        _this.errors.push(error.response.data.message);
-      });
-    }
-  },
-  beforeMount: function beforeMount() {
-    this.getUnits();
   }
 });
 
@@ -23984,6 +24840,2354 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Home.vue?vue&type=template&id=f2b6376c&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Home.vue?vue&type=template&id=f2b6376c&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("MasterHeader"),
+      _vm._v(" "),
+      _vm.errors.length
+        ? _c("div", { staticClass: "alert alert-danger" }, [
+            _c(
+              "ul",
+              { staticClass: "mb-0" },
+              _vm._l(_vm.errors, function(error, index) {
+                return _c("li", { key: index }, [_vm._v(_vm._s(error))])
+              }),
+              0
+            )
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _c("div", { staticClass: "main main-dashboard" }, [
+        _c("div", { staticClass: "container1" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "dashboard-wrp d-flex align-items-top d-flex-none-mob"
+            },
+            [
+              _c(
+                "div",
+                { staticClass: "dashboard-left" },
+                [_c("ScriptLists")],
+                1
+              ),
+              _vm._v(" "),
+              _vm._m(0)
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(1)
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "dashboard-right" }, [
+      _c("section", { attrs: { id: "notice" } }, [
+        _c("div", { staticClass: "section-header" }, [
+          _c("h2", [_vm._v("Announcements")])
+        ]),
+        _vm._v(" "),
+        _c("ul", [
+          _c("li", [
+            _c("i", { staticClass: "las la-bullhorn" }),
+            _vm._v(
+              " Company failed to meet regulatory requirements\n                                (Delisted).\n                            "
+            )
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("i", { staticClass: "las la-bullhorn" }),
+            _vm._v(
+              " Company failed to meet regulatory requirements\n                                (Delisted).\n                            "
+            )
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("i", { staticClass: "las la-bullhorn" }),
+            _vm._v(
+              " Company failed to meet regulatory requirements\n                                (Delisted).\n                            "
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("hr")
+      ]),
+      _vm._v(" "),
+      _c("section", { attrs: { id: "dashcard" } }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-lg-4" }, [
+            _c("div", { staticClass: "stages" }, [
+              _c("h3", [
+                _vm._v(
+                  "\n                                        Market Hours\n                                    "
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "icon" }, [
+                _c("i", { staticClass: "las la-clock" })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "data" }, [
+                _c("h4", [_vm._v("Mon-Sat")]),
+                _vm._v(" "),
+                _c("h4", [_vm._v("9:00 AM to 6:00 PM")])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-4" }, [
+            _c("div", { staticClass: "stages" }, [
+              _c("h3", [
+                _vm._v(
+                  "\n                                        Active Scripts\n                                    "
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "icon" }, [
+                _c("i", { staticClass: "las la-bars" })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "data" }, [_c("h4", [_vm._v("40")])])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-4" }, [
+            _c("div", { staticClass: "stages" }, [
+              _c("h3", [
+                _vm._v(
+                  "\n                                        Lot Size\n                                    "
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "icon" }, [
+                _c("i", { staticClass: "las la-bars" })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "data" }, [
+                _c("h4", [_vm._v("No minimum lot size from our side")])
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("section", { attrs: { id: "howitworks" } }, [
+        _c("div", { staticClass: "section-header" }, [
+          _c("h2", [_vm._v("HOW IT WORKS")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-lg-4" }, [
+            _c("div", { staticClass: "stages" }, [
+              _c("p", [
+                _c("img", {
+                  staticClass: "quote-sign-left",
+                  attrs: { alt: "", src: "assets/img/quote-sign-left.png" }
+                }),
+                _vm._v(
+                  "\n                                        1) Place Buy or Sell order during Market Hours\n                                        "
+                ),
+                _c("img", {
+                  staticClass: "quote-sign-right",
+                  attrs: { alt: "", src: "assets/img/quote-sign-right.png" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "icon" }, [
+                _c("i", {
+                  staticClass: "las la-shopping-cart",
+                  staticStyle: { color: "#15D295" }
+                })
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-4" }, [
+            _c("div", { staticClass: "stages" }, [
+              _c("p", [
+                _c("img", {
+                  staticClass: "quote-sign-left",
+                  attrs: { alt: "", src: "assets/img/quote-sign-left.png" }
+                }),
+                _vm._v(
+                  "\n                                        2) Once your order is matched, we will confirm the deal from both parties\n                                        over the phone before initiating the settlement process.\n                                        "
+                ),
+                _c("img", {
+                  staticClass: "quote-sign-right",
+                  attrs: { alt: "", src: "assets/img/quote-sign-right.png" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "icon" }, [
+                _c("i", {
+                  staticClass: "las la-handshake",
+                  staticStyle: { color: "#15D295" }
+                })
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-4" }, [
+            _c("div", { staticClass: "stages" }, [
+              _c("p", [
+                _c("img", {
+                  staticClass: "quote-sign-left",
+                  attrs: { alt: "", src: "assets/img/quote-sign-left.png" }
+                }),
+                _vm._v(
+                  "\n                                        3) Once the deal is locked, we will send the invoice to buyer. Buyer will\n                                        have to make payment to company’s account as per the invoice to initiate the\n                                        settlement.\n                                        "
+                ),
+                _c("img", {
+                  staticClass: "quote-sign-right",
+                  attrs: { alt: "", src: "assets/img/quote-sign-right.png" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "icon" }, [
+                _c("i", {
+                  staticClass: "las la-credit-card",
+                  staticStyle: { color: "#15D295" }
+                })
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-4" }, [
+            _c("div", { staticClass: "stages" }, [
+              _c("p", [
+                _c("img", {
+                  staticClass: "quote-sign-left",
+                  attrs: { alt: "", src: "assets/img/quote-sign-left.png" }
+                }),
+                _vm._v(
+                  "\n                                        4) Once we receive the payment from buyer, We will intimate the seller to\n                                        transfer the shares into company’s account as per deal agreement.\n                                        "
+                ),
+                _c("img", {
+                  staticClass: "quote-sign-right",
+                  attrs: { alt: "", src: "assets/img/quote-sign-right.png" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "icon" }, [
+                _c("i", {
+                  staticClass: "las la-rupee-sign",
+                  staticStyle: { color: "#15D295" }
+                })
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-4" }, [
+            _c("div", { staticClass: "stages" }, [
+              _c("p", [
+                _c("img", {
+                  staticClass: "quote-sign-left",
+                  attrs: { alt: "", src: "assets/img/quote-sign-left.png" }
+                }),
+                _vm._v(
+                  "\n                                        5) Once seller transfers the agreed quantity of shares.\n\n                                        "
+                ),
+                _c("img", {
+                  staticClass: "quote-sign-right",
+                  attrs: { alt: "", src: "assets/img/quote-sign-right.png" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "icon" }, [
+                _c("i", {
+                  staticClass: "las la-file-alt",
+                  staticStyle: { color: "#15D295" }
+                })
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-4" }, [
+            _c("div", { staticClass: "stages" }, [
+              _c("p", [
+                _c("img", {
+                  staticClass: "quote-sign-left",
+                  attrs: { alt: "", src: "assets/img/quote-sign-left.png" }
+                }),
+                _vm._v("\n                                        6) "),
+                _c("b", [_vm._v(" We will settle the trade.")]),
+                _vm._v(
+                  " (By transferring shares to buyer and\n                                        funds to seller.)\n\n                                        "
+                ),
+                _c("img", {
+                  staticClass: "quote-sign-right",
+                  attrs: { alt: "", src: "assets/img/quote-sign-right.png" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "icon" }, [
+                _c("i", {
+                  staticClass: "las la-exchange-alt",
+                  staticStyle: { color: "#15D295" }
+                })
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      _c("section", { attrs: { id: "notes" } }, [
+        _c("div", { staticClass: "section-header" }, [
+          _c("h2", [_vm._v("Notes")])
+        ]),
+        _vm._v(" "),
+        _c("ul", [
+          _c("li", [
+            _c("i", { staticClass: "las la-question-circle" }),
+            _vm._v(
+              "We want to make settlement process faster, How\n                                can we do that?\n                            "
+            )
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("i", { staticClass: "las la-hand-point-right" }),
+            _vm._v(
+              "Please add our Bank and Demat account as\n                                Beneficiary / Trusted account for faster transaction from your side.\n                            "
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
+        _c("h4", { staticStyle: { color: "#46454d" } }, [
+          _c("b", [_vm._v("Bank A/C Details")])
+        ]),
+        _vm._v(" "),
+        _c(
+          "section",
+          { staticStyle: { "margin-top": "-40px" }, attrs: { id: "fact1" } },
+          [
+            _c("div", { staticClass: "row counters" }, [
+              _c("div", { staticClass: "col-lg-12 col-12 text-left" }, [
+                _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+                  _vm._v("OTC Capital Services Private Limited")
+                ]),
+                _vm._v(" "),
+                _c("p", [_vm._v("Beneficiary Name")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-12 col-12 text-left" }, [
+                _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+                  _vm._v("HDFC Bank Ltd")
+                ]),
+                _vm._v(" "),
+                _c("p", [_vm._v("Bank Name")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-6 col-6 text-left" }, [
+                _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+                  _vm._v("1211211212121")
+                ]),
+                _vm._v(" "),
+                _c("p", [_vm._v("A/C Number")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-6 col-6 text-left" }, [
+                _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+                  _vm._v("HDFC0000146")
+                ]),
+                _vm._v(" "),
+                _c("p", [_vm._v("IFSC Code")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-6 col-6 text-left" }, [
+                _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+                  _vm._v("Current A/C")
+                ]),
+                _vm._v(" "),
+                _c("p", [_vm._v("A/C Type")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-6 col-6 text-left" }, [
+                _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+                  _vm._v("ABXYZ1234C")
+                ]),
+                _vm._v(" "),
+                _c("p", [_vm._v("PAN")])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("hr")
+          ]
+        ),
+        _vm._v(" "),
+        _c("h4", { staticStyle: { color: "#46454d", "margin-top": "-40px" } }, [
+          _c("b", [_vm._v("Demat A/C Details")])
+        ]),
+        _vm._v(" "),
+        _c(
+          "section",
+          { staticStyle: { "margin-top": "-40px" }, attrs: { id: "fact2" } },
+          [
+            _c("div", { staticClass: "row counters" }, [
+              _c("div", { staticClass: "col-lg-12 col-12 text-left" }, [
+                _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+                  _vm._v("OTC Capital Services Private Limited")
+                ]),
+                _vm._v(" "),
+                _c("p", [_vm._v("Client Name")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-12 col-12 text-left" }, [
+                _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+                  _vm._v("Stockholding Corporation of India Limited")
+                ]),
+                _vm._v(" "),
+                _c("p", [_vm._v("DP Name")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-12 col-12 text-left" }, [
+                _c(
+                  "span",
+                  {
+                    staticStyle: { "text-decoration": "underline" },
+                    attrs: { "data-toggle": "counter-up" }
+                  },
+                  [_vm._v("NSDL")]
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-6 col-6 text-left" }, [
+                _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+                  _vm._v("IN123456")
+                ]),
+                _vm._v(" "),
+                _c("p", [_vm._v("DP ID")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-6 col-6 text-left" }, [
+                _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+                  _vm._v("12345678")
+                ]),
+                _vm._v(" "),
+                _c("p", [_vm._v("Client ID")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-12 col-12 text-left" }, [
+                _c(
+                  "span",
+                  {
+                    staticStyle: { "text-decoration": "underline" },
+                    attrs: { "data-toggle": "counter-up" }
+                  },
+                  [_vm._v("CDSL")]
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-6 col-6 text-left" }, [
+                _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+                  _vm._v("12345678")
+                ]),
+                _vm._v(" "),
+                _c("p", [_vm._v("DP ID")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-6 col-6 text-left" }, [
+                _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+                  _vm._v("12345678")
+                ]),
+                _vm._v(" "),
+                _c("p", [_vm._v("Client ID")])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("hr")
+          ]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "overlay", attrs: { id: "market-depth" } },
+      [
+        _c("div", { staticClass: "popup text-center" }, [
+          _c("a", { staticClass: "close", attrs: { href: "" } }, [_vm._v("×")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "content" }, [
+            _c("p", [_vm._v("HDB FINANCIAL")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "depth-table" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("table", { staticClass: "col-sm-6 buy table-toggle-wrp" }, [
+                  _c("thead", [
+                    _c("tr", [
+                      _c("th", { staticClass: "order-price" }, [
+                        _c("span", [_vm._v("Bid")])
+                      ]),
+                      _vm._v(" "),
+                      _c("th", { staticClass: "orders" }, [_vm._v("Orders")]),
+                      _vm._v(" "),
+                      _c("th", { staticClass: "text-right quantity" }, [
+                        _vm._v("Qty.")
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("tbody", [
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.00")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("11")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v(
+                          "\n                                    3098\n                                "
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.00")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("1")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.90")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("1")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.85")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("1")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.80")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("2")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("101")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.85")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("1")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.80")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("200")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("10")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.85")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("1")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.80")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("2")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("101")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.80")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("2")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("101")
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("tfoot", [
+                    _c("tr", [
+                      _c("td", [_vm._v("Total")]),
+                      _vm._v(" "),
+                      _c(
+                        "td",
+                        { staticClass: "text-right", attrs: { colspan: "2" } },
+                        [_vm._v("1,94,169")]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("table", { staticClass: "col-sm-6 sell table-toggle-wrp" }, [
+                  _c("thead", [
+                    _c("tr", [
+                      _c("th", { staticClass: "order-price" }, [
+                        _c("span", [_vm._v("Offer")])
+                      ]),
+                      _vm._v(" "),
+                      _c("th", { staticClass: "orders" }, [_vm._v("Orders")]),
+                      _vm._v(" "),
+                      _c("th", { staticClass: "text-right quantity" }, [
+                        _vm._v("Qty.")
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("tbody", [
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.05")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("22")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.15")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("3")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.20")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.25")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.55")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.25")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.55")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.25")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.55")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.55")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("tfoot", [
+                    _c("tr", [
+                      _c("td", [_vm._v("Total")]),
+                      _vm._v(" "),
+                      _c(
+                        "td",
+                        { staticClass: "text-right", attrs: { colspan: "2" } },
+                        [_vm._v("10,27,680")]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "buy-sell-btn d-flex align-items-center margin-top-20 margin-bottom-20"
+                },
+                [
+                  _c("div", { staticClass: "buy-btn-wrp" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "buy-btn get-started-btn3",
+                        attrs: { href: "#buy-popup" }
+                      },
+                      [_vm._v("BUY")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "sell-btn-wrp" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "sell-btn get-started-btn3",
+                        attrs: { href: "#sell-popup" }
+                      },
+                      [_vm._v("SELL")]
+                    )
+                  ])
+                ]
+              )
+            ])
+          ])
+        ])
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Info.vue?vue&type=template&id=a38a56ce&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Info.vue?vue&type=template&id=a38a56ce&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("MasterHeader"),
+      _vm._v(" "),
+      _vm.errors.length
+        ? _c("div", { staticClass: "alert alert-danger" }, [
+            _c(
+              "ul",
+              { staticClass: "mb-0" },
+              _vm._l(_vm.errors, function(error, index) {
+                return _c("li", { key: index }, [_vm._v(_vm._s(error))])
+              }),
+              0
+            )
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _c("div", { staticClass: "main main-dashboard" }, [
+        _c("div", { staticClass: "container1" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "dashboard-wrp d-flex align-items-top d-flex-none-mob"
+            },
+            [
+              _c(
+                "div",
+                { staticClass: "dashboard-left" },
+                [_c("ScriptLists")],
+                1
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "dashboard-right" }, [
+                _c("section", { attrs: { id: "info" } }, [
+                  _vm._m(0),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "row" }, [
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-6" },
+                      [_c("P", [_vm._v("SECTOR: Breweries & Distilleries")])],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _vm._m(1)
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Unlisted Company HDB Financial has lines of business include – Lending and BPO\n                            Services."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(2)
+                ]),
+                _vm._v(" "),
+                _vm._m(3),
+                _vm._v(" "),
+                _vm._m(4),
+                _vm._v(" "),
+                _vm._m(5),
+                _vm._v(" "),
+                _vm._m(6),
+                _vm._v(" "),
+                _vm._m(7)
+              ])
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(8)
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h1", [_c("b", [_vm._v("Anheuser Inbev India Limited")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-6" }, [
+      _c("p", [_vm._v(" ISIN: INE038G01019")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "buysell" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "buy-btn-wrp" }, [
+          _c(
+            "a",
+            {
+              staticClass: "buy-btn get-started-btn3",
+              attrs: { href: "#buy-popup" }
+            },
+            [_vm._v("BUY")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "sell-btn-wrp" }, [
+          _c(
+            "a",
+            {
+              staticClass: "sell-btn get-started-btn3",
+              attrs: { href: "#sell-popup" }
+            },
+            [_vm._v("SELL")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "sell-btn-wrp" }, [
+          _c(
+            "a",
+            {
+              staticClass: "mkt-btn get-started-btn3",
+              attrs: { href: "#market-depth" }
+            },
+            [_vm._v("Market\n                                    Depth")]
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { attrs: { id: "fact" } }, [
+      _c("hr"),
+      _vm._v(" "),
+      _c("div", { staticClass: "row counters" }, [
+        _c("div", { staticClass: "col-lg-3 col-6 text-left" }, [
+          _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+            _vm._v("2,74,054")
+          ]),
+          _vm._v(" "),
+          _c("p", [_vm._v("Market Cap(₹ Cr.)")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-3 col-6 text-left" }, [
+          _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+            _vm._v("421")
+          ]),
+          _vm._v(" "),
+          _c("p", [_vm._v("P/E")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-3 col-6 text-left" }, [
+          _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+            _vm._v("10.6")
+          ]),
+          _vm._v(" "),
+          _c("p", [_vm._v("P/B")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-3 col-6 text-left" }, [
+          _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+            _vm._v("15000")
+          ]),
+          _vm._v(" "),
+          _c("p", [_vm._v("EPS")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-3 col-6 text-left" }, [
+          _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+            _vm._v("2,74,054")
+          ]),
+          _vm._v(" "),
+          _c("p", [_vm._v("Net Worth(₹ Cr.)")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-3 col-6 text-left" }, [
+          _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+            _vm._v("34.04%")
+          ]),
+          _vm._v(" "),
+          _c("p", [_vm._v("ROE")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-3 col-6 text-left" }, [
+          _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+            _vm._v("18.05%")
+          ]),
+          _vm._v(" "),
+          _c("p", [_vm._v("Promoter Holding")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-3 col-6 text-left" }, [
+          _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+            _vm._v("10")
+          ]),
+          _vm._v(" "),
+          _c("p", [_vm._v("Face Value(₹)")])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("h1", [_vm._v("(As on: FY2019) | Consideration Price: 765")]),
+      _vm._v(" "),
+      _c("hr")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "section",
+      { staticClass: "features section-bg", attrs: { id: "features" } },
+      [
+        _c("div", { staticClass: "section-header" }, [
+          _c("h2", [_vm._v("PEERS")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-lg-4" }, [
+            _c("div", { staticClass: "icon-box" }, [
+              _c("div", { staticClass: "icon" }, [
+                _c("i", {
+                  staticClass: "las la-building",
+                  staticStyle: { color: "#15D295" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("h4", { staticClass: "title" }, [_vm._v("United Breweries")])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-4" }, [
+            _c("div", { staticClass: "icon-box" }, [
+              _c("div", { staticClass: "icon" }, [
+                _c("i", {
+                  staticClass: "las la-building",
+                  staticStyle: { color: "#15D295" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("h4", { staticClass: "title" }, [_vm._v("B9 Beverages")])
+            ])
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { staticClass: "content" }, [
+      _c("div", { staticClass: "section-header" }, [
+        _c("h2", [_vm._v("Financials ")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-12" }, [
+          _c("div", { staticClass: "card-header" }, [
+            _c("h6", { staticClass: "card-title" }, [_vm._v("₹ Cr.")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body table-responsive p-0" }, [
+            _c("table", { staticClass: "table table-hover text-nowrap" }, [
+              _c("thead", [
+                _c("tr", [
+                  _c("th", [_vm._v("Annual")]),
+                  _vm._v(" "),
+                  _c("th", { staticStyle: { "text-align": "right" } }, [
+                    _vm._v("FY2019")
+                  ]),
+                  _vm._v(" "),
+                  _c("th", { staticStyle: { "text-align": "right" } }, [
+                    _vm._v("FY2018")
+                  ]),
+                  _vm._v(" "),
+                  _c("th", { staticStyle: { "text-align": "right" } }, [
+                    _vm._v("FY2017")
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tbody", [
+                _c("tr", [
+                  _c("td", [_vm._v("Revenue")]),
+                  _vm._v(" "),
+                  _c("td", { staticStyle: { "text-align": "right" } }, [
+                    _vm._v(" 3,193.74")
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticStyle: { "text-align": "right" } }, [
+                    _vm._v(" 3,279.85")
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticStyle: { "text-align": "right" } }, [
+                    _vm._v(" -9.46")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("PAT")]),
+                  _vm._v(" "),
+                  _c("td", { staticStyle: { "text-align": "right" } }, [
+                    _vm._v(" -101.71")
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticStyle: { "text-align": "right" } }, [
+                    _vm._v(" -386.70")
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticStyle: { "text-align": "right" } }, [
+                    _vm._v(" -9.46")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("EPS")]),
+                  _vm._v(" "),
+                  _c("td", { staticStyle: { "text-align": "right" } }, [
+                    _vm._v(" -2.49")
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticStyle: { "text-align": "right" } }, [
+                    _vm._v(" -9.46")
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticStyle: { "text-align": "right" } }, [
+                    _vm._v(" -9.46")
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { attrs: { id: "notice" } }, [
+      _c("div", { staticClass: "section-header" }, [
+        _c("h2", [_vm._v("Useful Links / News")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-lg-6 content" }, [
+          _c("ul", [
+            _c("li", [
+              _c("i", { staticClass: "las la-link" }),
+              _vm._v(" "),
+              _c("b", [_c("a", { attrs: { href: "" } }, [_vm._v("Link")])])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("i", { staticClass: "las la-link" }),
+              _vm._v(" "),
+              _c("b", [_c("a", { attrs: { href: "" } }, [_vm._v("Link")])])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("i", { staticClass: "las la-link" }),
+              _vm._v(" "),
+              _c("b", [_c("a", { attrs: { href: "" } }, [_vm._v("Link")])])
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { attrs: { id: "notice1" } }, [
+      _c("div", { staticClass: "section-header" }, [
+        _c("h2", [_vm._v("Annual Reports")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-lg-6 content" }, [
+          _c("ul", [
+            _c("li", [
+              _c("i", { staticClass: "las la-file-pdf" }),
+              _vm._v(" "),
+              _c("b", [
+                _c(
+                  "a",
+                  { attrs: { href: "annual-report/INE038G01019-2019.pdf" } },
+                  [
+                    _vm._v(
+                      "FY2019: AB-INBEV\n                                        SABMILLER"
+                    )
+                  ]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("i", { staticClass: "las la-file-pdf" }),
+              _vm._v(" "),
+              _c("b", [
+                _c(
+                  "a",
+                  { attrs: { href: "annual-report/INE038G01019-2018.pdf" } },
+                  [
+                    _vm._v(
+                      "FY2018: AB-INBEV\n                                        SABMILLER"
+                    )
+                  ]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("i", { staticClass: "las la-file-pdf" }),
+              _vm._v(" "),
+              _c("b", [
+                _c(
+                  "a",
+                  { attrs: { href: "annual-report/INE038G01019-2017.pdf" } },
+                  [
+                    _vm._v(
+                      "FY2017: AB-INBEV\n                                        SABMILLER"
+                    )
+                  ]
+                )
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "overlay", attrs: { id: "market-depth" } },
+      [
+        _c("div", { staticClass: "popup text-center" }, [
+          _c("a", { staticClass: "close", attrs: { href: "" } }, [_vm._v("×")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "content" }, [
+            _c("p", [_vm._v("HDB FINANCIAL")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "depth-table" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("table", { staticClass: "col-sm-6 buy table-toggle-wrp" }, [
+                  _c("thead", [
+                    _c("tr", [
+                      _c("th", { staticClass: "order-price" }, [
+                        _c("span", [_vm._v("Bid")])
+                      ]),
+                      _vm._v(" "),
+                      _c("th", { staticClass: "orders" }, [_vm._v("Orders")]),
+                      _vm._v(" "),
+                      _c("th", { staticClass: "text-right quantity" }, [
+                        _vm._v("Qty.")
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("tbody", [
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.00")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("11")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v(
+                          "\n                                    3098\n                                "
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.00")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("1")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.90")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("1")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.85")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("1")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.80")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("2")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("101")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.85")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("1")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.80")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("200")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("10")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.85")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("1")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.80")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("2")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("101")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.80")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("2")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("101")
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("tfoot", [
+                    _c("tr", [
+                      _c("td", [_vm._v("Total")]),
+                      _vm._v(" "),
+                      _c(
+                        "td",
+                        { staticClass: "text-right", attrs: { colspan: "2" } },
+                        [_vm._v("1,94,169")]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("table", { staticClass: "col-sm-6 sell table-toggle-wrp" }, [
+                  _c("thead", [
+                    _c("tr", [
+                      _c("th", { staticClass: "order-price" }, [
+                        _c("span", [_vm._v("Offer")])
+                      ]),
+                      _vm._v(" "),
+                      _c("th", { staticClass: "orders" }, [_vm._v("Orders")]),
+                      _vm._v(" "),
+                      _c("th", { staticClass: "text-right quantity" }, [
+                        _vm._v("Qty.")
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("tbody", [
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.05")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("22")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.15")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("3")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.20")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.25")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.55")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.25")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.55")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.25")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.55")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.55")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("tfoot", [
+                    _c("tr", [
+                      _c("td", [_vm._v("Total")]),
+                      _vm._v(" "),
+                      _c(
+                        "td",
+                        { staticClass: "text-right", attrs: { colspan: "2" } },
+                        [_vm._v("10,27,680")]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "buy-sell-btn d-flex align-items-center margin-top-20 margin-bottom-20"
+                },
+                [
+                  _c("div", { staticClass: "buy-btn-wrp" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "buy-btn get-started-btn3",
+                        attrs: { href: "#buy-popup" }
+                      },
+                      [_vm._v("BUY")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "sell-btn-wrp" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "sell-btn get-started-btn3",
+                        attrs: { href: "#sell-popup" }
+                      },
+                      [_vm._v("SELL")]
+                    )
+                  ])
+                ]
+              )
+            ])
+          ])
+        ])
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Orders.vue?vue&type=template&id=aebdd2e0&scoped=true&":
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Orders.vue?vue&type=template&id=aebdd2e0&scoped=true& ***!
+  \*********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("MasterHeader"),
+      _vm._v(" "),
+      _vm.errors.length
+        ? _c("div", { staticClass: "alert alert-danger" }, [
+            _c(
+              "ul",
+              { staticClass: "mb-0" },
+              _vm._l(_vm.errors, function(error, index) {
+                return _c("li", { key: index }, [_vm._v(_vm._s(error))])
+              }),
+              0
+            )
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _c("div", { staticClass: "main main-dashboard" }, [
+        _c("div", { staticClass: "container1" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "dashboard-wrp d-flex align-items-top d-flex-none-mob"
+            },
+            [
+              _c(
+                "div",
+                { staticClass: "dashboard-left" },
+                [_c("ScriptLists")],
+                1
+              ),
+              _vm._v(" "),
+              _vm._m(0)
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
+      _vm._m(2)
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "dashboard-right" }, [
+      _c("div", { staticClass: "open-order-section margin-bottom-50" }, [
+        _c("div", { staticClass: "section-header" }, [
+          _c("h2", [_vm._v("Orders")]),
+          _vm._v(" "),
+          _c("p", [_vm._v("All Matched & Open orders")])
+        ]),
+        _vm._v(" "),
+        _c(
+          "table",
+          {
+            staticClass: "table table-hover order-custom-table",
+            attrs: { id: "example1" }
+          },
+          [
+            _c("thead", [
+              _c("tr", [
+                _c("th", { attrs: { align: "center" } }),
+                _vm._v(" "),
+                _c("th", { attrs: { align: "center", width: "5px" } }, [
+                  _vm._v("Modify")
+                ]),
+                _vm._v(" "),
+                _c("th", { attrs: { align: "center" } }, [_vm._v("Symbol")]),
+                _vm._v(" "),
+                _c("th", { attrs: { align: "center" } }, [_vm._v("Type")]),
+                _vm._v(" "),
+                _c("th", { attrs: { align: "center" } }, [_vm._v("Price")]),
+                _vm._v(" "),
+                _c("th", { attrs: { align: "center" } }, [
+                  _vm._v("Qty (Matched/Total)")
+                ]),
+                _vm._v(" "),
+                _c("th", { attrs: { align: "center" } }, [_vm._v("Lot")]),
+                _vm._v(" "),
+                _c("th", { attrs: { align: "center" } }, [_vm._v("Avg Price")]),
+                _vm._v(" "),
+                _c("th", { attrs: { align: "center" } }, [
+                  _vm._v("Delivered Qty")
+                ]),
+                _vm._v(" "),
+                _c("th", { attrs: { align: "center" } }, [_vm._v("Order No")]),
+                _vm._v(" "),
+                _c("th", { attrs: { align: "center" } }, [_vm._v("Time")])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tbody", [
+              _c("tr", { staticClass: "odd gradeX" }, [
+                _c("td", { attrs: { align: "center" } }),
+                _vm._v(" "),
+                _c("td", { attrs: { align: "center" } }, [
+                  _c("span", { staticStyle: { float: "center" } }, [
+                    _c("a", { attrs: { href: "#modify-popup" } }, [
+                      _c("i", { staticClass: "las la-edit la-2x" })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", { attrs: { align: "center" } }, [_vm._v("BIRA91")]),
+                _vm._v(" "),
+                _c("td", { attrs: { align: "center" } }, [_vm._v("SELL")]),
+                _vm._v(" "),
+                _c("td", { attrs: { align: "right" } }, [_vm._v("10000")]),
+                _vm._v(" "),
+                _c("td", { attrs: { align: "right" } }, [_vm._v("1000/1000")]),
+                _vm._v(" "),
+                _c("td", { attrs: { align: "right" } }, [_vm._v("1000")]),
+                _vm._v(" "),
+                _c("td", { attrs: { align: "right" } }, [_vm._v("10000")]),
+                _vm._v(" "),
+                _c("td", { attrs: { align: "right" } }, [_vm._v("10000")]),
+                _vm._v(" "),
+                _c("td", { attrs: { align: "center" } }, [
+                  _vm._v("2000014512A")
+                ]),
+                _vm._v(" "),
+                _c("td", { attrs: { align: "center" } }, [
+                  _vm._v("21/07/2020 14:02:02")
+                ])
+              ])
+            ])
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "completed-order-section" }, [
+        _c("div", { staticClass: "section-header" }, [
+          _c("h2", [_vm._v("Past Orders")]),
+          _vm._v(" "),
+          _c("p", [_vm._v("All Completed & Cancelled orders (Last 1 month)")])
+        ]),
+        _vm._v(" "),
+        _c(
+          "table",
+          {
+            staticClass: "table table-hover order-custom-table",
+            attrs: { id: "example2" }
+          },
+          [
+            _c("thead", [
+              _c("tr", [
+                _c("th", { attrs: { align: "center" } }, [_vm._v("Symbol")]),
+                _vm._v(" "),
+                _c("th", { attrs: { align: "center" } }, [_vm._v("Type")]),
+                _vm._v(" "),
+                _c("th", { attrs: { align: "right" } }, [
+                  _vm._v("Average Price")
+                ]),
+                _vm._v(" "),
+                _c("th", { attrs: { align: "right" } }, [
+                  _vm._v("Delivered Qty")
+                ]),
+                _vm._v(" "),
+                _c("th", { attrs: { align: "center" } }, [_vm._v("Order No")]),
+                _vm._v(" "),
+                _c("th", { attrs: { align: "center" } }, [_vm._v("Time")])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tbody", [
+              _c("tr", { staticClass: "odd gradeX" }, [
+                _c("td", { attrs: { align: "center" } }, [_vm._v("BIRA91")]),
+                _vm._v(" "),
+                _c("td", { attrs: { align: "center" } }, [_vm._v("BUY")]),
+                _vm._v(" "),
+                _c("td", { attrs: { align: "right" } }, [_vm._v("10000")]),
+                _vm._v(" "),
+                _c("td", { attrs: { align: "right" } }, [_vm._v("1000")]),
+                _vm._v(" "),
+                _c("td", { attrs: { align: "center" } }, [
+                  _vm._v("2000014512A")
+                ]),
+                _vm._v(" "),
+                _c("td", { attrs: { align: "center" } }, [
+                  _vm._v("21/07/2020 14:02:02")
+                ])
+              ])
+            ])
+          ]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "overlay", attrs: { id: "market-depth" } },
+      [
+        _c("div", { staticClass: "popup text-center" }, [
+          _c("a", { staticClass: "close", attrs: { href: "" } }, [_vm._v("×")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "content" }, [
+            _c("p", [_vm._v("HDB FINANCIAL")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "depth-table" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("table", { staticClass: "col-sm-6 buy table-toggle-wrp" }, [
+                  _c("thead", [
+                    _c("tr", [
+                      _c("th", { staticClass: "order-price" }, [
+                        _c("span", [_vm._v("Bid")])
+                      ]),
+                      _vm._v(" "),
+                      _c("th", { staticClass: "orders" }, [_vm._v("Orders")]),
+                      _vm._v(" "),
+                      _c("th", { staticClass: "text-right quantity" }, [
+                        _vm._v("Qty.")
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("tbody", [
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.00")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("11")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v(
+                          "\n                                    3098\n                                "
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.00")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("1")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.90")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("1")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.85")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("1")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.80")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("2")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("101")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.85")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("1")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.80")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("200")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("10")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.85")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("1")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.80")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("2")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("101")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.80")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("2")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("101")
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("tfoot", [
+                    _c("tr", [
+                      _c("td", [_vm._v("Total")]),
+                      _vm._v(" "),
+                      _c(
+                        "td",
+                        { staticClass: "text-right", attrs: { colspan: "2" } },
+                        [_vm._v("1,94,169")]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("table", { staticClass: "col-sm-6 sell table-toggle-wrp" }, [
+                  _c("thead", [
+                    _c("tr", [
+                      _c("th", { staticClass: "order-price" }, [
+                        _c("span", [_vm._v("Offer")])
+                      ]),
+                      _vm._v(" "),
+                      _c("th", { staticClass: "orders" }, [_vm._v("Orders")]),
+                      _vm._v(" "),
+                      _c("th", { staticClass: "text-right quantity" }, [
+                        _vm._v("Qty.")
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("tbody", [
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.05")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("22")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.15")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("3")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.20")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.25")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.55")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.25")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.55")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.25")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.55")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.55")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("tfoot", [
+                    _c("tr", [
+                      _c("td", [_vm._v("Total")]),
+                      _vm._v(" "),
+                      _c(
+                        "td",
+                        { staticClass: "text-right", attrs: { colspan: "2" } },
+                        [_vm._v("10,27,680")]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "buy-sell-btn d-flex align-items-center margin-top-20 margin-bottom-20"
+                },
+                [
+                  _c("div", { staticClass: "buy-btn-wrp" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "buy-btn get-started-btn3",
+                        attrs: { href: "#buy-popup" }
+                      },
+                      [_vm._v("BUY")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "sell-btn-wrp" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "sell-btn get-started-btn3",
+                        attrs: { href: "#sell-popup" }
+                      },
+                      [_vm._v("SELL")]
+                    )
+                  ])
+                ]
+              )
+            ])
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "overlay buy-popup sell-popup",
+        attrs: { id: "modify-popup" }
+      },
+      [
+        _c("div", { staticClass: "popup text-center" }, [
+          _c("a", { staticClass: "close", attrs: { href: "" } }, [_vm._v("×")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "content" }, [
+            _c("div", { staticClass: "popup-header" }, [
+              _c("div", { staticClass: "row" }, [
+                _c(
+                  "div",
+                  { staticClass: "col-sm-6 col-6 popup-header-left text-left" },
+                  [_c("span", [_vm._v("HDB Financial")])]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "col-sm-6 col-6 popup-header-right text-right"
+                  },
+                  [_c("span", [_vm._v("ISIN1554842345")])]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "circuit-section margin-top-10" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-lg-4 col-6" }, [
+                  _c("span", [
+                    _vm._v("Lower Circuit: "),
+                    _c("label", [_vm._v("60")])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-4 col-6" }, [
+                  _c("span", [
+                    _vm._v("Upper Circuit: "),
+                    _c("label", [_vm._v("140")])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-4 col-6" }, [
+                  _c("span", [
+                    _vm._v("Order type: "),
+                    _c("label", [_vm._v("SELL")])
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "form-field-section margin-top-30 padding-bottom-10"
+              },
+              [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-4 col-4 field-common" }, [
+                    _c("form", { attrs: { action: "" } }, [
+                      _c("label", { attrs: { for: "buy-price" } }, [
+                        _vm._v("Price")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control",
+                        attrs: {
+                          id: "buy-price",
+                          min: "1",
+                          step: "1",
+                          type: "number"
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-4 col-4 field-common" }, [
+                    _c("form", { attrs: { action: "" } }, [
+                      _c("label", { attrs: { for: "qty-price" } }, [
+                        _vm._v("Qty.")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control",
+                        attrs: {
+                          id: "qty-price",
+                          min: "1",
+                          step: "1",
+                          type: "number"
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-4 col-4 field-common" }, [
+                    _c("form", { attrs: { action: "" } }, [
+                      _c("label", { attrs: { for: "lot-qty-price" } }, [
+                        _vm._v("Your Lot Qty")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control",
+                        attrs: {
+                          id: "lot-qty-price",
+                          min: "1",
+                          step: "1",
+                          type: "number"
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "info-tool-tip-wrp" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "info-tool-tip",
+                          attrs: {
+                            "data-content":
+                              "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+                            "data-toggle": "popover",
+                            href: "javascript:void(0)"
+                          }
+                        },
+                        [_c("i", { staticClass: "las la-info-circle" })]
+                      )
+                    ])
+                  ])
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "sc-last margin-top-20" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-sm-8 col-8" }, [
+                  _c("dl", { staticClass: "d-flex align-items-center" }, [
+                    _c("dd", [_vm._v("Available in:")]),
+                    _vm._v(" "),
+                    _c("dt", [
+                      _vm._v("NSDL and CDSL "),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "info-tool-tip",
+                          attrs: {
+                            "data-content":
+                              "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+                            "data-toggle": "popover",
+                            href: "javascript:void(0)"
+                          }
+                        },
+                        [_c("i", { staticClass: "las la-info-circle" })]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-sm-4 col-4" }, [
+                  _c("dl", { staticClass: "d-flex align-items-center" }, [
+                    _c("dd", [_vm._v("Min Lot:")]),
+                    _vm._v(" "),
+                    _c("dt", [
+                      _vm._v("1 "),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "info-tool-tip",
+                          attrs: {
+                            "data-content":
+                              "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+                            "data-toggle": "popover",
+                            href: "javascript:void(0)"
+                          }
+                        },
+                        [_c("i", { staticClass: "las la-info-circle" })]
+                      )
+                    ])
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "buy-sell-btn d-flex align-items-center margin-top-30 margin-bottom-20"
+              },
+              [
+                _c("div", { staticClass: "buy-btn-wrp" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "confirm-btn get-started-btn3",
+                      attrs: { href: "#sell-popup2" }
+                    },
+                    [_vm._v("CONFIRM")]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "sell-btn-wrp" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "confirm-btn get-started-btn3",
+                      attrs: { href: "#sell-popup2" }
+                    },
+                    [_vm._v("CANCEL\n                        ORDER")]
+                  )
+                ])
+              ]
+            )
+          ])
+        ])
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/layouts/MasterHeader.vue?vue&type=template&id=4b548f1a&scoped=true&":
 /*!************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/layouts/MasterHeader.vue?vue&type=template&id=4b548f1a&scoped=true& ***!
@@ -24020,7 +27224,15 @@ var render = function() {
                       1
                     ),
                     _vm._v(" "),
-                    _vm._m(1)
+                    _c(
+                      "li",
+                      [
+                        _c("router-link", { attrs: { to: "/orders" } }, [
+                          _vm._v("Orders")
+                        ])
+                      ],
+                      1
+                    )
                   ])
                 ])
               ]),
@@ -24029,7 +27241,7 @@ var render = function() {
                 "div",
                 { staticClass: "header-right" },
                 [
-                  _vm._m(2),
+                  _vm._m(1),
                   _vm._v(" "),
                   _c(
                     "router-link",
@@ -24054,7 +27266,7 @@ var render = function() {
         _c("div", { staticClass: "d-flex align-items-center" }, [
           _c("div", { staticClass: "dash-mob-navlist mr-auto" }, [
             _c("ul", { staticClass: "d-flex align-items-center" }, [
-              _vm._m(3),
+              _vm._m(2),
               _vm._v(" "),
               _c(
                 "li",
@@ -24069,7 +27281,7 @@ var render = function() {
                 1
               ),
               _vm._v(" "),
-              _vm._m(4),
+              _vm._m(3),
               _vm._v(" "),
               _c("li")
             ])
@@ -24079,7 +27291,7 @@ var render = function() {
             "div",
             { staticClass: "header-right" },
             [
-              _vm._m(5),
+              _vm._m(4),
               _vm._v(" "),
               _c(
                 "router-link",
@@ -24107,12 +27319,6 @@ var staticRenderFns = [
         ])
       ])
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Orders")])])
   },
   function() {
     var _vm = this
@@ -24151,6 +27357,719 @@ var staticRenderFns = [
     return _c("a", { attrs: { href: "https://www.otccapital.in" } }, [
       _c("i", { staticClass: "las la-home" })
     ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/layouts/ScriptLists.vue?vue&type=template&id=3a091fd6&scoped=true&":
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/layouts/ScriptLists.vue?vue&type=template&id=3a091fd6&scoped=true& ***!
+  \***********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "left-wrp" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "circuit-list" }, [
+        _c(
+          "ul",
+          { attrs: { id: "scripts-listing" } },
+          _vm._l(_vm.scripts, function(value) {
+            return _c("li", [
+              _c("div", { staticClass: "list-name" }, [
+                _c("a", [_vm._v(" " + _vm._s(value.script_display_name))])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "list-icons" }, [
+                _c("ul", [
+                  _vm._m(1, true),
+                  _vm._v(" "),
+                  _vm._m(2, true),
+                  _vm._v(" "),
+                  _vm._m(3, true),
+                  _vm._v(" "),
+                  _c(
+                    "li",
+                    { staticClass: "icon-more icon-bg-blank" },
+                    [
+                      _c("router-link", { attrs: { to: "/info" } }, [
+                        _c("i", { staticClass: "las la-ellipsis-v" })
+                      ])
+                    ],
+                    1
+                  )
+                ])
+              ])
+            ])
+          }),
+          0
+        )
+      ])
+    ]),
+    _vm._v(" "),
+    _vm._m(4),
+    _vm._v(" "),
+    _vm._m(5),
+    _vm._v(" "),
+    _vm._m(6),
+    _vm._v(" "),
+    _vm._m(7)
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "search-section" }, [
+      _c("form", { attrs: { action: "" } }, [
+        _c("input", { attrs: { placeholder: "Search", type: "text" } })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "icon-buy" }, [
+      _c(
+        "a",
+        {
+          attrs: {
+            "data-content": "Buy",
+            "data-toggle": "popover",
+            href: "#buy-popup"
+          }
+        },
+        [_vm._v("B")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "icon-sell" }, [
+      _c(
+        "a",
+        {
+          attrs: {
+            "data-content": "Sell",
+            "data-toggle": "popover",
+            href: "#sell-popup"
+          }
+        },
+        [_vm._v("S")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "li",
+      {
+        staticClass: "icon-market-depth icon-bg-blank",
+        attrs: { "data-content": "Market Depth", "data-toggle": "popover" }
+      },
+      [
+        _c("a", { attrs: { href: "#market-depth" } }, [
+          _c("i", { staticClass: "las la-bars" })
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "overlay buy-popup", attrs: { id: "buy-popup" } },
+      [
+        _c("div", { staticClass: "popup text-center" }, [
+          _c("a", { staticClass: "close", attrs: { href: "" } }, [_vm._v("×")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "content" }, [
+            _c("div", { staticClass: "popup-header" }, [
+              _c("div", { staticClass: "row" }, [
+                _c(
+                  "div",
+                  { staticClass: "col-sm-6 col-6 popup-header-left text-left" },
+                  [_c("span", [_vm._v("HDB Financial")])]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "col-sm-6 col-6 popup-header-right text-right"
+                  },
+                  [_c("span", [_vm._v("ISIN1554842345")])]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "circuit-section margin-top-10" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-sm-4 col-6" }, [
+                  _c("span", [
+                    _vm._v("Lower Circuit: "),
+                    _c("label", [_vm._v("60")])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-sm-4 col-6" }, [
+                  _c("span", [
+                    _vm._v("Upper Circuit: "),
+                    _c("label", [_vm._v("140")])
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "form-field-section margin-top-30 padding-bottom-10"
+              },
+              [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-4 col-4 field-common" }, [
+                    _c("form", { attrs: { action: "" } }, [
+                      _c("label", { attrs: { for: "buy-price" } }, [
+                        _vm._v("Price")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control",
+                        attrs: {
+                          id: "buy-price",
+                          min: "0",
+                          step: "1",
+                          type: "number"
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-4 col-4 field-common" }, [
+                    _c("form", { attrs: { action: "" } }, [
+                      _c("label", { attrs: { for: "buy-qty-price" } }, [
+                        _vm._v("Qty.")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control",
+                        attrs: {
+                          id: "buy-qty-price",
+                          min: "1",
+                          step: "1",
+                          type: "number"
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-4 col-4 field-common" }, [
+                    _c("form", { attrs: { action: "" } }, [
+                      _c("label", { attrs: { for: "buy-lot-qty-price" } }, [
+                        _vm._v("Your Lot Qty")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control",
+                        attrs: {
+                          id: "buy-lot-qty-price",
+                          min: "1",
+                          step: "1",
+                          type: "number"
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "info-tool-tip-wrp" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "info-tool-tip",
+                          attrs: {
+                            "data-content":
+                              "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+                            "data-toggle": "popover",
+                            href: "javascript:void(0)"
+                          }
+                        },
+                        [_c("i", { staticClass: "las la-info-circle" })]
+                      )
+                    ])
+                  ])
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "sc-last margin-top-20" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-sm-8 col-8" }, [
+                  _c("dl", { staticClass: "d-flex align-items-center" }, [
+                    _c("dd", [_vm._v("Available in:")]),
+                    _vm._v(" "),
+                    _c("dt", [
+                      _vm._v("Only NSDL "),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "info-tool-tip",
+                          attrs: {
+                            "data-content":
+                              "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+                            "data-toggle": "popover",
+                            href: "javascript:void(0)"
+                          }
+                        },
+                        [_c("i", { staticClass: "las la-info-circle" })]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-sm-4 col-4" }, [
+                  _c("dl", { staticClass: "d-flex align-items-center" }, [
+                    _c("dd", [_vm._v("Min Lot:")]),
+                    _vm._v(" "),
+                    _c("dt", [
+                      _vm._v("1 "),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "info-tool-tip",
+                          attrs: {
+                            "data-content":
+                              "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+                            "data-toggle": "popover",
+                            href: "javascript:void(0)"
+                          }
+                        },
+                        [_c("i", { staticClass: "las la-info-circle" })]
+                      )
+                    ])
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "buy-sell-btn d-flex align-items-center margin-top-30 margin-bottom-20"
+              },
+              [
+                _c("div", { staticClass: "buy-btn-wrp" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "buy-btn get-started-btn3",
+                      attrs: { href: "#buy-popup2" }
+                    },
+                    [_vm._v("BUY")]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "sell-btn-wrp" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "cancel-btn get-started-btn3",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("CANCEL")]
+                  )
+                ])
+              ]
+            )
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "overlay buy-popup", attrs: { id: "buy-popup2" } },
+      [
+        _c("div", { staticClass: "popup text-center" }, [
+          _c("a", { staticClass: "close", attrs: { href: "" } }, [_vm._v("×")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "content" }, [
+            _c("div", { staticClass: "popup-header" }, [
+              _c("div", { staticClass: "row" }, [
+                _c(
+                  "div",
+                  { staticClass: "col-sm-6 col-6 popup-header-left text-left" },
+                  [_c("span", [_vm._v("HDB Financial")])]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "col-sm-6 col-6 popup-header-right text-right"
+                  },
+                  [_c("span", [_vm._v("ISIN1554842345")])]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("br"),
+            _c("br"),
+            _c("br"),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v("Are you loren lorem lorem want to lorem lorem comfirm? ")
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "buy-sell-btn d-flex align-items-center margin-top-30 margin-bottom-20"
+              },
+              [
+                _c("div", { staticClass: "buy-btn-wrp" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "buy-btn get-started-btn3",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("CONFIRM")]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "sell-btn-wrp" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "cancel-btn get-started-btn3",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("CANCEL")]
+                  )
+                ])
+              ]
+            )
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "overlay buy-popup sell-popup",
+        attrs: { id: "sell-popup" }
+      },
+      [
+        _c("div", { staticClass: "popup text-center" }, [
+          _c("a", { staticClass: "close", attrs: { href: "" } }, [_vm._v("×")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "content" }, [
+            _c("div", { staticClass: "popup-header" }, [
+              _c("div", { staticClass: "row" }, [
+                _c(
+                  "div",
+                  { staticClass: "col-sm-6 col-6 popup-header-left text-left" },
+                  [_c("span", [_vm._v("HDB Financial")])]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "col-sm-6 col-6 popup-header-right text-right"
+                  },
+                  [_c("span", [_vm._v("ISIN1554842345")])]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "circuit-section margin-top-10" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-lg-4 col-6" }, [
+                  _c("span", [
+                    _vm._v("Lower Circuit: "),
+                    _c("label", [_vm._v("60")])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-4 col-6" }, [
+                  _c("span", [
+                    _vm._v("Upper Circuit: "),
+                    _c("label", [_vm._v("140")])
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "form-field-section margin-top-30 padding-bottom-10"
+              },
+              [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-4 col-4 field-common" }, [
+                    _c("form", { attrs: { action: "" } }, [
+                      _c("label", { attrs: { for: "buy-price" } }, [
+                        _vm._v("Price")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control",
+                        attrs: {
+                          id: "sell-price",
+                          min: "1",
+                          step: "1",
+                          type: "number"
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-4 col-4 field-common" }, [
+                    _c("form", { attrs: { action: "" } }, [
+                      _c("label", { attrs: { for: "sell-qty-price" } }, [
+                        _vm._v("Qty.")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control",
+                        attrs: {
+                          id: "sell-qty-price",
+                          min: "1",
+                          step: "1",
+                          type: "number"
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-4 col-4 field-common" }, [
+                    _c("form", { attrs: { action: "" } }, [
+                      _c("label", { attrs: { for: "sell-lot-qty-price" } }, [
+                        _vm._v("Your Lot Qty")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control",
+                        attrs: {
+                          id: "sell-lot-qty-price",
+                          min: "1",
+                          step: "1",
+                          type: "number"
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "info-tool-tip-wrp" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "info-tool-tip",
+                          attrs: {
+                            "data-content":
+                              "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+                            "data-toggle": "popover",
+                            href: "javascript:void(0)"
+                          }
+                        },
+                        [_c("i", { staticClass: "las la-info-circle" })]
+                      )
+                    ])
+                  ])
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "sc-last margin-top-20" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-sm-8 col-8" }, [
+                  _c("dl", { staticClass: "d-flex align-items-center" }, [
+                    _c("dd", [_vm._v("Available in:")]),
+                    _vm._v(" "),
+                    _c("dt", [
+                      _vm._v("NSDL and CDSL "),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "info-tool-tip",
+                          attrs: {
+                            "data-content":
+                              "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+                            "data-toggle": "popover",
+                            href: "javascript:void(0)"
+                          }
+                        },
+                        [_c("i", { staticClass: "las la-info-circle" })]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-sm-4 col-4" }, [
+                  _c("dl", { staticClass: "d-flex align-items-center" }, [
+                    _c("dd", [_vm._v("Min Lot:")]),
+                    _vm._v(" "),
+                    _c("dt", [
+                      _vm._v("1 "),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "info-tool-tip",
+                          attrs: {
+                            "data-content":
+                              "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+                            "data-toggle": "popover",
+                            href: "javascript:void(0)"
+                          }
+                        },
+                        [_c("i", { staticClass: "las la-info-circle" })]
+                      )
+                    ])
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "buy-sell-btn d-flex align-items-center margin-top-30 margin-bottom-20"
+              },
+              [
+                _c("div", { staticClass: "buy-btn-wrp" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "sell-btn get-started-btn3",
+                      attrs: { href: "#sell-popup2" }
+                    },
+                    [_vm._v("SELL")]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "sell-btn-wrp" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "cancel-btn get-started-btn3",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("CANCEL")]
+                  )
+                ])
+              ]
+            )
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "overlay buy-popup", attrs: { id: "sell-popup2" } },
+      [
+        _c("div", { staticClass: "popup text-center" }, [
+          _c("a", { staticClass: "close", attrs: { href: "" } }, [_vm._v("×")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "content" }, [
+            _c("div", { staticClass: "popup-header" }, [
+              _c("div", { staticClass: "row" }, [
+                _c(
+                  "div",
+                  { staticClass: "col-sm-6 col-6 popup-header-left text-left" },
+                  [_c("span", [_vm._v("HDB Financial")])]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "col-sm-6 col-6 popup-header-right text-right"
+                  },
+                  [_c("span", [_vm._v("ISIN1554842345")])]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("br"),
+            _c("br"),
+            _c("br"),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v("Are you loren lorem lorem want to lorem lorem comfirm? ")
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "buy-sell-btn d-flex align-items-center margin-top-30 margin-bottom-20"
+              },
+              [
+                _c("div", { staticClass: "buy-btn-wrp" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "sell-btn get-started-btn3",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("CONFIRM")]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "sell-btn-wrp" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "cancel-btn get-started-btn3",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("CANCEL")]
+                  )
+                ])
+              ]
+            )
+          ])
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -25462,746 +29381,6 @@ var render = function() {
   )
 }
 var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Home.vue?vue&type=template&id=63cd6604&scoped=true&":
-/*!**************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Home.vue?vue&type=template&id=63cd6604&scoped=true& ***!
-  \**************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("MasterHeader"),
-      _vm._v(" "),
-      _vm.errors.length
-        ? _c("div", { staticClass: "alert alert-danger" }, [
-            _c(
-              "ul",
-              { staticClass: "mb-0" },
-              _vm._l(_vm.errors, function(error, index) {
-                return _c("li", { key: index }, [_vm._v(_vm._s(error))])
-              }),
-              0
-            )
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _c("div", { staticClass: "main main-dashboard" }, [
-        _c("div", { staticClass: "container1" }, [
-          _c(
-            "div",
-            {
-              staticClass:
-                "dashboard-wrp d-flex align-items-top d-flex-none-mob"
-            },
-            [
-              _c("div", { staticClass: "dashboard-left" }, [
-                _c("div", { staticClass: "left-wrp" }, [
-                  _vm._m(0),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "circuit-list" }, [
-                    _c(
-                      "ul",
-                      { attrs: { id: "scripts-listing" } },
-                      _vm._l(_vm.scripts, function(value) {
-                        return _c("li", [
-                          _c("div", { staticClass: "list-name" }, [
-                            _c("a", [
-                              _vm._v(" " + _vm._s(value.script_display_name))
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _vm._m(1, true)
-                        ])
-                      }),
-                      0
-                    )
-                  ])
-                ])
-              ])
-            ]
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _vm._m(2),
-      _vm._v(" "),
-      _vm._m(3),
-      _vm._v(" "),
-      _vm._m(4),
-      _vm._v(" "),
-      _vm._m(5)
-    ],
-    1
-  )
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "search-section" }, [
-      _c("form", { attrs: { action: "" } }, [
-        _c("input", { attrs: { placeholder: "Search", type: "text" } })
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "list-icons" }, [
-      _c("ul", [
-        _c("li", { staticClass: "icon-buy" }, [
-          _c(
-            "a",
-            {
-              attrs: {
-                "data-content": "Buy",
-                "data-toggle": "popover",
-                href: "#buy-popup"
-              }
-            },
-            [_vm._v("B")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "icon-sell" }, [
-          _c(
-            "a",
-            {
-              attrs: {
-                "data-content": "Sell",
-                "data-toggle": "popover",
-                href: "#sell-popup"
-              }
-            },
-            [_vm._v("S")]
-          )
-        ]),
-        _vm._v(" "),
-        _c(
-          "li",
-          {
-            staticClass: "icon-market-depth icon-bg-blank",
-            attrs: { "data-content": "Market Depth", "data-toggle": "popover" }
-          },
-          [
-            _c("a", { attrs: { href: "#market-depth" } }, [
-              _c("i", { staticClass: "las la-bars" })
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c("li", { staticClass: "icon-more icon-bg-blank" }, [
-          _c(
-            "a",
-            {
-              attrs: {
-                "data-content": "Info",
-                "data-toggle": "popover",
-                href: "info.html"
-              }
-            },
-            [_c("i", { staticClass: "las la-ellipsis-v" })]
-          )
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "overlay buy-popup", attrs: { id: "buy-popup" } },
-      [
-        _c("div", { staticClass: "popup text-center" }, [
-          _c("a", { staticClass: "close", attrs: { href: "" } }, [_vm._v("×")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "content" }, [
-            _c("div", { staticClass: "popup-header" }, [
-              _c("div", { staticClass: "row" }, [
-                _c(
-                  "div",
-                  { staticClass: "col-sm-6 col-6 popup-header-left text-left" },
-                  [_c("span", [_vm._v("HDB Financial")])]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "col-sm-6 col-6 popup-header-right text-right"
-                  },
-                  [_c("span", [_vm._v("ISIN1554842345")])]
-                )
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "circuit-section margin-top-10" }, [
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-sm-4 col-6" }, [
-                  _c("span", [
-                    _vm._v("Lower Circuit: "),
-                    _c("label", [_vm._v("60")])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-sm-4 col-6" }, [
-                  _c("span", [
-                    _vm._v("Upper Circuit: "),
-                    _c("label", [_vm._v("140")])
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "form-field-section margin-top-30 padding-bottom-10"
-              },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-sm-4 col-4 field-common" }, [
-                    _c("form", { attrs: { action: "" } }, [
-                      _c("label", { attrs: { for: "buy-price" } }, [
-                        _vm._v("Price")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        staticClass: "form-control",
-                        attrs: {
-                          id: "buy-price",
-                          min: "0",
-                          step: "1",
-                          type: "number"
-                        }
-                      })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-sm-4 col-4 field-common" }, [
-                    _c("form", { attrs: { action: "" } }, [
-                      _c("label", { attrs: { for: "qty-price" } }, [
-                        _vm._v("Qty.")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        staticClass: "form-control",
-                        attrs: {
-                          id: "qty-price",
-                          min: "1",
-                          step: "1",
-                          type: "number"
-                        }
-                      })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-sm-4 col-4 field-common" }, [
-                    _c("form", { attrs: { action: "" } }, [
-                      _c("label", { attrs: { for: "lot-qty-price" } }, [
-                        _vm._v("Your Lot Qty")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        staticClass: "form-control",
-                        attrs: {
-                          id: "lot-qty-price",
-                          min: "1",
-                          step: "1",
-                          type: "number"
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "info-tool-tip-wrp" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "info-tool-tip",
-                          attrs: {
-                            "data-content":
-                              "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-                            "data-toggle": "popover",
-                            href: "javascript:void(0)"
-                          }
-                        },
-                        [_c("i", { staticClass: "las la-info-circle" })]
-                      )
-                    ])
-                  ])
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "sc-last margin-top-20" }, [
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-sm-8 col-8" }, [
-                  _c("dl", { staticClass: "d-flex align-items-center" }, [
-                    _c("dd", [_vm._v("Available in:")]),
-                    _vm._v(" "),
-                    _c("dt", [
-                      _vm._v("Only NSDL "),
-                      _c(
-                        "a",
-                        {
-                          staticClass: "info-tool-tip",
-                          attrs: {
-                            "data-content":
-                              "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-                            "data-toggle": "popover",
-                            href: "javascript:void(0)"
-                          }
-                        },
-                        [_c("i", { staticClass: "las la-info-circle" })]
-                      )
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-sm-4 col-4" }, [
-                  _c("dl", { staticClass: "d-flex align-items-center" }, [
-                    _c("dd", [_vm._v("Min Lot:")]),
-                    _vm._v(" "),
-                    _c("dt", [
-                      _vm._v("1 "),
-                      _c(
-                        "a",
-                        {
-                          staticClass: "info-tool-tip",
-                          attrs: {
-                            "data-content":
-                              "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-                            "data-toggle": "popover",
-                            href: "javascript:void(0)"
-                          }
-                        },
-                        [_c("i", { staticClass: "las la-info-circle" })]
-                      )
-                    ])
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "buy-sell-btn d-flex align-items-center margin-top-30 margin-bottom-20"
-              },
-              [
-                _c("div", { staticClass: "buy-btn-wrp" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "buy-btn get-started-btn3",
-                      attrs: { href: "#buy-popup2" }
-                    },
-                    [_vm._v("BUY")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "sell-btn-wrp" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "cancel-btn get-started-btn3",
-                      attrs: { href: "#" }
-                    },
-                    [_vm._v("CANCEL")]
-                  )
-                ])
-              ]
-            )
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "overlay buy-popup", attrs: { id: "buy-popup2" } },
-      [
-        _c("div", { staticClass: "popup text-center" }, [
-          _c("a", { staticClass: "close", attrs: { href: "" } }, [_vm._v("×")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "content" }, [
-            _c("div", { staticClass: "popup-header" }, [
-              _c("div", { staticClass: "row" }, [
-                _c(
-                  "div",
-                  { staticClass: "col-sm-6 col-6 popup-header-left text-left" },
-                  [_c("span", [_vm._v("HDB Financial")])]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "col-sm-6 col-6 popup-header-right text-right"
-                  },
-                  [_c("span", [_vm._v("ISIN1554842345")])]
-                )
-              ])
-            ]),
-            _vm._v(" "),
-            _c("br"),
-            _c("br"),
-            _c("br"),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v("Are you loren lorem lorem want to lorem lorem comfirm? ")
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "buy-sell-btn d-flex align-items-center margin-top-30 margin-bottom-20"
-              },
-              [
-                _c("div", { staticClass: "buy-btn-wrp" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "buy-btn get-started-btn3",
-                      attrs: { href: "#" }
-                    },
-                    [_vm._v("CONFIRM")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "sell-btn-wrp" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "cancel-btn get-started-btn3",
-                      attrs: { href: "#" }
-                    },
-                    [_vm._v("CANCEL")]
-                  )
-                ])
-              ]
-            )
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "overlay buy-popup sell-popup",
-        attrs: { id: "sell-popup" }
-      },
-      [
-        _c("div", { staticClass: "popup text-center" }, [
-          _c("a", { staticClass: "close", attrs: { href: "" } }, [_vm._v("×")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "content" }, [
-            _c("div", { staticClass: "popup-header" }, [
-              _c("div", { staticClass: "row" }, [
-                _c(
-                  "div",
-                  { staticClass: "col-sm-6 col-6 popup-header-left text-left" },
-                  [_c("span", [_vm._v("HDB Financial")])]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "col-sm-6 col-6 popup-header-right text-right"
-                  },
-                  [_c("span", [_vm._v("ISIN1554842345")])]
-                )
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "circuit-section margin-top-10" }, [
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-lg-4 col-6" }, [
-                  _c("span", [
-                    _vm._v("Lower Circuit: "),
-                    _c("label", [_vm._v("60")])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-4 col-6" }, [
-                  _c("span", [
-                    _vm._v("Upper Circuit: "),
-                    _c("label", [_vm._v("140")])
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "form-field-section margin-top-30 padding-bottom-10"
-              },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-sm-4 col-4 field-common" }, [
-                    _c("form", { attrs: { action: "" } }, [
-                      _c("label", { attrs: { for: "buy-price" } }, [
-                        _vm._v("Price")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        staticClass: "form-control",
-                        attrs: {
-                          id: "buy-price",
-                          min: "1",
-                          step: "1",
-                          type: "number"
-                        }
-                      })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-sm-4 col-4 field-common" }, [
-                    _c("form", { attrs: { action: "" } }, [
-                      _c("label", { attrs: { for: "qty-price" } }, [
-                        _vm._v("Qty.")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        staticClass: "form-control",
-                        attrs: {
-                          id: "qty-price",
-                          min: "1",
-                          step: "1",
-                          type: "number"
-                        }
-                      })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-sm-4 col-4 field-common" }, [
-                    _c("form", { attrs: { action: "" } }, [
-                      _c("label", { attrs: { for: "lot-qty-price" } }, [
-                        _vm._v("Your Lot Qty")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        staticClass: "form-control",
-                        attrs: {
-                          id: "lot-qty-price",
-                          min: "1",
-                          step: "1",
-                          type: "number"
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "info-tool-tip-wrp" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "info-tool-tip",
-                          attrs: {
-                            "data-content":
-                              "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-                            "data-toggle": "popover",
-                            href: "javascript:void(0)"
-                          }
-                        },
-                        [_c("i", { staticClass: "las la-info-circle" })]
-                      )
-                    ])
-                  ])
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "sc-last margin-top-20" }, [
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-sm-8 col-8" }, [
-                  _c("dl", { staticClass: "d-flex align-items-center" }, [
-                    _c("dd", [_vm._v("Available in:")]),
-                    _vm._v(" "),
-                    _c("dt", [
-                      _vm._v("NSDL and CDSL "),
-                      _c(
-                        "a",
-                        {
-                          staticClass: "info-tool-tip",
-                          attrs: {
-                            "data-content":
-                              "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-                            "data-toggle": "popover",
-                            href: "javascript:void(0)"
-                          }
-                        },
-                        [_c("i", { staticClass: "las la-info-circle" })]
-                      )
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-sm-4 col-4" }, [
-                  _c("dl", { staticClass: "d-flex align-items-center" }, [
-                    _c("dd", [_vm._v("Min Lot:")]),
-                    _vm._v(" "),
-                    _c("dt", [
-                      _vm._v("1 "),
-                      _c(
-                        "a",
-                        {
-                          staticClass: "info-tool-tip",
-                          attrs: {
-                            "data-content":
-                              "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-                            "data-toggle": "popover",
-                            href: "javascript:void(0)"
-                          }
-                        },
-                        [_c("i", { staticClass: "las la-info-circle" })]
-                      )
-                    ])
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "buy-sell-btn d-flex align-items-center margin-top-30 margin-bottom-20"
-              },
-              [
-                _c("div", { staticClass: "buy-btn-wrp" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "sell-btn get-started-btn3",
-                      attrs: { href: "#sell-popup2" }
-                    },
-                    [_vm._v("SELL")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "sell-btn-wrp" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "cancel-btn get-started-btn3",
-                      attrs: { href: "#" }
-                    },
-                    [_vm._v("CANCEL")]
-                  )
-                ])
-              ]
-            )
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "overlay buy-popup", attrs: { id: "sell-popup2" } },
-      [
-        _c("div", { staticClass: "popup text-center" }, [
-          _c("a", { staticClass: "close", attrs: { href: "" } }, [_vm._v("×")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "content" }, [
-            _c("div", { staticClass: "popup-header" }, [
-              _c("div", { staticClass: "row" }, [
-                _c(
-                  "div",
-                  { staticClass: "col-sm-6 col-6 popup-header-left text-left" },
-                  [_c("span", [_vm._v("HDB Financial")])]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "col-sm-6 col-6 popup-header-right text-right"
-                  },
-                  [_c("span", [_vm._v("ISIN1554842345")])]
-                )
-              ])
-            ]),
-            _vm._v(" "),
-            _c("br"),
-            _c("br"),
-            _c("br"),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v("Are you loren lorem lorem want to lorem lorem comfirm? ")
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "buy-sell-btn d-flex align-items-center margin-top-30 margin-bottom-20"
-              },
-              [
-                _c("div", { staticClass: "buy-btn-wrp" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "sell-btn get-started-btn3",
-                      attrs: { href: "#" }
-                    },
-                    [_vm._v("CONFIRM")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "sell-btn-wrp" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "cancel-btn get-started-btn3",
-                      attrs: { href: "#" }
-                    },
-                    [_vm._v("CANCEL")]
-                  )
-                ])
-              ]
-            )
-          ])
-        ])
-      ]
-    )
-  }
-]
 render._withStripped = true
 
 
@@ -86829,6 +90008,213 @@ if (token) {
 
 /***/ }),
 
+/***/ "./resources/js/components/Home.vue":
+/*!******************************************!*\
+  !*** ./resources/js/components/Home.vue ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Home_vue_vue_type_template_id_f2b6376c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Home.vue?vue&type=template&id=f2b6376c&scoped=true& */ "./resources/js/components/Home.vue?vue&type=template&id=f2b6376c&scoped=true&");
+/* harmony import */ var _Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home.vue?vue&type=script&lang=js& */ "./resources/js/components/Home.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Home_vue_vue_type_template_id_f2b6376c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Home_vue_vue_type_template_id_f2b6376c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "f2b6376c",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Home.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Home.vue?vue&type=script&lang=js&":
+/*!*******************************************************************!*\
+  !*** ./resources/js/components/Home.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Home.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Home.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Home.vue?vue&type=template&id=f2b6376c&scoped=true&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/Home.vue?vue&type=template&id=f2b6376c&scoped=true& ***!
+  \*************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_template_id_f2b6376c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Home.vue?vue&type=template&id=f2b6376c&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Home.vue?vue&type=template&id=f2b6376c&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_template_id_f2b6376c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_template_id_f2b6376c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Info.vue":
+/*!******************************************!*\
+  !*** ./resources/js/components/Info.vue ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Info_vue_vue_type_template_id_a38a56ce_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Info.vue?vue&type=template&id=a38a56ce&scoped=true& */ "./resources/js/components/Info.vue?vue&type=template&id=a38a56ce&scoped=true&");
+/* harmony import */ var _Info_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Info.vue?vue&type=script&lang=js& */ "./resources/js/components/Info.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Info_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Info_vue_vue_type_template_id_a38a56ce_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Info_vue_vue_type_template_id_a38a56ce_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "a38a56ce",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Info.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Info.vue?vue&type=script&lang=js&":
+/*!*******************************************************************!*\
+  !*** ./resources/js/components/Info.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Info_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Info.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Info.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Info_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Info.vue?vue&type=template&id=a38a56ce&scoped=true&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/Info.vue?vue&type=template&id=a38a56ce&scoped=true& ***!
+  \*************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Info_vue_vue_type_template_id_a38a56ce_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Info.vue?vue&type=template&id=a38a56ce&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Info.vue?vue&type=template&id=a38a56ce&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Info_vue_vue_type_template_id_a38a56ce_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Info_vue_vue_type_template_id_a38a56ce_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Orders.vue":
+/*!********************************************!*\
+  !*** ./resources/js/components/Orders.vue ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Orders_vue_vue_type_template_id_aebdd2e0_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Orders.vue?vue&type=template&id=aebdd2e0&scoped=true& */ "./resources/js/components/Orders.vue?vue&type=template&id=aebdd2e0&scoped=true&");
+/* harmony import */ var _Orders_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Orders.vue?vue&type=script&lang=js& */ "./resources/js/components/Orders.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Orders_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Orders_vue_vue_type_template_id_aebdd2e0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Orders_vue_vue_type_template_id_aebdd2e0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "aebdd2e0",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Orders.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Orders.vue?vue&type=script&lang=js&":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/Orders.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Orders_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Orders.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Orders.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Orders_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Orders.vue?vue&type=template&id=aebdd2e0&scoped=true&":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/components/Orders.vue?vue&type=template&id=aebdd2e0&scoped=true& ***!
+  \***************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Orders_vue_vue_type_template_id_aebdd2e0_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Orders.vue?vue&type=template&id=aebdd2e0&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Orders.vue?vue&type=template&id=aebdd2e0&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Orders_vue_vue_type_template_id_aebdd2e0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Orders_vue_vue_type_template_id_aebdd2e0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/layouts/MasterHeader.vue":
 /*!***********************************************!*\
   !*** ./resources/js/layouts/MasterHeader.vue ***!
@@ -86916,6 +90302,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/layouts/ScriptLists.vue":
+/*!**********************************************!*\
+  !*** ./resources/js/layouts/ScriptLists.vue ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ScriptLists_vue_vue_type_template_id_3a091fd6_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ScriptLists.vue?vue&type=template&id=3a091fd6&scoped=true& */ "./resources/js/layouts/ScriptLists.vue?vue&type=template&id=3a091fd6&scoped=true&");
+/* harmony import */ var _ScriptLists_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ScriptLists.vue?vue&type=script&lang=js& */ "./resources/js/layouts/ScriptLists.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ScriptLists_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ScriptLists_vue_vue_type_template_id_3a091fd6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ScriptLists_vue_vue_type_template_id_3a091fd6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "3a091fd6",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/layouts/ScriptLists.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/layouts/ScriptLists.vue?vue&type=script&lang=js&":
+/*!***********************************************************************!*\
+  !*** ./resources/js/layouts/ScriptLists.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ScriptLists_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./ScriptLists.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/layouts/ScriptLists.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ScriptLists_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/layouts/ScriptLists.vue?vue&type=template&id=3a091fd6&scoped=true&":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/layouts/ScriptLists.vue?vue&type=template&id=3a091fd6&scoped=true& ***!
+  \*****************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ScriptLists_vue_vue_type_template_id_3a091fd6_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./ScriptLists.vue?vue&type=template&id=3a091fd6&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/layouts/ScriptLists.vue?vue&type=template&id=3a091fd6&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ScriptLists_vue_vue_type_template_id_3a091fd6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ScriptLists_vue_vue_type_template_id_3a091fd6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/middlewares/auth.js":
 /*!******************************************!*\
   !*** ./resources/js/middlewares/auth.js ***!
@@ -86982,16 +90437,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var _middlewares_auth_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./middlewares/auth.js */ "./resources/js/middlewares/auth.js");
-/* harmony import */ var _js_views_Home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/js/views/Home */ "./resources/js/views/Home.vue");
+/* harmony import */ var _js_components_Home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/js/components/Home */ "./resources/js/components/Home.vue");
 /* harmony import */ var _js_views_About__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/js/views/About */ "./resources/js/views/About.vue");
 /* harmony import */ var _js_views_Auth_Login__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/js/views/Auth/Login */ "./resources/js/views/Auth/Login.vue");
 /* harmony import */ var _js_views_Auth_Register__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/js/views/Auth/Register */ "./resources/js/views/Auth/Register.vue");
 /* harmony import */ var _views_Auth_LoginOtp__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./views/Auth/LoginOtp */ "./resources/js/views/Auth/LoginOtp.vue");
+/* harmony import */ var _components_Orders__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/Orders */ "./resources/js/components/Orders.vue");
+/* harmony import */ var _components_Info__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/Info */ "./resources/js/components/Info.vue");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
 
 
 
@@ -87007,7 +90466,21 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   routes: [{
     path: '/',
     name: 'Home',
-    component: _js_views_Home__WEBPACK_IMPORTED_MODULE_3__["default"],
+    component: _js_components_Home__WEBPACK_IMPORTED_MODULE_3__["default"],
+    meta: {
+      middleware: _middlewares_auth_js__WEBPACK_IMPORTED_MODULE_2__["default"]
+    }
+  }, {
+    path: '/orders',
+    name: 'Orders',
+    component: _components_Orders__WEBPACK_IMPORTED_MODULE_8__["default"],
+    meta: {
+      middleware: _middlewares_auth_js__WEBPACK_IMPORTED_MODULE_2__["default"]
+    }
+  }, {
+    path: '/info',
+    name: 'Info',
+    component: _components_Info__WEBPACK_IMPORTED_MODULE_9__["default"],
     meta: {
       middleware: _middlewares_auth_js__WEBPACK_IMPORTED_MODULE_2__["default"]
     }
@@ -87872,75 +91345,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VerifyOtp_vue_vue_type_template_id_791c14ec_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VerifyOtp_vue_vue_type_template_id_791c14ec_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/views/Home.vue":
-/*!*************************************!*\
-  !*** ./resources/js/views/Home.vue ***!
-  \*************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Home_vue_vue_type_template_id_63cd6604_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Home.vue?vue&type=template&id=63cd6604&scoped=true& */ "./resources/js/views/Home.vue?vue&type=template&id=63cd6604&scoped=true&");
-/* harmony import */ var _Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home.vue?vue&type=script&lang=js& */ "./resources/js/views/Home.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Home_vue_vue_type_template_id_63cd6604_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Home_vue_vue_type_template_id_63cd6604_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  "63cd6604",
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/views/Home.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/views/Home.vue?vue&type=script&lang=js&":
-/*!**************************************************************!*\
-  !*** ./resources/js/views/Home.vue?vue&type=script&lang=js& ***!
-  \**************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Home.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Home.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/views/Home.vue?vue&type=template&id=63cd6604&scoped=true&":
-/*!********************************************************************************!*\
-  !*** ./resources/js/views/Home.vue?vue&type=template&id=63cd6604&scoped=true& ***!
-  \********************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_template_id_63cd6604_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Home.vue?vue&type=template&id=63cd6604&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Home.vue?vue&type=template&id=63cd6604&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_template_id_63cd6604_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_template_id_63cd6604_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

@@ -19,7 +19,9 @@
                                         <li>
                                             <router-link to="/">Desk</router-link>
                                         </li>
-                                        <li><a href="#">Orders</a></li>
+                                        <li>
+                                            <router-link to="/orders">Orders</router-link>
+                                        </li>
 
                                     </ul>
                                 </nav><!-- .nav-menu -->

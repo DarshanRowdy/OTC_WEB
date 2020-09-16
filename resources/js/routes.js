@@ -2,11 +2,13 @@ import Vue from 'vue';
 import VueRouter from "vue-router";
 
 import auth from './middlewares/auth.js';
-import Home from "@/js/views/Home";
+import Home from "@/js/components/Home";
 import About from "@/js/views/About";
 import Login from "@/js/views/Auth/Login";
 import Register from "@/js/views/Auth/Register";
 import LoginOtp from "./views/Auth/LoginOtp";
+import Orders from "./components/Orders";
+import Info from "./components/Info";
 
 Vue.use(VueRouter);
 
@@ -20,7 +22,22 @@ const router = new VueRouter({
             meta: {
                 middleware: auth,
             }
-
+        },
+        {
+            path: '/orders',
+            name: 'Orders',
+            component: Orders,
+            meta: {
+                middleware: auth,
+            }
+        },
+        {
+            path: '/info',
+            name: 'Info',
+            component: Info,
+            meta: {
+                middleware: auth,
+            }
         },
         {
             path: '/about',
