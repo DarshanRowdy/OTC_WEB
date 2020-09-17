@@ -51,7 +51,7 @@ export default {
             }
 
             var is_login_with_otp = 0;
-            if(this.from_where === 'login_from_otp'){
+            if(this.from_where === 'login_with_otp'){
                 is_login_with_otp = 1;
             }
 
@@ -66,7 +66,9 @@ export default {
                 } else if(this.from_were === 'register') {
                     this.$parent.showConfirmation();
                 } else if(this.from_where === 'login_with_otp') {
-                    alert('login with OTP success');
+                    let userObj = JSON.stringify(response.data.data.user)
+                    localStorage.setItem('userObj', userObj);
+                    this.$router.push('/');
                 }
             }).catch(error => {
                 this.errors.push(error.response.data.message)

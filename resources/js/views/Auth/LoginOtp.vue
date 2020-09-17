@@ -1,6 +1,6 @@
 <template>
     <div>
-        <transition name="forgot-password">
+        <transition name="login-with-otp">
             <div class="modal-mask">
                 <div class="modal-wrapper">
                     <div class="modal-dialog" role="document">

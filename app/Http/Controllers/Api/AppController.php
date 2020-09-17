@@ -112,6 +112,7 @@ class AppController extends BaseApiController
             $this->checkValidate($request, $validFields);
             $mobile = $request->has('mobile') ? $request->mobile : '';
             $otp = $request->has('otp') ? $request->otp : '';
+            $is_login_with_otp = $request->has('is_login_with_otp') ? $request->is_login_with_otp : 0;
 
             $user = Users::query();
             $user->where(['user_mobile' => $mobile]);
@@ -123,7 +124,17 @@ class AppController extends BaseApiController
             }
             $userUpdate = Users::where('user_id', $userObj->user_id)->update(array('user_status' => 'active', 'otp' => null));
             if($userUpdate){
-                $this->_sendResponse([],'Mobile Verification complete successfully');
+                $response = [];
+                $message = 'Mobile Verification complete successfully';
+                if($is_login_with_otp == 1){
+                    $user_id = $userObj->user_id;
+                    $userQue = Users::query();
+                    $userQue->where('user_id', '=', $user_id);
+                    $userObj = $userQue->first();
+                    $response = ['user' => $userObj];
+                    $message = 'Login Successfully';
+                }
+                $this->_sendResponse($response,$message);
             }
             $this->_sendErrorResponse(500,'Please Try Again later');
         } catch (\Exception $exception){

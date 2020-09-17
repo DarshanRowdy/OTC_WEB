@@ -4422,7 +4422,7 @@ __webpack_require__.r(__webpack_exports__);
 
       var is_login_with_otp = 0;
 
-      if (this.from_where === 'login_from_otp') {
+      if (this.from_where === 'login_with_otp') {
         is_login_with_otp = 1;
       }
 
@@ -4437,7 +4437,10 @@ __webpack_require__.r(__webpack_exports__);
         } else if (_this.from_were === 'register') {
           _this.$parent.showConfirmation();
         } else if (_this.from_where === 'login_with_otp') {
-          alert('login with OTP success');
+          var userObj = JSON.stringify(response.data.data.user);
+          localStorage.setItem('userObj', userObj);
+
+          _this.$router.push('/');
         }
       })["catch"](function (error) {
         _this.errors.push(error.response.data.message);
@@ -28612,7 +28615,7 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("transition", { attrs: { name: "forgot-password" } }, [
+      _c("transition", { attrs: { name: "login-with-otp" } }, [
         _c("div", { staticClass: "modal-mask" }, [
           _c("div", { staticClass: "modal-wrapper" }, [
             _c(
