@@ -2193,179 +2193,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2376,11 +2203,24 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      errors: []
+      errors: [],
+      announcements: []
     };
   },
-  methods: {},
-  beforeMount: function beforeMount() {}
+  methods: {
+    getAnnouncement: function getAnnouncement() {
+      var _this = this;
+
+      axios.get('api/announcements').then(function (response) {
+        _this.announcements = response.data.data.announcements;
+      })["catch"](function (error) {
+        _this.errors.push(error.response.data.message);
+      });
+    }
+  },
+  beforeMount: function beforeMount() {
+    this.getAnnouncement();
+  }
 });
 
 /***/ }),
@@ -3573,11 +3413,173 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "ScriptLists",
   data: function data() {
     return {
       scripts: [],
+      search: '',
       errors: []
     };
   },
@@ -3589,6 +3591,18 @@ __webpack_require__.r(__webpack_exports__);
         _this.scripts = response.data.data.scripts;
       })["catch"](function (error) {
         _this.errors.push(error.response.data.message);
+      });
+    },
+    searchScript: function searchScript(event) {
+      var _this2 = this;
+
+      var data = {
+        search: this.search
+      };
+      axios.post('api/scripts', data).then(function (response) {
+        _this2.scripts = response.data.data.scripts;
+      })["catch"](function (error) {
+        _this2.errors.push(error.response.data.message);
       });
     }
   },
@@ -24892,13 +24906,40 @@ var render = function() {
                 1
               ),
               _vm._v(" "),
-              _vm._m(0)
+              _c("div", { staticClass: "dashboard-right" }, [
+                _c("section", { attrs: { id: "notice" } }, [
+                  _vm._m(0),
+                  _vm._v(" "),
+                  _c(
+                    "ul",
+                    _vm._l(_vm.announcements, function(announcement) {
+                      return _c("li", [
+                        _c("i", { staticClass: "las la-bullhorn" }),
+                        _vm._v(
+                          "\n                                " +
+                            _vm._s(announcement.announcement_list) +
+                            "\n                            "
+                        )
+                      ])
+                    }),
+                    0
+                  ),
+                  _vm._v(" "),
+                  _c("hr")
+                ]),
+                _vm._v(" "),
+                _vm._m(1),
+                _vm._v(" "),
+                _vm._m(2),
+                _vm._v(" "),
+                _c("hr"),
+                _vm._v(" "),
+                _vm._m(3)
+              ])
             ]
           )
         ])
-      ]),
-      _vm._v(" "),
-      _vm._m(1)
+      ])
     ],
     1
   )
@@ -24908,426 +24949,69 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "dashboard-right" }, [
-      _c("section", { attrs: { id: "notice" } }, [
-        _c("div", { staticClass: "section-header" }, [
-          _c("h2", [_vm._v("Announcements")])
-        ]),
-        _vm._v(" "),
-        _c("ul", [
-          _c("li", [
-            _c("i", { staticClass: "las la-bullhorn" }),
-            _vm._v(
-              " Company failed to meet regulatory requirements\n                                (Delisted).\n                            "
-            )
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("i", { staticClass: "las la-bullhorn" }),
-            _vm._v(
-              " Company failed to meet regulatory requirements\n                                (Delisted).\n                            "
-            )
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("i", { staticClass: "las la-bullhorn" }),
-            _vm._v(
-              " Company failed to meet regulatory requirements\n                                (Delisted).\n                            "
-            )
+    return _c("div", { staticClass: "section-header" }, [
+      _c("h2", [_vm._v("Announcements")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { attrs: { id: "dashcard" } }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-lg-4" }, [
+          _c("div", { staticClass: "stages" }, [
+            _c("h3", [
+              _vm._v(
+                "\n                                        Market Hours\n                                    "
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "icon" }, [
+              _c("i", { staticClass: "las la-clock" })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "data" }, [
+              _c("h4", [_vm._v("Mon-Sat")]),
+              _vm._v(" "),
+              _c("h4", [_vm._v("9:00 AM to 6:00 PM")])
+            ])
           ])
         ]),
         _vm._v(" "),
-        _c("hr")
-      ]),
-      _vm._v(" "),
-      _c("section", { attrs: { id: "dashcard" } }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-lg-4" }, [
-            _c("div", { staticClass: "stages" }, [
-              _c("h3", [
-                _vm._v(
-                  "\n                                        Market Hours\n                                    "
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "icon" }, [
-                _c("i", { staticClass: "las la-clock" })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "data" }, [
-                _c("h4", [_vm._v("Mon-Sat")]),
-                _vm._v(" "),
-                _c("h4", [_vm._v("9:00 AM to 6:00 PM")])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4" }, [
-            _c("div", { staticClass: "stages" }, [
-              _c("h3", [
-                _vm._v(
-                  "\n                                        Active Scripts\n                                    "
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "icon" }, [
-                _c("i", { staticClass: "las la-bars" })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "data" }, [_c("h4", [_vm._v("40")])])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4" }, [
-            _c("div", { staticClass: "stages" }, [
-              _c("h3", [
-                _vm._v(
-                  "\n                                        Lot Size\n                                    "
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "icon" }, [
-                _c("i", { staticClass: "las la-bars" })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "data" }, [
-                _c("h4", [_vm._v("No minimum lot size from our side")])
-              ])
+        _c("div", { staticClass: "col-lg-4" }, [
+          _c("div", { staticClass: "stages" }, [
+            _c("h3", [
+              _vm._v(
+                "\n                                        Active Scripts\n                                    "
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "icon" }, [
+              _c("i", { staticClass: "las la-bars" })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "data" }, [_c("h4", [_vm._v("40")])])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-4" }, [
+          _c("div", { staticClass: "stages" }, [
+            _c("h3", [
+              _vm._v(
+                "\n                                        Lot Size\n                                    "
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "icon" }, [
+              _c("i", { staticClass: "las la-bars" })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "data" }, [
+              _c("h4", [_vm._v("No minimum lot size from our side")])
             ])
           ])
         ])
-      ]),
-      _vm._v(" "),
-      _c("section", { attrs: { id: "howitworks" } }, [
-        _c("div", { staticClass: "section-header" }, [
-          _c("h2", [_vm._v("HOW IT WORKS")])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-lg-4" }, [
-            _c("div", { staticClass: "stages" }, [
-              _c("p", [
-                _c("img", {
-                  staticClass: "quote-sign-left",
-                  attrs: { alt: "", src: "assets/img/quote-sign-left.png" }
-                }),
-                _vm._v(
-                  "\n                                        1) Place Buy or Sell order during Market Hours\n                                        "
-                ),
-                _c("img", {
-                  staticClass: "quote-sign-right",
-                  attrs: { alt: "", src: "assets/img/quote-sign-right.png" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "icon" }, [
-                _c("i", {
-                  staticClass: "las la-shopping-cart",
-                  staticStyle: { color: "#15D295" }
-                })
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4" }, [
-            _c("div", { staticClass: "stages" }, [
-              _c("p", [
-                _c("img", {
-                  staticClass: "quote-sign-left",
-                  attrs: { alt: "", src: "assets/img/quote-sign-left.png" }
-                }),
-                _vm._v(
-                  "\n                                        2) Once your order is matched, we will confirm the deal from both parties\n                                        over the phone before initiating the settlement process.\n                                        "
-                ),
-                _c("img", {
-                  staticClass: "quote-sign-right",
-                  attrs: { alt: "", src: "assets/img/quote-sign-right.png" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "icon" }, [
-                _c("i", {
-                  staticClass: "las la-handshake",
-                  staticStyle: { color: "#15D295" }
-                })
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4" }, [
-            _c("div", { staticClass: "stages" }, [
-              _c("p", [
-                _c("img", {
-                  staticClass: "quote-sign-left",
-                  attrs: { alt: "", src: "assets/img/quote-sign-left.png" }
-                }),
-                _vm._v(
-                  "\n                                        3) Once the deal is locked, we will send the invoice to buyer. Buyer will\n                                        have to make payment to company’s account as per the invoice to initiate the\n                                        settlement.\n                                        "
-                ),
-                _c("img", {
-                  staticClass: "quote-sign-right",
-                  attrs: { alt: "", src: "assets/img/quote-sign-right.png" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "icon" }, [
-                _c("i", {
-                  staticClass: "las la-credit-card",
-                  staticStyle: { color: "#15D295" }
-                })
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4" }, [
-            _c("div", { staticClass: "stages" }, [
-              _c("p", [
-                _c("img", {
-                  staticClass: "quote-sign-left",
-                  attrs: { alt: "", src: "assets/img/quote-sign-left.png" }
-                }),
-                _vm._v(
-                  "\n                                        4) Once we receive the payment from buyer, We will intimate the seller to\n                                        transfer the shares into company’s account as per deal agreement.\n                                        "
-                ),
-                _c("img", {
-                  staticClass: "quote-sign-right",
-                  attrs: { alt: "", src: "assets/img/quote-sign-right.png" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "icon" }, [
-                _c("i", {
-                  staticClass: "las la-rupee-sign",
-                  staticStyle: { color: "#15D295" }
-                })
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4" }, [
-            _c("div", { staticClass: "stages" }, [
-              _c("p", [
-                _c("img", {
-                  staticClass: "quote-sign-left",
-                  attrs: { alt: "", src: "assets/img/quote-sign-left.png" }
-                }),
-                _vm._v(
-                  "\n                                        5) Once seller transfers the agreed quantity of shares.\n\n                                        "
-                ),
-                _c("img", {
-                  staticClass: "quote-sign-right",
-                  attrs: { alt: "", src: "assets/img/quote-sign-right.png" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "icon" }, [
-                _c("i", {
-                  staticClass: "las la-file-alt",
-                  staticStyle: { color: "#15D295" }
-                })
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4" }, [
-            _c("div", { staticClass: "stages" }, [
-              _c("p", [
-                _c("img", {
-                  staticClass: "quote-sign-left",
-                  attrs: { alt: "", src: "assets/img/quote-sign-left.png" }
-                }),
-                _vm._v("\n                                        6) "),
-                _c("b", [_vm._v(" We will settle the trade.")]),
-                _vm._v(
-                  " (By transferring shares to buyer and\n                                        funds to seller.)\n\n                                        "
-                ),
-                _c("img", {
-                  staticClass: "quote-sign-right",
-                  attrs: { alt: "", src: "assets/img/quote-sign-right.png" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "icon" }, [
-                _c("i", {
-                  staticClass: "las la-exchange-alt",
-                  staticStyle: { color: "#15D295" }
-                })
-              ])
-            ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("hr"),
-      _vm._v(" "),
-      _c("section", { attrs: { id: "notes" } }, [
-        _c("div", { staticClass: "section-header" }, [
-          _c("h2", [_vm._v("Notes")])
-        ]),
-        _vm._v(" "),
-        _c("ul", [
-          _c("li", [
-            _c("i", { staticClass: "las la-question-circle" }),
-            _vm._v(
-              "We want to make settlement process faster, How\n                                can we do that?\n                            "
-            )
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("i", { staticClass: "las la-hand-point-right" }),
-            _vm._v(
-              "Please add our Bank and Demat account as\n                                Beneficiary / Trusted account for faster transaction from your side.\n                            "
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("hr"),
-        _vm._v(" "),
-        _c("h4", { staticStyle: { color: "#46454d" } }, [
-          _c("b", [_vm._v("Bank A/C Details")])
-        ]),
-        _vm._v(" "),
-        _c(
-          "section",
-          { staticStyle: { "margin-top": "-40px" }, attrs: { id: "fact1" } },
-          [
-            _c("div", { staticClass: "row counters" }, [
-              _c("div", { staticClass: "col-lg-12 col-12 text-left" }, [
-                _c("span", { attrs: { "data-toggle": "counter-up" } }, [
-                  _vm._v("OTC Capital Services Private Limited")
-                ]),
-                _vm._v(" "),
-                _c("p", [_vm._v("Beneficiary Name")])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-12 col-12 text-left" }, [
-                _c("span", { attrs: { "data-toggle": "counter-up" } }, [
-                  _vm._v("HDFC Bank Ltd")
-                ]),
-                _vm._v(" "),
-                _c("p", [_vm._v("Bank Name")])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-6 col-6 text-left" }, [
-                _c("span", { attrs: { "data-toggle": "counter-up" } }, [
-                  _vm._v("1211211212121")
-                ]),
-                _vm._v(" "),
-                _c("p", [_vm._v("A/C Number")])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-6 col-6 text-left" }, [
-                _c("span", { attrs: { "data-toggle": "counter-up" } }, [
-                  _vm._v("HDFC0000146")
-                ]),
-                _vm._v(" "),
-                _c("p", [_vm._v("IFSC Code")])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-6 col-6 text-left" }, [
-                _c("span", { attrs: { "data-toggle": "counter-up" } }, [
-                  _vm._v("Current A/C")
-                ]),
-                _vm._v(" "),
-                _c("p", [_vm._v("A/C Type")])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-6 col-6 text-left" }, [
-                _c("span", { attrs: { "data-toggle": "counter-up" } }, [
-                  _vm._v("ABXYZ1234C")
-                ]),
-                _vm._v(" "),
-                _c("p", [_vm._v("PAN")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("hr")
-          ]
-        ),
-        _vm._v(" "),
-        _c("h4", { staticStyle: { color: "#46454d", "margin-top": "-40px" } }, [
-          _c("b", [_vm._v("Demat A/C Details")])
-        ]),
-        _vm._v(" "),
-        _c(
-          "section",
-          { staticStyle: { "margin-top": "-40px" }, attrs: { id: "fact2" } },
-          [
-            _c("div", { staticClass: "row counters" }, [
-              _c("div", { staticClass: "col-lg-12 col-12 text-left" }, [
-                _c("span", { attrs: { "data-toggle": "counter-up" } }, [
-                  _vm._v("OTC Capital Services Private Limited")
-                ]),
-                _vm._v(" "),
-                _c("p", [_vm._v("Client Name")])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-12 col-12 text-left" }, [
-                _c("span", { attrs: { "data-toggle": "counter-up" } }, [
-                  _vm._v("Stockholding Corporation of India Limited")
-                ]),
-                _vm._v(" "),
-                _c("p", [_vm._v("DP Name")])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-12 col-12 text-left" }, [
-                _c(
-                  "span",
-                  {
-                    staticStyle: { "text-decoration": "underline" },
-                    attrs: { "data-toggle": "counter-up" }
-                  },
-                  [_vm._v("NSDL")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-6 col-6 text-left" }, [
-                _c("span", { attrs: { "data-toggle": "counter-up" } }, [
-                  _vm._v("IN123456")
-                ]),
-                _vm._v(" "),
-                _c("p", [_vm._v("DP ID")])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-6 col-6 text-left" }, [
-                _c("span", { attrs: { "data-toggle": "counter-up" } }, [
-                  _vm._v("12345678")
-                ]),
-                _vm._v(" "),
-                _c("p", [_vm._v("Client ID")])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-12 col-12 text-left" }, [
-                _c(
-                  "span",
-                  {
-                    staticStyle: { "text-decoration": "underline" },
-                    attrs: { "data-toggle": "counter-up" }
-                  },
-                  [_vm._v("CDSL")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-6 col-6 text-left" }, [
-                _c("span", { attrs: { "data-toggle": "counter-up" } }, [
-                  _vm._v("12345678")
-                ]),
-                _vm._v(" "),
-                _c("p", [_vm._v("DP ID")])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-6 col-6 text-left" }, [
-                _c("span", { attrs: { "data-toggle": "counter-up" } }, [
-                  _vm._v("12345678")
-                ]),
-                _vm._v(" "),
-                _c("p", [_vm._v("Client ID")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("hr")
-          ]
-        )
       ])
     ])
   },
@@ -25335,316 +25019,339 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "overlay", attrs: { id: "market-depth" } },
-      [
-        _c("div", { staticClass: "popup text-center" }, [
-          _c("a", { staticClass: "close", attrs: { href: "" } }, [_vm._v("×")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "content" }, [
-            _c("p", [_vm._v("HDB FINANCIAL")]),
+    return _c("section", { attrs: { id: "howitworks" } }, [
+      _c("div", { staticClass: "section-header" }, [
+        _c("h2", [_vm._v("HOW IT WORKS")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-lg-4" }, [
+          _c("div", { staticClass: "stages" }, [
+            _c("p", [
+              _c("img", {
+                staticClass: "quote-sign-left",
+                attrs: { alt: "", src: "assets/img/quote-sign-left.png" }
+              }),
+              _vm._v(
+                "\n                                        1) Place Buy or Sell order during Market Hours\n                                        "
+              ),
+              _c("img", {
+                staticClass: "quote-sign-right",
+                attrs: { alt: "", src: "assets/img/quote-sign-right.png" }
+              })
+            ]),
             _vm._v(" "),
-            _c("div", { staticClass: "depth-table" }, [
-              _c("div", { staticClass: "row" }, [
-                _c("table", { staticClass: "col-sm-6 buy table-toggle-wrp" }, [
-                  _c("thead", [
-                    _c("tr", [
-                      _c("th", { staticClass: "order-price" }, [
-                        _c("span", [_vm._v("Bid")])
-                      ]),
-                      _vm._v(" "),
-                      _c("th", { staticClass: "orders" }, [_vm._v("Orders")]),
-                      _vm._v(" "),
-                      _c("th", { staticClass: "text-right quantity" }, [
-                        _vm._v("Qty.")
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("tbody", [
-                    _c("tr", [
-                      _c("td", { staticClass: "rate" }, [_vm._v("1364.00")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "orders" }, [_vm._v("11")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "text-right quantity" }, [
-                        _vm._v(
-                          "\n                                    3098\n                                "
-                        )
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("tr", [
-                      _c("td", { staticClass: "rate" }, [_vm._v("1363.00")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "text-right quantity" }, [
-                        _vm._v("1")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("tr", [
-                      _c("td", { staticClass: "rate" }, [_vm._v("1363.90")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "text-right quantity" }, [
-                        _vm._v("1")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("tr", [
-                      _c("td", { staticClass: "rate" }, [_vm._v("1363.85")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "text-right quantity" }, [
-                        _vm._v("1")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("tr", [
-                      _c("td", { staticClass: "rate" }, [_vm._v("1363.80")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "orders" }, [_vm._v("2")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "text-right quantity" }, [
-                        _vm._v("101")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("tr", [
-                      _c("td", { staticClass: "rate" }, [_vm._v("1363.85")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "text-right quantity" }, [
-                        _vm._v("1")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("tr", [
-                      _c("td", { staticClass: "rate" }, [_vm._v("1363.80")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "orders" }, [_vm._v("200")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "text-right quantity" }, [
-                        _vm._v("10")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("tr", [
-                      _c("td", { staticClass: "rate" }, [_vm._v("1363.85")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "text-right quantity" }, [
-                        _vm._v("1")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("tr", [
-                      _c("td", { staticClass: "rate" }, [_vm._v("1363.80")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "orders" }, [_vm._v("2")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "text-right quantity" }, [
-                        _vm._v("101")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("tr", [
-                      _c("td", { staticClass: "rate" }, [_vm._v("1363.80")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "orders" }, [_vm._v("2")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "text-right quantity" }, [
-                        _vm._v("101")
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("tfoot", [
-                    _c("tr", [
-                      _c("td", [_vm._v("Total")]),
-                      _vm._v(" "),
-                      _c(
-                        "td",
-                        { staticClass: "text-right", attrs: { colspan: "2" } },
-                        [_vm._v("1,94,169")]
-                      )
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("table", { staticClass: "col-sm-6 sell table-toggle-wrp" }, [
-                  _c("thead", [
-                    _c("tr", [
-                      _c("th", { staticClass: "order-price" }, [
-                        _c("span", [_vm._v("Offer")])
-                      ]),
-                      _vm._v(" "),
-                      _c("th", { staticClass: "orders" }, [_vm._v("Orders")]),
-                      _vm._v(" "),
-                      _c("th", { staticClass: "text-right quantity" }, [
-                        _vm._v("Qty.")
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("tbody", [
-                    _c("tr", [
-                      _c("td", { staticClass: "rate" }, [_vm._v("1364.05")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "text-right quantity" }, [
-                        _vm._v("22")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("tr", [
-                      _c("td", { staticClass: "rate" }, [_vm._v("1364.15")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "orders" }, [_vm._v("3")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "text-right quantity" }, [
-                        _vm._v("33")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("tr", [
-                      _c("td", { staticClass: "rate" }, [_vm._v("1364.20")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "text-right quantity" }, [
-                        _vm._v("33")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("tr", [
-                      _c("td", { staticClass: "rate" }, [_vm._v("1364.25")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "text-right quantity" }, [
-                        _vm._v("33")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("tr", [
-                      _c("td", { staticClass: "rate" }, [_vm._v("1364.55")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "text-right quantity" }, [
-                        _vm._v("33")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("tr", [
-                      _c("td", { staticClass: "rate" }, [_vm._v("1364.25")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "text-right quantity" }, [
-                        _vm._v("33")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("tr", [
-                      _c("td", { staticClass: "rate" }, [_vm._v("1364.55")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "text-right quantity" }, [
-                        _vm._v("33")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("tr", [
-                      _c("td", { staticClass: "rate" }, [_vm._v("1364.25")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "text-right quantity" }, [
-                        _vm._v("33")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("tr", [
-                      _c("td", { staticClass: "rate" }, [_vm._v("1364.55")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "text-right quantity" }, [
-                        _vm._v("33")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("tr", [
-                      _c("td", { staticClass: "rate" }, [_vm._v("1364.55")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
-                      _vm._v(" "),
-                      _c("td", { staticClass: "text-right quantity" }, [
-                        _vm._v("33")
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("tfoot", [
-                    _c("tr", [
-                      _c("td", [_vm._v("Total")]),
-                      _vm._v(" "),
-                      _c(
-                        "td",
-                        { staticClass: "text-right", attrs: { colspan: "2" } },
-                        [_vm._v("10,27,680")]
-                      )
-                    ])
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "buy-sell-btn d-flex align-items-center margin-top-20 margin-bottom-20"
-                },
-                [
-                  _c("div", { staticClass: "buy-btn-wrp" }, [
-                    _c(
-                      "a",
-                      {
-                        staticClass: "buy-btn get-started-btn3",
-                        attrs: { href: "#buy-popup" }
-                      },
-                      [_vm._v("BUY")]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "sell-btn-wrp" }, [
-                    _c(
-                      "a",
-                      {
-                        staticClass: "sell-btn get-started-btn3",
-                        attrs: { href: "#sell-popup" }
-                      },
-                      [_vm._v("SELL")]
-                    )
-                  ])
-                ]
-              )
+            _c("div", { staticClass: "icon" }, [
+              _c("i", {
+                staticClass: "las la-shopping-cart",
+                staticStyle: { color: "#15D295" }
+              })
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-4" }, [
+          _c("div", { staticClass: "stages" }, [
+            _c("p", [
+              _c("img", {
+                staticClass: "quote-sign-left",
+                attrs: { alt: "", src: "assets/img/quote-sign-left.png" }
+              }),
+              _vm._v(
+                "\n                                        2) Once your order is matched, we will confirm the deal from both parties\n                                        over the phone before initiating the settlement process.\n                                        "
+              ),
+              _c("img", {
+                staticClass: "quote-sign-right",
+                attrs: { alt: "", src: "assets/img/quote-sign-right.png" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "icon" }, [
+              _c("i", {
+                staticClass: "las la-handshake",
+                staticStyle: { color: "#15D295" }
+              })
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-4" }, [
+          _c("div", { staticClass: "stages" }, [
+            _c("p", [
+              _c("img", {
+                staticClass: "quote-sign-left",
+                attrs: { alt: "", src: "assets/img/quote-sign-left.png" }
+              }),
+              _vm._v(
+                "\n                                        3) Once the deal is locked, we will send the invoice to buyer. Buyer will\n                                        have to make payment to company’s account as per the invoice to initiate the\n                                        settlement.\n                                        "
+              ),
+              _c("img", {
+                staticClass: "quote-sign-right",
+                attrs: { alt: "", src: "assets/img/quote-sign-right.png" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "icon" }, [
+              _c("i", {
+                staticClass: "las la-credit-card",
+                staticStyle: { color: "#15D295" }
+              })
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-4" }, [
+          _c("div", { staticClass: "stages" }, [
+            _c("p", [
+              _c("img", {
+                staticClass: "quote-sign-left",
+                attrs: { alt: "", src: "assets/img/quote-sign-left.png" }
+              }),
+              _vm._v(
+                "\n                                        4) Once we receive the payment from buyer, We will intimate the seller to\n                                        transfer the shares into company’s account as per deal agreement.\n                                        "
+              ),
+              _c("img", {
+                staticClass: "quote-sign-right",
+                attrs: { alt: "", src: "assets/img/quote-sign-right.png" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "icon" }, [
+              _c("i", {
+                staticClass: "las la-rupee-sign",
+                staticStyle: { color: "#15D295" }
+              })
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-4" }, [
+          _c("div", { staticClass: "stages" }, [
+            _c("p", [
+              _c("img", {
+                staticClass: "quote-sign-left",
+                attrs: { alt: "", src: "assets/img/quote-sign-left.png" }
+              }),
+              _vm._v(
+                "\n                                        5) Once seller transfers the agreed quantity of shares.\n\n                                        "
+              ),
+              _c("img", {
+                staticClass: "quote-sign-right",
+                attrs: { alt: "", src: "assets/img/quote-sign-right.png" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "icon" }, [
+              _c("i", {
+                staticClass: "las la-file-alt",
+                staticStyle: { color: "#15D295" }
+              })
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-4" }, [
+          _c("div", { staticClass: "stages" }, [
+            _c("p", [
+              _c("img", {
+                staticClass: "quote-sign-left",
+                attrs: { alt: "", src: "assets/img/quote-sign-left.png" }
+              }),
+              _vm._v("\n                                        6) "),
+              _c("b", [_vm._v(" We will settle the trade.")]),
+              _vm._v(
+                " (By transferring shares to buyer and\n                                        funds to seller.)\n\n                                        "
+              ),
+              _c("img", {
+                staticClass: "quote-sign-right",
+                attrs: { alt: "", src: "assets/img/quote-sign-right.png" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "icon" }, [
+              _c("i", {
+                staticClass: "las la-exchange-alt",
+                staticStyle: { color: "#15D295" }
+              })
             ])
           ])
         ])
-      ]
-    )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { attrs: { id: "notes" } }, [
+      _c("div", { staticClass: "section-header" }, [
+        _c("h2", [_vm._v("Notes")])
+      ]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [
+          _c("i", { staticClass: "las la-question-circle" }),
+          _vm._v(
+            "We want to make settlement process faster, How\n                                can we do that?\n                            "
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("i", { staticClass: "las la-hand-point-right" }),
+          _vm._v(
+            "Please add our Bank and Demat account as\n                                Beneficiary / Trusted account for faster transaction from your side.\n                            "
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      _c("h4", { staticStyle: { color: "#46454d" } }, [
+        _c("b", [_vm._v("Bank A/C Details")])
+      ]),
+      _vm._v(" "),
+      _c(
+        "section",
+        { staticStyle: { "margin-top": "-40px" }, attrs: { id: "fact1" } },
+        [
+          _c("div", { staticClass: "row counters" }, [
+            _c("div", { staticClass: "col-lg-12 col-12 text-left" }, [
+              _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+                _vm._v("OTC Capital Services Private Limited")
+              ]),
+              _vm._v(" "),
+              _c("p", [_vm._v("Beneficiary Name")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-12 col-12 text-left" }, [
+              _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+                _vm._v("HDFC Bank Ltd")
+              ]),
+              _vm._v(" "),
+              _c("p", [_vm._v("Bank Name")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-6 col-6 text-left" }, [
+              _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+                _vm._v("1211211212121")
+              ]),
+              _vm._v(" "),
+              _c("p", [_vm._v("A/C Number")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-6 col-6 text-left" }, [
+              _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+                _vm._v("HDFC0000146")
+              ]),
+              _vm._v(" "),
+              _c("p", [_vm._v("IFSC Code")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-6 col-6 text-left" }, [
+              _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+                _vm._v("Current A/C")
+              ]),
+              _vm._v(" "),
+              _c("p", [_vm._v("A/C Type")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-6 col-6 text-left" }, [
+              _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+                _vm._v("ABXYZ1234C")
+              ]),
+              _vm._v(" "),
+              _c("p", [_vm._v("PAN")])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("hr")
+        ]
+      ),
+      _vm._v(" "),
+      _c("h4", { staticStyle: { color: "#46454d", "margin-top": "-40px" } }, [
+        _c("b", [_vm._v("Demat A/C Details")])
+      ]),
+      _vm._v(" "),
+      _c(
+        "section",
+        { staticStyle: { "margin-top": "-40px" }, attrs: { id: "fact2" } },
+        [
+          _c("div", { staticClass: "row counters" }, [
+            _c("div", { staticClass: "col-lg-12 col-12 text-left" }, [
+              _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+                _vm._v("OTC Capital Services Private Limited")
+              ]),
+              _vm._v(" "),
+              _c("p", [_vm._v("Client Name")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-12 col-12 text-left" }, [
+              _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+                _vm._v("Stockholding Corporation of India Limited")
+              ]),
+              _vm._v(" "),
+              _c("p", [_vm._v("DP Name")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-12 col-12 text-left" }, [
+              _c(
+                "span",
+                {
+                  staticStyle: { "text-decoration": "underline" },
+                  attrs: { "data-toggle": "counter-up" }
+                },
+                [_vm._v("NSDL")]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-6 col-6 text-left" }, [
+              _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+                _vm._v("IN123456")
+              ]),
+              _vm._v(" "),
+              _c("p", [_vm._v("DP ID")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-6 col-6 text-left" }, [
+              _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+                _vm._v("12345678")
+              ]),
+              _vm._v(" "),
+              _c("p", [_vm._v("Client ID")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-12 col-12 text-left" }, [
+              _c(
+                "span",
+                {
+                  staticStyle: { "text-decoration": "underline" },
+                  attrs: { "data-toggle": "counter-up" }
+                },
+                [_vm._v("CDSL")]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-6 col-6 text-left" }, [
+              _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+                _vm._v("12345678")
+              ]),
+              _vm._v(" "),
+              _c("p", [_vm._v("DP ID")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-6 col-6 text-left" }, [
+              _c("span", { attrs: { "data-toggle": "counter-up" } }, [
+                _vm._v("12345678")
+              ]),
+              _vm._v(" "),
+              _c("p", [_vm._v("Client ID")])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("hr")
+        ]
+      )
+    ])
   }
 ]
 render._withStripped = true
@@ -27385,7 +27092,31 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("div", { staticClass: "left-wrp" }, [
-      _vm._m(0),
+      _c("div", { staticClass: "search-section" }, [
+        _c("form", { attrs: { action: "" } }, [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.search,
+                expression: "search"
+              }
+            ],
+            attrs: { placeholder: "Search", type: "text" },
+            domProps: { value: _vm.search },
+            on: {
+              keyup: _vm.searchScript,
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.search = $event.target.value
+              }
+            }
+          })
+        ])
+      ]),
       _vm._v(" "),
       _c("div", { staticClass: "circuit-list" }, [
         _c(
@@ -27399,11 +27130,11 @@ var render = function() {
               _vm._v(" "),
               _c("div", { staticClass: "list-icons" }, [
                 _c("ul", [
+                  _vm._m(0, true),
+                  _vm._v(" "),
                   _vm._m(1, true),
                   _vm._v(" "),
                   _vm._m(2, true),
-                  _vm._v(" "),
-                  _vm._m(3, true),
                   _vm._v(" "),
                   _c(
                     "li",
@@ -27424,6 +27155,8 @@ var render = function() {
       ])
     ]),
     _vm._v(" "),
+    _vm._m(3),
+    _vm._v(" "),
     _vm._m(4),
     _vm._v(" "),
     _vm._m(5),
@@ -27434,16 +27167,6 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "search-section" }, [
-      _c("form", { attrs: { action: "" } }, [
-        _c("input", { attrs: { placeholder: "Search", type: "text" } })
-      ])
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -28069,6 +27792,321 @@ var staticRenderFns = [
                 ])
               ]
             )
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "overlay", attrs: { id: "market-depth" } },
+      [
+        _c("div", { staticClass: "popup text-center" }, [
+          _c("a", { staticClass: "close", attrs: { href: "" } }, [_vm._v("×")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "content" }, [
+            _c("p", [_vm._v("HDB FINANCIAL")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "depth-table" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("table", { staticClass: "col-sm-6 buy table-toggle-wrp" }, [
+                  _c("thead", [
+                    _c("tr", [
+                      _c("th", { staticClass: "order-price" }, [
+                        _c("span", [_vm._v("Bid")])
+                      ]),
+                      _vm._v(" "),
+                      _c("th", { staticClass: "orders" }, [_vm._v("Orders")]),
+                      _vm._v(" "),
+                      _c("th", { staticClass: "text-right quantity" }, [
+                        _vm._v("Qty.")
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("tbody", [
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.00")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("11")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v(
+                          "\n                                    3098\n                                "
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.00")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("1")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.90")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("1")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.85")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("1")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.80")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("2")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("101")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.85")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("1")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.80")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("200")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("10")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.85")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("1")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.80")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("2")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("101")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1363.80")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("2")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("101")
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("tfoot", [
+                    _c("tr", [
+                      _c("td", [_vm._v("Total")]),
+                      _vm._v(" "),
+                      _c(
+                        "td",
+                        { staticClass: "text-right", attrs: { colspan: "2" } },
+                        [_vm._v("1,94,169")]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("table", { staticClass: "col-sm-6 sell table-toggle-wrp" }, [
+                  _c("thead", [
+                    _c("tr", [
+                      _c("th", { staticClass: "order-price" }, [
+                        _c("span", [_vm._v("Offer")])
+                      ]),
+                      _vm._v(" "),
+                      _c("th", { staticClass: "orders" }, [_vm._v("Orders")]),
+                      _vm._v(" "),
+                      _c("th", { staticClass: "text-right quantity" }, [
+                        _vm._v("Qty.")
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("tbody", [
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.05")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("22")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.15")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("3")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.20")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.25")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.55")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.25")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.55")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.25")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.55")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", { staticClass: "rate" }, [_vm._v("1364.55")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "orders" }, [_vm._v("1")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-right quantity" }, [
+                        _vm._v("33")
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("tfoot", [
+                    _c("tr", [
+                      _c("td", [_vm._v("Total")]),
+                      _vm._v(" "),
+                      _c(
+                        "td",
+                        { staticClass: "text-right", attrs: { colspan: "2" } },
+                        [_vm._v("10,27,680")]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "buy-sell-btn d-flex align-items-center margin-top-20 margin-bottom-20"
+                },
+                [
+                  _c("div", { staticClass: "buy-btn-wrp" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "buy-btn get-started-btn3",
+                        attrs: { href: "#buy-popup" }
+                      },
+                      [_vm._v("BUY")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "sell-btn-wrp" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "sell-btn get-started-btn3",
+                        attrs: { href: "#sell-popup" }
+                      },
+                      [_vm._v("SELL")]
+                    )
+                  ])
+                ]
+              )
+            ])
           ])
         ])
       ]

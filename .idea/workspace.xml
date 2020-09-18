@@ -10,12 +10,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad78d497-6ee3-44fc-899a-1d01e02b08b4" name="Default Changelist" comment="order page and info page template set">
+    <list default="true" id="ad78d497-6ee3-44fc-899a-1d01e02b08b4" name="Default Changelist" comment="login with OTP redirect to dashboard">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/AppController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/AppController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/AnnouncementsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/AnnouncementsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ScriptsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ScriptsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Auth/LoginOtp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Auth/LoginOtp.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Auth/VerifyOtp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Auth/VerifyOtp.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/layouts/ScriptLists.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/layouts/ScriptLists.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +138,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../reternX/RET-APIs" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -190,7 +192,7 @@
       <workItem from="1600136980496" duration="3596000" />
       <workItem from="1600220802505" duration="6397000" />
       <workItem from="1600359700819" duration="162000" />
-      <workItem from="1600359879672" duration="2257000" />
+      <workItem from="1600359879672" duration="4979000" />
     </task>
     <task id="LOCAL-00001" summary="first init commit">
       <created>1600007025647</created>
@@ -213,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600228119710</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="login with OTP redirect to dashboard">
+      <created>1600362189339</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1600362189339</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,17 +246,18 @@
     <MESSAGE value="first init commit" />
     <MESSAGE value="middleware and home page" />
     <MESSAGE value="order page and info page template set" />
-    <option name="LAST_COMMIT_MESSAGE" value="order page and info page template set" />
+    <MESSAGE value="login with OTP redirect to dashboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="login with OTP redirect to dashboard" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1779" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599672648337">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1779" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1599672648337" />
-    <state x="1829" y="118" key="FileChooserDialogImpl" timestamp="1599668738872">
+    <state x="1829" y="118" key="FileChooserDialogImpl" timestamp="1600362771831">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state x="1829" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1599668738872" />
+    <state x="1829" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600362771831" />
     <state x="1366" y="0" key="FileDocumentManager.FileCacheConflict" timestamp="1600221370300">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
@@ -276,10 +286,10 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1550" y="8" key="SettingsEditor/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600359862000" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1600225005121">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1600363382644">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600225005121" />
+    <state width="498" height="446" key="SwitcherDM/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600363382644" />
     <state x="1641" y="96" key="Vcs.Push.Dialog.v2" timestamp="1600007053689">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>

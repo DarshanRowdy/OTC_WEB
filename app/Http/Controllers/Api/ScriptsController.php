@@ -11,7 +11,18 @@ class ScriptsController extends BaseApiController
     public function index(ScriptsRequest $request)
     {
         try{
+
+            $search = $request->has('search') ? $request->search : '';
             $tbl_scripts = Scripts::query();
+            $tbl_scripts->when(!empty($search), function ($query) use ($search) {
+                $query->where(function ($que) use ($search) {
+                    $string = explode(' ', $search);
+                    foreach ($string as $str){
+                        $str = '%'.strtoupper($str).'%';
+                        $que->orWhere('script_display_name', 'LIKE', $str);
+                    }
+                });
+            });
             $scripts = $tbl_scripts->get();
             $response = ['scripts' => $scripts];
             $this->_sendResponse($response, 'Scripts listing Success');

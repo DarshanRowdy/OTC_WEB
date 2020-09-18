@@ -4,7 +4,7 @@
         <div class="left-wrp">
             <div class="search-section">
                 <form action="">
-                    <input placeholder="Search" type="text">
+                    <input v-model="search" placeholder="Search" v-on:keyup="searchScript" type="text">
                 </form>
             </div>
             <div class="circuit-list">
@@ -285,6 +285,167 @@
                 </div>
             </div>
         </div>
+
+        <!-- Market Depth popup start -->
+        <div class="overlay" id="market-depth">
+            <div class="popup text-center">
+                <a class="close" href="">×</a>
+                <div class="content">
+                    <p>HDB FINANCIAL</p>
+                    <div class="depth-table">
+                        <div class="row">
+                            <table class="col-sm-6 buy table-toggle-wrp">
+                                <thead>
+                                <tr>
+                                    <th class="order-price"><span>Bid</span>
+                                    </th>
+                                    <th class="orders">Orders</th>
+                                    <th class="text-right quantity">Qty.</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="rate">1364.00</td>
+                                    <td class="orders">11</td>
+                                    <td class="text-right quantity">
+                                        3098
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="rate">1363.00</td>
+                                    <td class="orders">1</td>
+                                    <td class="text-right quantity">1</td>
+                                </tr>
+                                <tr>
+                                    <td class="rate">1363.90</td>
+                                    <td class="orders">1</td>
+                                    <td class="text-right quantity">1</td>
+                                </tr>
+                                <tr>
+                                    <td class="rate">1363.85</td>
+                                    <td class="orders">1</td>
+                                    <td class="text-right quantity">1</td>
+                                </tr>
+                                <tr>
+                                    <td class="rate">1363.80</td>
+                                    <td class="orders">2</td>
+                                    <td class="text-right quantity">101</td>
+                                </tr>
+                                <tr>
+                                    <td class="rate">1363.85</td>
+                                    <td class="orders">1</td>
+                                    <td class="text-right quantity">1</td>
+                                </tr>
+                                <tr>
+                                    <td class="rate">1363.80</td>
+                                    <td class="orders">200</td>
+                                    <td class="text-right quantity">10</td>
+                                </tr>
+                                <tr>
+                                    <td class="rate">1363.85</td>
+                                    <td class="orders">1</td>
+                                    <td class="text-right quantity">1</td>
+                                </tr>
+                                <tr>
+                                    <td class="rate">1363.80</td>
+                                    <td class="orders">2</td>
+                                    <td class="text-right quantity">101</td>
+                                </tr>
+                                <tr>
+                                    <td class="rate">1363.80</td>
+                                    <td class="orders">2</td>
+                                    <td class="text-right quantity">101</td>
+                                </tr>
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                    <td>Total</td>
+                                    <td class="text-right" colspan="2">1,94,169</td>
+                                </tr>
+                                </tfoot>
+                            </table>
+                            <table class="col-sm-6 sell table-toggle-wrp">
+                                <thead>
+                                <tr>
+                                    <th class="order-price">
+                                        <span>Offer</span></th>
+                                    <th class="orders">Orders</th>
+                                    <th class="text-right quantity">Qty.</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="rate">1364.05</td>
+                                    <td class="orders">1</td>
+                                    <td class="text-right quantity">22</td>
+                                </tr>
+                                <tr>
+                                    <td class="rate">1364.15</td>
+                                    <td class="orders">3</td>
+                                    <td class="text-right quantity">33</td>
+                                </tr>
+                                <tr>
+                                    <td class="rate">1364.20</td>
+                                    <td class="orders">1</td>
+                                    <td class="text-right quantity">33</td>
+                                </tr>
+                                <tr>
+                                    <td class="rate">1364.25</td>
+                                    <td class="orders">1</td>
+                                    <td class="text-right quantity">33</td>
+                                </tr>
+                                <tr>
+                                    <td class="rate">1364.55</td>
+                                    <td class="orders">1</td>
+                                    <td class="text-right quantity">33</td>
+                                </tr>
+                                <tr>
+                                    <td class="rate">1364.25</td>
+                                    <td class="orders">1</td>
+                                    <td class="text-right quantity">33</td>
+                                </tr>
+                                <tr>
+                                    <td class="rate">1364.55</td>
+                                    <td class="orders">1</td>
+                                    <td class="text-right quantity">33</td>
+                                </tr>
+                                <tr>
+                                    <td class="rate">1364.25</td>
+                                    <td class="orders">1</td>
+                                    <td class="text-right quantity">33</td>
+                                </tr>
+                                <tr>
+                                    <td class="rate">1364.55</td>
+                                    <td class="orders">1</td>
+                                    <td class="text-right quantity">33</td>
+                                </tr>
+                                <tr>
+                                    <td class="rate">1364.55</td>
+                                    <td class="orders">1</td>
+                                    <td class="text-right quantity">33</td>
+                                </tr>
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                    <td>Total</td>
+
+                                    <td class="text-right" colspan="2">10,27,680</td>
+                                </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+
+                        <div class="buy-sell-btn d-flex align-items-center margin-top-20 margin-bottom-20">
+                            <div class="buy-btn-wrp"><a class="buy-btn get-started-btn3" href="#buy-popup">BUY</a></div>
+                            <div class="sell-btn-wrp"><a class="sell-btn get-started-btn3" href="#sell-popup">SELL</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Market Depth popup end -->
     </div>
 </template>
 
@@ -295,6 +456,7 @@ export default {
     data() {
         return {
             scripts: [],
+            search: '',
             errors: []
         }
     },
@@ -306,6 +468,16 @@ export default {
                 this.errors.push(error.response.data.message)
             });
         },
+        searchScript(event) {
+            const data = {
+                search: this.search,
+            };
+            axios.post('api/scripts',data).then(response => {
+                this.scripts = response.data.data.scripts;
+            }).catch(error => {
+                this.errors.push(error.response.data.message)
+            });
+        }
     },
     beforeMount() {
         this.getUnits();
