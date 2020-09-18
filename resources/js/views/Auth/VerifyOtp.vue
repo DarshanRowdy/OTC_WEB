@@ -63,7 +63,8 @@ export default {
             axios.post('api/verify-otp', data).then(response => {
                 if(this.from_where === 'login'){
                     this.$parent.showNewPasswordModal(this.mobile);
-                } else if(this.from_were === 'register') {
+                } else if(this.from_where === 'register') {
+                    console.log('show conf');
                     this.$parent.showConfirmation();
                 } else if(this.from_where === 'login_with_otp') {
                     let userObj = JSON.stringify(response.data.data.user)

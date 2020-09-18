@@ -105,7 +105,54 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td align="center" height="40"></td>
+                                <td align="center" height="60"></td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <button style="font-family:'Open Sans','Arial',sans-serif;font-size:16px;color:#3c3c3c;line-height:20px">Learn More</button>
+                                    <button style="font-family:'Open Sans','Arial',sans-serif;font-size:16px;color:#3c3c3c;line-height:20px">Trade Now</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" height="20"></td>
+                            </tr>
+                            <tr>
+                                <td align="left">
+                                    <span style="font-family:'Open Sans','Arial',sans-serif;font-size:16px;color:#3c3c3c;line-height:20px"> OTC Capital Services Private Limited </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" height="20"></td>
+                            </tr>
+                            <tr>
+                                <td align="left">
+                                    <span style="font-family:'Open Sans','Arial',sans-serif;font-size:16px;color:#3c3c3c;line-height:20px"> 1205, Pride Paradise, Vrindavan, Thane, Maharashtra - 400601, India </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" height="20"></td>
+                            </tr>
+                            <tr>
+                                <td align="left">
+                                    <span style="font-family:'Open Sans','Arial',sans-serif;font-size:16px;color:#3c3c3c;line-height:20px"> M. +91 93217 83465 </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" height="20"></td>
+                            </tr>
+                            <tr>
+                                <td align="left">
+                                    <span style="font-family:'Open Sans','Arial',sans-serif;font-size:16px;color:#3c3c3c;line-height:20px"> Email: <a
+                                            href="mailto:info@otccapital.in">info@otccapital.in</a> </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" height="20"></td>
+                            </tr>
+                            <tr>
+                                <td align="left">
+                                    <span style="font-family:'Open Sans','Arial',sans-serif;font-size:16px;color:#3c3c3c;line-height:20px"> CIN: U74999MH2020PTC343420 </span>
+                                </td>
                             </tr>
                             </tbody>
                         </table>

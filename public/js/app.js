@@ -4448,7 +4448,9 @@ __webpack_require__.r(__webpack_exports__);
       axios.post('api/verify-otp', data).then(function (response) {
         if (_this.from_where === 'login') {
           _this.$parent.showNewPasswordModal(_this.mobile);
-        } else if (_this.from_were === 'register') {
+        } else if (_this.from_where === 'register') {
+          console.log('show conf');
+
           _this.$parent.showConfirmation();
         } else if (_this.from_where === 'login_with_otp') {
           var userObj = JSON.stringify(response.data.data.user);
@@ -28216,7 +28218,7 @@ var render = function() {
                     [
                       _c("h2", {}, [_vm._v("Congratulations!")]),
                       _vm._v(" "),
-                      (_vm.from_where = "login")
+                      _vm.from_where === "login"
                         ? _c("p", [
                             _c("strong", [
                               _vm._v("Password Reset Successfully")
@@ -29136,7 +29138,7 @@ var render = function() {
                   expression: "isSendVerifyOtp"
                 }
               ],
-              attrs: { mobile: _vm.mobile, from_were: _vm.register },
+              attrs: { mobile: _vm.mobile, from_where: _vm.register },
               on: { close: _vm.closeSendVerifyOtp }
             }),
             _vm._v(" "),
@@ -29149,6 +29151,7 @@ var render = function() {
                   expression: "isConfirmation"
                 }
               ],
+              attrs: { from_where: _vm.register },
               on: { close: _vm.closeConfirmation }
             })
           ],

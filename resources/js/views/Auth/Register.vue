@@ -46,9 +46,9 @@
                         <SendOtp :mobile="mobile" v-show="isSendOtpVisible" @close="closeSendOtpModal" />
                         <!-- OTP Popup end -->
 
-                        <VerifyOtp :mobile="mobile" :from_were="register" v-show="isSendVerifyOtp" @close="closeSendVerifyOtp" />
+                        <VerifyOtp :mobile="mobile" :from_where="register" v-show="isSendVerifyOtp" @close="closeSendVerifyOtp" />
 
-                        <ConfirmationPopup v-show="isConfirmation" @close="closeConfirmation" />
+                        <ConfirmationPopup v-show="isConfirmation" :from_where="register" @close="closeConfirmation" />
                 </div>
             </div>
         </div>

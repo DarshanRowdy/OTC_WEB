@@ -12,7 +12,7 @@
                             </div>
                             <div class="modal-body text-center">
                                 <h2 class="">Congratulations!</h2>
-                                <p v-if="from_where = 'login'"><strong>Password Reset Successfully</strong></p>
+                                <p v-if="from_where === 'login'"><strong>Password Reset Successfully</strong></p>
                                 <p v-else class="no-margin">OTP Verified Successfully</p>
                                 <p class="resend-link margin-bottom-30 display-inline-block">Please Login to Trade</p>
                                 <router-link class="btn btn-block login-btn" to="/login">Login</router-link>
