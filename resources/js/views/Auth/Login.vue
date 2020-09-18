@@ -85,6 +85,15 @@ export default {
         mobile: { required },
         password: { required }
     },
+    watch: {
+        'errors': function (val) {
+            if(val.length){
+                setTimeout(function (){
+
+                }, 500);
+            }
+        }
+    },
     methods: {
         showForgotPasswordModal() {
             this.isForgotPasswordVisible = true;

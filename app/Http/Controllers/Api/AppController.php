@@ -59,6 +59,10 @@ class AppController extends BaseApiController
             if($userObj->user_status != 'active'){
                 $this->_sendErrorResponse(401, 'Please Complete Verification');
             }
+            $userId = $userObj->user_id;
+            $currentDate = date('Y-m-d H:i:s');
+            Users::where('user_id','=', $userId)->update(array('last_login' => $currentDate));
+            $userObj = Users::where('user_id','=',$userId)->first();
             $response = ['user' => $userObj];
             $this->_sendResponse($response, "You are successfully login into system.");
         } catch (Exception $exception) {
@@ -132,6 +136,8 @@ class AppController extends BaseApiController
                 $message = 'Mobile Verification complete successfully';
                 if($is_login_with_otp == 1){
                     $user_id = $userObj->user_id;
+                    $currentDate = date('Y-m-d H:i:s');
+                    Users::where('user_id','=', $user_id)->update(array('last_login' => $currentDate));
                     $userQue = Users::query();
                     $userQue->where('user_id', '=', $user_id);
                     $userObj = $userQue->first();

@@ -3884,6 +3884,13 @@ __webpack_require__.r(__webpack_exports__);
       required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_4__["required"]
     }
   },
+  watch: {
+    'errors': function errors(val) {
+      if (val.length) {
+        setTimeout(function () {}, 500);
+      }
+    }
+  },
   methods: {
     showForgotPasswordModal: function showForgotPasswordModal() {
       this.isForgotPasswordVisible = true;

@@ -14,6 +14,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @property $auth_token
  * @property $otp
  * @property $password_reset_token
+ * @property $last_login
  * @property $user_status
  * @property $created_at
  * @property $created_by
@@ -48,7 +49,7 @@ class Users extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = ['otp', 'user_name', 'password', 'user_mobile', 'user_email', 'auth_token', 'password_reset_token', 'user_status', 'creation_date', 'created_by', 'last_update_date', 'last_updated_by'];
+    protected $fillable = ['otp', 'user_name', 'password', 'user_mobile', 'user_email', 'auth_token', 'password_reset_token', 'user_status', 'creation_date', 'created_by', 'last_update_date', 'last_updated_by', 'last_login'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -69,7 +70,7 @@ class Users extends Authenticatable
      *
      * @var array
      */
-    protected $dates = ['created_at', 'updated_at'];
+    protected $dates = ['created_at', 'updated_at','last_login'];
 
     public static function findByField($field, $value)
     {
