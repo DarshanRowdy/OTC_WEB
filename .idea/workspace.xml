@@ -10,9 +10,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad78d497-6ee3-44fc-899a-1d01e02b08b4" name="Default Changelist" comment="otp and mail changes">
+    <list default="true" id="ad78d497-6ee3-44fc-899a-1d01e02b08b4" name="Default Changelist" comment="email dynamic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Info.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Info.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Orders.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Orders.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/App.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +31,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -135,13 +140,16 @@
     <property name="DatabaseDriversLRU" value="mysql.8" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../adopt-pets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/layouts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\wamp64\www\new_otc\resources\js\layouts" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\wamp64\www\new_otc\resources\js\components" />
       <recent name="D:\wamp64\www\new_otc\app" />
@@ -193,7 +201,7 @@
       <workItem from="1600444541366" duration="3767000" />
       <workItem from="1600454447580" duration="2841000" />
       <workItem from="1600531879635" duration="4435000" />
-      <workItem from="1600578990037" duration="1087000" />
+      <workItem from="1600578990037" duration="6939000" />
     </task>
     <task id="LOCAL-00001" summary="first init commit">
       <created>1600007025647</created>
@@ -244,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600457671065</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="email dynamic">
+      <created>1600586313170</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1600586313170</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,7 +286,8 @@
     <MESSAGE value="login with OTP redirect to dashboard" />
     <MESSAGE value="script listing filter and announcement listing on home" />
     <MESSAGE value="otp and mail changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="otp and mail changes" />
+    <MESSAGE value="email dynamic" />
+    <option name="LAST_COMMIT_MESSAGE" value="email dynamic" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600586242792">
@@ -323,18 +339,19 @@
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1600586258951" />
     <state width="498" height="446" key="SwitcherDM/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600456090324" />
-    <state x="1641" y="96" key="Vcs.Push.Dialog.v2" timestamp="1600533951538">
-      <screen x="1366" y="0" width="1366" height="728" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1600586317645">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1600586317645" />
     <state x="1641" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600533951538" />
     <state x="1458" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600015452988">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1458" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600015452988" />
-    <state x="1872" y="85" width="744" height="592" key="find.popup" timestamp="1600221923411">
+    <state x="1872" y="85" width="744" height="592" key="find.popup" timestamp="1600589332115">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state x="1872" y="85" width="744" height="592" key="find.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600221923411" />
+    <state x="1872" y="85" width="744" height="592" key="find.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600589332115" />
     <state x="1850" y="270" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1600533944842">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
