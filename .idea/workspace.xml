@@ -12,10 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ad78d497-6ee3-44fc-899a-1d01e02b08b4" name="Default Changelist" comment="otp and mail changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/AppController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/AppController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Auth/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Auth/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/UsersController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,6 +132,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql.8" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../adopt-pets" />
@@ -193,7 +191,9 @@
       <workItem from="1600359700819" duration="162000" />
       <workItem from="1600359879672" duration="4979000" />
       <workItem from="1600444541366" duration="3767000" />
-      <workItem from="1600454447580" duration="2803000" />
+      <workItem from="1600454447580" duration="2841000" />
+      <workItem from="1600531879635" duration="4435000" />
+      <workItem from="1600578990037" duration="1087000" />
     </task>
     <task id="LOCAL-00001" summary="first init commit">
       <created>1600007025647</created>
@@ -237,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600451138441</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="otp and mail changes">
+      <created>1600457671065</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1600457671065</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +274,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="otp and mail changes" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600586242792">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1600586242792" />
     <state x="1779" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599672648337">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
@@ -307,14 +318,15 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1550" y="8" key="SettingsEditor/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600359862000" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1600456090324">
-      <screen x="1366" y="0" width="1366" height="728" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1600586258951">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1600586258951" />
     <state width="498" height="446" key="SwitcherDM/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600456090324" />
-    <state x="1641" y="96" key="Vcs.Push.Dialog.v2" timestamp="1600007053689">
+    <state x="1641" y="96" key="Vcs.Push.Dialog.v2" timestamp="1600533951538">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state x="1641" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600007053688" />
+    <state x="1641" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600533951538" />
     <state x="1458" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600015452988">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
@@ -323,9 +335,13 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1872" y="85" width="744" height="592" key="find.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600221923411" />
-    <state x="1705" y="17" width="672" height="678" key="search.everywhere.popup" timestamp="1600455500105">
+    <state x="1850" y="270" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1600533944842">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state x="1705" y="17" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600455500105" />
+    <state x="1850" y="270" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600533944842" />
+    <state x="1705" y="17" width="672" height="678" key="search.everywhere.popup" timestamp="1600540202249">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1705" y="17" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600540202249" />
   </component>
 </project>

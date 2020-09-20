@@ -47,8 +47,8 @@ class UsersController extends AppController
             if(!$userObj->save()){
                 $this->_sendErrorResponse(417,'user registration un-successfully');
             }
-            $mail_val['name'] = 'Darshan';
-            Helpers::Mail_send_common('email.welcomeEmail', $mail_val, 'darshanrathod1993@gmail.com','Welcome to OTC Capital');
+            $mail_val['name'] = $request->name;
+            Helpers::Mail_send_common('email.welcomeEmail', $mail_val, $request->email,'Welcome to OTC Capital');
             $response = ['user' => $userObj];
             $this->_sendResponse($response, 'user registration successfully');
         } catch (\Exception $exception){
