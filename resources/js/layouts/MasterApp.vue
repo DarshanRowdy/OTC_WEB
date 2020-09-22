@@ -6,7 +6,7 @@
                 <div class="container1">
                     <div class="dashboard-wrp d-flex align-items-top d-flex-none-mob">
                         <div class="dashboard-left">
-                            <ScriptLists/>
+                            <ScriptLists />
                         </div>
                         <div class="dashboard-right">
                             <router-view></router-view>
@@ -24,10 +24,16 @@ import ScriptLists from "./ScriptLists.vue";
 
 export default {
     name: "MasterApp",
+    data() {
+        return {
+        }
+    },
     components: {
         MasterHeader,
         ScriptLists
     },
+    methods: {
+    }
 }
 </script>
 

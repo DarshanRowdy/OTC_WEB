@@ -31,6 +31,7 @@ class Scripts extends Model
 {
     protected $guarded = ['script_id'];
 
+    protected $appends = ['lower','upper'];
     /**
      * The database table used by the model.
      *
@@ -43,7 +44,7 @@ class Scripts extends Model
      *
      * @var array
      */
-    protected $fillable = ['script_name', 'script_display_name', 'script_isin_number', 'script_sector', 'script_description', 'script_website', 'script_peer_1', 'script_peer_2', 'script_peer_3', 'script_availability', 'script_min_lot', 'script_status', 'script_face_val', 'script_ltp', 'creation_date', 'created_by', 'last_update_date', 'last_updated_by'];
+    protected $fillable = ['script_name', 'script_display_name', 'script_isin_number', 'script_sector', 'script_description', 'script_website', 'script_peer_1', 'script_peer_2', 'script_peer_3', 'script_availability', 'script_min_lot', 'script_status', 'script_face_val', 'script_ltp', 'created_by', 'last_update_date', 'last_updated_by'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -69,5 +70,13 @@ class Scripts extends Model
     public static function findByField($field, $value)
     {
         return self::where($field, (string)$value)->first();
+    }
+
+    public function getUpperAttribute(){
+        return $this->script_ltp + ((30 / 100) * $this->script_ltp);
+    }
+
+    public function getLowerAttribute(){
+        return $this->script_ltp - ((30 / 100) * $this->script_ltp);
     }
 }

@@ -39,7 +39,7 @@ class Orders extends Model
      *
      * @var array
      */
-    protected $fillable = ['script_id', 'order_type', 'order_price', 'order_qty_original', 'lot_size', 'order_date', 'placed_by', 'creation_date', 'last_updated_by', 'last_update_date', 'cust_id', 'assigned_to', 'notes'];
+//    protected $fillable = ['script_id', 'order_type', 'order_price', 'order_qty_original', 'lot_size', 'order_date', 'placed_by', 'last_updated_by', 'cust_id', 'assigned_to', 'notes'];
 
     /**
      * The attributes excluded from the model's JSON form.

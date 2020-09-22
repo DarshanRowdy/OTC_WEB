@@ -30,5 +30,7 @@ Route::namespace('Api')->group(function () {
     Route::any('scripts', 'ScriptsController@index')->name('scripts.index');
 
     Route::get('announcements','AnnouncementsController@index')->name('announcements.index');
+
+    Route::post('order', 'OrdersController@store')->name('order.store');
 //    });
 });

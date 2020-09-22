@@ -49,7 +49,7 @@ class Users extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = ['otp', 'user_name', 'password', 'user_mobile', 'user_email', 'auth_token', 'password_reset_token', 'user_status', 'creation_date', 'created_by', 'last_update_date', 'last_updated_by', 'last_login'];
+    protected $fillable = ['otp', 'user_name', 'password', 'user_mobile', 'user_email', 'auth_token', 'password_reset_token', 'user_status', 'created_by', 'last_update_date', 'last_updated_by', 'last_login'];
 
     /**
      * The attributes excluded from the model's JSON form.
