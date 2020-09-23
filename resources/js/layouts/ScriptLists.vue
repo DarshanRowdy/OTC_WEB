@@ -37,11 +37,14 @@
         </div>
 
         <Order :values="scriptValue" :orderType="orderType" v-show="isOrder" @close="closeOrder" />
+
+        <OrderConfirm :values="scriptValue" :dataValue="dataValue" v-show="isOrderConfirm" @close="closeOrderConfirm" />
     </div>
 </template>
 
 <script>
 import Order from "../views/Scripts/Order.vue";
+import OrderConfirm from "../views/Scripts/OrderConfirm.vue";
 export default {
     name: "ScriptLists",
     data() {
@@ -51,11 +54,14 @@ export default {
             errors: [],
             scriptValue: {},
             orderType: '',
-            isOrder: false
+            dataValue: {},
+            isOrder: false,
+            isOrderConfirm: false
         }
     },
     components: {
-        Order
+        Order,
+        OrderConfirm
     },
     methods: {
         showOrder(value, type) {
@@ -65,6 +71,15 @@ export default {
         },
         closeOrder() {
             this.isOrder = false;
+        },
+        closeOrderConfirm() {
+            this.isOrderConfirm = false;
+        },
+        showOrderConfirm (value, dataValue) {
+            this.isOrder = false;
+            this.isOrderConfirm = true;
+            this.scriptValue = value;
+            this.dataValue = dataValue;
         },
         getUnits() {
             axios.get('api/scripts').then(response => {

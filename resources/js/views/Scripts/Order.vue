@@ -126,6 +126,7 @@ export default {
             this.$emit('close');
         },
         orderCreate() {
+            this.errors = [];
             if (!this.order_price) {
                 this.errors.push('Price is required.');
             }
@@ -152,8 +153,8 @@ export default {
                 this.errors.push('Qty and Lot Qty is must be multiplication of ' + this.values.script_min_lot);
             }
 
-
             if (!this.errors.length) {
+                console.log('in if');
                 const data = {
                     script_id: this.values.script_id,
                     order_type: this.orderType,
@@ -164,11 +165,7 @@ export default {
                 this.order_price = '';
                 this.order_qty = '';
                 this.lot_size = '';
-                axios.post('api/order', data).then(response => {
-                    this.close();
-                }).catch(error => {
-                    this.errors.push(error.response.data.message)
-                });
+                this.$parent.showOrderConfirm(this.values, data);
             }
         }
     }
