@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -12,9 +15,18 @@
   <component name="ChangeListManager">
     <list default="true" id="ad78d497-6ee3-44fc-899a-1d01e02b08b4" name="Default Changelist" comment="master page management">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/layouts/MasterApp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/layouts/MasterApp.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/layouts/MasterHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/layouts/MasterHeader.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/layouts/ScriptLists.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/layouts/ScriptLists.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/layouts/SimpleLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/layouts/SimpleLayout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/Scripts/Order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Scripts/Order.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/Scripts/OrderConfirm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Scripts/OrderConfirm.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +152,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/layouts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.2.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -204,7 +216,7 @@
       <workItem from="1600704166160" duration="10328000" />
       <workItem from="1600791295808" duration="3462000" />
       <workItem from="1600834047596" duration="10000" />
-      <workItem from="1600877786025" duration="929000" />
+      <workItem from="1600877786025" duration="5390000" />
     </task>
     <task id="LOCAL-00001" summary="first init commit">
       <created>1600007025647</created>
@@ -276,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600793926067</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Order Buy and sell with validation and confirm">
+      <created>1600878784333</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1600878784333</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,7 +325,8 @@
     <MESSAGE value="email dynamic" />
     <MESSAGE value="master page management" />
     <MESSAGE value="order Buy and Sell" />
-    <option name="LAST_COMMIT_MESSAGE" value="order Buy and Sell" />
+    <MESSAGE value="Order Buy and sell with validation and confirm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Order Buy and sell with validation and confirm" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600586242792">
@@ -317,10 +337,10 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1779" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1599672648337" />
-    <state x="1458" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1600457520476">
+    <state x="1458" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1600882539122">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state x="1458" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600457520476" />
+    <state x="1458" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600882539122" />
     <state x="1829" y="118" key="FileChooserDialogImpl" timestamp="1600456421734">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
@@ -367,17 +387,17 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1458" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600878346734" />
-    <state x="1872" y="85" width="744" height="592" key="find.popup" timestamp="1600624432326">
+    <state x="1872" y="85" width="744" height="592" key="find.popup" timestamp="1600880215065">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state x="1872" y="85" width="744" height="592" key="find.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600624432326" />
+    <state x="1872" y="85" width="744" height="592" key="find.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600880215065" />
     <state x="1850" y="270" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1600533944842">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1850" y="270" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600533944842" />
-    <state x="1705" y="17" width="672" height="678" key="search.everywhere.popup" timestamp="1600713831089">
+    <state x="1705" y="17" width="672" height="678" key="search.everywhere.popup" timestamp="1600882087592">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state x="1705" y="17" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600713831089" />
+    <state x="1705" y="17" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600882087592" />
   </component>
 </project>

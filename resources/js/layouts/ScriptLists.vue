@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="left-wrp">
+
             <div class="search-section">
                 <form action="">
                     <input v-model="search" placeholder="Search" v-on:keyup="searchScript" type="text">
@@ -34,7 +34,6 @@
                     </li>
                 </ul>
             </div>
-        </div>
 
         <Order :values="scriptValue" :orderType="orderType" v-show="isOrder" @close="closeOrder" />
 

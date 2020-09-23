@@ -6,15 +6,15 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <div class="row">
-                                    <div class="col-sm-6 col-6 popup-header-left text-left">
-                                        <span>{{ values.script_display_name }}</span>
-                                    </div>
-                                    <div class="col-sm-6 col-6 popup-header-right text-right">
-                                        <span>{{ values.script_isin_number }}</span>
-                                    </div>
+                                <div class="col-sm-6 col-6 popup-header-left text-left">
+                                    <span>{{ values.script_display_name }}</span>
                                 </div>
-                                <button type="button" class="btn-close close float-left" @click="close"> x</button>
+                                <div class="col-sm-5 col-5 popup-header-right text-right">
+                                    <span>{{ values.script_isin_number }}</span>
+                                </div>
+                                <div class="col-sm-1 col-1 popup-header-right text-left">
+                                    <button type="button" class="btn-close close float-left" @click="close"> x</button>
+                                </div>
                             </div>
                             <div class="modal-body">
                                 <div class="alert alert-danger" v-if="errors.length">

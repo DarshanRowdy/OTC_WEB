@@ -9,6 +9,7 @@ import Register from "@/js/views/Auth/Register";
 import LoginOtp from "./views/Auth/LoginOtp";
 import Orders from "./components/Orders";
 import Info from "./components/Info";
+import ScriptLists from "./layouts/ScriptLists";
 
 Vue.use(VueRouter);
 
@@ -19,6 +20,14 @@ const router = new VueRouter({
             path: '/',
             name: 'Home',
             component: Home,
+            meta: {
+                middleware: auth,
+            }
+        },
+        {
+            path: '/script-list',
+            name: 'ScriptLists',
+            component: ScriptLists,
             meta: {
                 middleware: auth,
             }

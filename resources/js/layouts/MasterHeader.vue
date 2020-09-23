@@ -44,10 +44,11 @@
                 <div class="d-flex align-items-center">
                     <div class="dash-mob-navlist mr-auto">
                         <ul class="d-flex align-items-center">
-                            <li><a href="#"><i class='las la-bars'></i></a></li>
+                            <li>
+                                <router-link to="/script-list"><i class='las la-bars'></i></router-link>
+                            </li>
                             <li>
                                 <router-link to="/"><i class='lab la-hornbill'></i></router-link>
-                                >
                             </li>
                             <li><a href="#"><i class='las la-book-open'></i></a></li>
                             <li></li>
@@ -71,7 +72,7 @@ export default {
 </script>
 
 <style scoped>
-.container {
+/*.container {
     padding: 0px 12px;
-}
+}*/
 </style>

@@ -1,7 +1,7 @@
 import "./bootstrap"
 import Vue from "vue"
 // import Vuex from "vuex"
-import vuetify from '@/js/plugins/vuetify'
+// import vuetify from '@/js/plugins/vuetify'
 import Vuelidate from "vuelidate";
 import { store } from "./stores";
 
@@ -18,7 +18,7 @@ Vue.component('spinner', require('vue-simple-spinner'));
 
 const app = new Vue({
     el: "#app",
-    vuetify,
+    // vuetify,
     router: Route,
     store,
     render: h => h(App)
