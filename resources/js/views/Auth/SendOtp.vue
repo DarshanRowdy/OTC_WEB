@@ -41,7 +41,7 @@ export default {
             const data = {
                 mobile: this.mobile,
             };
-            axios.post('api/send-otp', data).then(response => {
+            axios.post('/api/send-otp', data).then(response => {
                 this.$parent.sendVerifyOtp();
             }).catch(error => {
                 this.errors.push(error.response.data.message)

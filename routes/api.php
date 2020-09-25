@@ -28,6 +28,7 @@ Route::namespace('Api')->group(function () {
 //    Route::group(['middleware' => 'api.auth'], function() {
 //        Route::resource('scripts', , ['only' => 'index']);
     Route::any('scripts', 'ScriptsController@index')->name('scripts.index');
+    Route::get('scripts/{id}', 'ScriptsController@show')->name('scripts.show');
 
     Route::get('announcements','AnnouncementsController@index')->name('announcements.index');
 

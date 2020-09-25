@@ -79,4 +79,16 @@ class Scripts extends Model
     public function getLowerAttribute(){
         return $this->script_ltp - ((30 / 100) * $this->script_ltp);
     }
+
+    public function scriptNewsLinks(){
+        return $this->hasMany(ScriptNewslinks::class,'script_id','script_id');
+    }
+
+    public function scriptReports(){
+        return $this->hasMany(ScriptReports::class,'script_id','script_id');
+    }
+
+    public function scriptFinancials(){
+        return $this->hasMany(ScriptFinancials::class,'script_id','script_id');
+    }
 }

@@ -63,7 +63,7 @@ export default {
                     mobile: this.mobile,
                     password: this.password
                 };
-                axios.post('api/change-password', data).then(response => {
+                axios.post('/api/change-password', data).then(response => {
                     this.$parent.showConfirmationModal();
                 }).catch(error => {
                     this.errors.push(error.response.data.message)

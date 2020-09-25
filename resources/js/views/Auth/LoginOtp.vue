@@ -72,7 +72,7 @@ export default {
                     mobile: this.mobile
                 };
 
-                axios.post('api/send-otp', data).then(response => {
+                axios.post('/api/send-otp', data).then(response => {
                     alert(response.data.message);
                 }).catch(error => {
                     this.errors.push(error.response.data.message)

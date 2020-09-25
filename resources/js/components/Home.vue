@@ -281,7 +281,7 @@ export default {
     },
     methods: {
         getAnnouncement() {
-            axios.get('api/announcements').then(response => {
+            axios.get('/api/announcements').then(response => {
                 this.announcements = response.data.data.announcements;
             }).catch(error => {
                 this.errors.push(error.response.data.message)

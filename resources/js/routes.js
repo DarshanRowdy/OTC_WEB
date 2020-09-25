@@ -41,7 +41,7 @@ const router = new VueRouter({
             }
         },
         {
-            path: '/info',
+            path: '/info/:id',
             name: 'Info',
             component: Info,
             meta: {

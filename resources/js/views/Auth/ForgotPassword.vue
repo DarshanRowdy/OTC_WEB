@@ -49,7 +49,7 @@ export default {
             const data = {
                 mobile: this.mobile,
             };
-            axios.post('api/send-otp', data).then(response => {
+            axios.post('/api/send-otp', data).then(response => {
                 this.$parent.showVerifyOtpModal(this.mobile, this.from_where);
             }).catch(error => {
                 this.errors.push(error.response.data.message)

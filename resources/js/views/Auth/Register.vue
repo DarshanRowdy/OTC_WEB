@@ -134,7 +134,7 @@ export default {
                     password: this.password
                 };
 
-                axios.post('api/registration', data).then(response => {
+                axios.post('/api/registration', data).then(response => {
                     this.isSendOtpVisible = true;
                 }).catch(error => {
                     this.errors.push(error.response.data.message)

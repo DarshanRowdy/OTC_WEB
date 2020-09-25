@@ -144,7 +144,7 @@ export default {
                     password: this.password
                 };
 
-                axios.post('api/login', data).then(response => {
+                axios.post('/api/login', data).then(response => {
                     if(response.data.responseCode === 200 && 'auth_token' in response.data.data.user){
                         // this.$session.start()
                         // this.$session.set('auth_token', response.data.data.user.auth_token);

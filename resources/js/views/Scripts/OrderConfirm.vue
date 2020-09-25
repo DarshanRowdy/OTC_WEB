@@ -44,7 +44,7 @@ export default {
         },
         submitOrder() {
             if (this.dataValue !== null || this.dataValue !== undefined) {
-                axios.post('api/order', this.dataValue).then(response => {
+                axios.post('/api/order', this.dataValue).then(response => {
                     this.close();
                 }).catch(error => {
                     this.errors.push(error.response.data.message)

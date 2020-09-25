@@ -2245,7 +2245,7 @@ __webpack_require__.r(__webpack_exports__);
     getAnnouncement: function getAnnouncement() {
       var _this = this;
 
-      axios.get('api/announcements').then(function (response) {
+      axios.get('/api/announcements').then(function (response) {
         _this.announcements = response.data.data.announcements;
       })["catch"](function (error) {
         _this.errors.push(error.response.data.message);
@@ -2271,6 +2271,8 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layouts_MasterHeader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../layouts/MasterHeader */ "./resources/js/layouts/MasterHeader.vue");
 /* harmony import */ var _layouts_ScriptLists__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../layouts/ScriptLists */ "./resources/js/layouts/ScriptLists.vue");
+/* harmony import */ var _views_Scripts_Order__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../views/Scripts/Order */ "./resources/js/views/Scripts/Order.vue");
+/* harmony import */ var _views_Scripts_OrderConfirm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../views/Scripts/OrderConfirm */ "./resources/js/views/Scripts/OrderConfirm.vue");
 //
 //
 //
@@ -2462,31 +2464,61 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Info",
   data: function data() {
     return {
-      errors: []
+      id: this.$route.params.id,
+      errors: [],
+      scriptDetail: {},
+      orderType: '',
+      scriptValue: {},
+      dataValue: {},
+      scriptFinancials: {},
+      isOrder: false,
+      isOrderConfirm: false
     };
   },
   components: {
+    Order: _views_Scripts_Order__WEBPACK_IMPORTED_MODULE_2__["default"],
+    OrderConfirm: _views_Scripts_OrderConfirm__WEBPACK_IMPORTED_MODULE_3__["default"],
     MasterHeader: _layouts_MasterHeader__WEBPACK_IMPORTED_MODULE_0__["default"],
     ScriptLists: _layouts_ScriptLists__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  methods: {
+    getScripts: function getScripts() {
+      var _this = this;
+
+      axios.get('/api/scripts/' + this.id).then(function (response) {
+        _this.scriptDetail = response.data.data.script;
+      })["catch"](function (error) {
+        _this.errors.push(error.response.data.message);
+      });
+    },
+    showOrder: function showOrder(value, type) {
+      this.scriptValue = value;
+      this.orderType = type;
+      this.isOrder = true;
+    },
+    closeOrder: function closeOrder() {
+      this.isOrder = false;
+    },
+    closeOrderConfirm: function closeOrderConfirm() {
+      this.isOrderConfirm = false;
+    },
+    showOrderConfirm: function showOrderConfirm(value, dataValue) {
+      this.isOrder = false;
+      this.isOrderConfirm = true;
+      this.scriptValue = value;
+      this.dataValue = dataValue;
+    }
+  },
+  mounted: function mounted() {
+    this.getScripts();
   },
   beforeMount: function beforeMount() {
     this.$store.commit('SET_LAYOUT', 'master-app');
@@ -2801,6 +2833,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2842,7 +2877,7 @@ __webpack_require__.r(__webpack_exports__);
     getUnits: function getUnits() {
       var _this = this;
 
-      axios.get('api/scripts').then(function (response) {
+      axios.get('/api/scripts').then(function (response) {
         _this.scripts = response.data.data.scripts;
       })["catch"](function (error) {
         _this.errors.push(error.response.data.message);
@@ -2854,7 +2889,7 @@ __webpack_require__.r(__webpack_exports__);
       var data = {
         search: this.search
       };
-      axios.post('api/scripts', data).then(function (response) {
+      axios.post('/api/scripts', data).then(function (response) {
         _this2.scripts = response.data.data.scripts;
       })["catch"](function (error) {
         _this2.errors.push(error.response.data.message);
@@ -3065,7 +3100,7 @@ __webpack_require__.r(__webpack_exports__);
       var data = {
         mobile: this.mobile
       };
-      axios.post('api/send-otp', data).then(function (response) {
+      axios.post('/api/send-otp', data).then(function (response) {
         _this.$parent.showVerifyOtpModal(_this.mobile, _this.from_where);
       })["catch"](function (error) {
         _this.errors.push(error.response.data.message);
@@ -3243,7 +3278,7 @@ __webpack_require__.r(__webpack_exports__);
           mobile: this.mobile,
           password: this.password
         };
-        axios.post('api/login', data).then(function (response) {
+        axios.post('/api/login', data).then(function (response) {
           if (response.data.responseCode === 200 && 'auth_token' in response.data.data.user) {
             // this.$session.start()
             // this.$session.set('auth_token', response.data.data.user.auth_token);
@@ -3348,7 +3383,7 @@ __webpack_require__.r(__webpack_exports__);
         var data = {
           mobile: this.mobile
         };
-        axios.post('api/send-otp', data).then(function (response) {
+        axios.post('/api/send-otp', data).then(function (response) {
           alert(response.data.message);
         })["catch"](function (error) {
           _this.errors.push(error.response.data.message);
@@ -3437,7 +3472,7 @@ __webpack_require__.r(__webpack_exports__);
           mobile: this.mobile,
           password: this.password
         };
-        axios.post('api/change-password', data).then(function (response) {
+        axios.post('/api/change-password', data).then(function (response) {
           _this.$parent.showConfirmationModal();
         })["catch"](function (error) {
           _this.errors.push(error.response.data.message);
@@ -3605,7 +3640,7 @@ __webpack_require__.r(__webpack_exports__);
           mobile: this.mobile,
           password: this.password
         };
-        axios.post('api/registration', data).then(function (response) {
+        axios.post('/api/registration', data).then(function (response) {
           _this.isSendOtpVisible = true;
         })["catch"](function (error) {
           _this.errors.push(error.response.data.message);
@@ -3670,7 +3705,7 @@ __webpack_require__.r(__webpack_exports__);
       var data = {
         mobile: this.mobile
       };
-      axios.post('api/send-otp', data).then(function (response) {
+      axios.post('/api/send-otp', data).then(function (response) {
         _this.$parent.sendVerifyOtp();
       })["catch"](function (error) {
         _this.errors.push(error.response.data.message);
@@ -3757,7 +3792,7 @@ __webpack_require__.r(__webpack_exports__);
         otp: this.otp,
         is_login_with_otp: is_login_with_otp
       };
-      axios.post('api/verify-otp', data).then(function (response) {
+      axios.post('/api/verify-otp', data).then(function (response) {
         if (_this.from_where === 'login') {
           _this.$parent.showNewPasswordModal(_this.mobile);
         } else if (_this.from_where === 'register') {
@@ -3778,7 +3813,7 @@ __webpack_require__.r(__webpack_exports__);
       var data = {
         mobile: this.mobile
       };
-      axios.post('api/send-otp', data).then(function (response) {
+      axios.post('/api/send-otp', data).then(function (response) {
         alert('OTP Re-send successfully');
       })["catch"](function (error) {
         _this2.errors.push(error.response.data.message);
@@ -4034,7 +4069,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       if (this.dataValue !== null || this.dataValue !== undefined) {
-        axios.post('api/order', this.dataValue).then(function (response) {
+        axios.post('/api/order', this.dataValue).then(function (response) {
           _this.close();
         })["catch"](function (error) {
           _this.errors.push(error.response.data.message);
@@ -23291,38 +23326,284 @@ var render = function() {
         ])
       : _vm._e(),
     _vm._v(" "),
-    _c("section", { attrs: { id: "info" } }, [
-      _vm._m(0),
+    _c(
+      "section",
+      { attrs: { id: "info" } },
+      [
+        _c("h1", [_c("b", [_vm._v(_vm._s(_vm.scriptDetail.script_name))])]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c(
+            "div",
+            { staticClass: "col-lg-6" },
+            [_c("P", [_vm._v(_vm._s(_vm.scriptDetail.script_sector))])],
+            1
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-6" }, [
+            _c("p", [_vm._v(_vm._s(_vm.scriptDetail.script_isin_number))])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("p", [_vm._v(_vm._s(_vm.scriptDetail.script_description))]),
+        _vm._v(" "),
+        _c("div", { staticClass: "buysell" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "buy-btn-wrp" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "buy-btn get-started-btn3",
+                  on: {
+                    click: function($event) {
+                      return _vm.showOrder(_vm.scriptDetail, "Buy")
+                    }
+                  }
+                },
+                [_vm._v("BUY")]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "sell-btn-wrp" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "sell-btn get-started-btn3",
+                  on: {
+                    click: function($event) {
+                      return _vm.showOrder(_vm.scriptDetail, "Sell")
+                    }
+                  }
+                },
+                [_vm._v("SELL")]
+              )
+            ]),
+            _vm._v(" "),
+            _vm._m(0)
+          ])
+        ]),
+        _vm._v(" "),
+        _c("Order", {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: _vm.isOrder,
+              expression: "isOrder"
+            }
+          ],
+          attrs: { values: _vm.scriptValue, orderType: _vm.orderType },
+          on: { close: _vm.closeOrder }
+        }),
+        _vm._v(" "),
+        _c("OrderConfirm", {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: _vm.isOrderConfirm,
+              expression: "isOrderConfirm"
+            }
+          ],
+          attrs: { values: _vm.scriptValue, dataValue: _vm.dataValue },
+          on: { close: _vm.closeOrderConfirm }
+        })
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _vm._m(1),
+    _vm._v(" "),
+    _c(
+      "section",
+      { staticClass: "features section-bg", attrs: { id: "features" } },
+      [
+        _vm._m(2),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-lg-4" }, [
+            _c("div", { staticClass: "icon-box" }, [
+              _vm._m(3),
+              _vm._v(" "),
+              _c("h4", { staticClass: "title" }, [
+                _vm._v(_vm._s(_vm.scriptDetail.script_peer_1))
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-4" }, [
+            _c("div", { staticClass: "icon-box" }, [
+              _vm._m(4),
+              _vm._v(" "),
+              _c("h4", { staticClass: "title" }, [
+                _vm._v(_vm._s(_vm.scriptDetail.script_peer_2))
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-4" }, [
+            _c("div", { staticClass: "icon-box" }, [
+              _vm._m(5),
+              _vm._v(" "),
+              _c("h4", { staticClass: "title" }, [
+                _vm._v(_vm._s(_vm.scriptDetail.script_peer_3))
+              ])
+            ])
+          ])
+        ])
+      ]
+    ),
+    _vm._v(" "),
+    _c("section", { staticClass: "content" }, [
+      _vm._m(6),
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          { staticClass: "col-lg-6" },
-          [_c("P", [_vm._v("SECTOR: Breweries & Distilleries")])],
-          1
-        ),
-        _vm._v(" "),
-        _vm._m(1)
-      ]),
-      _vm._v(" "),
-      _c("p", [
-        _vm._v(
-          "Unlisted Company HDB Financial has lines of business include – Lending and BPO\n            Services."
-        )
-      ]),
-      _vm._v(" "),
-      _vm._m(2)
+        _c("div", { staticClass: "col-12" }, [
+          _vm._m(7),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body table-responsive p-0" }, [
+            _c("table", { staticClass: "table table-hover text-nowrap" }, [
+              _c("thead", [
+                _c(
+                  "tr",
+                  [
+                    _c("th", [_vm._v("Annual")]),
+                    _vm._v(" "),
+                    _vm._l(_vm.scriptDetail.script_financials, function(
+                      financialsDetails
+                    ) {
+                      return _c(
+                        "th",
+                        { staticStyle: { "text-align": "right" } },
+                        [_vm._v(_vm._s(financialsDetails.fin_year))]
+                      )
+                    })
+                  ],
+                  2
+                )
+              ]),
+              _vm._v(" "),
+              _c("tbody", [
+                _c(
+                  "tr",
+                  [
+                    _c("td", [_vm._v("Revenue")]),
+                    _vm._v(" "),
+                    _vm._l(_vm.scriptDetail.script_financials, function(
+                      financialsDetails
+                    ) {
+                      return _c(
+                        "td",
+                        { staticStyle: { "text-align": "right" } },
+                        [_vm._v(" " + _vm._s(financialsDetails.script_revenue))]
+                      )
+                    })
+                  ],
+                  2
+                ),
+                _vm._v(" "),
+                _c(
+                  "tr",
+                  [
+                    _c("td", [_vm._v("PAT")]),
+                    _vm._v(" "),
+                    _vm._l(_vm.scriptDetail.script_financials, function(
+                      financialsDetails
+                    ) {
+                      return _c(
+                        "td",
+                        { staticStyle: { "text-align": "right" } },
+                        [_vm._v(" " + _vm._s(financialsDetails.script_profit))]
+                      )
+                    })
+                  ],
+                  2
+                ),
+                _vm._v(" "),
+                _c(
+                  "tr",
+                  [
+                    _c("td", [_vm._v("EPS")]),
+                    _vm._v(" "),
+                    _vm._l(_vm.scriptDetail.script_financials, function(
+                      financialsDetails
+                    ) {
+                      return _c(
+                        "td",
+                        { staticStyle: { "text-align": "right" } },
+                        [_vm._v(" " + _vm._s(financialsDetails.script_eps))]
+                      )
+                    })
+                  ],
+                  2
+                )
+              ])
+            ])
+          ])
+        ])
+      ])
     ]),
     _vm._v(" "),
-    _vm._m(3),
+    _c("section", { attrs: { id: "notice" } }, [
+      _vm._m(8),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-lg-6 content" }, [
+          _c(
+            "ul",
+            _vm._l(_vm.scriptDetail.script_news_links, function(scriptLink) {
+              return _c("li", [
+                _c("i", { staticClass: "las la-link" }),
+                _c("b", [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        target: "_blank",
+                        href: "//" + scriptLink.script_news_link
+                      }
+                    },
+                    [_vm._v(_vm._s(scriptLink.script_link_header))]
+                  )
+                ])
+              ])
+            }),
+            0
+          )
+        ])
+      ])
+    ]),
     _vm._v(" "),
-    _vm._m(4),
-    _vm._v(" "),
-    _vm._m(5),
-    _vm._v(" "),
-    _vm._m(6),
-    _vm._v(" "),
-    _vm._m(7)
+    _c("section", { attrs: { id: "notice1" } }, [
+      _vm._m(9),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-lg-6 content" }, [
+          _c(
+            "ul",
+            _vm._l(_vm.scriptDetail.script_reports, function(scriptReport) {
+              return _c("li", [
+                _c("i", { staticClass: "las la-file-pdf" }),
+                _vm._v(" "),
+                _c("b", [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        target: "_blank",
+                        href: "//" + scriptReport.script_report_link
+                      }
+                    },
+                    [_vm._v(_vm._s(scriptReport.script_report_header))]
+                  )
+                ])
+              ])
+            }),
+            0
+          )
+        ])
+      ])
+    ])
   ])
 }
 var staticRenderFns = [
@@ -23330,55 +23611,15 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("h1", [_c("b", [_vm._v("Anheuser Inbev India Limited")])])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-6" }, [
-      _c("p", [_vm._v(" ISIN: INE038G01019")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "buysell" }, [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "buy-btn-wrp" }, [
-          _c(
-            "a",
-            {
-              staticClass: "buy-btn get-started-btn3",
-              attrs: { href: "#buy-popup" }
-            },
-            [_vm._v("BUY")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "sell-btn-wrp" }, [
-          _c(
-            "a",
-            {
-              staticClass: "sell-btn get-started-btn3",
-              attrs: { href: "#sell-popup" }
-            },
-            [_vm._v("SELL")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "sell-btn-wrp" }, [
-          _c(
-            "a",
-            {
-              staticClass: "mkt-btn get-started-btn3",
-              attrs: { href: "#market-depth" }
-            },
-            [_vm._v("Market\n                    Depth")]
-          )
-        ])
-      ])
+    return _c("div", { staticClass: "sell-btn-wrp" }, [
+      _c(
+        "a",
+        {
+          staticClass: "mkt-btn get-started-btn3",
+          attrs: { href: "#market-depth" }
+        },
+        [_vm._v("Market\n                    Depth")]
+      )
     ])
   },
   function() {
@@ -23465,230 +23706,73 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "section",
-      { staticClass: "features section-bg", attrs: { id: "features" } },
-      [
-        _c("div", { staticClass: "section-header" }, [
-          _c("h2", [_vm._v("PEERS")])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-lg-4" }, [
-            _c("div", { staticClass: "icon-box" }, [
-              _c("div", { staticClass: "icon" }, [
-                _c("i", {
-                  staticClass: "las la-building",
-                  staticStyle: { color: "#15D295" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "title" }, [_vm._v("United Breweries")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4" }, [
-            _c("div", { staticClass: "icon-box" }, [
-              _c("div", { staticClass: "icon" }, [
-                _c("i", {
-                  staticClass: "las la-building",
-                  staticStyle: { color: "#15D295" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "title" }, [_vm._v("B9 Beverages")])
-            ])
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "content" }, [
-      _c("div", { staticClass: "section-header" }, [
-        _c("h2", [_vm._v("Financials ")])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-12" }, [
-          _c("div", { staticClass: "card-header" }, [
-            _c("h6", { staticClass: "card-title" }, [_vm._v("₹ Cr.")])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body table-responsive p-0" }, [
-            _c("table", { staticClass: "table table-hover text-nowrap" }, [
-              _c("thead", [
-                _c("tr", [
-                  _c("th", [_vm._v("Annual")]),
-                  _vm._v(" "),
-                  _c("th", { staticStyle: { "text-align": "right" } }, [
-                    _vm._v("FY2019")
-                  ]),
-                  _vm._v(" "),
-                  _c("th", { staticStyle: { "text-align": "right" } }, [
-                    _vm._v("FY2018")
-                  ]),
-                  _vm._v(" "),
-                  _c("th", { staticStyle: { "text-align": "right" } }, [
-                    _vm._v("FY2017")
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tbody", [
-                _c("tr", [
-                  _c("td", [_vm._v("Revenue")]),
-                  _vm._v(" "),
-                  _c("td", { staticStyle: { "text-align": "right" } }, [
-                    _vm._v(" 3,193.74")
-                  ]),
-                  _vm._v(" "),
-                  _c("td", { staticStyle: { "text-align": "right" } }, [
-                    _vm._v(" 3,279.85")
-                  ]),
-                  _vm._v(" "),
-                  _c("td", { staticStyle: { "text-align": "right" } }, [
-                    _vm._v(" -9.46")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("tr", [
-                  _c("td", [_vm._v("PAT")]),
-                  _vm._v(" "),
-                  _c("td", { staticStyle: { "text-align": "right" } }, [
-                    _vm._v(" -101.71")
-                  ]),
-                  _vm._v(" "),
-                  _c("td", { staticStyle: { "text-align": "right" } }, [
-                    _vm._v(" -386.70")
-                  ]),
-                  _vm._v(" "),
-                  _c("td", { staticStyle: { "text-align": "right" } }, [
-                    _vm._v(" -9.46")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("tr", [
-                  _c("td", [_vm._v("EPS")]),
-                  _vm._v(" "),
-                  _c("td", { staticStyle: { "text-align": "right" } }, [
-                    _vm._v(" -2.49")
-                  ]),
-                  _vm._v(" "),
-                  _c("td", { staticStyle: { "text-align": "right" } }, [
-                    _vm._v(" -9.46")
-                  ]),
-                  _vm._v(" "),
-                  _c("td", { staticStyle: { "text-align": "right" } }, [
-                    _vm._v(" -9.46")
-                  ])
-                ])
-              ])
-            ])
-          ])
-        ])
-      ])
+    return _c("div", { staticClass: "section-header" }, [
+      _c("h2", [_vm._v("PEERS")])
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("section", { attrs: { id: "notice" } }, [
-      _c("div", { staticClass: "section-header" }, [
-        _c("h2", [_vm._v("Useful Links / News")])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-lg-6 content" }, [
-          _c("ul", [
-            _c("li", [
-              _c("i", { staticClass: "las la-link" }),
-              _vm._v(" "),
-              _c("b", [_c("a", { attrs: { href: "" } }, [_vm._v("Link")])])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", { staticClass: "las la-link" }),
-              _vm._v(" "),
-              _c("b", [_c("a", { attrs: { href: "" } }, [_vm._v("Link")])])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", { staticClass: "las la-link" }),
-              _vm._v(" "),
-              _c("b", [_c("a", { attrs: { href: "" } }, [_vm._v("Link")])])
-            ])
-          ])
-        ])
-      ])
+    return _c("div", { staticClass: "icon" }, [
+      _c("i", {
+        staticClass: "las la-building",
+        staticStyle: { color: "#15D295" }
+      })
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("section", { attrs: { id: "notice1" } }, [
-      _c("div", { staticClass: "section-header" }, [
-        _c("h2", [_vm._v("Annual Reports")])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-lg-6 content" }, [
-          _c("ul", [
-            _c("li", [
-              _c("i", { staticClass: "las la-file-pdf" }),
-              _vm._v(" "),
-              _c("b", [
-                _c(
-                  "a",
-                  { attrs: { href: "annual-report/INE038G01019-2019.pdf" } },
-                  [
-                    _vm._v(
-                      "FY2019: AB-INBEV\n                        SABMILLER"
-                    )
-                  ]
-                )
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", { staticClass: "las la-file-pdf" }),
-              _vm._v(" "),
-              _c("b", [
-                _c(
-                  "a",
-                  { attrs: { href: "annual-report/INE038G01019-2018.pdf" } },
-                  [
-                    _vm._v(
-                      "FY2018: AB-INBEV\n                        SABMILLER"
-                    )
-                  ]
-                )
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", { staticClass: "las la-file-pdf" }),
-              _vm._v(" "),
-              _c("b", [
-                _c(
-                  "a",
-                  { attrs: { href: "annual-report/INE038G01019-2017.pdf" } },
-                  [
-                    _vm._v(
-                      "FY2017: AB-INBEV\n                        SABMILLER"
-                    )
-                  ]
-                )
-              ])
-            ])
-          ])
-        ])
-      ])
+    return _c("div", { staticClass: "icon" }, [
+      _c("i", {
+        staticClass: "las la-building",
+        staticStyle: { color: "#15D295" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "icon" }, [
+      _c("i", {
+        staticClass: "las la-building",
+        staticStyle: { color: "#15D295" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "section-header" }, [
+      _c("h2", [_vm._v("Financials ")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header" }, [
+      _c("h6", { staticClass: "card-title" }, [_vm._v("₹ Cr.")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "section-header" }, [
+      _c("h2", [_vm._v("Useful Links / News")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "section-header" }, [
+      _c("h2", [_vm._v("Annual Reports")])
     ])
   }
 ]
@@ -24208,9 +24292,11 @@ var render = function() {
                       "li",
                       { staticClass: "icon-more icon-bg-blank" },
                       [
-                        _c("router-link", { attrs: { to: "/info" } }, [
-                          _c("i", { staticClass: "las la-ellipsis-v" })
-                        ])
+                        _c(
+                          "router-link",
+                          { attrs: { to: "/info/" + value.script_id } },
+                          [_c("i", { staticClass: "las la-ellipsis-v" })]
+                        )
                       ],
                       1
                     )
@@ -46163,7 +46249,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       middleware: _middlewares_auth_js__WEBPACK_IMPORTED_MODULE_2__["default"]
     }
   }, {
-    path: '/info',
+    path: '/info/:id',
     name: 'Info',
     component: _components_Info__WEBPACK_IMPORTED_MODULE_9__["default"],
     meta: {

@@ -31,7 +31,7 @@ class ScriptsController extends BaseApiController
         }
     }
 
-    public function store(ScriptsRequest $request)
+    /*public function store(ScriptsRequest $request)
     {
         try{
             $tbl_scripts = Scripts::create($request->all());
@@ -40,20 +40,30 @@ class ScriptsController extends BaseApiController
         }
         $response = ['Scripts' => $tbl_scripts];
         $this->_sendResponse($response, 'Scripts created success');
-    }
+    }*/
 
     public function show($id)
     {
         try{
-            $tbl_scripts = Scripts::findOrFail($id);
+            $tbl_scripts = Scripts::query();
+            $tbl_scripts->with(['scriptFinancials','scriptNewsLinks', 'scriptReports']);
+            $tbl_scripts->where('script_id','=',$id);
+            $scriptObj = $tbl_scripts->first();
+            if(!empty($scriptObj))
+            {
+                $response = ['script' => $scriptObj];
+                $this->_sendResponse($response, 'scripts detail found success');
+            } else {
+                $this->_sendErrorResponse(404,'script not found');
+            }
+
         } catch (\Exception $exception){
+            dd($exception);
             $this->_sendErrorResponse(500);
         }
-        $response = ['Scripts' => $tbl_scripts];
-        $this->_sendResponse($response, 'Scripts found success');
     }
 
-    public function update(ScriptsRequest $request, $id)
+   /* public function update(ScriptsRequest $request, $id)
     {
         try{
             $tbl_scripts = Scripts::findOrFail($id);
@@ -74,5 +84,5 @@ class ScriptsController extends BaseApiController
         }
         $response = ['Scripts' => $tbl_scripts];
         $this->_sendResponse($response, 'Scripts delete successfully');
-    }
+    }*/
 }

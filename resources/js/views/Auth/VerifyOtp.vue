@@ -60,7 +60,7 @@ export default {
                 otp: this.otp,
                 is_login_with_otp: is_login_with_otp
             };
-            axios.post('api/verify-otp', data).then(response => {
+            axios.post('/api/verify-otp', data).then(response => {
                 if(this.from_where === 'login'){
                     this.$parent.showNewPasswordModal(this.mobile);
                 } else if(this.from_where === 'register') {
@@ -78,7 +78,7 @@ export default {
             const data = {
                 mobile: this.mobile,
             };
-            axios.post('api/send-otp', data).then(response => {
+            axios.post('/api/send-otp', data).then(response => {
                 alert('OTP Re-send successfully');
             }).catch(error => {
                 this.errors.push(error.response.data.message)

@@ -25,7 +25,10 @@
                                     class="las la-bars"></i> </a></li>
 
                                 <li class="icon-more icon-bg-blank">
-                                    <router-link to="/info">
+                                    <!--<router-link :to="{name:'Info',params: {id: value.script_id}}">
+                                        <i class="las la-ellipsis-v"></i>
+                                    </router-link>-->
+                                    <router-link v-bind:to="`/info/${value.script_id}`">
                                         <i class="las la-ellipsis-v"></i>
                                     </router-link>
                                 </li>
@@ -82,7 +85,7 @@ export default {
             this.dataValue = dataValue;
         },
         getUnits() {
-            axios.get('api/scripts').then(response => {
+            axios.get('/api/scripts').then(response => {
                 this.scripts = response.data.data.scripts;
             }).catch(error => {
                 this.errors.push(error.response.data.message)
@@ -92,7 +95,7 @@ export default {
             const data = {
                 search: this.search,
             };
-            axios.post('api/scripts', data).then(response => {
+            axios.post('/api/scripts', data).then(response => {
                 this.scripts = response.data.data.scripts;
             }).catch(error => {
                 this.errors.push(error.response.data.message)
