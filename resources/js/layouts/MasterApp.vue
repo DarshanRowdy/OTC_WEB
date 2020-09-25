@@ -5,11 +5,12 @@
             <div class="container1">
                 <div class="dashboard-wrp d-flex align-items-top d-flex-none-mob">
                     <div class="dashboard-left">
-                        <div class="left-wrp">
+
                             <ScriptLists/>
-                        </div>
+
                     </div>
                     <div class="dashboard-right">
+                        <AutoLogout></AutoLogout>
                         <router-view></router-view>
                     </div>
                 </div>
@@ -21,6 +22,7 @@
 <script>
 import MasterHeader from "./MasterHeader.vue";
 import ScriptLists from "./ScriptLists.vue";
+import AutoLogout from "../components/AutoLogout";
 
 export default {
     name: "MasterApp",
@@ -29,7 +31,8 @@ export default {
     },
     components: {
         MasterHeader,
-        ScriptLists
+        ScriptLists,
+        AutoLogout
     },
     methods: {}
 }

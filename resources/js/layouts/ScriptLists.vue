@@ -1,6 +1,6 @@
 <template>
     <div>
-
+        <div class="left-wrp">
             <div class="search-section">
                 <form action="">
                     <input v-model="search" placeholder="Search" v-on:keyup="searchScript" type="text">
@@ -34,16 +34,17 @@
                     </li>
                 </ul>
             </div>
+        </div>
+        <Order :values="scriptValue" :orderType="orderType" v-show="isOrder" @close="closeOrder"/>
 
-        <Order :values="scriptValue" :orderType="orderType" v-show="isOrder" @close="closeOrder" />
-
-        <OrderConfirm :values="scriptValue" :dataValue="dataValue" v-show="isOrderConfirm" @close="closeOrderConfirm" />
+        <OrderConfirm :values="scriptValue" :dataValue="dataValue" v-show="isOrderConfirm" @close="closeOrderConfirm"/>
     </div>
 </template>
 
 <script>
 import Order from "../views/Scripts/Order.vue";
 import OrderConfirm from "../views/Scripts/OrderConfirm.vue";
+
 export default {
     name: "ScriptLists",
     data() {
@@ -74,7 +75,7 @@ export default {
         closeOrderConfirm() {
             this.isOrderConfirm = false;
         },
-        showOrderConfirm (value, dataValue) {
+        showOrderConfirm(value, dataValue) {
             this.isOrder = false;
             this.isOrderConfirm = true;
             this.scriptValue = value;
@@ -91,7 +92,7 @@ export default {
             const data = {
                 search: this.search,
             };
-            axios.post('api/scripts',data).then(response => {
+            axios.post('api/scripts', data).then(response => {
                 this.scripts = response.data.data.scripts;
             }).catch(error => {
                 this.errors.push(error.response.data.message)
@@ -105,5 +106,9 @@ export default {
 </script>
 
 <style scoped>
-
+@media screen and (max-width: 1020px) {
+    .left-wrp {
+        margin-top: 0;
+    }
+}
 </style>

@@ -145,9 +145,15 @@ export default {
                 };
 
                 axios.post('api/login', data).then(response => {
-                    let userObj = JSON.stringify(response.data.data.user)
-                    localStorage.setItem('userObj', userObj);
-                    this.$router.push('/');
+                    if(response.data.responseCode === 200 && 'auth_token' in response.data.data.user){
+                        // this.$session.start()
+                        // this.$session.set('auth_token', response.data.data.user.auth_token);
+                        let userObj = JSON.stringify(response.data.data.user)
+                        localStorage.setItem('userObj', userObj);
+                        this.$router.push('/');
+                    } else {
+                        this.$router.go(this.$router.currentRoute);
+                    }
                 }).catch(error => {
                     this.errors.push(error.response.data.message)
                 });
