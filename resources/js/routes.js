@@ -10,6 +10,7 @@ import LoginOtp from "./views/Auth/LoginOtp";
 import Orders from "./components/Orders";
 import Info from "./components/Info";
 import ScriptLists from "./layouts/ScriptLists";
+import NotFound from "./components/NotFound.vue"
 
 Vue.use(VueRouter);
 
@@ -78,7 +79,16 @@ const router = new VueRouter({
                     next();
                 }
             },
-        }
+        },
+        {
+            path: '/404',
+            component: NotFound,
+            name: NotFound
+        },
+        {
+            path: '*',
+            redirect: '/404'
+        },
     ]
 });
 

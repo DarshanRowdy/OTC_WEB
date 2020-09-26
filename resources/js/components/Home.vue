@@ -264,14 +264,10 @@
 </template>
 
 <script>
-import MasterHeader from "../layouts/MasterHeader";
-import ScriptLists from "../layouts/ScriptLists";
 
 export default {
     name: "Home",
     components: {
-        MasterHeader,
-        ScriptLists
     },
     data() {
         return {

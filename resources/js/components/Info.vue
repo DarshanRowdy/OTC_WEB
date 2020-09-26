@@ -5,7 +5,6 @@
                 <li :key="index" v-for="(error, index) in errors">{{ error }}</li>
             </ul>
         </div>
-
         <section id="info">
             <h1><b>{{ scriptDetail.script_name }}</b></h1>
             <div class="row">
@@ -92,19 +91,19 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4" v-if="scriptDetail.script_peer_1">
                     <div class="icon-box">
                         <div class="icon"><i class="las la-building" style="color: #15D295;"></i></div>
                         <h4 class="title">{{scriptDetail.script_peer_1}}</h4>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4" v-if="scriptDetail.script_peer_2">
                     <div class="icon-box">
                         <div class="icon"><i class="las la-building" style="color: #15D295;"></i></div>
                         <h4 class="title">{{scriptDetail.script_peer_2}}</h4>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4" v-if="scriptDetail.script_peer_3">
                     <div class="icon-box">
                         <div class="icon"><i class="las la-building" style="color: #15D295;"></i></div>
                         <h4 class="title">{{scriptDetail.script_peer_3}}</h4>
@@ -190,8 +189,6 @@
 </template>
 
 <script>
-import MasterHeader from "../layouts/MasterHeader";
-import ScriptLists from "../layouts/ScriptLists";
 import Order from "../views/Scripts/Order";
 import OrderConfirm from "../views/Scripts/OrderConfirm";
 
@@ -214,15 +211,17 @@ export default {
     components: {
         Order,
         OrderConfirm,
-        MasterHeader,
-        ScriptLists
     },
     methods: {
         getScripts(){
             axios.get('/api/scripts/'+this.id).then(response => {
-                this.scriptDetail = response.data.data.script;
+                if(response.data.responseCode === 200){
+                    this.scriptDetail = response.data.data.script;
+                } else {
+                    this.$router.push('/404');
+                }
             }).catch(error => {
-                this.errors.push(error.response.data.message)
+                this.$router.push('/404');
             });
         },
         showOrder(value, type) {
@@ -243,11 +242,15 @@ export default {
             this.dataValue = dataValue;
         },
     },
-    mounted() {
-        this.getScripts();
+    watch: {
+        '$route' (to, from) {
+            this.id = this.$route.params.id;
+            this.getScripts();
+        }
     },
     beforeMount() {
         this.$store.commit('SET_LAYOUT', 'master-app');
+        this.getScripts();
     }
 }
 </script>

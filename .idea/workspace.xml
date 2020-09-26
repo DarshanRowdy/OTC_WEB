@@ -15,22 +15,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ad78d497-6ee3-44fc-899a-1d01e02b08b4" name="Default Changelist" comment="master page management">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ScriptsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ScriptsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Scripts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Scripts.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Info.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Info.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/layouts/ScriptLists.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/layouts/ScriptLists.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Auth/ForgotPassword.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Auth/ForgotPassword.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Auth/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Auth/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Auth/LoginOtp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Auth/LoginOtp.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Auth/NewPassword.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Auth/NewPassword.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Auth/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Auth/Register.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Auth/SendOtp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Auth/SendOtp.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Auth/VerifyOtp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Auth/VerifyOtp.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Scripts/OrderConfirm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Scripts/OrderConfirm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,6 +211,7 @@
       <workItem from="1600877786025" duration="5513000" />
       <workItem from="1600996409215" duration="9867000" />
       <workItem from="1601053327817" duration="12985000" />
+      <workItem from="1601098897566" duration="2705000" />
     </task>
     <task id="LOCAL-00001" summary="first init commit">
       <created>1600007025647</created>
