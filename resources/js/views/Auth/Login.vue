@@ -26,12 +26,12 @@
                         <button class="login-page-btn btn btn-block login-btn">Login</button>
                         <hr/>
                         <div class="popup-box">
-                            <a @click="LoginWithOtp" class="button btn btn-block login-btn2">Login with OTP</a>
+                            <button @click="LoginWithOtp" class="button btn btn-block login-btn2">Login with OTP</button>
                         </div>
                         <!-- <input name="login" id="login" class="btn btn-block login-btn2" type="button" onclick="openForm()" value="Login with OTP"> -->
                     </form>
                     <p class="login-wrapper-footer-text">New User?
-                        <router-link to="/register" class="text-reset1">Register</router-link>
+                        <router-link to="/register" class="text-reset1">Register here</router-link>
                     </p>
                     <ForgotPassword :from_where="login" v-show="isForgotPasswordVisible"
                                     @close="closeForgotPasswordModal"/>
@@ -93,6 +93,9 @@ export default {
                 }, 500);
             }
         }
+    },
+    beforeMount() {
+        this.$store.commit('SET_LAYOUT', 'simple-layout');
     },
     methods: {
         showForgotPasswordModal() {
@@ -164,27 +167,4 @@ export default {
 </script>
 
 <style scoped>
-#visa {
-    margin: 20px auto;
-    max-width: 700px;
-    margin-bottom: 28px;
-}
-
-label {
-    display: block;
-    margin: 20px 0 10px;
-}
-
-span {
-    padding-top: 0px;
-    margin-top: 0px;
-    font-size: 12px;
-    color: red;
-}
-
-input {
-    font-size: 30px;
-    border: 1px double rgb(102, 97, 96);
-    border-radius: 4px;
-}
 </style>
