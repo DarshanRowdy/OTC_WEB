@@ -46,7 +46,7 @@ class ScriptsController extends BaseApiController
     {
         try{
             $tbl_scripts = Scripts::query();
-            $tbl_scripts->with(['scriptFinancials','scriptNewsLinks', 'scriptReports']);
+            $tbl_scripts->with(['scriptFinancials','scriptNewsLinks', 'scriptReports','lastYearScriptFinancial']);
             $tbl_scripts->where('script_id','=',$id);
             $scriptObj = $tbl_scripts->first();
             if(!empty($scriptObj))
@@ -58,7 +58,6 @@ class ScriptsController extends BaseApiController
             }
 
         } catch (\Exception $exception){
-            dd($exception);
             $this->_sendErrorResponse(500);
         }
     }

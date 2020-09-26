@@ -39,47 +39,47 @@
             <hr>
             <div class="row counters">
                 <div class="col-lg-3 col-6 text-left">
-                    <span data-toggle="counter-up">2,74,054</span>
+                    <span data-toggle="counter-up">{{ marketCap }}</span>
                     <p>Market Cap(₹ Cr.)</p>
                 </div>
 
                 <div class="col-lg-3 col-6 text-left">
-                    <span data-toggle="counter-up">421</span>
+                    <span data-toggle="counter-up">{{ p_e }}</span>
                     <p>P/E</p>
                 </div>
 
                 <div class="col-lg-3 col-6 text-left">
-                    <span data-toggle="counter-up">10.6</span>
+                    <span data-toggle="counter-up">{{ p_b }}</span>
                     <p>P/B</p>
                 </div>
 
                 <div class="col-lg-3 col-6 text-left">
-                    <span data-toggle="counter-up">15000</span>
+                    <span data-toggle="counter-up">{{ eps }}</span>
                     <p>EPS</p>
                 </div>
 
                 <div class="col-lg-3 col-6 text-left">
-                    <span data-toggle="counter-up">2,74,054</span>
+                    <span data-toggle="counter-up">{{ netWork }}</span>
                     <p>Net Worth(₹ Cr.)</p>
                 </div>
 
                 <div class="col-lg-3 col-6 text-left">
-                    <span data-toggle="counter-up">34.04%</span>
+                    <span data-toggle="counter-up">{{ roe }}%</span>
                     <p>ROE</p>
                 </div>
 
                 <div class="col-lg-3 col-6 text-left">
-                    <span data-toggle="counter-up">18.05%</span>
+                    <span data-toggle="counter-up">{{ promoter }}%</span>
                     <p>Promoter Holding</p>
                 </div>
 
                 <div class="col-lg-3 col-6 text-left">
-                    <span data-toggle="counter-up">10</span>
+                    <span data-toggle="counter-up">{{ faceValue }}</span>
                     <p>Face Value(₹)</p>
                 </div>
             </div>
             <br>
-            <h1>(As on: FY2019) | Consideration Price: 765</h1>
+            <h1>(As on: 31MAR{{ fin_year }}) | Consideration Price: {{ scriptDetail.script_ltp }}</h1>
             <hr>
 
         </section>
@@ -204,8 +204,16 @@ export default {
             dataValue: {},
             scriptFinancials: {},
             isOrder: false,
-
-            isOrderConfirm: false
+            isOrderConfirm: false,
+            marketCap: '',
+            p_e: '',
+            p_b: '',
+            eps: '',
+            netWork: '',
+            roe: '',
+            promoter: '',
+            faceValue: '',
+            fin_year: ''
         }
     },
     components: {
@@ -217,12 +225,36 @@ export default {
             axios.get('/api/scripts/'+this.id).then(response => {
                 if(response.data.responseCode === 200){
                     this.scriptDetail = response.data.data.script;
+                    this.calculateFinancialYear();
                 } else {
                     this.$router.push('/404');
                 }
             }).catch(error => {
                 this.$router.push('/404');
             });
+        },
+        calculateFinancialYear(){
+            let mCap = (this.scriptDetail.script_ltp * this.scriptDetail.last_year_script_financial.script_issued) / 10000000;
+            this.marketCap = mCap.toFixed(2);
+
+            let pe = (this.scriptDetail.script_ltp / this.scriptDetail.last_year_script_financial.script_eps);
+            this.p_e = pe.toFixed(2);
+
+            this.netWork = this.scriptDetail.last_year_script_financial.script_book_value;
+
+            let pb = this.marketCap / this.netWork;
+            this.p_b = pb.toFixed(2);
+
+            this.eps = this.scriptDetail.last_year_script_financial.script_eps;
+
+            let ROE = (this.scriptDetail.last_year_script_financial.script_profit / this.netWork) * 100;
+            this.roe = ROE.toFixed(2);
+
+            this.promoter = this.scriptDetail.last_year_script_financial.script_promoter_holding;
+
+            this.faceValue = this.scriptDetail.script_face_val;
+
+            this.fin_year = this.scriptDetail.last_year_script_financial.fin_year;
         },
         showOrder(value, type) {
             this.scriptValue = value;

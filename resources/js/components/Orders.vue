@@ -89,6 +89,7 @@
 
 import ScriptLists from "../layouts/ScriptLists";
 import MasterHeader from "../layouts/MasterHeader";
+import $ from 'jquery'
 
 export default {
     name: "Orders",
@@ -98,10 +99,19 @@ export default {
     },
     data() {
         return {
-            errors: []
+            errors: [],
+            dataTable:null
         }
     },
     mounted() {
+        $("#example1").DataTable({
+            "responsive": true,
+            "autoWidth": false,
+        });
+        $("#example2").DataTable({
+            "responsive": true,
+            "autoWidth": false,
+        });
     },
     beforeMount() {
         this.$store.commit('SET_LAYOUT', 'master-app');

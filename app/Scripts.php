@@ -84,6 +84,10 @@ class Scripts extends Model
         return $this->hasMany(ScriptNewslinks::class,'script_id','script_id');
     }
 
+    public function lastYearScriptFinancial(){
+        return $this->hasOne(ScriptFinancials::class, 'script_id','script_id')->orderByDesc('fin_year');
+    }
+
     public function scriptReports(){
         return $this->hasMany(ScriptReports::class,'script_id','script_id');
     }
