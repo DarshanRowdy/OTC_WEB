@@ -137,7 +137,7 @@ export default {
                 this.errors.push('Lot Qty is required.');
             }
 
-            if (this.order_price <= this.values.lower || this.order_price >= this.values.upper) {
+            if (this.order_price < this.values.lower || this.order_price > this.values.upper) {
                 this.errors.push('you have to select price between ' + this.values.lower + ' and ' + this.values.upper);
             }
 
@@ -154,8 +154,9 @@ export default {
             }
 
             if (!this.errors.length) {
-                console.log('in if');
+                let userObj = JSON.parse(localStorage.getItem('userObj'));
                 const data = {
+                    cust_id: userObj.user_id,
                     script_id: this.values.script_id,
                     order_type: this.orderType,
                     order_price: this.order_price,

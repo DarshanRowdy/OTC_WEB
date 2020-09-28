@@ -35,10 +35,16 @@
     <!-- include Font Awesome -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
+    <link  rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"  crossorigin="anonymous">
+
     <link rel="stylesheet" type="text/css" href="{{asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/vendor/line-awesome/css/line-awesome.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/vendor/datatables/dataTables.bootstrap4.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/vendor/datatables/responsive.bootstrap4.min.css')}}">
+
+    <script  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"  crossorigin="anonymous"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"  crossorigin="anonymous"></script>
+    <script  src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"  crossorigin="anonymous"></script>
 
     <!-- Template Main CSS File -->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/common.css')}}">
@@ -61,6 +67,7 @@
 {{--<script src="{{asset('assets/js/main.js')}}"></script>--}}
 <!-- Vendor JS Files -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script  src="https://unpkg.com/vue-bootstrap4-table@1.1.2/dist/vue-bootstrap4-table.min.js"  crossorigin="anonymous"></script>
 {{--<script src="{{asset('assets/vendor/jquery/jquery.min.js')}}"></script>--}}
 <script src="{{asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <script src="{{asset('assets/vendor/jquery.easing/jquery.easing.min.js')}}"></script>
@@ -68,5 +75,6 @@
 <script src="{{asset('assets/vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
 <script src="{{asset('assets/vendor/datatables/dataTables.responsive.min.js')}}"></script>
 <script src="{{asset('assets/vendor/datatables/responsive.bootstrap4.min.js')}}"></script>
+<script src="/"></script>
 </body>
 </html>

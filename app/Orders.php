@@ -62,6 +62,10 @@ class Orders extends Model
      */
     protected $dates = ['order_date', 'created_at', 'updated_at'];
 
+    public function script(){
+        return $this->belongsTo(Scripts::class,'script_id','script_id');
+    }
+
     public static function findByField($field, $value)
     {
         return self::where($field, (string)$value)->first();

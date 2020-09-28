@@ -10,110 +10,129 @@
                 <h2>Orders</h2>
                 <p>All Matched &amp; Open orders</p>
             </div>
-            <table class="table table-hover order-custom-table" id="example1">
-                <thead>
-                <tr>
-                    <th align='center'></th>
-                    <th align='center' width="5px">Modify</th>
-                    <th align='center'>Symbol</th>
-                    <th align='center'>Type</th>
-                    <th align='center'>Price</th>
-                    <th align='center'>Qty (Matched/Total)</th>
-                    <th align='center'>Lot</th>
-                    <th align='center'>Avg Price</th>
-                    <th align='center'>Delivered Qty</th>
-                    <th align='center'>Order No</th>
-                    <th align='center'>Time</th>
-
-                </tr>
-                </thead>
-                <tbody>
-                <tr class="odd gradeX">
-                    <td align='center'></td>
-                    <td align='center'><span style="float:left"><a href="#modify-popup"><i
-                        class="las la-edit la-2x"></i></a></span></td>
-                    <td align='center'>BIRA91</td>
-                    <td align='center'>SELL</td>
-                    <td align='right'>10000</td>
-                    <td align='right'>1000/1000</td>
-                    <td align='right'>1000</td>
-                    <td align='right'>10000</td>
-                    <td align='right'>10000</td>
-                    <td align='center'>2000014512A</td>
-                    <td align='center'>21/07/2020 14:02:02</td>
-
-                </tr>
-
-                </tbody>
-            </table>
-        </div>
-        <div class="completed-order-section">
-            <div class="section-header">
-                <h2>Past Orders</h2>
-                <p>All Completed &amp; Cancelled orders (Last 1 month)</p>
-            </div>
-
-            <table class="table table-hover order-custom-table" id="example2">
-                <thead>
-                <tr>
-                    <th align='center'>Symbol</th>
-                    <th align='center'>Type</th>
-                    <th align='right'>Average Price</th>
-                    <th align='right'>Delivered Qty</th>
-                    <th align='center'>Order No</th>
-                    <th align='center'>Time</th>
-                </tr>
-                </thead>
-                <tbody>
-
-
-                <tr class="odd gradeX">
-                    <td align='center'>BIRA91</td>
-                    <td align='center'>BUY</td>
-                    <td align='right'>10000</td>
-                    <td align='right'>1000</td>
-                    <td align='center'>2000014512A</td>
-                    <td align='center'>21/07/2020 14:02:02</td>
-                </tr>
-
-
-                </tbody>
-            </table>
-
-
+            <vue-bootstrap4-table :rows="rows"
+                                  :columns="columns"
+                                  :classes="classes"
+                                  :config="config"
+                                  @on-change-query="onChangeQuery"
+                                  :totalRows="total_rows"
+            >
+            </vue-bootstrap4-table>
         </div>
     </div>
 </template>
 
 <script>
-
-import ScriptLists from "../layouts/ScriptLists";
-import MasterHeader from "../layouts/MasterHeader";
-import $ from 'jquery'
+import VueBootstrap4Table from 'vue-bootstrap4-table'
 
 export default {
     name: "Orders",
-    components: {
-        ScriptLists,
-        MasterHeader
-    },
     data() {
         return {
             errors: [],
-            dataTable:null
+            rows: [],
+            columns: [
+                {
+                    label: "Symbol",
+                    name: "script_display_name",
+                    sort: true,
+                },
+                {
+                    label: "Type",
+                    name: "order_type",
+                    sort: true,
+                },
+                {
+                    label: "Price",
+                    name: "order_price",
+                    sort: true,
+                },
+                {
+                    label: "Qty (Matched/Total)",
+                    name: "order_qty_original",
+                    sort: true,
+                },
+                {
+                    label: "Lot",
+                    name: "lot_size",
+                    sort: true,
+                },
+                {
+                    label: "Avg Price",
+                    name: "order_price",
+                    sort: true,
+                },
+                {
+                    label: "Delivered Qty",
+                    name: "order_qty_original",
+                    sort: true,
+                },
+                {
+                    label: "Order No",
+                    name: "order_num",
+                    sort: true,
+                },
+                {
+                    label: "Time",
+                    name: "created_at",
+                    sort: true,
+                }],
+            classes: {
+            },
+            config: {
+                card_mode: false,
+                pagination: true, // default true
+                pagination_info: false, // default true
+                per_page: 5, // default 10,
+                selected_rows_info: true,
+                // multi_column_sort: true,
+                global_search: {
+                    placeholder: "Search",
+                    visibility: true,
+                    case_sensitive: false,
+                    showClearButton: true,
+                },
+                server_mode: true,
+                show_refresh_button: false,
+                show_reset_button: false
+            },
+            queryParams: {
+                sort: [],
+                filters: [],
+                global_search: "",
+                per_page: 5,
+                page: 1,
+            },
+            total_rows: 0,
         }
     },
+    methods: {
+        onChangeQuery(queryParams) {
+            this.queryParams = queryParams;
+            this.fetchData();
+        },
+        fetchData() {
+            let self = this;
+            const data = {
+                queryParams: this.queryParams,
+                page: this.queryParams.page
+            };
+            axios.post('/api/order-list', data).then(response => {
+                    self.rows = response.data.data.orders.data;
+                    self.total_rows = response.data.data.orders.total;
+                })
+                .catch(error => {
+                    this.errors.push(error.response.data.message)
+                });
+        }
+    },
+    components: {
+        VueBootstrap4Table
+    },
     mounted() {
-        $("#example1").DataTable({
-            "responsive": true,
-            "autoWidth": false,
-        });
-        $("#example2").DataTable({
-            "responsive": true,
-            "autoWidth": false,
-        });
     },
     beforeMount() {
+        this.fetchData();
         this.$store.commit('SET_LAYOUT', 'master-app');
     }
 }

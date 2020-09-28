@@ -33,5 +33,6 @@ Route::namespace('Api')->group(function () {
     Route::get('announcements','AnnouncementsController@index')->name('announcements.index');
 
     Route::post('order', 'OrdersController@store')->name('order.store');
+    Route::post('order-list', 'OrdersController@index')->name('order.list');
 //    });
 });

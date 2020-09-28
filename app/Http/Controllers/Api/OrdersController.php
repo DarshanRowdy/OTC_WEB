@@ -4,28 +4,48 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Requests\OrdersRequest;
 use App\Orders;
+use App\Scripts;
 use DevDr\ApiCrudGenerator\Controllers\BaseApiController;
 
 class OrdersController extends AppController
 {
-    /*public function index(OrdersRequest $request)
+    public function index(OrdersRequest $request)
     {
-        $limit = isset($request->limit) ? $request->limit : config('app.default_limit');
+        $queryParams = $request->has('queryParams') ? $request->queryParams : [];
+        $limit = !empty($queryParams) ? $queryParams['per_page'] : 5;
+        $sorts = !empty($queryParams) ? $queryParams['sort'] : [];
+        $global_search = !empty($queryParams) ? '%'.$queryParams['global_search'].'%' : '';
         try{
-            $tbl_orders = Orders::latest();
+            $tbl_orders = Orders::query();
+            $tbl_orders->select(['tbl_orders.*','tbl_scripts.script_display_name as script_display_name']);
+            $tbl_orders->join('tbl_scripts','tbl_orders.script_id','=','tbl_scripts.script_id');
+            $tbl_orders->when(!empty($global_search), function ($query) use ($global_search){
+               $searchFields = ['script_display_name','order_type','order_price','order_qty_original','lot_size','order_num','tbl_orders.created_at'];
+               $query->where(function ($que) use ($searchFields, $global_search){
+                   foreach ($searchFields as $field){
+                       $que->orWhere($field, 'LIKE', $global_search);
+                   }
+               });
+            });
+            $tbl_orders->when(!empty($sorts), function ($query) use ($sorts){
+                $field = $sorts[0]['name'];
+                $order = $sorts[0]['order'];
+                $query->orderBy($field,$order);
+            });
             $arrTbl_Orders = $tbl_orders->paginate($limit);
+            $response = ['orders' => $arrTbl_Orders];
+            $this->_sendResponse($response, 'tbl_orders listing Success');
         } catch (\Exception $exception){
             $this->_sendErrorResponse(500);
         }
-        $response = ['tbl_orders' => $arrTbl_Orders];
-        $this->_sendResponse($response, 'tbl_orders listing Success');
-    }*/
+    }
 
     public function store(OrdersRequest $request)
     {
         try{
 
             $validation = [
+                'cust_id' => 'required',
                 'script_id' => 'required',
                 'order_type' => 'required',
                 'order_price' => 'required',
@@ -35,6 +55,7 @@ class OrdersController extends AppController
 
             $this->checkValidate($request, $validation);
 
+            $cust_id = $request->has('cust_id') ? $request->cust_id : '';
             $script_id = $request->has('script_id') ? $request->script_id : '';
             $order_type = $request->has('order_type') ? $request->order_type : '';
             $order_price = $request->has('order_price') ? $request->order_price : '';
@@ -49,7 +70,7 @@ class OrdersController extends AppController
             $orderObj->lot_size = $lot_size;
             $orderObj->placed_by = 'self';
             $orderObj->last_updated_by = 'self';
-            $orderObj->cust_id = 1;
+            $orderObj->cust_id = $cust_id;
             $orderObj->assigned_to = 'self';
             if($orderObj->save()){
                 $response = [];

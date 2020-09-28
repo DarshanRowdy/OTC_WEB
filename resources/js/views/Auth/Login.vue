@@ -26,7 +26,8 @@
                         <button class="login-page-btn btn btn-block login-btn">Login</button>
                         <hr/>
                         <div class="popup-box">
-                            <button @click="LoginWithOtp" class="button btn btn-block login-btn2">Login with OTP</button>
+                            <button type="button" @click="LoginWithOtp" class="button btn btn-block login-btn2">Login with OTP
+                            </button>
                         </div>
                         <!-- <input name="login" id="login" class="btn btn-block login-btn2" type="button" onclick="openForm()" value="Login with OTP"> -->
                     </form>
@@ -58,7 +59,7 @@ import ForgotPassword from "./ForgotPassword.vue";
 import VerifyOtp from "./VerifyOtp.vue";
 import NewPassword from "./NewPassword.vue";
 import ConfirmationPopup from "./ConfirmationPopup.vue";
-import { required } from "vuelidate/lib/validators";
+import {required} from "vuelidate/lib/validators";
 
 export default {
     name: "Login",
@@ -82,13 +83,13 @@ export default {
         }
     },
     validations: {
-        mobile: { required },
-        password: { required }
+        mobile: {required},
+        password: {required}
     },
     watch: {
         'errors': function (val) {
-            if(val.length){
-                setTimeout(function (){
+            if (val.length) {
+                setTimeout(function () {
 
                 }, 500);
             }
@@ -148,7 +149,7 @@ export default {
                 };
 
                 axios.post('/api/login', data).then(response => {
-                    if(response.data.responseCode === 200 && 'auth_token' in response.data.data.user){
+                    if (response.data.responseCode === 200 && 'auth_token' in response.data.data.user) {
                         // this.$session.start()
                         // this.$session.set('auth_token', response.data.data.user.auth_token);
                         let userObj = JSON.stringify(response.data.data.user)

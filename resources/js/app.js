@@ -4,7 +4,9 @@ import Vue from "vue"
 // import vuetify from '@/js/plugins/vuetify'
 import Vuelidate from "vuelidate";
 import { store } from "./stores";
-import VueSession from 'vue-session'
+import VueSession from 'vue-session';
+import VueSocketIO from "vue-socket.io";
+import $ from 'jquery';
 
 Vue.use(Vuelidate);
 Vue.use(VueSession)
