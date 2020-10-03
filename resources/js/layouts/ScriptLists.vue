@@ -21,13 +21,10 @@
                                     <a data-toggle="popover" @click="showOrder(value, 'Sell')">S</a>
                                 </li>
                                 <li class="icon-market-depth icon-bg-blank" data-content="Market Depth"
-                                    data-toggle="popover"><a href="#market-depth"> <i
-                                    class="las la-bars"></i> </a></li>
-
+                                    data-toggle="popover">
+                                    <router-link v-bind:to="`/market-depth/${value.script_id}`"> <i
+                                        class="las la-bars"></i> </router-link></li>
                                 <li class="icon-more icon-bg-blank">
-                                    <!--<router-link :to="{name:'Info',params: {id: value.script_id}}">
-                                        <i class="las la-ellipsis-v"></i>
-                                    </router-link>-->
                                     <router-link v-bind:to="`/info/${value.script_id}`">
                                         <i class="las la-ellipsis-v"></i>
                                     </router-link>

@@ -6,6 +6,7 @@ use App\Http\Requests\OrdersRequest;
 use App\Orders;
 use App\Scripts;
 use DevDr\ApiCrudGenerator\Controllers\BaseApiController;
+use Illuminate\Http\Request;
 
 class OrdersController extends AppController
 {
@@ -82,6 +83,52 @@ class OrdersController extends AppController
             $this->_sendErrorResponse(500);
         }
     }
+
+    public function getMarketDepth(Request $request){
+        try {
+            $validation = [
+                'script_id' => 'required'
+            ];
+
+            $this->checkValidate($request, $validation);
+
+            $script_id = $request->has('script_id') ? $request->script_id : '';
+
+            $buyQuery = Orders::query();
+            $buyQuery->where('script_id','=', $script_id);
+            $buyQuery->where('order_type','=','Buy');
+            $buyQuery->whereRaw("fun_check_order_status(tbl_orders.order_num) in ('OPEN', 'DEALING')");
+            $buyQuery->orderByDesc('order_price');
+            $buyQuery->orderByDesc('updated_at');
+            $buyQuery->limit(10);
+            $buyObj = $buyQuery->get();
+
+            $buySum = Orders::where('script_id','=', $script_id)
+                ->where('order_type','=','Buy')->sum('order_qty_original');
+
+            $sellQuery = Orders::query();
+            $sellQuery->where('script_id','=',$script_id);
+            $sellQuery->where('order_type','=','Sell');
+            $sellQuery->whereRaw("fun_check_order_status(tbl_orders.order_num) in ('OPEN', 'DEALING')");
+            $sellQuery->orderByDesc('order_price');
+            $sellQuery->orderByDesc('updated_at');
+            $sellQuery->limit(10);
+            $sellObj = $sellQuery->get();
+
+            $sellSum = Orders::where('script_id','=', $script_id)
+                ->where('order_type','=','Sell')->sum('order_qty_original');
+
+            $scriptQuery = Scripts::query();
+            $scriptQuery->where('script_id','=', $script_id);
+            $scriptObj = $scriptQuery->first();
+
+            $response = ['buy' => $buyObj, 'buy_total' => $buySum, 'sell' => $sellObj, 'sell_total' => $sellSum, 'script' => $scriptObj];
+            $this->_sendResponse($response, 'order listed successfully');
+        } catch (Exception $exception) {
+            $this->_sendErrorResponse(500);
+        }
+    }
+
 /*
     public function show($id)
     {

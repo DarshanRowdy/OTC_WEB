@@ -17,6 +17,15 @@
                                   @on-change-query="onChangeQuery"
                                   :totalRows="total_rows"
             >
+                <template slot="sort-asc-icon">
+                    <i class="fa fa-sort-asc"></i>
+                </template>
+                <template slot="sort-desc-icon">
+                    <i class="fa fa-sort-desc"></i>
+                </template>
+                <template slot="no-sort-icon">
+                    <i class="fa fa-sort"></i>
+                </template>
             </vue-bootstrap4-table>
         </div>
     </div>

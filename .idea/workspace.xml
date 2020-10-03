@@ -14,17 +14,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad78d497-6ee3-44fc-899a-1d01e02b08b4" name="Default Changelist" comment="master page management">
+      <change afterPath="$PROJECT_DIR$/resources/js/views/Scripts/MarketDepth.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/OrdersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/OrdersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Orders.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Orders.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Orders.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Auth/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Auth/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Scripts/Order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Scripts/Order.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/layouts/ScriptLists.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/layouts/ScriptLists.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
@@ -156,15 +152,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\wamp64\www\new_otc\resources\js\layouts" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\wamp64\www\new_otc\resources\js\components" />
       <recent name="D:\wamp64\www\new_otc\app" />
       <recent name="D:\wamp64\www\new_otc\resources\js\views\Auth" />
       <recent name="D:\wamp64\www\new_otc\resources\js\views" />
       <recent name="D:\wamp64\www\new_otc\resources\js\plugins" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\wamp64\www\new_otc\resources\js\layouts" />
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
@@ -220,7 +216,13 @@
       <workItem from="1600996409215" duration="9867000" />
       <workItem from="1601053327817" duration="12985000" />
       <workItem from="1601098897566" duration="16726000" />
-      <workItem from="1601178675237" duration="31584000" />
+      <workItem from="1601178675237" duration="31616000" />
+      <workItem from="1601365254949" duration="599000" />
+      <workItem from="1601397051604" duration="2174000" />
+      <workItem from="1601442469878" duration="13000" />
+      <workItem from="1601483355053" duration="11226000" />
+      <workItem from="1601527169664" duration="7000" />
+      <workItem from="1601741184878" duration="10044000" />
     </task>
     <task id="LOCAL-00001" summary="first init commit">
       <created>1600007025647</created>
@@ -334,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601141500906</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="order table config">
+      <created>1601324725380</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1601324725380</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +379,8 @@
     <MESSAGE value="404 and dynamic route info impliment" />
     <MESSAGE value="information for finance" />
     <MESSAGE value="login page changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="login page changes" />
+    <MESSAGE value="order table config" />
+    <option name="LAST_COMMIT_MESSAGE" value="order table config" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600586242792">
@@ -381,10 +391,11 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1779" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1599672648337" />
-    <state x="1458" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1601142100671">
+    <state x="1458" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1601741353381">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state x="1458" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1601142100671" />
+    <state x="1458" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1601741353381" />
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1601490149876" />
     <state x="1829" y="118" key="FileChooserDialogImpl" timestamp="1600456421734">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
@@ -421,11 +432,12 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1550" y="8" key="SettingsEditor/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600359862000" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1601300535288">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1601744463517">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1600586258951" />
-    <state width="498" height="446" key="SwitcherDM/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1601300535288" />
+    <state width="498" height="446" key="SwitcherDM/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1601744463517" />
+    <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1601491365664" />
     <state x="1641" y="96" key="Vcs.Push.Dialog.v2" timestamp="1601137934547">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
@@ -443,9 +455,10 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1850" y="270" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600533944842" />
-    <state x="1705" y="17" width="672" height="678" key="search.everywhere.popup" timestamp="1601300405971">
-      <screen x="1366" y="0" width="1366" height="728" />
+    <state x="339" y="17" width="672" height="678" key="search.everywhere.popup" timestamp="1601493317314">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1705" y="17" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1601300405971" />
+    <state x="339" y="17" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1601493317314" />
   </component>
 </project>

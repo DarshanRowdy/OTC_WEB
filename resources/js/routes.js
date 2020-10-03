@@ -11,6 +11,7 @@ import Orders from "./components/Orders";
 import Info from "./components/Info";
 import ScriptLists from "./layouts/ScriptLists";
 import NotFound from "./components/NotFound.vue"
+import MarketDepth from "./views/Scripts/MarketDepth.vue";
 
 Vue.use(VueRouter);
 
@@ -45,6 +46,14 @@ const router = new VueRouter({
             path: '/info/:id',
             name: 'Info',
             component: Info,
+            meta: {
+                middleware: auth,
+            }
+        },
+        {
+            path: '/market-depth/:script_id',
+            name: 'MarketDepth',
+            component: MarketDepth,
             meta: {
                 middleware: auth,
             }
