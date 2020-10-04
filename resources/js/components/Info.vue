@@ -17,16 +17,16 @@
             <div class="buysell">
                 <div class="row">
                     <div class="buy-btn-wrp">
-                        <a class="buy-btn get-started-btn3" @click="showOrder(scriptDetail, 'Buy')">BUY</a>
+                        <a href="javascript:void(0)" class="buy-btn get-started-btn3" @click="showOrder(scriptDetail, 'Buy')">BUY</a>
                     </div>
                     <div class="sell-btn-wrp">
-                        <a class="sell-btn get-started-btn3" @click="showOrder(scriptDetail, 'Sell')">SELL</a>
+                        <a href="javascript:void(0)" class="sell-btn get-started-btn3" @click="showOrder(scriptDetail, 'Sell')">SELL</a>
                     </div>
-                    <!--
-                                             <div class="mkt-btn-wrp"><a href="#market-depth" class="cancel-btn get-started-btn3">Market Depth</a></div>
-                    -->
-                    <div class="sell-btn-wrp"><a class="mkt-btn get-started-btn3" href="#market-depth">Market
-                        Depth</a></div>
+                    <div class="sell-btn-wrp">
+                        <router-link class="mkt-btn get-started-btn3" v-bind:to="`/market-depth/${scriptDetail.script_id}`">
+                           Market Depth
+                        </router-link>
+                    </div>
                 </div>
             </div>
             <Order :values="scriptValue" :orderType="orderType" v-show="isOrder" @close="closeOrder"/>

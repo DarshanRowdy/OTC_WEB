@@ -15,10 +15,10 @@
                         <div class="list-icons">
                             <ul>
                                 <li class="icon-buy">
-                                    <a data-toggle="popover" @click="showOrder(value, 'Buy')">B</a>
+                                    <a data-toggle="popover" href="javascript:void(0)" @click="showOrder(value, 'Buy')">B</a>
                                 </li>
                                 <li class="icon-sell">
-                                    <a data-toggle="popover" @click="showOrder(value, 'Sell')">S</a>
+                                    <a data-toggle="popover" href="javascript:void(0)" @click="showOrder(value, 'Sell')">S</a>
                                 </li>
                                 <li class="icon-market-depth icon-bg-blank" data-content="Market Depth"
                                     data-toggle="popover">

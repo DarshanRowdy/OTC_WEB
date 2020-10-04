@@ -4355,6 +4355,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Order",
   props: ['values', 'orderType', 'orderData'],
@@ -4419,6 +4421,7 @@ __webpack_require__.r(__webpack_exports__);
         var userObj = JSON.parse(localStorage.getItem('userObj'));
         var data = {
           order_id: this.order_id,
+          order_no: this.order_no,
           cust_id: userObj.user_id,
           script_id: this.values.script_id,
           order_type: this.orderType,
@@ -4445,7 +4448,6 @@ __webpack_require__.r(__webpack_exports__);
         order_qty: this.order_qty,
         lot_size: this.lot_size
       };
-      console.log(data);
       this.order_price = '';
       this.order_qty = '';
       this.lot_size = '';
@@ -4522,6 +4524,19 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     close: function close() {
       this.$parent.editOrder(this.dataValue.order_id);
+    },
+    cancelOrder: function cancelOrder() {
+      var _this = this;
+
+      if (this.dataValue !== null || this.dataValue !== undefined) {
+        var data = this.dataValue;
+        data['is_cancel_order'] = true;
+        axios.post('/api/order', data).then(function (response) {
+          _this.close();
+        })["catch"](function (error) {
+          _this.errors.push(error.response.data.message);
+        });
+      }
     }
   }
 });
@@ -34820,6 +34835,7 @@ var render = function() {
                 "a",
                 {
                   staticClass: "buy-btn get-started-btn3",
+                  attrs: { href: "javascript:void(0)" },
                   on: {
                     click: function($event) {
                       return _vm.showOrder(_vm.scriptDetail, "Buy")
@@ -34835,6 +34851,7 @@ var render = function() {
                 "a",
                 {
                   staticClass: "sell-btn get-started-btn3",
+                  attrs: { href: "javascript:void(0)" },
                   on: {
                     click: function($event) {
                       return _vm.showOrder(_vm.scriptDetail, "Sell")
@@ -34845,7 +34862,25 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(0)
+            _c(
+              "div",
+              { staticClass: "sell-btn-wrp" },
+              [
+                _c(
+                  "router-link",
+                  {
+                    staticClass: "mkt-btn get-started-btn3",
+                    attrs: { to: "/market-depth/" + _vm.scriptDetail.script_id }
+                  },
+                  [
+                    _vm._v(
+                      "\n                       Market Depth\n                    "
+                    )
+                  ]
+                )
+              ],
+              1
+            )
           ])
         ]),
         _vm._v(" "),
@@ -34965,13 +35000,13 @@ var render = function() {
       "section",
       { staticClass: "features section-bg", attrs: { id: "features" } },
       [
-        _vm._m(1),
+        _vm._m(0),
         _vm._v(" "),
         _c("div", { staticClass: "row" }, [
           _vm.scriptDetail.script_peer_1
             ? _c("div", { staticClass: "col-lg-4" }, [
                 _c("div", { staticClass: "icon-box" }, [
-                  _vm._m(2),
+                  _vm._m(1),
                   _vm._v(" "),
                   _c("h4", { staticClass: "title" }, [
                     _vm._v(_vm._s(_vm.scriptDetail.script_peer_1))
@@ -34983,7 +35018,7 @@ var render = function() {
           _vm.scriptDetail.script_peer_2
             ? _c("div", { staticClass: "col-lg-4" }, [
                 _c("div", { staticClass: "icon-box" }, [
-                  _vm._m(3),
+                  _vm._m(2),
                   _vm._v(" "),
                   _c("h4", { staticClass: "title" }, [
                     _vm._v(_vm._s(_vm.scriptDetail.script_peer_2))
@@ -34995,7 +35030,7 @@ var render = function() {
           _vm.scriptDetail.script_peer_3
             ? _c("div", { staticClass: "col-lg-4" }, [
                 _c("div", { staticClass: "icon-box" }, [
-                  _vm._m(4),
+                  _vm._m(3),
                   _vm._v(" "),
                   _c("h4", { staticClass: "title" }, [
                     _vm._v(_vm._s(_vm.scriptDetail.script_peer_3))
@@ -35008,11 +35043,11 @@ var render = function() {
     ),
     _vm._v(" "),
     _c("section", { staticClass: "content" }, [
-      _vm._m(5),
+      _vm._m(4),
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-12" }, [
-          _vm._m(6),
+          _vm._m(5),
           _vm._v(" "),
           _c("div", { staticClass: "card-body table-responsive p-0" }, [
             _c("table", { staticClass: "table table-hover text-nowrap" }, [
@@ -35098,7 +35133,7 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("section", { attrs: { id: "notice" } }, [
-      _vm._m(7),
+      _vm._m(6),
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-lg-6 content" }, [
@@ -35128,7 +35163,7 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("section", { attrs: { id: "notice1" } }, [
-      _vm._m(8),
+      _vm._m(7),
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-lg-6 content" }, [
@@ -35160,21 +35195,6 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "sell-btn-wrp" }, [
-      _c(
-        "a",
-        {
-          staticClass: "mkt-btn get-started-btn3",
-          attrs: { href: "#market-depth" }
-        },
-        [_vm._v("Market\n                    Depth")]
-      )
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -35771,7 +35791,10 @@ var render = function() {
                       _c(
                         "a",
                         {
-                          attrs: { "data-toggle": "popover" },
+                          attrs: {
+                            "data-toggle": "popover",
+                            href: "javascript:void(0)"
+                          },
                           on: {
                             click: function($event) {
                               return _vm.showOrder(value, "Buy")
@@ -35786,7 +35809,10 @@ var render = function() {
                       _c(
                         "a",
                         {
-                          attrs: { "data-toggle": "popover" },
+                          attrs: {
+                            "data-toggle": "popover",
+                            href: "javascript:void(0)"
+                          },
                           on: {
                             click: function($event) {
                               return _vm.showOrder(value, "Sell")
@@ -37469,6 +37495,7 @@ var render = function() {
                                     "a",
                                     {
                                       staticClass: "buy-btn get-started-btn3",
+                                      attrs: { href: "javascript:void(0)" },
                                       on: {
                                         click: function($event) {
                                           return _vm.showOrder("Buy")
@@ -37484,6 +37511,7 @@ var render = function() {
                                     "a",
                                     {
                                       staticClass: "sell-btn get-started-btn3",
+                                      attrs: { href: "javascript:void(0)" },
                                       on: {
                                         click: function($event) {
                                           return _vm.showOrder("Sell")
@@ -37647,7 +37675,7 @@ var render = function() {
                           { staticClass: "circuit-section margin-top-10" },
                           [
                             _c("div", { staticClass: "row" }, [
-                              _c("div", { staticClass: "col-sm-4 col-6" }, [
+                              _c("div", { staticClass: "col-sm-4 col-4" }, [
                                 _c("span", [
                                   _vm._v(
                                     "Lower Circuit:\n                                            "
@@ -37658,7 +37686,7 @@ var render = function() {
                                 ])
                               ]),
                               _vm._v(" "),
-                              _c("div", { staticClass: "col-sm-4 col-6" }, [
+                              _c("div", { staticClass: "col-sm-4 col-4" }, [
                                 _c("span", [
                                   _vm._v(
                                     "Upper Circuit:\n                                            "
@@ -37667,7 +37695,20 @@ var render = function() {
                                     _vm._v(_vm._s(_vm.values.upper))
                                   ])
                                 ])
-                              ])
+                              ]),
+                              _vm._v(" "),
+                              _vm.orderData
+                                ? _c("div", { staticClass: "col-sm-4 col-4" }, [
+                                    _c("span", [
+                                      _vm._v(
+                                        "Order type:\n                                            "
+                                      ),
+                                      _c("label", [
+                                        _vm._v(_vm._s(_vm.orderType))
+                                      ])
+                                    ])
+                                  ])
+                                : _vm._e()
                             ])
                           ]
                         ),
@@ -37909,7 +37950,7 @@ var render = function() {
                                         "confirm-btn get-started-btn3",
                                       attrs: { type: "submit" }
                                     },
-                                    [_vm._v("CONFIRM")]
+                                    [_vm._v("MODIFY")]
                                   )
                                 ]),
                                 _vm._v(" "),
@@ -38086,14 +38127,20 @@ var render = function() {
                           ? _c("div", { staticClass: "buy-btn-wrp" }, [
                               _c(
                                 "button",
-                                { staticClass: "buy-btn get-started-btn3" },
+                                {
+                                  staticClass: "buy-btn get-started-btn3",
+                                  on: { click: _vm.cancelOrder }
+                                },
                                 [_vm._v("Yes, cancel it")]
                               )
                             ])
                           : _c("div", { staticClass: "buy-btn-wrp" }, [
                               _c(
                                 "button",
-                                { staticClass: "sell-btn get-started-btn3" },
+                                {
+                                  staticClass: "sell-btn get-started-btn3",
+                                  on: { click: _vm.cancelOrder }
+                                },
                                 [_vm._v("Yes, cancel it")]
                               )
                             ]),

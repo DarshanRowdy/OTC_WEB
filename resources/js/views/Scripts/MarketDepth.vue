@@ -76,9 +76,9 @@
                                         </div>
                                         <div
                                             class="buy-sell-btn d-flex align-items-center margin-top-20 margin-bottom-20">
-                                            <div class="buy-btn-wrp"><a @click="showOrder('Buy')"
+                                            <div class="buy-btn-wrp"><a href="javascript:void(0)" @click="showOrder('Buy')"
                                                                         class="buy-btn get-started-btn3">BUY</a></div>
-                                            <div class="sell-btn-wrp"><a @click="showOrder('Sell')"
+                                            <div class="sell-btn-wrp"><a href="javascript:void(0)" @click="showOrder('Sell')"
                                                                          class="sell-btn get-started-btn3">SELL</a>
                                             </div>
                                         </div>

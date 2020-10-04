@@ -25,10 +25,12 @@
                                 <form v-on:submit.prevent="orderCreate">
                                     <div class="circuit-section margin-top-10">
                                         <div class="row">
-                                            <div class="col-sm-4 col-6"><span>Lower Circuit:
+                                            <div class="col-sm-4 col-4"><span>Lower Circuit:
                                                 <label> {{ values.lower }} </label></span></div>
-                                            <div class="col-sm-4 col-6"><span>Upper Circuit:
+                                            <div class="col-sm-4 col-4"><span>Upper Circuit:
                                                 <label>{{ values.upper }}</label></span></div>
+                                            <div v-if="orderData" class="col-sm-4 col-4"><span>Order type:
+                                                <label>{{ orderType }}</label></span></div>
                                         </div>
                                     </div>
                                     <div class="form-field-section margin-top-30 padding-bottom-10">
@@ -85,7 +87,7 @@
                                         </div>
                                     </div>
                                     <div v-if="order_id" class="buy-sell-btn d-flex align-items-center margin-top-30 margin-bottom-20">
-                                        <div class="buy-btn-wrp"><button type="submit" class="confirm-btn get-started-btn3">CONFIRM</button></div>
+                                        <div class="buy-btn-wrp"><button type="submit" class="confirm-btn get-started-btn3">MODIFY</button></div>
                                         <div class="sell-btn-wrp"><a href="javascript:void(0)" @click="cancelOrder" class="confirm-btn get-started-btn3">CANCEL ORDER</a></div>
                                     </div>
                                     <div v-else class="buy-sell-btn d-flex align-items-center margin-top-30 margin-bottom-20">
@@ -171,6 +173,7 @@ export default {
                 let userObj = JSON.parse(localStorage.getItem('userObj'));
                 const data = {
                     order_id: this.order_id,
+                    order_no: this.order_no,
                     cust_id: userObj.user_id,
                     script_id: this.values.script_id,
                     order_type: this.orderType,
@@ -197,7 +200,6 @@ export default {
                 order_qty: this.order_qty,
                 lot_size: this.lot_size
             };
-            console.log(data);
             this.order_price = '';
             this.order_qty = '';
             this.lot_size = '';
