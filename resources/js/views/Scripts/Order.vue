@@ -84,7 +84,11 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="buy-sell-btn d-flex align-items-center margin-top-30 margin-bottom-20">
+                                    <div v-if="order_id" class="buy-sell-btn d-flex align-items-center margin-top-30 margin-bottom-20">
+                                        <div class="buy-btn-wrp"><button type="submit" class="confirm-btn get-started-btn3">CONFIRM</button></div>
+                                        <div class="sell-btn-wrp"><a href="javascript:void(0)" @click="cancelOrder" class="confirm-btn get-started-btn3">CANCEL ORDER</a></div>
+                                    </div>
+                                    <div v-else class="buy-sell-btn d-flex align-items-center margin-top-30 margin-bottom-20">
                                         <div class="buy-btn-wrp">
                                             <button v-if="orderType === 'Buy'" type="submit"
                                                     class="buy-btn get-started-btn3">BUY
@@ -107,18 +111,24 @@
 <script>
 export default {
     name: "Order",
-    props: ['values', 'orderType'],
+    props: ['values', 'orderType', 'orderData'],
     data() {
         return {
+            order_no: '',
+            order_id: '',
             script_id: '',
             order_price: '',
             order_qty: '',
             lot_size: '',
+            dataVal: {},
             errors: []
         }
     },
+    components: {
+    },
     methods: {
         close() {
+            this.order_id = '';
             this.order_price = '';
             this.order_qty = '';
             this.lot_size = '';
@@ -141,8 +151,12 @@ export default {
                 this.errors.push('you have to select price between ' + this.values.lower + ' and ' + this.values.upper);
             }
 
-            if ((this.order_price * this.order_qty) > 500000) {
-                this.errors.push('Total Price will not grater then 5,00,000');
+            if ((this.order_price * this.order_qty) > 5000000) {
+                this.errors.push('Total Price will not grater then 50,00,000');
+            }
+
+            if(this.order_qty < 0){
+                this.errors.push('Open Quantity is '+ this.order_qty+', Quantity reduction below the open quantity is not allowed.');
             }
 
             if (this.lot_size > this.order_qty) {
@@ -156,6 +170,7 @@ export default {
             if (!this.errors.length) {
                 let userObj = JSON.parse(localStorage.getItem('userObj'));
                 const data = {
+                    order_id: this.order_id,
                     cust_id: userObj.user_id,
                     script_id: this.values.script_id,
                     order_type: this.orderType,
@@ -166,8 +181,38 @@ export default {
                 this.order_price = '';
                 this.order_qty = '';
                 this.lot_size = '';
+                this.order_id = '';
                 this.$parent.showOrderConfirm(this.values, data);
             }
+        },
+        cancelOrder(){
+            let userObj = JSON.parse(localStorage.getItem('userObj'));
+            const data = {
+                order_id: this.order_id,
+                order_no: this.order_no,
+                cust_id: userObj.user_id,
+                script_id: this.values.script_id,
+                order_type: this.orderType,
+                order_price: this.order_price,
+                order_qty: this.order_qty,
+                lot_size: this.lot_size
+            };
+            console.log(data);
+            this.order_price = '';
+            this.order_qty = '';
+            this.lot_size = '';
+            this.order_id = '';
+            this.$parent.showOrderCancel(this.values, data);
+        }
+    },
+    watch: {
+        orderData: function(newVal, oldVal) { // watch it
+            // console.log('Prop changed: ', newVal, ' | was: ', oldVal)
+            this.order_id = newVal.order_id;
+            this.order_no = newVal.order_num;
+            this.order_price = newVal.order_price;
+            this.order_qty = newVal.order_qty_original;
+            this.lot_size = newVal.lot_size;
         }
     }
 }

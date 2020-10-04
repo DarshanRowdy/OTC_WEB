@@ -33,7 +33,9 @@ Route::namespace('Api')->group(function () {
     Route::get('announcements','AnnouncementsController@index')->name('announcements.index');
 
     Route::post('order', 'OrdersController@store')->name('order.store');
+    Route::get('order-show/{id}', 'OrdersController@show')->name('order.show');
     Route::post('order-list', 'OrdersController@index')->name('order.list');
+    Route::post('order-list-past', 'OrdersController@indexPastList')->name('order.list-past');
     Route::get('get-market-depth', 'OrdersController@getMarketDepth')->name('order.get-market-depth');
 //    });
 });

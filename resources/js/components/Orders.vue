@@ -26,13 +26,50 @@
                 <template slot="no-sort-icon">
                     <i class="fa fa-sort"></i>
                 </template>
+                <template slot="action" slot-scope="props">
+                    <span><a href="javascript:void(0)" @click="editOrder(props.cell_value)"><i
+                        class="las la-edit la-2x"></i></a></span>
+                </template>
             </vue-bootstrap4-table>
         </div>
+
+        <div class="completed-order-section">
+            <div class="section-header">
+                <h2>Past Orders</h2>
+                <p>All Completed &amp; Cancelled orders (Last 1 month)</p>
+            </div>
+
+            <vue-bootstrap4-table :rows="rowsPast"
+                                  :columns="columnsPast"
+                                  :classes="classes"
+                                  :config="config"
+                                  @on-change-query="onChangeQuery"
+                                  :totalRows="total_rows"
+            >
+                <template slot="sort-asc-icon">
+                    <i class="fa fa-sort-asc"></i>
+                </template>
+                <template slot="sort-desc-icon">
+                    <i class="fa fa-sort-desc"></i>
+                </template>
+                <template slot="no-sort-icon">
+                    <i class="fa fa-sort"></i>
+                </template>
+
+            </vue-bootstrap4-table>
+        </div>
+
+        <Order :values="scriptValue" :orderData="EditOrder" :orderType="orderType" v-show="isOrder" @close="closeOrder"/>
+        <OrderConfirm :values="scriptValue" :dataValue="dataValue" v-show="isOrderConfirm" @close="closeOrderConfirm"/>
+        <OrderCancel :values="scriptValue" :dataValue="dataValue" v-show="isOrderCancel" @close="closeOrderConfirm"/>
     </div>
 </template>
 
 <script>
 import VueBootstrap4Table from 'vue-bootstrap4-table'
+import Order from "../views/Scripts/Order";
+import OrderConfirm from "../views/Scripts/OrderConfirm";
+import OrderCancel from "../views/Scripts/OrderCancel";
 
 export default {
     name: "Orders",
@@ -41,6 +78,11 @@ export default {
             errors: [],
             rows: [],
             columns: [
+                {
+                    label: "Action",
+                    name: "order_id",
+                    slot_name: "action"
+                },
                 {
                     label: "Symbol",
                     name: "script_display_name",
@@ -58,7 +100,7 @@ export default {
                 },
                 {
                     label: "Qty (Matched/Total)",
-                    name: "order_qty_original",
+                    name: "qty",
                     sort: true,
                 },
                 {
@@ -68,12 +110,12 @@ export default {
                 },
                 {
                     label: "Avg Price",
-                    name: "order_price",
+                    name: "average_price",
                     sort: true,
                 },
                 {
                     label: "Delivered Qty",
-                    name: "order_qty_original",
+                    name: "delivered_qty",
                     sort: true,
                 },
                 {
@@ -83,11 +125,43 @@ export default {
                 },
                 {
                     label: "Time",
-                    name: "created_at",
+                    name: "time",
+                    sort: true,
+                }
+            ],
+            rowsPast: [],
+            columnsPast: [
+                {
+                    label: "Symbol",
+                    name: "script_display_name",
+                    sort: true,
+                },
+                {
+                    label: "Type",
+                    name: "order_type",
+                    sort: true,
+                },
+                {
+                    label: "Avg Price",
+                    name: "average_price",
+                    sort: true,
+                },
+                {
+                    label: "Delivered Qty",
+                    name: "delivered_qty",
+                    sort: true,
+                },
+                {
+                    label: "Order No",
+                    name: "order_num",
+                    sort: true,
+                },
+                {
+                    label: "Time",
+                    name: "time",
                     sort: true,
                 }],
-            classes: {
-            },
+            classes: {},
             config: {
                 card_mode: false,
                 pagination: true, // default true
@@ -101,7 +175,7 @@ export default {
                     case_sensitive: false,
                     showClearButton: true,
                 },
-                server_mode: true,
+                server_mode: false,
                 show_refresh_button: false,
                 show_reset_button: false
             },
@@ -113,35 +187,99 @@ export default {
                 page: 1,
             },
             total_rows: 0,
+            isOrder: false,
+            isOrderConfirm: false,
+            isOrderCancel: false,
+            scriptValue: {},
+            orderType: '',
+            dataValue: {},
+            EditOrder: {},
         }
     },
     methods: {
         onChangeQuery(queryParams) {
-            this.queryParams = queryParams;
-            this.fetchData();
+            // this.queryParams = queryParams;
+            // this.fetchData();
         },
-        fetchData() {
+        fetchOpenData() {
             let self = this;
+            let userObj = JSON.parse(localStorage.getItem('userObj'));
             const data = {
-                queryParams: this.queryParams,
-                page: this.queryParams.page
+                // queryParams: this.queryParams,
+                // page: this.queryParams.page
+                cust_id: userObj.user_id
             };
             axios.post('/api/order-list', data).then(response => {
-                    self.rows = response.data.data.orders.data;
-                    self.total_rows = response.data.data.orders.total;
-                })
+                self.rows = response.data.data.orders;
+                // self.total_rows = response.data.data.orders.total;
+            })
                 .catch(error => {
                     this.errors.push(error.response.data.message)
                 });
-        }
+        },
+        fetchPastData() {
+            let self = this;
+            let userObj = JSON.parse(localStorage.getItem('userObj'));
+            const data = {
+                // queryParams: this.queryParams,
+                // page: this.queryParams.page
+                cust_id: userObj.user_id
+            };
+            axios.post('/api/order-list-past', data).then(response => {
+                self.rowsPast = response.data.data.orders;
+                // self.total_rows = response.data.data.orders.total;
+            })
+                .catch(error => {
+                    this.errors.push(error.response.data.message)
+                });
+        },
+        editOrder(order_id) {
+            this.isOrderCancel = false;
+            axios.get('/api/order-show/'+order_id).then(response => {
+                this.EditOrder = response.data.data.order;
+                this.scriptValue = this.EditOrder.script;
+                this.showOrder(this.EditOrder.order_type);
+            })
+            .catch(error => {
+                this.errors.push(error.response.data.message)
+            });
+        },
+        showOrder(type) {
+            this.orderType = type;
+            this.isOrder = true;
+        },
+        showOrderCancel(value, dataValue){
+            this.isOrder = false;
+            this.isOrderCancel = true;
+            this.scriptValue = value;
+            this.dataValue = dataValue;
+        },
+        closeOrder() {
+            this.isOrder = false;
+            this.is_market_depth = true;
+        },
+        showOrderConfirm(value, dataValue) {
+            this.isOrder = false;
+            this.isOrderConfirm = true;
+            this.scriptValue = value;
+            this.dataValue = dataValue;
+        },
+        closeOrderConfirm() {
+            this.isOrderConfirm = false;
+            this.is_market_depth = true;
+        },
     },
     components: {
-        VueBootstrap4Table
+        VueBootstrap4Table,
+        Order,
+        OrderConfirm,
+        OrderCancel
     },
     mounted() {
     },
     beforeMount() {
-        this.fetchData();
+        this.fetchOpenData();
+        this.fetchPastData();
         this.$store.commit('SET_LAYOUT', 'master-app');
     }
 }
