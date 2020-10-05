@@ -15,12 +15,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ad78d497-6ee3-44fc-899a-1d01e02b08b4" name="Default Changelist" comment="order page and cancel order popup done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/OrdersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/OrdersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Orders.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Orders.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Scripts/MarketDepth.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Scripts/MarketDepth.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Scripts/Order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Scripts/Order.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Scripts/OrderCancel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Scripts/OrderCancel.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +218,7 @@
       <workItem from="1601741184878" duration="10275000" />
       <workItem from="1601790137215" duration="32866000" />
       <workItem from="1601881855900" duration="597000" />
-      <workItem from="1601915118509" duration="7317000" />
+      <workItem from="1601915118509" duration="8680000" />
     </task>
     <task id="LOCAL-00001" summary="first init commit">
       <created>1600007025647</created>
@@ -366,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601840771592</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="modification on the client as suggested">
+      <created>1601922812277</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1601922812277</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,7 +406,8 @@
     <MESSAGE value="order table config" />
     <MESSAGE value="MarketDepth done" />
     <MESSAGE value="order page and cancel order popup done" />
-    <option name="LAST_COMMIT_MESSAGE" value="order page and cancel order popup done" />
+    <MESSAGE value="modification on the client as suggested" />
+    <option name="LAST_COMMIT_MESSAGE" value="modification on the client as suggested" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600586242792">
