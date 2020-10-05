@@ -233,16 +233,21 @@ export default {
                     this.errors.push(error.response.data.message)
                 });
         },
-        editOrder(order_id) {
+        editOrder(order_id, page = null) {
             this.isOrderCancel = false;
-            axios.get('/api/order-show/'+order_id).then(response => {
-                this.EditOrder = response.data.data.order;
-                this.scriptValue = this.EditOrder.script;
-                this.showOrder(this.EditOrder.order_type);
-            })
-            .catch(error => {
-                this.errors.push(error.response.data.message)
-            });
+            if(page === 'order_reload'){
+                this.fetchOpenData();
+                this.fetchPastData();
+            } else {
+                axios.get('/api/order-show/'+order_id).then(response => {
+                    this.EditOrder = response.data.data.order;
+                    this.scriptValue = this.EditOrder.script;
+                    this.showOrder(this.EditOrder.order_type);
+                })
+                    .catch(error => {
+                        this.errors.push(error.response.data.message)
+                    });
+            }
         },
         showOrder(type) {
             this.orderType = type;
@@ -268,6 +273,9 @@ export default {
             this.isOrderConfirm = false;
             this.is_market_depth = true;
         },
+        close() {
+            this.$emit('close');
+        }
     },
     components: {
         VueBootstrap4Table,

@@ -92,8 +92,7 @@ fun_check_order_status(tbl_orders.order_num) order_status');
             $tbl_orders->select(['tbl_orders.order_id', 'tbl_orders.cust_id', 'tbl_scripts.script_display_name',
                 'tbl_orders.order_type', 'tbl_orders.order_num']);
 
-            $tbl_orders->selectRaw('tbl_orders.order_date time,
-fun_check_order_status(tbl_orders.order_num) order_status');
+            $tbl_orders->selectRaw('tbl_orders.order_date time, fun_check_order_status(tbl_orders.order_num) order_status');
 
             $tbl_orders->selectSub(function ($query) {
                 $query->selectRaw('sum(closed_qty * deal_price) / sum(closed_qty)')
@@ -112,7 +111,7 @@ fun_check_order_status(tbl_orders.order_num) order_status');
 
             $tbl_orders->join('users', 'users.user_id', '=', 'tbl_orders.cust_id');
 
-            $tbl_orders->whereRaw("fun_check_order_status(tbl_orders.order_num) in ('CLOSED', 'DEALING')");
+            $tbl_orders->whereRaw("fun_check_order_status(tbl_orders.order_num) in ('CLOSED', 'CANCELLED')");
 
             $tbl_orders->where('tbl_orders.cust_id', '=', $cust_id);
 
@@ -175,10 +174,11 @@ fun_check_order_status(tbl_orders.order_num) order_status');
                 $order_qty = $orderObj->order_qty_original - $results[0]->qty;
 
                 $isSuccess = Orders::where('order_id', '=', $order_id)
-                    ->update(['order_qty_original' => $order_qty]);
+                    ->update(['order_qty_original' => $order_qty, 'order_date' => date('Y-m-d H:i:s')]);
             } else if (!empty($order_id)) {
                 $isSuccess = Orders::where('order_id', '=', $order_id)
-                    ->update(['order_price' => $order_price, 'order_qty_original' => $order_qty, 'lot_size' => $lot_size]);
+                    ->update(['order_price' => $order_price, 'order_qty_original' => $order_qty,
+                        'lot_size' => $lot_size, 'order_date' => date('Y-m-d H:i:s')]);
             } else {
                 $orderObj = new Orders;
                 $orderObj->script_id = $script_id;
@@ -217,11 +217,13 @@ fun_check_order_status(tbl_orders.order_num) order_status');
             $script_id = $request->has('script_id') ? $request->script_id : '';
 
             $buyQuery = Orders::query();
+            $buyQuery->select(['tbl_orders.*']);
+            $buyQuery->selectRaw('fun_check_order_open_qty(tbl_orders.order_num) as qty');
             $buyQuery->where('script_id', '=', $script_id);
             $buyQuery->where('order_type', '=', 'Buy');
             $buyQuery->whereRaw("fun_check_order_status(tbl_orders.order_num) in ('OPEN', 'DEALING')");
             $buyQuery->orderByDesc('order_price');
-            $buyQuery->orderByDesc('updated_at');
+            $buyQuery->orderBy('order_date');
             $buyQuery->limit(10);
             $buyObj = $buyQuery->get();
 
@@ -229,11 +231,13 @@ fun_check_order_status(tbl_orders.order_num) order_status');
                 ->where('order_type', '=', 'Buy')->sum('order_qty_original');
 
             $sellQuery = Orders::query();
+            $sellQuery->select(['tbl_orders.*']);
+            $sellQuery->selectRaw('fun_check_order_open_qty(tbl_orders.order_num) as qty');
             $sellQuery->where('script_id', '=', $script_id);
             $sellQuery->where('order_type', '=', 'Sell');
             $sellQuery->whereRaw("fun_check_order_status(tbl_orders.order_num) in ('OPEN', 'DEALING')");
-            $sellQuery->orderByDesc('order_price');
-            $sellQuery->orderByDesc('updated_at');
+            $sellQuery->orderBy('order_price');
+            $sellQuery->orderBy('order_date');
             $sellQuery->limit(10);
             $sellObj = $sellQuery->get();
 
@@ -256,6 +260,8 @@ fun_check_order_status(tbl_orders.order_num) order_status');
         try {
             $tbl_orders = Orders::query();
             $tbl_orders->where('order_id', '=', $id);
+            $tbl_orders->select(['tbl_orders.*']);
+            $tbl_orders->selectRaw('fun_check_order_open_qty(tbl_orders.order_num) as qty');
             $tbl_orders->with(['script']);
             $orderObj = $tbl_orders->first();
             if (!empty($orderObj)) {
@@ -264,6 +270,7 @@ fun_check_order_status(tbl_orders.order_num) order_status');
             }
             $this->_sendErrorResponse(404, 'No Order Found');
         } catch (\Exception $exception) {
+            dd($exception);
             $this->_sendErrorResponse(500);
         }
     }

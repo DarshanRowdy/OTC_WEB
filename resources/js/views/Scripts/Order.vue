@@ -122,6 +122,7 @@ export default {
             order_price: '',
             order_qty: '',
             lot_size: '',
+            open_qty: '',
             dataVal: {},
             errors: []
         }
@@ -198,7 +199,8 @@ export default {
                 order_type: this.orderType,
                 order_price: this.order_price,
                 order_qty: this.order_qty,
-                lot_size: this.lot_size
+                lot_size: this.lot_size,
+                open_qty: this.open_qty
             };
             this.order_price = '';
             this.order_qty = '';
@@ -215,6 +217,7 @@ export default {
             this.order_price = newVal.order_price;
             this.order_qty = newVal.order_qty_original;
             this.lot_size = newVal.lot_size;
+            this.open_qty = newVal.qty;
         }
     }
 }

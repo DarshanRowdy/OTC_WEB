@@ -2803,15 +2803,22 @@ __webpack_require__.r(__webpack_exports__);
     editOrder: function editOrder(order_id) {
       var _this3 = this;
 
+      var page = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
       this.isOrderCancel = false;
-      axios.get('/api/order-show/' + order_id).then(function (response) {
-        _this3.EditOrder = response.data.data.order;
-        _this3.scriptValue = _this3.EditOrder.script;
 
-        _this3.showOrder(_this3.EditOrder.order_type);
-      })["catch"](function (error) {
-        _this3.errors.push(error.response.data.message);
-      });
+      if (page === 'order_reload') {
+        this.fetchOpenData();
+        this.fetchPastData();
+      } else {
+        axios.get('/api/order-show/' + order_id).then(function (response) {
+          _this3.EditOrder = response.data.data.order;
+          _this3.scriptValue = _this3.EditOrder.script;
+
+          _this3.showOrder(_this3.EditOrder.order_type);
+        })["catch"](function (error) {
+          _this3.errors.push(error.response.data.message);
+        });
+      }
     },
     showOrder: function showOrder(type) {
       this.orderType = type;
@@ -2836,6 +2843,9 @@ __webpack_require__.r(__webpack_exports__);
     closeOrderConfirm: function closeOrderConfirm() {
       this.isOrderConfirm = false;
       this.is_market_depth = true;
+    },
+    close: function close() {
+      this.$emit('close');
     }
   },
   components: {
@@ -4368,6 +4378,7 @@ __webpack_require__.r(__webpack_exports__);
       order_price: '',
       order_qty: '',
       lot_size: '',
+      open_qty: '',
       dataVal: {},
       errors: []
     };
@@ -4446,7 +4457,8 @@ __webpack_require__.r(__webpack_exports__);
         order_type: this.orderType,
         order_price: this.order_price,
         order_qty: this.order_qty,
-        lot_size: this.lot_size
+        lot_size: this.lot_size,
+        open_qty: this.open_qty
       };
       this.order_price = '';
       this.order_qty = '';
@@ -4464,6 +4476,7 @@ __webpack_require__.r(__webpack_exports__);
       this.order_price = newVal.order_price;
       this.order_qty = newVal.order_qty_original;
       this.lot_size = newVal.lot_size;
+      this.open_qty = newVal.qty;
     }
   }
 });
@@ -4521,9 +4534,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "OrderConfirm",
   props: ['values', 'dataValue'],
+  data: function data() {
+    return {
+      errors: []
+    };
+  },
   methods: {
     close: function close() {
-      this.$parent.editOrder(this.dataValue.order_id);
+      this.$parent.editOrder(this.dataValue.order_id, 'order_reload');
     },
     cancelOrder: function cancelOrder() {
       var _this = this;
@@ -4534,6 +4552,8 @@ __webpack_require__.r(__webpack_exports__);
         axios.post('/api/order', data).then(function (response) {
           _this.close();
         })["catch"](function (error) {
+          console.log(error.response);
+
           _this.errors.push(error.response.data.message);
         });
       }
@@ -37358,8 +37378,7 @@ var render = function() {
                                               "\n                                                    " +
                                                 _vm._s(
                                                   _vm.buyData[index - 1]
-                                                    ? _vm.buyData[index - 1]
-                                                        .order_qty_original
+                                                    ? _vm.buyData[index - 1].qty
                                                     : 0
                                                 ) +
                                                 "\n                                                "
@@ -37453,7 +37472,7 @@ var render = function() {
                                                 _vm._s(
                                                   _vm.sellData[index - 1]
                                                     ? _vm.sellData[index - 1]
-                                                        .order_qty_original
+                                                        .qty
                                                     : 0
                                                 ) +
                                                 "\n                                                "
@@ -38111,7 +38130,7 @@ var render = function() {
                     _c("p", [
                       _vm._v(
                         "You are about to cancel " +
-                          _vm._s(_vm.dataValue.order_qty) +
+                          _vm._s(_vm.dataValue.open_qty) +
                           " open quantity, Ary you sure you want to cancel this order?"
                       )
                     ]),

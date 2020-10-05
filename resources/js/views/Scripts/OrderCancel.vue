@@ -17,7 +17,7 @@
                                 </div>
                             </div>
                             <div class="modal-body">
-                                <p>You are about to cancel {{dataValue.order_qty}} open quantity, Ary you sure you want to cancel this order?</p>
+                                <p>You are about to cancel {{dataValue.open_qty}} open quantity, Ary you sure you want to cancel this order?</p>
                                 <div class="buy-sell-btn d-flex align-items-center margin-top-30 margin-bottom-20">
                                     <div v-if="dataValue.order_type === 'Buy'" class="buy-btn-wrp">
                                         <button @click="cancelOrder" class="buy-btn get-started-btn3">Yes, cancel it</button>
@@ -41,9 +41,14 @@
 export default {
     name: "OrderConfirm",
     props: ['values', 'dataValue'],
+    data() {
+        return {
+            errors: []
+        }
+    },
     methods: {
         close() {
-            this.$parent.editOrder(this.dataValue.order_id);
+            this.$parent.editOrder(this.dataValue.order_id, 'order_reload');
         },
         cancelOrder() {
             if (this.dataValue !== null || this.dataValue !== undefined) {
@@ -52,6 +57,7 @@ export default {
                 axios.post('/api/order', data).then(response => {
                     this.close();
                 }).catch(error => {
+                    console.log(error.response);
                     this.errors.push(error.response.data.message)
                 });
             }

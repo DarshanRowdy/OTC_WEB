@@ -33,7 +33,7 @@
                                                         {{ buyData[index - 1] ? buyData[index - 1].lot_size : 0 }}
                                                     </td>
                                                     <td class="text-right quantity">
-                                                        {{ buyData[index - 1] ? buyData[index - 1].order_qty_original : 0 }}
+                                                        {{ buyData[index - 1] ? buyData[index - 1].qty : 0 }}
                                                     </td>
                                                 </tr>
                                                 </tbody>
@@ -62,7 +62,7 @@
                                                         {{ sellData[index - 1] ? sellData[index - 1].lot_size : 0 }}
                                                     </td>
                                                     <td class="text-right quantity">
-                                                        {{ sellData[index - 1] ? sellData[index - 1].order_qty_original : 0 }}
+                                                        {{ sellData[index - 1] ? sellData[index - 1].qty : 0 }}
                                                     </td>
                                                 </tr>
                                                 </tbody>
