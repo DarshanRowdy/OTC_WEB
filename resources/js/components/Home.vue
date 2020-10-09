@@ -152,8 +152,7 @@
 
 
         <hr>
-        <section id="notes">
-
+        <section id="notice">
             <div class="section-header">
                 <h2>Notes</h2></div>
             <ul>
@@ -164,13 +163,9 @@
                     Beneficiary / Trusted account for faster transaction from your side.
                 </li>
             </ul>
-
             <hr>
             <h4 style="color:#46454d"><b>Bank A/C Details</b></h4>
-
             <section id="fact1" style="margin-top: -40px;">
-
-
                 <div class="row counters">
                     <div class="col-lg-12 col-12 text-left">
                         <span data-toggle="counter-up">OTC Capital Services Private Limited</span>
@@ -210,9 +205,7 @@
 
             <h4 style="color:#46454d; margin-top: -40px;"><b>Demat A/C Details</b></h4>
 
-            <section id="fact2" style="margin-top: -40px;">
-
-
+            <section id="fact1" style="margin-top: -40px;">
                 <div class="row counters">
                     <div class="col-lg-12 col-12 text-left">
                         <span data-toggle="counter-up">OTC Capital Services Private Limited</span>
@@ -251,14 +244,9 @@
                         <span data-toggle="counter-up">12345678</span>
                         <p>Client ID</p>
                     </div>
-
-
                 </div>
                 <hr>
-
             </section>
-
-
         </section>
     </div>
 </template>

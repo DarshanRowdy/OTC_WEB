@@ -8,14 +8,14 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h2 class="otc-heading">OTC<span>STOX</span></h2>
-                                <button type="button" class="btn-close" @click="close"> x</button>
+                                <a href="javascript:void(0)" class="btn-close" @click="close"> x</a>
                             </div>
                             <div class="modal-body text-center">
                                 <h2 class="">Congratulations!</h2>
                                 <p v-if="from_where === 'login'"><strong>Password Reset Successfully</strong></p>
                                 <p v-else class="no-margin">OTP Verified Successfully</p>
                                 <p class="resend-link margin-bottom-30 display-inline-block">Please Login to Trade</p>
-                                <router-link class="btn btn-block login-btn" to="/login">Login</router-link>
+                                <a href="javascript:void(0)" class="btn btn-block login-btn" @click="close" >Login</a>
                             </div>
                         </div>
                     </div>

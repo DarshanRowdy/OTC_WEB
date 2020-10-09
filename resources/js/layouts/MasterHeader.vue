@@ -17,7 +17,7 @@
                                     <ul>
 
                                         <li>
-                                            <router-link to="/">Desk</router-link>
+                                            <router-link to="/desk">Desk</router-link>
                                         </li>
                                         <li>
                                             <router-link to="/orders">Orders</router-link>
@@ -48,7 +48,7 @@
                                 <router-link to="/script-list"><i class='las la-bars'></i></router-link>
                             </li>
                             <li>
-                                <router-link to="/"><i class='lab la-hornbill'></i></router-link>
+                                <router-link to="/desk"><i class='lab la-hornbill'></i></router-link>
                             </li>
                             <li><a href="#"><i class='las la-book-open'></i></a></li>
                             <li></li>

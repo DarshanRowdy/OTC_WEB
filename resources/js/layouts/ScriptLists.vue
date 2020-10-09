@@ -8,27 +8,31 @@
             </div>
             <div class="circuit-list">
                 <ul id="scripts-listing">
-                    <li v-for="value in scripts">
+                    <li v-for="(value, index) in scripts">
                         <div class="list-name">
                             <a> {{ value.script_display_name }}</a>
                         </div>
                         <div class="list-icons">
                             <ul>
-                                <li class="icon-buy">
-                                    <a data-toggle="popover" href="javascript:void(0)" @click="showOrder(value, 'Buy')">B</a>
+                                <li :id="'Buy'+index" class="icon-buy">
+                                    <a href="javascript:void(0)" @click="showOrder(value, 'Buy')">B</a>
                                 </li>
-                                <li class="icon-sell">
-                                    <a data-toggle="popover" href="javascript:void(0)" @click="showOrder(value, 'Sell')">S</a>
+                                <b-tooltip :target="'Buy'+index" title="Buy"></b-tooltip>
+                                <li :id="'Sell'+index" class="icon-sell">
+                                    <a href="javascript:void(0)" @click="showOrder(value, 'Sell')">S</a>
                                 </li>
-                                <li class="icon-market-depth icon-bg-blank" data-content="Market Depth"
-                                    data-toggle="popover">
+                                <b-tooltip :target="'Sell'+index" title="Sell"></b-tooltip>
+                                <li :id="'Market'+index" class="icon-market-depth icon-bg-blank">
                                     <router-link v-bind:to="`/market-depth/${value.script_id}`"> <i
-                                        class="las la-bars"></i> </router-link></li>
-                                <li class="icon-more icon-bg-blank">
+                                        class="las la-bars"></i> </router-link>
+                                </li>
+                                <b-tooltip :target="'Market'+index" title="Market Depth"></b-tooltip>
+                                <li :id="'info'+index" class="icon-more icon-bg-blank" v-b-tooltip.hover title="Info">
                                     <router-link v-bind:to="`/info/${value.script_id}`">
                                         <i class="las la-ellipsis-v"></i>
                                     </router-link>
                                 </li>
+                                <b-tooltip :target="'info'+index" title="Info"></b-tooltip>
                             </ul>
                         </div>
                     </li>

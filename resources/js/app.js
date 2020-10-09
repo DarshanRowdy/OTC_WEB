@@ -4,13 +4,14 @@ import Vue from "vue"
 // import vuetify from '@/js/plugins/vuetify'
 import Vuelidate from "vuelidate";
 import { store } from "./stores";
+import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 import VueSession from 'vue-session';
-import VueSocketIO from "vue-socket.io";
-import $ from 'jquery';
-
+// import $ from 'jquery';
+Vue.use(BootstrapVue)
 Vue.use(Vuelidate);
 Vue.use(VueSession)
 // Vue.use(Vuex);
+
 
 //Route Information from Vue Router
 import Route from '@/js/routes.js'
@@ -23,7 +24,7 @@ Vue.component('auto-logout', require('./components/AutoLogout.vue').default);
 
 const app = new Vue({
     el: "#app",
-    // vuetify,
+    BootstrapVue,
     router: Route,
     store,
     render: h => h(App)

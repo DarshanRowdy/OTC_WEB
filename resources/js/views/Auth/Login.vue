@@ -8,47 +8,46 @@
                 <div class="login-wrapper my-auto">
                     <h1 class="login-title">LOG IN</h1>
                     <form @submit.prevent="onSubmit">
-                        <div class="alert alert-danger" v-if="errors.length">
-                            <ul class="mb-0">
-                                <li v-for="(error, index) in errors" :key="index">{{ error }}</li>
-                            </ul>
-                        </div>
+                        <p v-if="errors" class="text-danger">{{ errors }}</p>
                         <div class="form-group">
                             <label for="mobile">Mobile</label>
-                            <input type="number" v-model="mobile" name="mobile" id="mobile" class="form-control">
+                            <input id="mobile" v-model="mobile" class="form-control" name="mobile" type="number">
                         </div>
                         <div class="form-group mb-4">
                             <label for="password">Password</label>
-                            <input type="password" v-model="password" name="password" id="password"
-                                   class="form-control">
-                            <a @click="showForgotPasswordModal" class="forgot-password-link">Forgot password?</a>
+                            <input id="password" v-model="password" class="form-control" name="password"
+                                   type="password">
+                            <a class="forgot-password-link"
+                               href="javascript:void(0)" @click="showForgotPasswordModal">Forgot
+                                password?</a>
                         </div>
                         <button class="login-page-btn btn btn-block login-btn">Login</button>
                         <hr/>
                         <div class="popup-box">
-                            <button type="button" @click="LoginWithOtp" class="button btn btn-block login-btn2">Login with OTP
+                            <button class="button btn btn-block login-btn2" type="button" @click="LoginWithOtp">Login
+                                with OTP
                             </button>
                         </div>
                         <!-- <input name="login" id="login" class="btn btn-block login-btn2" type="button" onclick="openForm()" value="Login with OTP"> -->
                     </form>
                     <p class="login-wrapper-footer-text">New User?
-                        <router-link to="/register" class="text-reset1">Register here</router-link>
+                        <router-link class="text-reset1" to="/register">Register here</router-link>
                     </p>
-                    <ForgotPassword :from_where="login" v-show="isForgotPasswordVisible"
+                    <ForgotPassword v-show="isForgotPasswordVisible" :from_where="login"
                                     @close="closeForgotPasswordModal"/>
 
-                    <VerifyOtp :mobile="mobile" :from_where="login" v-show="isVerifyOtpVisible"
+                    <VerifyOtp v-show="isVerifyOtpVisible" :from_where="login" :mobile="mobile"
                                @close="closeVerifyOtpModal"/>
 
-                    <NewPassword :mobile="mobile" v-show="isNewPasswordVisible" @close="closeNewPasswordModal"/>
+                    <NewPassword v-show="isNewPasswordVisible" :mobile="mobile" @close="closeNewPasswordModal"/>
 
-                    <ConfirmationPopup :from_where="login" v-show="isConfirmationVisible"
+                    <ConfirmationPopup v-show="isConfirmationVisible" :from_where="login"
                                        @close="closeConfirmationModal"/>
 
                 </div>
             </div>
             <div class="col-sm-6 px-0 d-none d-sm-block">
-                <img src="assets/img/logingif.gif" alt="login image" class="login-img">
+                <img alt="login image" class="login-img" src="assets/img/logingif.gif">
             </div>
         </div>
     </div>
@@ -79,7 +78,7 @@ export default {
             isVerifyOtpVisible: false,
             isNewPasswordVisible: false,
             isConfirmationVisible: false,
-            errors: [],
+            errors: '',
         }
     },
     validations: {
@@ -100,6 +99,7 @@ export default {
     },
     methods: {
         showForgotPasswordModal() {
+            this.login = 'forgot_password';
             this.isForgotPasswordVisible = true;
         },
         closeForgotPasswordModal() {
@@ -134,15 +134,28 @@ export default {
             this.isForgotPasswordVisible = true;
         },
         onSubmit() {
-            this.errors = [];
+            this.errors = '';
             if (!this.mobile) {
-                this.errors.push('Mobile is required.');
-            }
-            if (!this.password) {
-                this.errors.push('Password is required.');
+                this.errors = 'Mobile is required.';
+                return false;
             }
 
-            if (!this.errors.length) {
+            if (this.mobile.length > 10 || this.mobile.length < 10) {
+                this.errors = 'Enter 10 digit mobile number.';
+                return false
+            }
+
+            if (!this.password) {
+                this.errors = 'Password is required.';
+                return false;
+            }
+
+            if (this.password.length < 6) {
+                this.errors = 'Password must be at least 6 character.';
+                return false;
+            }
+
+            if (this.errors === '') {
                 const data = {
                     mobile: this.mobile,
                     password: this.password
@@ -150,16 +163,14 @@ export default {
 
                 axios.post('/api/login', data).then(response => {
                     if (response.data.responseCode === 200 && 'auth_token' in response.data.data.user) {
-                        // this.$session.start()
-                        // this.$session.set('auth_token', response.data.data.user.auth_token);
                         let userObj = JSON.stringify(response.data.data.user)
                         localStorage.setItem('userObj', userObj);
-                        this.$router.push('/');
+                        this.$router.push('/desk');
                     } else {
                         this.$router.go(this.$router.currentRoute);
                     }
                 }).catch(error => {
-                    this.errors.push(error.response.data.message)
+                    this.errors = error.response.data.message;
                 });
             }
         }
@@ -168,4 +179,5 @@ export default {
 </script>
 
 <style scoped>
+
 </style>

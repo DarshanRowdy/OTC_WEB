@@ -8,21 +8,18 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h2 class="otc-heading">OTC<span>STOX</span></h2>
-                                <button type="button" class="btn-close" @click="close"> x</button>
+                                <a class="btn-close" href="javascript:void(0)" @click="close"> x</a>
                             </div>
                             <div class="modal-body">
+                                <p v-if="errors" class="text-danger">{{ errors }}</p>
                                 <h2 class="">Enter Password</h2>
-                                <div class="alert alert-danger" v-if="errors.length">
-                                    <ul class="mb-0">
-                                        <li v-for="(error, index) in errors" :key="index">{{ error }}</li>
-                                    </ul>
-                                </div>
-                                <form v-on:submit.prevent="sendNewPassword" class="popup-form">
-                                    <input type="text" v-model="password" class="form-control"
-                                           placeholder="Enter New Password">
-                                    <input type="text" v-model="confirm_password" class="form-control"
-                                           placeholder="Confirm Password">
-                                    <button type="submit" class="btn btn-block login-btn">Reset</button>
+                                <form class="popup-form" v-on:submit.prevent="sendNewPassword">
+                                    <input v-model="password" class="form-control" placeholder="Enter New Password"
+                                           type="password">
+                                    <input v-model="confirm_password" class="form-control"
+                                           placeholder="Confirm Password"
+                                           type="password">
+                                    <button class="btn btn-block login-btn" type="submit">Reset</button>
                                 </form>
                             </div>
                         </div>
@@ -42,23 +39,38 @@ export default {
         return {
             password: '',
             confirm_password: '',
-            errors: []
+            errors: ''
         }
     },
     methods: {
         sendNewPassword() {
-            // this.$parent.showConfirmation();
+            this.errors = '';
             if (!this.password) {
-                this.errors.push('Password is required.');
-            }
-            if (!this.confirm_password) {
-                this.errors.push('Confirm Password is required.');
-            }
-            if (!this.mobile) {
-                this.errors.push('Mobile Password is required.');
+                this.errors = 'Password is required.';
+                return false;
             }
 
-            if (!this.errors.length) {
+            if (this.password.length < 6) {
+                this.errors = 'Password must be at least 6 character.';
+                return false;
+            }
+
+            if (this.confirm_password !== this.password) {
+                this.errors = 'Confirm Password not matched.';
+                return false;
+            }
+
+            if (!this.confirm_password) {
+                this.errors = 'Confirm Password is required.';
+                return false;
+            }
+
+            if (!this.mobile) {
+                this.errors = 'Mobile is required.';
+                return false;
+            }
+
+            if (this.errors === '') {
                 const data = {
                     mobile: this.mobile,
                     password: this.password
@@ -66,7 +78,7 @@ export default {
                 axios.post('/api/change-password', data).then(response => {
                     this.$parent.showConfirmationModal();
                 }).catch(error => {
-                    this.errors.push(error.response.data.message)
+                    this.errors = error.response.data.message;
                 });
             }
         },

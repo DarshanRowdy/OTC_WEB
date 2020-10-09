@@ -10,15 +10,11 @@
                 </div>
                 <div class="login-wrapper my-auto">
                     <h1 class="login-title">WELCOME</h1>
+                    <p v-if="errors" class="text-danger">{{ errors }}</p>
                     <form v-on:submit.prevent="onSubmit">
-                        <div class="alert alert-danger" v-if="errors.length">
-                            <ul class="mb-0">
-                                <li v-for="(error, index) in errors" :key="index">{{ error }}</li>
-                            </ul>
-                        </div>
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" name="name" v-model="name" id="name" class="form-control">
+                            <input type="text" name="name" v-model="name" @keypress="isLetter($event)" id="name" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="mobile">Mobile</label>
@@ -26,7 +22,7 @@
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" name="email" v-model="email" id="email" class="form-control">
+                            <input type="text" name="email" v-model="email" id="email" class="form-control">
                         </div>
                         <div class="form-group mb-4">
                             <label for="password">Password</label>
@@ -78,7 +74,8 @@ export default {
             mobile: '',
             password: '',
             confirm_password: '',
-            errors: [],
+            errors: '',
+            reg: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/,
             isSendOtpVisible: false,
             isSendVerifyOtp: false,
             isConfirmation: false
@@ -105,28 +102,51 @@ export default {
         closeConfirmation() {
             this.isConfirmation = false;
         },
+        isLetter(e) {
+            let char = String.fromCharCode(e.keyCode);
+            if (/^[A-Za-z]+$/.test(char)) return true;
+            else e.preventDefault();
+        },
         onSubmit() {
-            this.errors = [];
+            this.errors = '';
             if (!this.name) {
-                this.errors.push('Name is required.');
-            }
-            if (!this.email) {
-                this.errors.push('Email is required.');
+                this.errors = 'Name is required.';
+                return false;
             }
             if (!this.mobile) {
-                this.errors.push('Mobile is required.');
+                this.errors = 'Mobile is required.';
+                return false;
+            }
+            if (this.mobile.length > 10 || this.mobile.length < 10) {
+                this.errors = 'Enter 10 digit mobile number.';
+                return false;
+            }
+            if (!this.email) {
+                this.errors = 'Email is required.';
+                return false;
+            }
+            if (!this.reg.test(this.email)) {
+                this.errors = 'Please enter valid Email.';
+                return false;
             }
             if (!this.password) {
-                this.errors.push('Password is required.');
+                this.errors = 'Password is required.';
+                return false;
+            }
+            if (this.password.length < 6) {
+                this.errors = 'Password must be at least 6 character.';
+                return false;
             }
             if (!this.confirm_password) {
-                this.errors.push('Confirm Password is required.');
+                this.errors = 'Confirm Password is required.';
+                return false;
             }
             if (this.password !== this.confirm_password) {
-                this.errors.push('Password do not match.')
+                this.errors = 'Confirm Password not matched.';
+                return false;
             }
 
-            if (!this.errors.length) {
+            if (this.errors === '') {
                 const data = {
                     name: this.name,
                     email: this.email,
@@ -137,7 +157,7 @@ export default {
                 axios.post('/api/registration', data).then(response => {
                     this.isSendOtpVisible = true;
                 }).catch(error => {
-                    this.errors.push(error.response.data.message)
+                    this.errors = error.response.data.message;
                 });
             }
         }

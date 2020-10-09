@@ -7,15 +7,12 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h2 class="otc-heading">OTC<span>STOX</span></h2>
-                                <button type="button" class="btn-close" @click="close"> x</button>
+                                <a href="javascript:void(0)" class="btn-close" @click="close"> x</a>
                             </div>
                             <div class="modal-body">
-                                <h2 class="login-title">LOG IN With OTP</h2>
-                                <div class="alert alert-danger" v-if="errors.length">
-                                    <ul class="mb-0">
-                                        <li v-for="(error, index) in errors" :key="index">{{ error }}</li>
-                                    </ul>
-                                </div>
+                                <h2 class="login-title" v-if="from_where !== 'login_with_otp'">FORGOT PASSWORD?</h2>
+                                <h2 class="login-title" v-else>LOG IN WITH OTP</h2>
+                                <p class="text-danger" v-if="errors">{{ errors }}</p>
                                 <form v-on:submit.prevent="sendVerifyOtp" class="popup-form">
                                     <input v-model="mobile" type="text" class="form-control" placeholder="Enter 10 Digit Mobile Number">
                                     <button class="btn btn-block login-btn" type="submit">Continue</button>
@@ -37,23 +34,33 @@ export default {
     data() {
         return {
             mobile: '',
-            errors: []
+            errors: ''
         }
     },
     methods: {
         sendVerifyOtp() {
+            this.errors = '';
+
             if (!this.mobile) {
-                this.errors.push('Mobile is required.');
+                this.errors = 'Mobile is required.';
+                return false;
             }
 
-            const data = {
-                mobile: this.mobile,
-            };
-            axios.post('/api/send-otp', data).then(response => {
-                this.$parent.showVerifyOtpModal(this.mobile, this.from_where);
-            }).catch(error => {
-                this.errors.push(error.response.data.message)
-            });
+            if (this.mobile.length > 10 || this.mobile.length < 10) {
+                this.errors = 'Enter 10 digit mobile number.';
+                return false;
+            }
+
+            if(this.errors === ''){
+                const data = {
+                    mobile: this.mobile,
+                };
+                axios.post('/api/send-otp', data).then(response => {
+                    this.$parent.showVerifyOtpModal(this.mobile, this.from_where);
+                }).catch(error => {
+                    this.errors = error.response.data.message;
+                });
+            }
         },
         close() {
             this.$emit('close');

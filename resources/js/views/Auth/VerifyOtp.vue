@@ -8,16 +8,12 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h2 class="otc-heading">OTC<span>STOX</span></h2>
-                                <button type="button" class="btn-close" @click="close"> x </button>
+                                <a href="javascript:void(0)" class="btn-close" @click="close"> x </a>
                             </div>
                             <div class="modal-body">
-                                <h2 class="">Enter 4 digit code</h2>
-                                <div class="alert alert-danger" v-if="errors.length">
-                                    <ul class="mb-0">
-                                        <li v-for="(error, index) in errors" :key="index">{{ error }}</li>
-                                    </ul>
-                                </div>
-                                <p>We send an SMS with confirmation code to {{mobile}}</p>
+                                <p v-if="errors" class="text-danger">{{ errors }}</p>
+                                <p>We have sent an OTP to +91 {{mobile}}</p>
+                                <h2 class="">Enter 4 digit OTP</h2>
                                 <a v-if="from_where === 'register'" @click="resendOtp" class="resend-link margin-bottom-30 display-inline-block">Resend Code</a>
                                 <form v-on:submit.prevent="sendConfirmation" class="popup-form">
                                     <input type="text" v-model="otp" class="form-control" placeholder="Enter OTP">
@@ -40,14 +36,20 @@ export default {
     data() {
         return {
             otp: '',
-            errors: []
+            errors: ''
         }
     },
     methods: {
         sendConfirmation() {
-            // this.$parent.showConfirmation();
+            this.errors = '';
             if (!this.otp) {
-                this.errors.push('OTP is required.');
+                this.errors = 'OTP is required.';
+                return false;
+            }
+
+            if(this.otp.length < 4 || this.otp.length > 4) {
+                this.errors = 'Enter 4 digit OTP.';
+                return false;
             }
 
             var is_login_with_otp = 0;
@@ -55,33 +57,37 @@ export default {
                 is_login_with_otp = 1;
             }
 
-            const data = {
-                mobile: this.mobile,
-                otp: this.otp,
-                is_login_with_otp: is_login_with_otp
-            };
-            axios.post('/api/verify-otp', data).then(response => {
-                if(this.from_where === 'login'){
-                    this.$parent.showNewPasswordModal(this.mobile);
-                } else if(this.from_where === 'register') {
-                    this.$parent.showConfirmation();
-                } else if(this.from_where === 'login_with_otp') {
-                    let userObj = JSON.stringify(response.data.data.user)
-                    localStorage.setItem('userObj', userObj);
-                    this.$router.push('/');
-                }
-            }).catch(error => {
-                this.errors.push(error.response.data.message)
-            });
+            if(this.errors === ''){
+                const data = {
+                    mobile: this.mobile,
+                    otp: this.otp,
+                    is_login_with_otp: is_login_with_otp
+                };
+                axios.post('/api/verify-otp', data).then(response => {
+                    if(this.from_where === 'login'){
+                        this.$parent.showNewPasswordModal(this.mobile);
+                    } else if(this.from_where === 'register') {
+                        this.$parent.showConfirmation();
+                    } else if(this.from_where === 'login_with_otp') {
+                        let userObj = JSON.stringify(response.data.data.user)
+                        localStorage.setItem('userObj', userObj);
+                        this.$router.push('/desk');
+                    }
+                }).catch(error => {
+                    this.errors = error.response.data.message;
+                });
+            }
         },
         resendOtp() {
+            this.errors = '';
+
             const data = {
                 mobile: this.mobile,
             };
             axios.post('/api/send-otp', data).then(response => {
                 alert('OTP Re-send successfully');
             }).catch(error => {
-                this.errors.push(error.response.data.message)
+                this.errors = error.response.data.message;
             });
         },
         close() {

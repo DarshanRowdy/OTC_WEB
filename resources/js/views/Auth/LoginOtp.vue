@@ -10,12 +10,8 @@
                                 <button type="button" class="btn-close" @click="closeSendOtpModal"> x</button>
                             </div>
                             <div class="modal-body">
+                                <p v-if="errors" class="text-danger">{{ errors }}</p>
                                 <h2 class="login-title">LOG IN With OTP</h2>
-                                <div class="alert alert-danger" v-if="errors.length">
-                                    <ul class="mb-0">
-                                        <li v-for="(error, index) in errors" :key="index">{{ error }}</li>
-                                    </ul>
-                                </div>
                                 <form v-on:submit.prevent="sendVerifyOtp" class="popup-form">
                                     <input v-model="mobile" type="text" class="form-control"
                                            placeholder="Enter 10 Digit Mobile Number">
@@ -45,7 +41,7 @@ export default {
             login_otp: 'login_otp',
             isSendOtpVisible: true,
             isVerifyOtpVisible: false,
-            errors: []
+            errors: ''
         }
     },
     methods: {
@@ -62,12 +58,19 @@ export default {
             this.isVerifyOtpVisible = false;
         },
         sendVerifyOtp() {
-            this.errors = [];
+            this.errors = '';
+
             if (!this.mobile) {
                 this.errors.push('Mobile is required.');
+                return false;
             }
 
-            if (!this.errors.length) {
+            if (this.mobile.length > 10 || this.mobile.length < 10) {
+                this.errors = 'Enter 10 digit mobile number.';
+                return false;
+            }
+
+            if (this.errors === '') {
                 const data = {
                     mobile: this.mobile
                 };
@@ -75,7 +78,7 @@ export default {
                 axios.post('/api/send-otp', data).then(response => {
                     alert(response.data.message);
                 }).catch(error => {
-                    this.errors.push(error.response.data.message)
+                    this.errors = error.response.data.message;
                 });
             }
         }

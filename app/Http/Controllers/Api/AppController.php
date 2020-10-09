@@ -53,7 +53,7 @@ class AppController extends BaseApiController
         $this->checkValidate($request, $validator);
         try {
             if (!Auth::attempt(['user_mobile' => request('mobile'), 'password' => request('password')])) {
-                $this->_sendErrorResponse(401, "Incorrect Email or Password.");
+                $this->_sendErrorResponse(401, "Incorrect Mobile or Password.");
             }
             $userObj = Auth::user();
             if($userObj->user_status != 'active'){
@@ -128,7 +128,7 @@ class AppController extends BaseApiController
             $userObj = $user->first();
 
             if(empty($userObj)){
-                $this->_sendErrorResponse(400, 'does not match');
+                $this->_sendErrorResponse(400, 'OTP is wrong. Please enter correct OTP.');
             }
             $userUpdate = Users::where('user_id', $userObj->user_id)->update(array('user_status' => 'active', 'otp' => null));
             if($userUpdate){
