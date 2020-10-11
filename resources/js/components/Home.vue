@@ -40,7 +40,7 @@
                         </h3>
                         <div class="icon"><i class="las la-bars"></i></div>
                         <div class="data">
-                            <h4>40</h4></div>
+                            <h4>{{ active_script_count }}</h4></div>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -257,7 +257,8 @@ export default {
         return {
             errors: '',
             announcements: [],
-            userObj : {}
+            userObj : {},
+            active_script_count : 0
         }
     },
     methods: {
@@ -268,10 +269,18 @@ export default {
             }).catch(error => {
                 this.errors = error.response.data.message;
             });
+        },
+        getScript(){
+            axios.get('/api/scripts?is_active_count=true').then(response => {
+                this.active_script_count = response.data.data.scripts;
+            }).catch(error => {
+                this.errors = error.response.data.message;
+            });
         }
     },
     beforeMount() {
         this.getAnnouncement();
+        this.getScript();
         this.$store.commit('SET_LAYOUT', 'master-app');
         this.userObj = JSON.parse(localStorage.getItem('userObj'));
     }

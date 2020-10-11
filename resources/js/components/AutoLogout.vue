@@ -20,7 +20,7 @@ export default {
     },
     methods: {
         setTimers: function (){
-            this.logoutTimer = setTimeout(this.logoutUser, 5 * 60 * 60 * 1000);
+            this.logoutTimer = setTimeout(this.logoutUser, 12 * 60 * 60 * 1000);
         },
         logoutUser: function () {
             let userObj = JSON.parse(localStorage.getItem('userObj'));

@@ -13,6 +13,7 @@ class ScriptsController extends BaseApiController
         try{
 
             $search = $request->has('search') ? $request->search : '';
+            $is_active_count = $request->has('is_active_count') ? $request->is_active_count : false;
             $tbl_scripts = Scripts::query();
             $tbl_scripts->when(!empty($search), function ($query) use ($search) {
                 $query->where(function ($que) use ($search) {
@@ -25,7 +26,11 @@ class ScriptsController extends BaseApiController
             });
             $tbl_scripts->where('script_status', '=','ACTIVE');
             $tbl_scripts->orderBy('script_display_name');
-            $scripts = $tbl_scripts->get();
+            if($is_active_count){
+                $scripts = $tbl_scripts->count();
+            } else {
+                $scripts = $tbl_scripts->get();
+            }
             $response = ['scripts' => $scripts];
             $this->_sendResponse($response, 'Scripts listing Success');
         } catch (\Exception $exception){
