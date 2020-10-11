@@ -33,17 +33,17 @@ fun_check_order_status(tbl_orders.order_num) order_status');
                     ->whereColumn('tbl_assignments.order_number', '=', 'tbl_orders.order_num');
             }, 'match_qty');
 
-            $tbl_orders->selectRaw("concat_ws('/',(select sum(match_qty) as match_qty from tbl_assignments where tbl_assignments.order_number = tbl_orders.order_num), tbl_orders.order_qty_original) qty");
+            $tbl_orders->selectRaw("concat_ws('/',(select IFNULL(sum(match_qty),0) from tbl_assignments where tbl_assignments.order_number = tbl_orders.order_num), tbl_orders.order_qty_original) qty");
 
             $tbl_orders->selectSub(function ($query) {
-                $query->selectRaw('sum(closed_qty * deal_price) / sum(closed_qty)')
+                $query->selectRaw('IFNULL(sum(closed_qty * deal_price) / sum(closed_qty),0)')
                     ->from('tbl_assignments')
                     ->where('closed_qty', '>', 0)
                     ->whereColumn('order_number', '=', 'tbl_orders.order_num');
             }, 'average_price');
 
             $tbl_orders->selectSub(function ($query) {
-                $query->selectRaw('sum(closed_qty)')
+                $query->selectRaw('IFNULL(sum(closed_qty),0)')
                     ->from('tbl_assignments')
                     ->whereColumn('order_number', '=', 'tbl_orders.order_num');
             }, 'delivered_qty');
@@ -95,14 +95,14 @@ fun_check_order_status(tbl_orders.order_num) order_status');
             $tbl_orders->selectRaw('tbl_orders.order_date time, fun_check_order_status(tbl_orders.order_num) order_status');
 
             $tbl_orders->selectSub(function ($query) {
-                $query->selectRaw('sum(closed_qty * deal_price) / sum(closed_qty)')
+                $query->selectRaw('IFNULL(sum(closed_qty * deal_price) / sum(closed_qty),0)')
                     ->from('tbl_assignments')
                     ->where('closed_qty', '>', 0)
                     ->whereColumn('order_number', '=', 'tbl_orders.order_num');
             }, 'average_price');
 
             $tbl_orders->selectSub(function ($query) {
-                $query->selectRaw('sum(closed_qty)')
+                $query->selectRaw('IFNULL(sum(closed_qty),0)')
                     ->from('tbl_assignments')
                     ->whereColumn('order_number', '=', 'tbl_orders.order_num');
             }, 'delivered_qty');
@@ -182,7 +182,7 @@ fun_check_order_status(tbl_orders.order_num) order_status');
             } else {
                 $orderObj = new Orders;
                 $orderObj->script_id = $script_id;
-                $orderObj->order_type = $order_type;
+                $orderObj->order_type = strtoupper($order_type);
                 $orderObj->placed_by = 'self';
                 $orderObj->last_updated_by = 'self';
                 $orderObj->cust_id = $cust_id;
@@ -220,7 +220,7 @@ fun_check_order_status(tbl_orders.order_num) order_status');
             $buyQuery->select(['tbl_orders.*']);
             $buyQuery->selectRaw('fun_check_order_open_qty(tbl_orders.order_num) as qty');
             $buyQuery->where('script_id', '=', $script_id);
-            $buyQuery->where('order_type', '=', 'Buy');
+            $buyQuery->where('order_type', '=', 'BUY');
             $buyQuery->whereRaw("fun_check_order_status(tbl_orders.order_num) in ('OPEN', 'DEALING')");
             $buyQuery->orderByDesc('order_price');
             $buyQuery->orderBy('order_date');
@@ -228,13 +228,13 @@ fun_check_order_status(tbl_orders.order_num) order_status');
             $buyObj = $buyQuery->get();
 
             $buySum = Orders::where('script_id', '=', $script_id)
-                ->where('order_type', '=', 'Buy')->sum('order_qty_original');
+                ->where('order_type', '=', 'BUY')->sum('order_qty_original');
 
             $sellQuery = Orders::query();
             $sellQuery->select(['tbl_orders.*']);
             $sellQuery->selectRaw('fun_check_order_open_qty(tbl_orders.order_num) as qty');
             $sellQuery->where('script_id', '=', $script_id);
-            $sellQuery->where('order_type', '=', 'Sell');
+            $sellQuery->where('order_type', '=', 'SELL');
             $sellQuery->whereRaw("fun_check_order_status(tbl_orders.order_num) in ('OPEN', 'DEALING')");
             $sellQuery->orderBy('order_price');
             $sellQuery->orderBy('order_date');
@@ -242,7 +242,7 @@ fun_check_order_status(tbl_orders.order_num) order_status');
             $sellObj = $sellQuery->get();
 
             $sellSum = Orders::where('script_id', '=', $script_id)
-                ->where('order_type', '=', 'Sell')->sum('order_qty_original');
+                ->where('order_type', '=', 'SELL')->sum('order_qty_original');
 
             $scriptQuery = Scripts::query();
             $scriptQuery->where('script_id', '=', $script_id);

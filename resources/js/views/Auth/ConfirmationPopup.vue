@@ -8,7 +8,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h2 class="otc-heading">OTC<span>STOX</span></h2>
-                                <a href="javascript:void(0)" class="btn-close" @click="close"> x</a>
+                                <a href="javascript:void(0)" class="close" @click="close"> x</a>
                             </div>
                             <div class="modal-body text-center">
                                 <h2 class="">Congratulations!</h2>

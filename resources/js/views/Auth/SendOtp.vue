@@ -8,9 +8,10 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h2 class="otc-heading">OTC<span>STOX</span></h2>
-                                <button type="button" class="btn-close" @click="close"> x</button>
+                                <a href="javascript:void(0)" class="close" @click="close">x</a>
                             </div>
                             <div class="modal-body">
+                                <p v-if="errors" class="text-danger">{{ errors }}</p>
                                 <h2 class="login-title">OTP Verification</h2>
                                 <p>We will send an SMS with confirmation code to (+91) {{ mobile }} <span
                                     class="phone-number"></span>
@@ -36,6 +37,11 @@
 export default {
     name: "SendOtp",
     props: ['mobile'],
+    data() {
+        return {
+            errors: ''
+        }
+    },
     methods: {
         sendVerifyOtp() {
             const data = {
@@ -44,7 +50,7 @@ export default {
             axios.post('/api/send-otp', data).then(response => {
                 this.$parent.sendVerifyOtp();
             }).catch(error => {
-                this.errors.push(error.response.data.message)
+                this.errors = error.response.data.message;
             });
         },
         close() {

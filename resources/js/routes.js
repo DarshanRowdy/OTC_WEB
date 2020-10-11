@@ -27,7 +27,7 @@ const router = new VueRouter({
             }
         },
         {
-            path: '/script-list',
+            path: '/list',
             name: 'ScriptLists',
             component: ScriptLists,
             meta: {

@@ -45,13 +45,14 @@
                     <div class="dash-mob-navlist mr-auto">
                         <ul class="d-flex align-items-center">
                             <li>
-                                <router-link to="/script-list"><i class='las la-bars'></i></router-link>
+                                <router-link to="/list"><i class='las la-bars'></i></router-link>
                             </li>
                             <li>
                                 <router-link to="/desk"><i class='lab la-hornbill'></i></router-link>
                             </li>
-                            <li><a href="#"><i class='las la-book-open'></i></a></li>
-                            <li></li>
+                            <li>
+                                <router-link to="/orders"><i class='las la-book-open'></i></router-link>
+                            </li>
                         </ul>
                     </div>
                     <div class="header-right">

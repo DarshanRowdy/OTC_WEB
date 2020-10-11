@@ -84,7 +84,7 @@ class AppController extends BaseApiController
             if($user){
                 $this->_sendResponse($otp,'OTP send successfully');
             }
-            $this->_sendErrorResponse(500,'Please Try Again later');
+            $this->_sendErrorResponse(404,'Mobile not registered');
         } catch (\Exception $exception){
             $this->_sendErrorResponse(500);
         }

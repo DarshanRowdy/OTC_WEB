@@ -1,11 +1,7 @@
 <template>
     <div>
-        <div class="alert alert-danger" v-if="errors.length">
-            <ul class="mb-0">
-                <li :key="index" v-for="(error, index) in errors">{{ error }}</li>
-            </ul>
-        </div>
 
+        <h3 class="user-info"><strong>Hi, </strong>{{userObj.user_name}}</h3>
         <section id="notice">
             <div class="section-header">
                 <h2>Announcements</h2></div>
@@ -259,26 +255,33 @@ export default {
     },
     data() {
         return {
-            errors: [],
-            announcements: []
+            errors: '',
+            announcements: [],
+            userObj : {}
         }
     },
     methods: {
         getAnnouncement() {
             axios.get('/api/announcements').then(response => {
                 this.announcements = response.data.data.announcements;
+                window.scrollTo(0,0);
             }).catch(error => {
-                this.errors.push(error.response.data.message)
+                this.errors = error.response.data.message;
             });
         }
     },
     beforeMount() {
         this.getAnnouncement();
         this.$store.commit('SET_LAYOUT', 'master-app');
+        this.userObj = JSON.parse(localStorage.getItem('userObj'));
     }
 }
 </script>
 
 <style scoped>
-
+.user-info{
+    font-family: 'Open Sans';
+    color: #45464d;
+    size: 20px;
+}
 </style>

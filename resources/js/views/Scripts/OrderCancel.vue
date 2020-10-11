@@ -13,7 +13,7 @@
                                     <span>{{ values.script_isin_number }}</span>
                                 </div>
                                 <div class="col-sm-1 col-1 popup-header-right text-left">
-                                    <button type="button" class="btn-close close float-left" @click="close"> x</button>
+                                    <a href="javascript:void(0)" class="close" @click="close"> x</a>
                                 </div>
                             </div>
                             <div class="modal-body">

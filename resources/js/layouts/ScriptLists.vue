@@ -27,8 +27,8 @@
                                         class="las la-bars"></i> </router-link>
                                 </li>
                                 <b-tooltip :target="'Market'+index" title="Market Depth"></b-tooltip>
-                                <li :id="'info'+index" class="icon-more icon-bg-blank" v-b-tooltip.hover title="Info">
-                                    <router-link v-bind:to="`/info/${value.script_id}`">
+                                <li :id="'info'+index" class="icon-more icon-bg-blank">
+                                    <router-link v-bind:to="`/info/${value.slot_url}`">
                                         <i class="las la-ellipsis-v"></i>
                                     </router-link>
                                 </li>

@@ -13,16 +13,17 @@
                                     <span>{{ values.script_isin_number }}</span>
                                 </div>
                                 <div class="col-sm-1 col-1 popup-header-right text-left">
-                                    <button type="button" class="btn-close close float-left" @click="close"> x</button>
+                                    <a href="javascript:void(0)" class="close" @click="close"> x</a>
                                 </div>
                             </div>
                             <div class="modal-body">
-                                <h3>Are you sure you want to {{ dataValue.order_type }}?</h3>
+                                <p v-if="errors" class="text-danger">{{ errors }}</p>
+                                <h3>Please confirm to place {{ dataValue.order_type }} order.</h3>
                                 <div class="buy-sell-btn d-flex align-items-center margin-top-30 margin-bottom-20">
                                     <div class="buy-btn-wrp">
-                                        <button @click="submitOrder" class="buy-btn get-started-btn3">CONFIRM</button>
+                                        <button @click="submitOrder" :class="dataValue.order_type === 'Buy' ? 'buy-btn get-started-btn3' : 'sell-btn get-started-btn3'">CONFIRM</button>
                                     </div>
-                                    <div class="sell-btn-wrp"><a class="cancel-btn get-started-btn3" @click="close">CANCEL</a>
+                                    <div class="sell-btn-wrp"><a href="javascript:void(0)" class="cancel-btn get-started-btn3" @click="close">CANCEL</a>
                                     </div>
                                 </div>
                             </div>
@@ -38,6 +39,11 @@
 export default {
     name: "OrderConfirm",
     props: ['values', 'dataValue'],
+    data() {
+        return {
+            errors: ''
+        }
+    },
     methods: {
         close() {
             this.$emit('close');
@@ -47,7 +53,7 @@ export default {
                 axios.post('/api/order', this.dataValue).then(response => {
                     this.close();
                 }).catch(error => {
-                    this.errors.push(error.response.data.message)
+                    this.errors = error.response.data.message;
                 });
             }
         }

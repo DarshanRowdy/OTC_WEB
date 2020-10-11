@@ -23,6 +23,8 @@ class ScriptsController extends BaseApiController
                     }
                 });
             });
+            $tbl_scripts->where('script_status', '=','ACTIVE');
+            $tbl_scripts->orderBy('script_display_name');
             $scripts = $tbl_scripts->get();
             $response = ['scripts' => $scripts];
             $this->_sendResponse($response, 'Scripts listing Success');
@@ -45,9 +47,12 @@ class ScriptsController extends BaseApiController
     public function show($id)
     {
         try{
+            $scrip_name = strtoupper(str_replace('-',' ', $id));
             $tbl_scripts = Scripts::query();
-            $tbl_scripts->with(['scriptFinancials','scriptNewsLinks', 'scriptReports','lastYearScriptFinancial']);
-            $tbl_scripts->where('script_id','=',$id);
+            $tbl_scripts->with(['scriptFinancials' => function($query) {
+                $query->orderByDesc('fin_year');
+            },'scriptNewsLinks', 'scriptReports','lastYearScriptFinancial']);
+            $tbl_scripts->where('script_display_name','=',$scrip_name);
             $scriptObj = $tbl_scripts->first();
             if(!empty($scriptObj))
             {

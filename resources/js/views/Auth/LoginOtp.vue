@@ -7,7 +7,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h2 class="otc-heading">OTC<span>STOX</span></h2>
-                                <button type="button" class="btn-close" @click="closeSendOtpModal"> x</button>
+                                <a href="javascript:void(0)" class="close" @click="closeSendOtpModal"> x</a>
                             </div>
                             <div class="modal-body">
                                 <p v-if="errors" class="text-danger">{{ errors }}</p>
@@ -61,7 +61,7 @@ export default {
             this.errors = '';
 
             if (!this.mobile) {
-                this.errors.push('Mobile is required.');
+                this.errors = 'Mobile is required.';
                 return false;
             }
 

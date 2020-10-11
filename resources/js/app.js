@@ -6,7 +6,7 @@ import Vuelidate from "vuelidate";
 import { store } from "./stores";
 import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 import VueSession from 'vue-session';
-// import $ from 'jquery';
+import $ from 'jquery';
 Vue.use(BootstrapVue)
 Vue.use(Vuelidate);
 Vue.use(VueSession)

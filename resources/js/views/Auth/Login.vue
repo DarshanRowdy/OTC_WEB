@@ -150,10 +150,10 @@ export default {
                 return false;
             }
 
-            if (this.password.length < 6) {
+            /*if (this.password.length < 6) {
                 this.errors = 'Password must be at least 6 character.';
                 return false;
-            }
+            }*/
 
             if (this.errors === '') {
                 const data = {

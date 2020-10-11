@@ -9,7 +9,7 @@
                                 <div class="col-sm-6 col-6 popup-header-left text-left">
                                     <span>{{ scriptValue.script_display_name }}</span>
                                 </div>
-                                <a @click="$router.go(-1)">X</a>
+                                <a href="javascript:void(0)" class="close" @click="$router.go(-1)">X</a>
                             </div>
                             <div class="modal-body">
                                 <div class="content">
@@ -20,7 +20,7 @@
                                                 <tr>
                                                     <th class="order-price"><span>Bid</span>
                                                     </th>
-                                                    <th class="orders">Orders</th>
+                                                    <th class="orders">LOT</th>
                                                     <th class="text-right quantity">Qty.</th>
                                                 </tr>
                                                 </thead>
@@ -198,5 +198,16 @@ export default {
 .modal-wrapper {
     display: table-cell;
     vertical-align: middle;
+}
+
+@media screen and (max-width: 1020px) {
+    .modal-content{
+        max-height: 550px;
+        overflow-y: auto;
+    }
+    .get-started-btn3 {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
 }
 </style>

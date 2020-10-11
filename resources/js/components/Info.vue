@@ -1,10 +1,6 @@
 <template>
     <div>
-        <div class="alert alert-danger" v-if="errors.length">
-            <ul class="mb-0">
-                <li :key="index" v-for="(error, index) in errors">{{ error }}</li>
-            </ul>
-        </div>
+        <p v-if="errors" class="text-danger">{{ errors }}</p>
         <section id="info">
             <h1><b>{{ scriptDetail.script_name }}</b></h1>
             <div class="row">
@@ -66,12 +62,12 @@
                 </div>
 
                 <div class="col-lg-3 col-6 text-left">
-                    <span data-toggle="counter-up">{{ roe }}%</span>
+                    <span data-toggle="counter-up">{{ roe }}</span>
                     <p>ROE</p>
                 </div>
 
                 <div class="col-lg-3 col-6 text-left">
-                    <span data-toggle="counter-up">{{ promoter }}%</span>
+                    <span data-toggle="counter-up">{{ promoter }}</span>
                     <p>Promoter Holding</p>
                 </div>
 
@@ -131,7 +127,7 @@
                             <thead>
                             <tr>
                                 <th>Annual</th>
-                                <th v-for="financialsDetails in scriptDetail.script_financials" style="text-align: right;">{{financialsDetails.fin_year}}</th>
+                                <th v-for="financialsDetails in scriptDetail.script_financials" style="text-align: right;">FY{{financialsDetails.fin_year}}</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -199,7 +195,7 @@ export default {
     data() {
         return {
             id: this.$route.params.id,
-            errors: [],
+            errors: '',
             scriptDetail: {},
             orderType: '',
             scriptValue: {},
@@ -228,6 +224,7 @@ export default {
                 if(response.data.responseCode === 200){
                     this.scriptDetail = response.data.data.script;
                     this.calculateFinancialYear();
+                    window.scrollTo(0,0);
                 } else {
                     this.$router.push('/404');
                 }
@@ -237,26 +234,47 @@ export default {
         },
         calculateFinancialYear(){
             let mCap = (this.scriptDetail.script_ltp * this.scriptDetail.last_year_script_financial.script_issued) / 10000000;
-            this.marketCap = mCap.toFixed(2);
+            this.marketCap = mCap !== null ? mCap.toFixed(2) : '-';
 
-            let pe = (this.scriptDetail.script_ltp / this.scriptDetail.last_year_script_financial.script_eps);
-            this.p_e = pe.toFixed(2);
+            if(this.scriptDetail.last_year_script_financial.script_eps < 0) {
+                this.p_e = '-';
+            } else {
+                let pe = (this.scriptDetail.script_ltp / this.scriptDetail.last_year_script_financial.script_eps);
+                this.p_e = pe !== null ? pe.toFixed(2) : '-';
+            }
 
-            this.netWork = this.scriptDetail.last_year_script_financial.script_book_value;
+            if(this.scriptDetail.last_year_script_financial.script_book_value < 0){
+                this.netWork = '-';
+            } else {
+                this.netWork = this.scriptDetail.last_year_script_financial.script_book_value;
+            }
 
-            let pb = this.marketCap / this.netWork;
-            this.p_b = pb.toFixed(2);
+            if(this.netWork < 0 || this.netWork === '-'){
+                this.p_b = '-';
+            } else {
+                let pb = this.marketCap / this.netWork;
+                this.p_b = pb !== null ? pb.toFixed(2) : '-';
+            }
 
-            this.eps = this.scriptDetail.last_year_script_financial.script_eps;
 
-            let ROE = (this.scriptDetail.last_year_script_financial.script_profit / this.netWork) * 100;
-            this.roe = ROE.toFixed(2);
+            let EPS = this.scriptDetail.last_year_script_financial.script_eps;
+            this.eps = EPS !== null ? EPS : '-';
 
-            this.promoter = this.scriptDetail.last_year_script_financial.script_promoter_holding;
+            if((this.eps < 0 || this.eps === '-') && (this.netWork < 0 || this.netWork === '-')){
+                this.roe = '-';
+            } else {
+                let ROE = (this.scriptDetail.last_year_script_financial.script_profit / this.netWork) * 100;
+                this.roe = ROE !== null ? ROE.toFixed(2)+'%' : '-';
+            }
 
-            this.faceValue = this.scriptDetail.script_face_val;
+            let Promo = this.scriptDetail.last_year_script_financial.script_promoter_holding
+            this.promoter = Promo !== null ? Promo+'%' : '-';
 
-            this.fin_year = this.scriptDetail.last_year_script_financial.fin_year;
+            let FaceVal = this.scriptDetail.script_face_val
+            this.faceValue = FaceVal !== null ? FaceVal : '-';
+
+            let FineYear = this.scriptDetail.last_year_script_financial.fin_year;
+            this.fin_year = FineYear !== null ? FineYear : '-';
         },
         showOrder(value, type) {
             this.scriptValue = value;

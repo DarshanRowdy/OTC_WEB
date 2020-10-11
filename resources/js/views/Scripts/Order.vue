@@ -6,22 +6,18 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <div class="col-sm-6 col-6 popup-header-left text-left">
+                                <div class="col-sm-5 col-5 popup-header-left text-left">
                                     <span>{{ values.script_display_name }}</span>
                                 </div>
                                 <div class="col-sm-5 col-5 popup-header-right text-right">
                                     <span>{{ values.script_isin_number }}</span>
                                 </div>
                                 <div class="col-sm-1 col-1 popup-header-right text-left">
-                                    <button type="button" class="btn-close close float-left" @click="close"> x</button>
+                                    <a href="javascript:void(0)" class="close" @click="close"> x</a>
                                 </div>
                             </div>
                             <div class="modal-body">
-                                <div class="alert alert-danger" v-if="errors.length">
-                                    <ul class="mb-0">
-                                        <li :key="index" v-for="(error, index) in errors">{{ error }}</li>
-                                    </ul>
-                                </div>
+                                <p v-if="errors" class="text-danger">{{ errors }}</p>
                                 <form v-on:submit.prevent="orderCreate">
                                     <div class="circuit-section margin-top-10">
                                         <div class="row">
@@ -37,27 +33,25 @@
                                         <div class="row">
                                             <div class="col-sm-4 col-4 field-common">
                                                 <label for="buy-price">Price</label>
-                                                <input class="form-control" v-model="order_price" id="buy-price" min="0"
-                                                       step="1"
+                                                <input class="form-control" v-model="order_price" id="buy-price" @keypress="isNumber($event)"
                                                        type="number">
                                             </div>
                                             <div class="col-sm-4 col-4 field-common">
                                                 <label for="buy-qty-price">Qty.</label>
-                                                <input class="form-control" v-model="order_qty" id="buy-qty-price"
-                                                       min="1" step="1"
+                                                <input class="form-control" v-model="order_qty" id="buy-qty-price" @keypress="isNumber($event)"
                                                        type="number">
                                             </div>
                                             <div class="col-sm-4 col-4 field-common">
                                                 <label for="buy-lot-qty-price">Your Lot Qty</label>
-                                                <input class="form-control" v-model="lot_size" id="buy-lot-qty-price"
+                                                <input class="form-control" v-model="lot_size" id="buy-lot-qty-price" @keypress="isNumber($event)"
                                                        min="1" step="1"
                                                        type="number">
                                                 <div class="info-tool-tip-wrp">
-                                                    <a class="info-tool-tip"
-                                                       data-content="Lorem, ipsum dolor sit amet consectetur adipisicing elit."
-                                                       data-toggle="popover"
-                                                       href="javascript:void(0)"> <i
-                                                        class="las la-info-circle"></i> </a>
+                                                    <a id="lot_qty" class="info-tool-tip"
+                                                       href="javascript:void(0)">
+                                                        <i class="las la-info-circle"></i>
+                                                    </a>
+                                                    <b-tooltip target="lot_qty" title="In this multiple of Lot you are comfortable to transact shares/amount to complete the whole Qty of this order. Keep both same if you want only single transaction."></b-tooltip>
                                                 </div>
                                             </div>
                                         </div>
@@ -67,21 +61,26 @@
                                             <div class="col-sm-8 col-8">
                                                 <dl class="d-flex align-items-center">
                                                     <dd>Available in:</dd>
-                                                    <dt>{{ values.script_availability }} <a class="info-tool-tip"
-                                                                                            data-content="Lorem, ipsum dolor sit amet consectetur adipisicing elit."
-                                                                                            data-toggle="popover"
-                                                                                            href="javascript:void(0)"><i
-                                                        class="las la-info-circle"></i></a></dt>
+                                                    <dt>{{ values.script_availability }}
+                                                        <a class="info-tool-tip"
+                                                            href="javascript:void(0)"
+                                                            id="scr_avail"
+                                                        >
+                                                        <i class="las la-info-circle"></i></a>
+                                                        <b-tooltip target="scr_avail" title="In the mentioned Depository/ies, Shares of this company are available to trade"></b-tooltip>
+                                                    </dt>
                                                 </dl>
                                             </div>
                                             <div class="col-sm-4 col-4">
                                                 <dl class="d-flex align-items-center">
                                                     <dd>Min Lot:</dd>
-                                                    <dt>{{ values.script_min_lot }} <a class="info-tool-tip"
-                                                                                       data-content="Lorem, ipsum dolor sit amet consectetur adipisicing elit."
-                                                                                       data-toggle="popover"
-                                                                                       href="javascript:void(0)"><i
-                                                        class="las la-info-circle"></i></a></dt>
+                                                    <dt>{{ values.script_min_lot }}
+                                                        <a id="min_lot" class="info-tool-tip"
+                                                           href="javascript:void(0)">
+                                                            <i class="las la-info-circle"></i>
+                                                        </a>
+                                                        <b-tooltip target="min_lot" title="Minimum lot size to trade in this stock."></b-tooltip>
+                                                    </dt>
                                                 </dl>
                                             </div>
                                         </div>
@@ -97,7 +96,7 @@
                                             </button>
                                             <button v-else type="submit" class="sell-btn get-started-btn3">SELL</button>
                                         </div>
-                                        <div class="sell-btn-wrp"><a class="cancel-btn get-started-btn3" @click="close">CANCEL</a>
+                                        <div class="sell-btn-wrp"><a href="javascript:void(0)" class="cancel-btn get-started-btn3" @click="close">CANCEL</a>
                                         </div>
                                     </div>
                                 </form>
@@ -124,7 +123,7 @@ export default {
             lot_size: '',
             open_qty: '',
             dataVal: {},
-            errors: []
+            errors: ''
         }
     },
     components: {
@@ -135,39 +134,52 @@ export default {
             this.order_price = '';
             this.order_qty = '';
             this.lot_size = '';
-            this.errors = [];
+            this.errors = '';
             this.$emit('close');
         },
+        isNumber(e) {
+            let num = String.fromCharCode(e.keyCode);
+            if (/^[0-9]+$/.test(num)) return true;
+            else e.preventDefault();
+        },
         orderCreate() {
-            this.errors = [];
+            this.errors = '';
             if (!this.order_price) {
-                this.errors.push('Price is required.');
+                this.errors = 'Price is required.';
+                return false;
             }
             if (!this.order_qty) {
-                this.errors.push('Qty is required.');
+                this.errors = 'Qty is required.';
+                return false;
             }
             if (!this.lot_size) {
-                this.errors.push('Lot Qty is required.');
+                this.errors= 'Lot Qty is required.';
+                return false;
             }
 
             if (this.order_price < this.values.lower || this.order_price > this.values.upper) {
-                this.errors.push('you have to select price between ' + this.values.lower + ' and ' + this.values.upper);
+                this.errors = 'Your order price is not within the range, please enter order price in the range from' + this.values.lower + ' to ' + this.values.upper;
+                return false;
             }
 
             if ((this.order_price * this.order_qty) > 5000000) {
-                this.errors.push('Total Price will not grater then 50,00,000');
+                this.errors = 'Order value grater than 50 Lakhs. Please call us for placing this order.';
+                return false;
             }
 
-            if(this.order_qty < 0){
-                this.errors.push('Open Quantity is '+ this.order_qty+', Quantity reduction below the open quantity is not allowed.');
+            if(this.order_id !== '' && this.order_qty < this.open_qty){
+                this.errors = 'Open Quantity is '+ this.open_qty+', Quantity reduction below the open quantity is not allowed.';
+                return false;
             }
 
-            if (this.lot_size > this.order_qty) {
-                this.errors.push('Lot Qty is must be less or equal to Qty');
+            if (parseInt(this.lot_size) > parseInt(this.order_qty)) {
+                this.errors = 'Your Lot Qty must be less than or equal to Order Qty.';
+                return false;
             }
 
             if (this.order_qty % this.values.script_min_lot !== 0 || this.lot_size % this.values.script_min_lot !== 0) {
-                this.errors.push('Qty and Lot Qty is must be multiplication of ' + this.values.script_min_lot);
+                this.errors = 'Qty and Lot Qty is must be multiplication of ' + this.values.script_min_lot;
+                return false;
             }
 
             if (!this.errors.length) {
@@ -239,5 +251,58 @@ export default {
 .modal-wrapper {
     display: table-cell;
     vertical-align: middle;
+}
+
+@media screen and (max-width: 1023px)
+{
+    .get-started-btn3 {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+    .col-sm-4{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .col-sm-5{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .modal-header {
+        padding: 0;
+    }
+    .modal-dialog {
+        margin: .2rem;
+    }
+    .modal-body{
+        padding: 0.5rem;
+    }
+}
+@media screen and (max-width: 300px)
+{
+    .get-started-btn3 {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    .col-sm-4{
+        padding-right: 5px;
+        padding-left: 10px;
+    }
+    .col-sm-5{
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+    .modal-header {
+        padding: 0;
+    }
+    .modal-dialog {
+        margin: .2rem;
+    }
+    .modal-body{
+        padding: 0.5rem;
+    }
+    .form-control{
+        width: 90%;
+        margin: 3px;
+    }
 }
 </style>

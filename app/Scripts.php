@@ -31,7 +31,7 @@ class Scripts extends Model
 {
     protected $guarded = ['script_id'];
 
-    protected $appends = ['lower','upper'];
+    protected $appends = ['lower','upper', 'slot_url'];
     /**
      * The database table used by the model.
      *
@@ -78,6 +78,10 @@ class Scripts extends Model
 
     public function getLowerAttribute(){
         return $this->script_ltp - ((30 / 100) * $this->script_ltp);
+    }
+
+    public function getSlotUrlAttribute(){
+        return strtolower(str_replace(' ','-',$this->script_display_name));
     }
 
     public function scriptNewsLinks(){

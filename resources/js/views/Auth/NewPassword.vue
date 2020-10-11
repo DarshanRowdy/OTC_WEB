@@ -8,7 +8,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h2 class="otc-heading">OTC<span>STOX</span></h2>
-                                <a class="btn-close" href="javascript:void(0)" @click="close"> x</a>
+                                <a class="close" href="javascript:void(0)" @click="close"> x</a>
                             </div>
                             <div class="modal-body">
                                 <p v-if="errors" class="text-danger">{{ errors }}</p>
