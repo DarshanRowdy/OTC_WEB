@@ -3,7 +3,7 @@
         <div class="left-wrp">
             <div class="search-section">
                 <form action="">
-                    <input v-model="search" placeholder="Search" v-on:keyup="searchScript" type="text">
+                    <input v-model="search" placeholder="Search" type="text">
                 </form>
             </div>
             <div class="circuit-list">
@@ -14,25 +14,21 @@
                         </div>
                         <div class="list-icons">
                             <ul>
-                                <li :id="'Buy'+index" class="icon-buy">
-                                    <a href="javascript:void(0)" @click="showOrder(value, 'Buy')">B</a>
+                                <li class="icon-buy">
+                                    <a href="javascript:void(0)" title="Buy" @click="showOrder(value, 'Buy')">B</a>
                                 </li>
-                                <b-tooltip :target="'Buy'+index" title="Buy"></b-tooltip>
-                                <li :id="'Sell'+index" class="icon-sell">
-                                    <a href="javascript:void(0)" @click="showOrder(value, 'Sell')">S</a>
+                                <li class="icon-sell">
+                                    <a href="javascript:void(0)" title="Sell" @click="showOrder(value, 'Sell')">S</a>
                                 </li>
-                                <b-tooltip :target="'Sell'+index" title="Sell"></b-tooltip>
-                                <li :id="'Market'+index" class="icon-market-depth icon-bg-blank">
-                                    <router-link v-bind:to="`/market-depth/${value.script_id}`"> <i
+                                <li class="icon-market-depth icon-bg-blank">
+                                    <router-link title="Market Depth" v-bind:to="`/market-depth/${value.script_id}`"> <i
                                         class="las la-bars"></i> </router-link>
                                 </li>
-                                <b-tooltip :target="'Market'+index" title="Market Depth"></b-tooltip>
-                                <li :id="'info'+index" class="icon-more icon-bg-blank">
-                                    <router-link v-bind:to="`/info/${value.slot_url}`">
+                                <li class="icon-more icon-bg-blank">
+                                    <router-link title="Info" v-bind:to="`/info/${value.slot_url}`">
                                         <i class="las la-ellipsis-v"></i>
                                     </router-link>
                                 </li>
-                                <b-tooltip :target="'info'+index" title="Info"></b-tooltip>
                             </ul>
                         </div>
                     </li>
@@ -48,6 +44,7 @@
 <script>
 import Order from "../views/Scripts/Order.vue";
 import OrderConfirm from "../views/Scripts/OrderConfirm.vue";
+import $ from "jquery";
 
 export default {
     name: "ScriptLists",
@@ -92,9 +89,9 @@ export default {
                 this.errors.push(error.response.data.message)
             });
         },
-        searchScript(event) {
+        searchScript(newValue) {
             const data = {
-                search: this.search,
+                search: newValue,
             };
             axios.post('/api/scripts', data).then(response => {
                 this.scripts = response.data.data.scripts;
@@ -105,6 +102,14 @@ export default {
     },
     beforeMount() {
         this.getUnits();
+    },
+    watch: {
+        search: {
+            handler: function(newValue) {
+                this.searchScript(newValue);
+            },
+            deep: true
+        }
     }
 }
 </script>

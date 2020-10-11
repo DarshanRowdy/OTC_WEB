@@ -78,7 +78,7 @@ class AppController extends BaseApiController
             $this->checkValidate($request, $validFields);
             $mobile = $request->has('mobile') ? $request->mobile : '';
             $otp = mt_rand(1000,9999);
-            $url = 'https://2factor.in/API/V1/ce9cad9f-f750-11ea-9fa5-0200cd936042/SMS/'.$mobile.'/'.$otp.'/OTC';
+            $url = 'https://2factor.in/API/V1/ce9cad9f-f750-11ea-9fa5-0200cd936042/SMS/'.$mobile.'/'.$otp.'/OTC_CAP';
             $sendOtp = Curl::to($url)->get();
             $user = Users::where('user_mobile', $mobile)->update(array('otp' => $otp));
             if($user){

@@ -47,11 +47,11 @@
                                                        min="1" step="1"
                                                        type="number">
                                                 <div class="info-tool-tip-wrp">
-                                                    <a id="lot_qty" class="info-tool-tip"
+                                                    <a title="In this multiple of Lot you are comfortable to transact shares/amount to complete the whole Qty of this order. Keep both same if you want only single transaction."
+                                                       class="info-tool-tip"
                                                        href="javascript:void(0)">
                                                         <i class="las la-info-circle"></i>
                                                     </a>
-                                                    <b-tooltip target="lot_qty" title="In this multiple of Lot you are comfortable to transact shares/amount to complete the whole Qty of this order. Keep both same if you want only single transaction."></b-tooltip>
                                                 </div>
                                             </div>
                                         </div>
@@ -64,10 +64,9 @@
                                                     <dt>{{ values.script_availability }}
                                                         <a class="info-tool-tip"
                                                             href="javascript:void(0)"
-                                                            id="scr_avail"
+                                                           title="In the mentioned Depository/ies, Shares of this company are available to trade"
                                                         >
                                                         <i class="las la-info-circle"></i></a>
-                                                        <b-tooltip target="scr_avail" title="In the mentioned Depository/ies, Shares of this company are available to trade"></b-tooltip>
                                                     </dt>
                                                 </dl>
                                             </div>
@@ -75,11 +74,11 @@
                                                 <dl class="d-flex align-items-center">
                                                     <dd>Min Lot:</dd>
                                                     <dt>{{ values.script_min_lot }}
-                                                        <a id="min_lot" class="info-tool-tip"
-                                                           href="javascript:void(0)">
+                                                        <a class="info-tool-tip"
+                                                           href="javascript:void(0)"
+                                                           title="Minimum lot size to trade in this stock.">
                                                             <i class="las la-info-circle"></i>
                                                         </a>
-                                                        <b-tooltip target="min_lot" title="Minimum lot size to trade in this stock."></b-tooltip>
                                                     </dt>
                                                 </dl>
                                             </div>

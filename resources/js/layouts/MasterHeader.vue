@@ -39,6 +39,7 @@
                 </div>
             </div>
         </header>
+
         <div class="header-dash-mobile">
             <div class="justify-content-center">
                 <div class="d-flex align-items-center">
@@ -73,7 +74,9 @@ export default {
 </script>
 
 <style scoped>
-/*.container {
-    padding: 0px 12px;
-}*/
+@media screen and (max-width: 1023px) {
+    .dashboard-right {
+        padding: 0;
+    }
+}
 </style>
