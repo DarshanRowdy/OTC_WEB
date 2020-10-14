@@ -15,13 +15,13 @@
             <div class="buysell">
                 <div class="row">
                     <div class="buy-btn-wrp">
-                        <a href="javascript:void(0)" class="buy-btn get-started-btn3" @click="showOrder(scriptDetail, 'Buy')">BUY</a>
+                        <a href="javascript:void(0)" class="buy-btn get-started-btn3" @click="showOrder(scriptDetail, 'BUY')">BUY</a>
                     </div>
                     <div class="sell-btn-wrp">
-                        <a href="javascript:void(0)" class="sell-btn get-started-btn3" @click="showOrder(scriptDetail, 'Sell')">SELL</a>
+                        <a href="javascript:void(0)" class="sell-btn get-started-btn3" @click="showOrder(scriptDetail, 'SELL')">SELL</a>
                     </div>
                     <div class="sell-btn-wrp">
-                        <router-link class="mkt-btn get-started-btn3" v-bind:to="`/market-depth/${scriptDetail.script_id}`">
+                        <router-link class="mkt-btn get-started-btn3" v-bind:to="`/market-depth/${scriptDetail.slot_url}`">
                            Market Depth
                         </router-link>
                     </div>
@@ -37,12 +37,12 @@
             <hr>
             <div class="row counters">
                 <div class="col-lg-3 col-6 text-left">
-                    <span data-toggle="counter-up">{{ marketCap }}</span>
+                    <span data-toggle="counter-up">{{ this.formatPrice(marketCap) }}</span>
                     <p>Market Cap(₹ Cr.)</p>
                 </div>
 
                 <div class="col-lg-3 col-6 text-left">
-                    <span data-toggle="counter-up">{{ p_e }}</span>
+                    <span data-toggle="counter-up">{{ p_e !== '-' ? this.formatPrice(p_e) : p_e }}</span>
                     <p>P/E</p>
                 </div>
 
@@ -158,7 +158,7 @@
                 <h2>Useful Links / News</h2>
             </div>
             <div class="row">
-                <div class="col-lg-6 content">
+                <div class="col-lg-12 content">
                     <ul>
                         <li v-for="scriptLink in scriptDetail.script_news_links"><i class="las la-link"></i><b><a target="_blank" v-bind:href="'//'+scriptLink.script_news_link">{{scriptLink.script_link_header}}</a></b></li>
                     </ul>
@@ -166,12 +166,12 @@
             </div>
         </section>
 
-        <section id="notice1">
+        <section id="notice">
             <div class="section-header">
                 <h2>Annual Reports</h2>
             </div>
             <div class="row">
-                <div class="col-lg-6 content">
+                <div class="col-lg-12 content">
                     <ul>
                         <li v-for="scriptReport in scriptDetail.script_reports">
                             <i class="las la-file-pdf"></i>
@@ -219,6 +219,10 @@ export default {
         OrderConfirm,
     },
     methods: {
+        formatPrice(value) {
+            let val = (value/1).toFixed(2).replace('.', '.')
+            return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+        },
         getScripts(){
             axios.get('/api/scripts/'+this.id).then(response => {
                 if(response.data.responseCode === 200){

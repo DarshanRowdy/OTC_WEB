@@ -1,7 +1,8 @@
 <template>
     <div>
 
-        <h3 class="user-info"><strong>Hi, </strong>{{userObj.user_name}}</h3>
+        <h3 class="user-info">Hi, {{userObj.user_name}}</h3>
+        <hr>
         <section id="notice">
             <div class="section-header">
                 <h2>Announcements</h2></div>

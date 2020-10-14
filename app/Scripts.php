@@ -73,11 +73,13 @@ class Scripts extends Model
     }
 
     public function getUpperAttribute(){
-        return $this->script_ltp + ((30 / 100) * $this->script_ltp);
+        return round($this->script_ltp + ((30 / 100) * $this->script_ltp));
+//        return $this->script_ltp + ((30 / 100) * $this->script_ltp);
     }
 
     public function getLowerAttribute(){
-        return $this->script_ltp - ((30 / 100) * $this->script_ltp);
+        return round($this->script_ltp - ((30 / 100) * $this->script_ltp));
+//        return $this->script_ltp - ((30 / 100) * $this->script_ltp);
     }
 
     public function getSlotUrlAttribute(){

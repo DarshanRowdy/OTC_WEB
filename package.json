@@ -28,6 +28,7 @@
         "v-tooltip": "^2.0.3",
         "vue": "^2.6.12",
         "vue-bootstrap4-table": "^1.1.11",
+        "vue-loading-button": "^0.2.0",
         "vue-router": "^3.4.3",
         "vue-session": "^1.0.0",
         "vue-simple-spinner": "^1.2.10",

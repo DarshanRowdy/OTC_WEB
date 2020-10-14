@@ -215,6 +215,15 @@ fun_check_order_status(tbl_orders.order_num) order_status');
             $this->checkValidate($request, $validation);
 
             $script_id = $request->has('script_id') ? $request->script_id : '';
+            $scrip_name = strtoupper(str_replace('-',' ', $script_id));
+
+            $scriptQuery = Scripts::query();
+            $scriptQuery->where('script_display_name','=',$scrip_name);
+            $scriptObj = $scriptQuery->first();
+            if(empty($scriptObj)){
+                $this->_sendErrorResponse(404);
+            }
+            $script_id = $scriptObj->script_id;
 
             $buyQuery = Orders::query();
             $buyQuery->select(['tbl_orders.*']);
@@ -243,10 +252,6 @@ fun_check_order_status(tbl_orders.order_num) order_status');
 
             $sellSum = Orders::where('script_id', '=', $script_id)
                 ->where('order_type', '=', 'SELL')->sum('order_qty_original');
-
-            $scriptQuery = Scripts::query();
-            $scriptQuery->where('script_id', '=', $script_id);
-            $scriptObj = $scriptQuery->first();
 
             $response = ['buy' => $buyObj, 'buy_total' => $buySum, 'sell' => $sellObj, 'sell_total' => $sellSum, 'script' => $scriptObj];
             $this->_sendResponse($response, 'order listed successfully');

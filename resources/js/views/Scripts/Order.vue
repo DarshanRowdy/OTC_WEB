@@ -90,7 +90,7 @@
                                     </div>
                                     <div v-else class="buy-sell-btn d-flex align-items-center margin-top-30 margin-bottom-20">
                                         <div class="buy-btn-wrp">
-                                            <button v-if="orderType === 'Buy'" type="submit"
+                                            <button v-if="orderType === 'BUY'" type="submit"
                                                     class="buy-btn get-started-btn3">BUY
                                             </button>
                                             <button v-else type="submit" class="sell-btn get-started-btn3">SELL</button>
@@ -157,7 +157,7 @@ export default {
             }
 
             if (this.order_price < this.values.lower || this.order_price > this.values.upper) {
-                this.errors = 'Your order price is not within the range, please enter order price in the range from' + this.values.lower + ' to ' + this.values.upper;
+                this.errors = 'Your order price is not within the range, please enter order price in the range from ' + this.values.lower + ' to ' + this.values.upper;
                 return false;
             }
 
@@ -166,8 +166,10 @@ export default {
                 return false;
             }
 
-            if(this.order_id !== '' && this.order_qty < this.open_qty){
-                this.errors = 'Open Quantity is '+ this.open_qty+', Quantity reduction below the open quantity is not allowed.';
+            let new_open_qty = parseInt(this.order_qty) - parseInt(this.open_qty);
+
+            if(this.order_id !== '' && parseInt(this.order_qty) < new_open_qty) {
+                this.errors = 'Open Quantity is '+ new_open_qty+', Quantity reduction below the open quantity is not allowed.';
                 return false;
             }
 
@@ -227,7 +229,7 @@ export default {
             this.order_no = newVal.order_num;
             this.order_price = newVal.order_price;
             this.order_qty = newVal.order_qty_original;
-            this.lot_size = newVal.lot_size;
+            this.lot_size = newVal.lot_size > newVal.qty && newVal.qty > 0 ? newVal.qty : newVal.lot_size;
             this.open_qty = newVal.qty;
         }
     }

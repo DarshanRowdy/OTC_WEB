@@ -35,7 +35,13 @@
                                    id="confirm-password" class="form-control">
                         </div>
                         <div class="popup-box">
-                            <button class="button btn btn-block login-btn" type="submit">Sign Up</button>
+<!--                            <button class="button btn btn-block login-btn" type="submit">Sign Up</button>-->
+                            <VueLoadingButton
+                                aria-label="Register"
+                                class="button btn btn-block login-btn"
+                                type="submit"
+                                :loading="isLoading"
+                            >Sign Up</VueLoadingButton>
                         </div>
                     </form>
                         <!-- OTP Popup start -->
@@ -55,13 +61,15 @@
 import SendOtp from "./SendOtp.vue";
 import VerifyOtp from "./VerifyOtp.vue";
 import ConfirmationPopup from "./ConfirmationPopup.vue";
+import VueLoadingButton from "vue-loading-button";
 
 export default {
     name: "Register",
     components: {
         SendOtp,
         VerifyOtp,
-        ConfirmationPopup
+        ConfirmationPopup,
+        VueLoadingButton
     },
     props: {
         app
@@ -75,6 +83,7 @@ export default {
             password: '',
             confirm_password: '',
             errors: '',
+            isLoading: false,
             reg: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/,
             isSendOtpVisible: false,
             isSendVerifyOtp: false,
@@ -108,6 +117,7 @@ export default {
             else e.preventDefault();
         },
         onSubmit() {
+            this.isLoading = true;
             this.errors = '';
             if (!this.name) {
                 this.errors = 'Name is required.';
@@ -155,8 +165,10 @@ export default {
                 };
 
                 axios.post('/api/registration', data).then(response => {
+                    this.isLoading = false;
                     this.isSendOtpVisible = true;
                 }).catch(error => {
+                    this.isLoading = false;
                     this.errors = error.response.data.message;
                 });
             }

@@ -15,12 +15,22 @@
   <component name="ChangeListManager">
     <list default="true" id="ad78d497-6ee3-44fc-899a-1d01e02b08b4" name="Default Changelist" comment="Dynamic details">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/AppController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/AppController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/OrdersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/OrdersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Scripts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Scripts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/AutoLogout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/AutoLogout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Info.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Info.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/layouts/MasterApp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/layouts/MasterApp.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/layouts/MasterHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/layouts/MasterHeader.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/layouts/ScriptLists.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/layouts/ScriptLists.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/Auth/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Auth/Register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/Scripts/MarketDepth.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Scripts/MarketDepth.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/Scripts/Order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Scripts/Order.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/Scripts/OrderCancel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Scripts/OrderCancel.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/Scripts/OrderConfirm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Scripts/OrderConfirm.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +50,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="blank" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -230,6 +245,8 @@
       <workItem from="1602258038579" duration="23882000" />
       <workItem from="1602391171553" duration="2406000" />
       <workItem from="1602417959147" duration="20538000" />
+      <workItem from="1602569620421" duration="14000" />
+      <workItem from="1602692906033" duration="12611000" />
     </task>
     <task id="LOCAL-00001" summary="first init commit">
       <created>1600007025647</created>
@@ -494,34 +511,38 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1550" y="8" key="SettingsEditor/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600359862000" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1602265466297">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1602708340570">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1600586258951" />
-    <state width="498" height="446" key="SwitcherDM/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1602265466297" />
+    <state width="498" height="446" key="SwitcherDM/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1602708340570" />
     <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1601920526793" />
     <state x="1641" y="96" key="Vcs.Push.Dialog.v2" timestamp="1601137934547">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1600586317645" />
     <state x="1641" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1601137934547" />
-    <state x="1458" y="92" width="1182" height="544" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602098575256">
-      <screen x="1366" y="0" width="1366" height="728" />
+    <state x="1458" y="92" width="1182" height="544" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602527152801">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1458" y="92" width="1182" height="544" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1602098575256" />
-    <state x="1654" y="56" width="744" height="635" key="find.popup" timestamp="1602432404829">
+    <state x="1654" y="56" width="744" height="635" key="find.popup" timestamp="1602707605194">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state x="1654" y="56" width="744" height="635" key="find.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1602432404829" />
+    <state x="1654" y="56" width="744" height="635" key="find.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1602707605194" />
     <state x="288" y="56" width="744" height="635" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1602321186496" />
+    <state x="463" y="76" key="git4idea.branch.GitSmartOperationDialog" timestamp="1602525949949">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="76" key="git4idea.branch.GitSmartOperationDialog/0.0.1366.728@0.0.1366.728" timestamp="1602525949949" />
     <state x="1850" y="270" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1600533944842">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1850" y="270" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600533944842" />
-    <state x="1705" y="17" width="672" height="678" key="search.everywhere.popup" timestamp="1602431828668">
+    <state x="1705" y="17" width="672" height="678" key="search.everywhere.popup" timestamp="1602705526103">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state x="1705" y="17" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1602431828668" />
+    <state x="1705" y="17" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1602705526103" />
     <state x="339" y="17" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1601915272743" />
   </component>
 </project>

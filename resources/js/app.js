@@ -20,7 +20,7 @@ import Route from '@/js/routes.js'
 import App from '@/js/views/App'
 
 Vue.component('spinner', require('vue-simple-spinner'));
-Vue.component('auto-logout', require('./components/AutoLogout.vue').default);
+// Vue.component('auto-logout', require('./components/AutoLogout.vue').default);
 
 const app = new Vue({
     el: "#app",

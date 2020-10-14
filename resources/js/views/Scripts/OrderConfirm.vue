@@ -21,7 +21,13 @@
                                 <h3>Please confirm to place {{ dataValue.order_type }} order.</h3>
                                 <div class="buy-sell-btn d-flex align-items-center margin-top-30 margin-bottom-20">
                                     <div class="buy-btn-wrp">
-                                        <button @click="submitOrder" :class="dataValue.order_type === 'Buy' ? 'buy-btn get-started-btn3' : 'sell-btn get-started-btn3'">CONFIRM</button>
+                                        <VueLoadingButton
+                                            aria-label="Confirm"
+                                            @click.native="submitOrder"
+                                            :class="dataValue.order_type === 'BUY' ? 'buy-btn get-started-btn3' : 'sell-btn get-started-btn3'"
+                                            :loading="isLoading"
+                                            style="font-size: 100%;"
+                                        >CONFIRM</VueLoadingButton>
                                     </div>
                                     <div class="sell-btn-wrp"><a href="javascript:void(0)" class="cancel-btn get-started-btn3" @click="close">CANCEL</a>
                                     </div>
@@ -36,23 +42,32 @@
 </template>
 
 <script>
+import VueLoadingButton from "vue-loading-button";
 export default {
     name: "OrderConfirm",
     props: ['values', 'dataValue'],
+    components: {
+        VueLoadingButton
+    },
     data() {
         return {
-            errors: ''
+            errors: '',
+            isLoading: false,
         }
     },
     methods: {
         close() {
             this.$emit('close');
+            this.$parent.editOrder(this.dataValue.order_id, 'order_reload');
         },
         submitOrder() {
+            this.isLoading = true;
             if (this.dataValue !== null || this.dataValue !== undefined) {
                 axios.post('/api/order', this.dataValue).then(response => {
+                    this.isLoading = false;
                     this.close();
                 }).catch(error => {
+                    this.isLoading = false;
                     this.errors = error.response.data.message;
                 });
             }
@@ -62,6 +77,10 @@ export default {
 </script>
 
 <style scoped>
+button {
+    font-size: 100%;
+}
+
 .modal-mask {
     position: fixed;
     z-index: 9998;
@@ -77,5 +96,57 @@ export default {
 .modal-wrapper {
     display: table-cell;
     vertical-align: middle;
+}
+@media screen and (max-width: 1023px)
+{
+    .get-started-btn3 {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+    .col-sm-4{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .col-sm-5{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .modal-header {
+        padding: 0;
+    }
+    .modal-dialog {
+        margin: .2rem;
+    }
+    .modal-body{
+        padding: 0.5rem;
+    }
+}
+@media screen and (max-width: 300px)
+{
+    .get-started-btn3 {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    .col-sm-4{
+        padding-right: 5px;
+        padding-left: 10px;
+    }
+    .col-sm-5{
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+    .modal-header {
+        padding: 0;
+    }
+    .modal-dialog {
+        margin: .2rem;
+    }
+    .modal-body{
+        padding: 0.5rem;
+    }
+    .form-control{
+        width: 90%;
+        margin: 3px;
+    }
 }
 </style>

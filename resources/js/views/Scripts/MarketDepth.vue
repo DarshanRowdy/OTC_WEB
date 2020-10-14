@@ -6,10 +6,12 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <div class="col-sm-6 col-6 popup-header-left text-left">
-                                    <span>{{ scriptValue.script_display_name }}</span>
+                                <div class="col-sm-11 col-11 popup-header-left text-left">
+                                    <span><strong>{{ scriptValue.script_display_name }}</strong></span>
                                 </div>
-                                <a href="javascript:void(0)" class="close" @click="$router.go(-1)">X</a>
+                                <div class="col-sm-1 col-1 popup-header-right text-left">
+                                    <a href="javascript:void(0)" class="close" @click="$router.go(-1)"> x</a>
+                                </div>
                             </div>
                             <div class="modal-body">
                                 <div class="content">
@@ -37,12 +39,12 @@
                                                     </td>
                                                 </tr>
                                                 </tbody>
-                                                <tfoot>
+                                                <!--<tfoot>
                                                 <tr>
                                                     <td>Total</td>
                                                     <td colspan="2" class="text-right">{{ buyTotal }}</td>
                                                 </tr>
-                                                </tfoot>
+                                                </tfoot>-->
                                             </table>
                                             <table class="col-sm-6 sell table-toggle-wrp">
                                                 <thead>
@@ -66,19 +68,19 @@
                                                     </td>
                                                 </tr>
                                                 </tbody>
-                                                <tfoot>
+                                                <!--<tfoot>
                                                 <tr>
                                                     <td>Total</td>
                                                     <td colspan="2" class="text-right">{{ sellTotal }}</td>
                                                 </tr>
-                                                </tfoot>
+                                                </tfoot>-->
                                             </table>
                                         </div>
                                         <div
                                             class="buy-sell-btn d-flex align-items-center margin-top-20 margin-bottom-20">
-                                            <div class="buy-btn-wrp"><a href="javascript:void(0)" @click="showOrder('Buy')"
+                                            <div class="buy-btn-wrp"><a href="javascript:void(0)" @click="showOrder('BUY')"
                                                                         class="buy-btn get-started-btn3">BUY</a></div>
-                                            <div class="sell-btn-wrp"><a href="javascript:void(0)" @click="showOrder('Sell')"
+                                            <div class="sell-btn-wrp"><a href="javascript:void(0)" @click="showOrder('SELL')"
                                                                          class="sell-btn get-started-btn3">SELL</a>
                                             </div>
                                         </div>

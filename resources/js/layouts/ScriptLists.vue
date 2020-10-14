@@ -15,13 +15,13 @@
                         <div class="list-icons">
                             <ul>
                                 <li class="icon-buy">
-                                    <a href="javascript:void(0)" title="Buy" @click="showOrder(value, 'Buy')">B</a>
+                                    <a href="javascript:void(0)" title="Buy" @click="showOrder(value, 'BUY')">B</a>
                                 </li>
                                 <li class="icon-sell">
-                                    <a href="javascript:void(0)" title="Sell" @click="showOrder(value, 'Sell')">S</a>
+                                    <a href="javascript:void(0)" title="Sell" @click="showOrder(value, 'SELL')">S</a>
                                 </li>
                                 <li class="icon-market-depth icon-bg-blank">
-                                    <router-link title="Market Depth" v-bind:to="`/market-depth/${value.script_id}`"> <i
+                                    <router-link title="Market Depth" v-bind:to="`/market-depth/${value.slot_url}`"> <i
                                         class="las la-bars"></i> </router-link>
                                 </li>
                                 <li class="icon-more icon-bg-blank">
