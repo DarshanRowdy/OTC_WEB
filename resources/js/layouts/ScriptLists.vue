@@ -98,6 +98,9 @@ export default {
             }).catch(error => {
                 this.errors.push(error.response.data.message)
             });
+        },
+        handler: function handler(event) {
+            this.$router.push('/desk');
         }
     },
     beforeMount() {
@@ -110,7 +113,10 @@ export default {
             },
             deep: true
         }
-    }
+    },
+    created() {
+        window.addEventListener('load', this.handler);
+    },
 }
 </script>
 

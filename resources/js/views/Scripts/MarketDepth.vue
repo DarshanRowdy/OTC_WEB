@@ -51,7 +51,7 @@
                                                 <tr>
                                                     <th class="order-price">
                                                         <span>Offer</span></th>
-                                                    <th class="orders">Orders</th>
+                                                    <th class="orders">LOT</th>
                                                     <th class="text-right quantity">Qty.</th>
                                                 </tr>
                                                 </thead>

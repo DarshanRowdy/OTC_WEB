@@ -26,6 +26,7 @@
                 <template slot="no-sort-icon">
                     <i class="fa fa-sort"></i>
                 </template>
+
                 <template slot="action" slot-scope="props">
                     <span><a href="javascript:void(0)" @click="editOrder(props.cell_value)"><i
                         class="las la-edit la-2x"></i></a></span>

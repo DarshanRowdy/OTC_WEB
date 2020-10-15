@@ -5,10 +5,10 @@
             <h1><b>{{ scriptDetail.script_name }}</b></h1>
             <div class="row">
                 <div class="col-lg-6">
-                    <P>SECTOR:{{ scriptDetail.script_sector }}</p>
+                    <P>SECTOR: {{ scriptDetail.script_sector }}</p>
                 </div>
                 <div class="col-lg-6">
-                    <p>ISIN:{{scriptDetail.script_isin_number}}</p>
+                    <p>ISIN: {{scriptDetail.script_isin_number}}</p>
                 </div>
             </div>
             <p>{{scriptDetail.script_description}}</p>

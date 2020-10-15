@@ -19,6 +19,10 @@ const router = new VueRouter({
     mode: 'history',
     routes: [
         {
+            path: '/',
+            redirect: '/desk'
+        },
+        {
             path: '/desk',
             name: 'Home',
             component: Home,

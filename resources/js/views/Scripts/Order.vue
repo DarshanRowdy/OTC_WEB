@@ -237,6 +237,19 @@ export default {
 </script>
 
 <style scoped>
+span {
+    position: relative;
+}
+
+span:active:after {
+    content:attr(title);
+    padding:5px;
+    border:1px solid #ccc;
+    top:5px;
+    right:10%;
+    background: #bada55;
+}
+
 .modal-mask {
     position: fixed;
     z-index: 9998;

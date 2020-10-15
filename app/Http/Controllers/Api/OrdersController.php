@@ -36,7 +36,7 @@ fun_check_order_status(tbl_orders.order_num) order_status');
             $tbl_orders->selectRaw("concat_ws('/',(select IFNULL(sum(match_qty),0) from tbl_assignments where tbl_assignments.order_number = tbl_orders.order_num), tbl_orders.order_qty_original) qty");
 
             $tbl_orders->selectSub(function ($query) {
-                $query->selectRaw('IFNULL(sum(closed_qty * deal_price) / sum(closed_qty),0)')
+                $query->selectRaw('FORMAT(IFNULL(sum(closed_qty * deal_price) / sum(closed_qty), 0), 2)')
                     ->from('tbl_assignments')
                     ->where('closed_qty', '>', 0)
                     ->whereColumn('order_number', '=', 'tbl_orders.order_num');

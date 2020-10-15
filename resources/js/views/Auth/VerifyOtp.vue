@@ -64,7 +64,7 @@ export default {
                     is_login_with_otp: is_login_with_otp
                 };
                 axios.post('/api/verify-otp', data).then(response => {
-                    if(this.from_where === 'login'){
+                    if(this.from_where === 'forgot_password'){
                         this.$parent.showNewPasswordModal(this.mobile);
                     } else if(this.from_where === 'register') {
                         this.$parent.showConfirmation();
