@@ -62,13 +62,25 @@ export default {
         },
         submitOrder() {
             this.isLoading = true;
+            let userObj = JSON.parse(localStorage.getItem('userObj'));
+            let config = {
+                headers: {
+                    AUTH_TOKEN : userObj.auth_token
+                }
+            }
             if (this.dataValue !== null || this.dataValue !== undefined) {
-                axios.post('/api/order', this.dataValue).then(response => {
+                axios.post('/api/order', this.dataValue,config).then(response => {
                     this.isLoading = false;
                     this.close();
                 }).catch(error => {
                     this.isLoading = false;
-                    this.errors = error.response.data.message;
+                    if(error.response.data.responseCode === 401){
+                        localStorage.removeItem('userObj');
+                        this.$session.set('auth_error', error.response.data.message);
+                        this.$router.push("/login").catch(()=>{});
+                    } else {
+                        this.errors = error.response.data.message;
+                    }
                 });
             }
         }

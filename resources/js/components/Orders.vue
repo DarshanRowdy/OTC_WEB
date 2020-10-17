@@ -200,6 +200,16 @@ export default {
             orderType: '',
             dataValue: {},
             EditOrder: {},
+            dataConfig: {},
+            userObj: {}
+        }
+    },
+    created() {
+        this.userObj = JSON.parse(localStorage.getItem('userObj'));
+        this.dataConfig = {
+            headers: {
+                AUTH_TOKEN : this.userObj.auth_token
+            }
         }
     },
     methods: {
@@ -209,35 +219,45 @@ export default {
         },
         fetchOpenData() {
             let self = this;
-            let userObj = JSON.parse(localStorage.getItem('userObj'));
             const data = {
                 // queryParams: this.queryParams,
                 // page: this.queryParams.page
-                cust_id: userObj.user_id
+                cust_id: self.userObj.user_id
             };
-            axios.post('/api/order-list', data).then(response => {
+            axios.post('/api/order-list', data, this.dataConfig).then(response => {
                 self.rows = response.data.data.orders;
                 window.scrollTo(0,0);
                 // self.total_rows = response.data.data.orders.total;
             })
             .catch(error => {
-                this.errors.push(error.response.data.message)
+                if(error.response.data.responseCode === 401){
+                    localStorage.removeItem('userObj');
+                    this.$session.set('auth_error', error.response.data.message);
+                    this.$router.push("/login").catch(()=>{});
+                } else {
+                    this.errors = error.response.data.message;
+                }
             });
         },
         fetchPastData() {
             let self = this;
-            let userObj = JSON.parse(localStorage.getItem('userObj'));
             const data = {
                 // queryParams: this.queryParams,
                 // page: this.queryParams.page
-                cust_id: userObj.user_id
+                cust_id: self.userObj.user_id
             };
-            axios.post('/api/order-list-past', data).then(response => {
+            axios.post('/api/order-list-past', data, this.dataConfig).then(response => {
                 self.rowsPast = response.data.data.orders;
                 // self.total_rows = response.data.data.orders.total;
             })
                 .catch(error => {
-                    this.errors.push(error.response.data.message)
+                    if(error.response.data.responseCode === 401){
+                        localStorage.removeItem('userObj');
+                        this.$session.set('auth_error', error.response.data.message);
+                        this.$router.push("/login").catch(()=>{});
+                    } else {
+                        this.errors = error.response.data.message;
+                    }
                 });
         },
         editOrder(order_id, page = null) {
@@ -246,13 +266,19 @@ export default {
                 this.fetchOpenData();
                 this.fetchPastData();
             } else {
-                axios.get('/api/order-show/'+order_id).then(response => {
+                axios.get('/api/order-show/'+order_id, this.dataConfig).then(response => {
                     this.EditOrder = response.data.data.order;
                     this.scriptValue = this.EditOrder.script;
                     this.showOrder(this.EditOrder.order_type);
                 })
                 .catch(error => {
-                    this.errors.push(error.response.data.message)
+                    if(error.response.data.responseCode === 401){
+                        localStorage.removeItem('userObj');
+                        this.$session.set('auth_error', error.response.data.message);
+                        this.$router.push("/login").catch(()=>{});
+                    } else {
+                        this.errors = error.response.data.message;
+                    }
                 });
             }
         },

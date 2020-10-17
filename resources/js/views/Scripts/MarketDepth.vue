@@ -117,7 +117,8 @@ export default {
             is_market_depth: true,
             isOrder: false,
             isOrderConfirm: false,
-            interval: 1000
+            interval: 1000,
+            config: {}
         }
     },
     components: {
@@ -148,9 +149,13 @@ export default {
             this.is_market_depth = true;
         },
         fetchData() {
+            let userObj = JSON.parse(localStorage.getItem('userObj'));
             axios.get('/api/get-market-depth', {
                 params: {
                     script_id: this.script_id
+                },
+                headers: {
+                    AUTH_TOKEN : userObj.auth_token
                 }
             }).then(response => {
                 this.buyData = response.data.data.buy;
@@ -159,7 +164,13 @@ export default {
                 this.sellTotal = response.data.data.sell_total;
                 this.scriptValue = response.data.data.script;
             }).catch(error => {
-                this.errors.push(error.response.data.message)
+                if(error.response.data.responseCode === 401){
+                    localStorage.removeItem('userObj');
+                    this.$session.set('auth_error', error.response.data.message);
+                    this.$router.push("/login").catch(()=>{});
+                } else {
+                    this.errors = error.response.data.message;
+                }
             });
         }
     },
@@ -175,7 +186,7 @@ export default {
     mounted() {
         this.fetchData();
     },
-    created() {
+    created(){
         this.interval = setInterval(() => this.fetchData(), 3 * 1000);
     },
     beforeDestroy : function(){

@@ -47,17 +47,17 @@
                 </div>
 
                 <div class="col-lg-3 col-6 text-left">
-                    <span data-toggle="counter-up">{{ p_b }}</span>
+                    <span data-toggle="counter-up">{{ p_b !== '-' ? this.formatPrice(p_b) : p_b }}</span>
                     <p>P/B</p>
                 </div>
 
                 <div class="col-lg-3 col-6 text-left">
-                    <span data-toggle="counter-up">{{ eps }}</span>
+                    <span data-toggle="counter-up">{{ eps !== '-' ? this.formatPrice(eps) : eps }}</span>
                     <p>EPS</p>
                 </div>
 
                 <div class="col-lg-3 col-6 text-left">
-                    <span data-toggle="counter-up">{{ netWork }}</span>
+                    <span data-toggle="counter-up">{{ netWork !== '-' ? this.formatPrice(netWork) : netWork }}</span>
                     <p>Net Worth(₹ Cr.)</p>
                 </div>
 
@@ -72,12 +72,12 @@
                 </div>
 
                 <div class="col-lg-3 col-6 text-left">
-                    <span data-toggle="counter-up">{{ faceValue }}</span>
+                    <span data-toggle="counter-up">{{ faceValue !== '-' ? this.formatPrice(faceValue) : faceValue }}</span>
                     <p>Face Value(₹)</p>
                 </div>
             </div>
             <br>
-            <h1>(As on: 31MAR{{ fin_year }}) | Consideration Price: {{ scriptDetail.script_ltp }}</h1>
+            <h1>(As on: 31MAR{{ fin_year }}) | Consideration Price: {{ scriptDetail.script_ltp !== '-' ? this.formatPrice(scriptDetail.script_ltp) : scriptDetail.script_ltp }}</h1>
             <hr>
 
         </section>
@@ -133,17 +133,18 @@
                             <tbody>
                             <tr>
                                 <td>Revenue</td>
-                                <td style="text-align: right;" v-for="financialsDetails in scriptDetail.script_financials"> {{financialsDetails.script_revenue}}</td>
+<!--                                <td style="text-align: right;" v-for="financialsDetails in scriptDetail.script_financials"> {{ this.formatPrice(financialsDetails.script_revenue) }}</td>-->
+                                <td style="text-align: right;" v-for="financialsDetails in scriptDetail.script_financials"> {{ formatPrice(financialsDetails.script_revenue) }}</td>
                             </tr>
 
                             <tr>
                                 <td>PAT</td>
-                                <td style="text-align: right;" v-for="financialsDetails in scriptDetail.script_financials"> {{financialsDetails.script_profit}}</td>
+                                <td style="text-align: right;" v-for="financialsDetails in scriptDetail.script_financials"> {{ formatPrice(financialsDetails.script_profit) }}</td>
                             </tr>
 
                             <tr>
                                 <td>EPS</td>
-                                <td style="text-align: right;" v-for="financialsDetails in scriptDetail.script_financials"> {{financialsDetails.script_eps}}</td>
+                                <td style="text-align: right;" v-for="financialsDetails in scriptDetail.script_financials"> {{ formatPrice(financialsDetails.script_eps) }}</td>
                             </tr>
                             </tbody>
                         </table>
@@ -211,20 +212,31 @@ export default {
             roe: '',
             promoter: '',
             faceValue: '',
-            fin_year: ''
+            fin_year: '',
+            config : {}
         }
     },
     components: {
         Order,
         OrderConfirm,
     },
+    created() {
+        let userObj = JSON.parse(localStorage.getItem('userObj'));
+        this.config = {
+            headers: {
+                AUTH_TOKEN : userObj.auth_token
+            }
+        }
+    },
     methods: {
         formatPrice(value) {
-            let val = (value/1).toFixed(2).replace('.', '.')
-            return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+            if(value !== '' && value !== undefined){
+                let val = (value/1).toFixed(2).replace('.', '.')
+                return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+            }
         },
         getScripts(){
-            axios.get('/api/scripts/'+this.id).then(response => {
+            axios.get('/api/scripts/'+this.id, this.config).then(response => {
                 if(response.data.responseCode === 200){
                     this.scriptDetail = response.data.data.script;
                     this.calculateFinancialYear();
@@ -233,7 +245,13 @@ export default {
                     this.$router.push('/404');
                 }
             }).catch(error => {
-                this.$router.push('/404');
+                if(error.response.data.responseCode === 401){
+                    this.$session.set('auth_error', error.response.data.message);
+                    localStorage.removeItem('userObj');
+                    this.$router.push("/login").catch(()=>{});
+                } else {
+                    this.$router.push('/404');
+                }
             });
         },
         calculateFinancialYear(){
@@ -268,11 +286,11 @@ export default {
                 this.roe = '-';
             } else {
                 let ROE = (this.scriptDetail.last_year_script_financial.script_profit / this.netWork) * 100;
-                this.roe = ROE !== null ? ROE.toFixed(2)+'%' : '-';
+                this.roe = ROE !== null ? this.formatPrice(ROE.toFixed(2)) +'%' : '-';
             }
 
             let Promo = this.scriptDetail.last_year_script_financial.script_promoter_holding
-            this.promoter = Promo !== null ? Promo+'%' : '-';
+            this.promoter = Promo !== null ? this.formatPrice(Promo)+'%' : '-';
 
             let FaceVal = this.scriptDetail.script_face_val
             this.faceValue = FaceVal !== null ? FaceVal : '-';

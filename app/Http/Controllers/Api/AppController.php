@@ -61,7 +61,8 @@ class AppController extends BaseApiController
             }
             $userId = $userObj->user_id;
             $currentDate = date('Y-m-d H:i:s');
-            Users::where('user_id','=', $userId)->update(array('last_login' => $currentDate));
+            $token = $this->_generateToken();
+            Users::where('user_id','=', $userId)->update(array('last_login' => $currentDate,'auth_token' => $token));
             $userObj = Users::where('user_id','=',$userId)->first();
             $response = ['user' => $userObj];
             $this->_sendResponse($response, "You are successfully login into system.");

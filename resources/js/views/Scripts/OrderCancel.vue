@@ -75,12 +75,24 @@ export default {
             if (this.dataValue !== null || this.dataValue !== undefined) {
                 const data = this.dataValue;
                 data['is_cancel_order'] = true;
-                axios.post('/api/order', data).then(response => {
+                let userObj = JSON.parse(localStorage.getItem('userObj'));
+                let config = {
+                    headers: {
+                        AUTH_TOKEN : userObj.auth_token
+                    }
+                }
+                axios.post('/api/order', data, config).then(response => {
                     this.isLoading = false;
                     this.close();
                 }).catch(error => {
                     this.isLoading = false;
-                    this.errors.push(error.response.data.message)
+                    if(error.response.data.responseCode === 401){
+                        localStorage.removeItem('userObj');
+                        this.$session.set('auth_error', error.response.data.message);
+                        this.$router.push("/login").catch(()=>{});
+                    } else {
+                        this.errors = error.response.data.message;
+                    }
                 });
             }
         }

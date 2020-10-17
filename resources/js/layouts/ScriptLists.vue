@@ -57,7 +57,8 @@ export default {
             orderType: '',
             dataValue: {},
             isOrder: false,
-            isOrderConfirm: false
+            isOrderConfirm: false,
+            config : {}
         }
     },
     components: {
@@ -83,24 +84,36 @@ export default {
             this.dataValue = dataValue;
         },
         getUnits() {
-            axios.get('/api/scripts').then(response => {
+            axios.get('/api/scripts', this.config).then(response => {
                 this.scripts = response.data.data.scripts;
             }).catch(error => {
-                this.errors.push(error.response.data.message)
+                if(error.response.data.responseCode === 401){
+                    this.$session.set('auth_error', error.response.data.message);
+                    localStorage.removeItem('userObj');
+                    this.$router.push("/login").catch(()=>{});
+                } else {
+                    this.errors = error.response.data.message;
+                }
             });
         },
         searchScript(newValue) {
             const data = {
                 search: newValue,
             };
-            axios.post('/api/scripts', data).then(response => {
+            axios.post('/api/scripts', data, this.config).then(response => {
                 this.scripts = response.data.data.scripts;
             }).catch(error => {
-                this.errors.push(error.response.data.message)
+                if(error.response.data.responseCode === 401){
+                    localStorage.removeItem('userObj');
+                    this.$session.set('auth_error', error.response.data.message);
+                    this.$router.push("/login").catch(()=>{});
+                } else {
+                    this.errors = error.response.data.message;
+                }
             });
         },
         handler: function handler(event) {
-            this.$router.push('/desk');
+            this.$router.push('/desk').catch(()=>{});
         }
     },
     beforeMount() {
@@ -115,7 +128,15 @@ export default {
         }
     },
     created() {
-        window.addEventListener('load', this.handler);
+        let userObj = JSON.parse(localStorage.getItem('userObj'));
+        this.config = {
+            headers: {
+                AUTH_TOKEN : userObj.auth_token
+            }
+        }
+        if(this.$route.name === 'ScriptLists'){
+            window.addEventListener('load', this.handler);
+        }
     },
 }
 </script>

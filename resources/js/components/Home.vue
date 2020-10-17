@@ -259,31 +259,51 @@ export default {
             errors: '',
             announcements: [],
             userObj : {},
-            active_script_count : 0
+            active_script_count : 0,
+            config : {}
         }
     },
     methods: {
         getAnnouncement() {
-            axios.get('/api/announcements').then(response => {
+            axios.get('/api/announcements', this.config).then(response => {
                 this.announcements = response.data.data.announcements;
                 window.scrollTo(0,0);
             }).catch(error => {
-                this.errors = error.response.data.message;
+                if(error.response.data.responseCode === 401){
+                    this.$session.set('auth_error', error.response.data.message);
+                    localStorage.removeItem('userObj');
+                    this.$router.push("/login").catch(()=>{});
+                } else {
+                    this.errors = error.response.data.message;
+                }
             });
         },
         getScript(){
-            axios.get('/api/scripts?is_active_count=true').then(response => {
+            axios.get('/api/scripts?is_active_count=true', this.config).then(response => {
                 this.active_script_count = response.data.data.scripts;
             }).catch(error => {
-                this.errors = error.response.data.message;
+                if(error.response.data.responseCode === 401){
+                    localStorage.removeItem('userObj');
+                    this.$session.set('auth_error', error.response.data.message);
+                    this.$router.push("/login").catch(()=>{});
+                } else {
+                    this.errors = error.response.data.message;
+                }
             });
+        }
+    },
+    created() {
+        this.userObj = JSON.parse(localStorage.getItem('userObj'));
+        this.config = {
+            headers: {
+                AUTH_TOKEN : this.userObj.auth_token
+            }
         }
     },
     beforeMount() {
         this.getAnnouncement();
         this.getScript();
         this.$store.commit('SET_LAYOUT', 'master-app');
-        this.userObj = JSON.parse(localStorage.getItem('userObj'));
     }
 }
 </script>

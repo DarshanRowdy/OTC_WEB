@@ -86,16 +86,23 @@ export default {
         password: {required}
     },
     watch: {
-        'errors': function (val) {
-            if (val.length) {
-                setTimeout(function () {
-
-                }, 500);
-            }
+    },
+    beforeCreate() {
+        let self = this;
+        if (this.$session.exists()) {
+            let message = this.$session.get('auth_error');
+            setTimeout(function () {
+                self.errors = message;
+                self.$session.destroy();
+            }, 2000);
         }
     },
     beforeMount() {
         this.$store.commit('SET_LAYOUT', 'simple-layout');
+    },
+    mounted() {
+    },
+    updated(){
     },
     methods: {
         showForgotPasswordModal() {
