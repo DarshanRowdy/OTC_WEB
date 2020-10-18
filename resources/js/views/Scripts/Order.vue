@@ -247,12 +247,12 @@ span {
 }
 
 span:active:after {
-    content:attr(title);
-    padding:5px;
-    border:1px solid #ccc;
+    /*content:attr(title);*/
+    /*padding:5px;*/
+    /*border:1px solid #ccc;*/
     top:5px;
     right:10%;
-    background: #bada55;
+    /*background: #bada55;*/
 }
 
 .modal-mask {
