@@ -47,11 +47,10 @@
                                                        min="1" step="1"
                                                        type="number">
                                                 <div class="info-tool-tip-wrp">
-                                                    <a title="In this multiple of Lot you are comfortable to transact shares/amount to complete the whole Qty of this order. Keep both same if you want only single transaction."
-                                                       class="info-tool-tip"
-                                                       href="javascript:void(0)">
+                                                    <span class="info-tool-tip">
                                                         <i class="las la-info-circle"></i>
-                                                    </a>
+                                                        <span class="tooltiptext">In this multiple of Lot you are comfortable to transact shares/amount to complete the whole Qty of this order. Keep both same if you want only single transaction.</span>
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -62,11 +61,10 @@
                                                 <dl class="d-flex align-items-center">
                                                     <dd>Available in:</dd>
                                                     <dt>{{ values.script_availability }}
-                                                        <a class="info-tool-tip"
-                                                            href="javascript:void(0)"
-                                                           title="In the mentioned Depository/ies, Shares of this company are available to trade"
-                                                        >
-                                                        <i class="las la-info-circle"></i></a>
+                                                        <span class="info-tool-tip">
+                                                            <i class="las la-info-circle"></i>
+                                                            <span class="tooltiptext">In the mentioned Depository/ies, Shares of this company are available to trade.</span>
+                                                        </span>
                                                     </dt>
                                                 </dl>
                                             </div>
@@ -74,11 +72,10 @@
                                                 <dl class="d-flex align-items-center">
                                                     <dd>Min Lot:</dd>
                                                     <dt>{{ values.script_min_lot }}
-                                                        <a class="info-tool-tip"
-                                                           href="javascript:void(0)"
-                                                           title="Minimum lot size to trade in this stock.">
+                                                        <span class="info-tool-tip">
                                                             <i class="las la-info-circle"></i>
-                                                        </a>
+                                                            <span class="tooltiptext">Minimum lot size to trade in this stock.</span>
+                                                        </span>
                                                     </dt>
                                                 </dl>
                                             </div>
@@ -299,6 +296,7 @@ span:active:after {
         padding: 0.5rem;
     }
 }
+
 @media screen and (max-width: 300px)
 {
     .get-started-btn3 {
@@ -327,4 +325,50 @@ span:active:after {
         margin: 3px;
     }
 }
+.field-common label {
+    z-index: 0;
+}
+
+.info-tool-tip {
+    position: inherit;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.info-tool-tip-wrp .info-tool-tip {
+    position: absolute;
+}
+
+.info-tool-tip .tooltiptext {
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.info-tool-tip .tooltiptext::after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: 5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.info-tool-tip:hover .tooltiptext {
+    padding: 5px;
+    visibility: visible;
+    opacity: 1;
+}
+
 </style>
