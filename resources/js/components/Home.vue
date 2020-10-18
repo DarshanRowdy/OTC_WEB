@@ -175,7 +175,7 @@
                     </div>
 
                     <div class="col-lg-6 col-6 text-left">
-                        <span data-toggle="counter-up">1211211212121</span>
+                        <span data-toggle="counter-up">50200049544149</span>
                         <p>A/C Number</p>
                     </div>
 
@@ -190,7 +190,7 @@
                     </div>
 
                     <div class="col-lg-6 col-6 text-left">
-                        <span data-toggle="counter-up">ABXYZ1234C</span>
+                        <span data-toggle="counter-up">AADCO2190H</span>
                         <p>PAN</p>
                     </div>
 
@@ -219,12 +219,12 @@
                     </div>
 
                     <div class="col-lg-6 col-6 text-left">
-                        <span data-toggle="counter-up">IN123456</span>
+                        <span data-toggle="counter-up">IN301330</span>
                         <p>DP ID</p>
                     </div>
 
                     <div class="col-lg-6 col-6 text-left">
-                        <span data-toggle="counter-up">12345678</span>
+                        <span data-toggle="counter-up">40369677</span>
                         <p>Client ID</p>
                     </div>
 
@@ -233,12 +233,12 @@
                     </div>
 
                     <div class="col-lg-6 col-6 text-left">
-                        <span data-toggle="counter-up">12345678</span>
+                        <span data-toggle="counter-up">16010100</span>
                         <p>DP ID</p>
                     </div>
 
                     <div class="col-lg-6 col-6 text-left">
-                        <span data-toggle="counter-up">12345678</span>
+                        <span data-toggle="counter-up">00468547</span>
                         <p>Client ID</p>
                     </div>
                 </div>

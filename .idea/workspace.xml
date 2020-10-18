@@ -13,17 +13,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad78d497-6ee3-44fc-899a-1d01e02b08b4" name="Default Changelist" comment="final feedback phase - 3">
+    <list default="true" id="ad78d497-6ee3-44fc-899a-1d01e02b08b4" name="Default Changelist" comment="final feedback phase - 4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/AppController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/AppController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/OrdersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/OrdersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Users.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/layouts/ScriptLists.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/layouts/ScriptLists.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Auth/ConfirmationPopup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Auth/ConfirmationPopup.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/Auth/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Auth/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Auth/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Auth/Register.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Scripts/MarketDepth.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Scripts/MarketDepth.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/Scripts/Order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Scripts/Order.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +243,11 @@
       <workItem from="1602934289693" duration="18611000" />
       <workItem from="1603002097704" duration="630000" />
       <workItem from="1603003175348" duration="1811000" />
-      <workItem from="1603006742872" duration="1487000" />
+      <workItem from="1603006742872" duration="3500000" />
+      <workItem from="1603019502066" duration="1791000" />
+      <workItem from="1603021335162" duration="1773000" />
+      <workItem from="1603023153728" duration="863000" />
+      <workItem from="1603025866812" duration="188000" />
     </task>
     <task id="LOCAL-00001" summary="first init commit">
       <created>1600007025647</created>
@@ -438,7 +438,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602958824545</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="final feedback phase - 4">
+      <created>1603008396717</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1603008396717</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +466,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="first init commit" />
     <MESSAGE value="middleware and home page" />
     <MESSAGE value="order page and info page template set" />
     <MESSAGE value="login with OTP redirect to dashboard" />
@@ -484,7 +490,8 @@
     <MESSAGE value="final feedback phase - 1" />
     <MESSAGE value="final feedback phase - 2" />
     <MESSAGE value="final feedback phase - 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="final feedback phase - 3" />
+    <MESSAGE value="final feedback phase - 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="final feedback phase - 4" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600586242792">
@@ -547,10 +554,10 @@
     </state>
     <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1600586317645" />
     <state x="1641" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1601137934547" />
-    <state x="1458" y="92" width="1182" height="544" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602949610652">
+    <state x="1458" y="92" width="1182" height="544" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1603021892105">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state x="1458" y="92" width="1182" height="544" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1602949610652" />
+    <state x="1458" y="92" width="1182" height="544" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1603021892105" />
     <state x="1654" y="56" width="744" height="635" key="find.popup" timestamp="1602952853714">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
@@ -564,11 +571,11 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1850" y="270" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600533944842" />
-    <state x="1705" y="17" width="672" height="678" key="search.everywhere.popup" timestamp="1603007936125">
+    <state x="1705" y="17" width="672" height="678" key="search.everywhere.popup" timestamp="1603024889636">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="17" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1603004105483" />
-    <state x="1705" y="17" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1603007936125" />
+    <state x="1705" y="17" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1603024889636" />
     <state x="339" y="17" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1601915272743" />
   </component>
 </project>

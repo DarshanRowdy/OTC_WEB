@@ -92,7 +92,11 @@ export default {
         if (this.$session.exists()) {
             let message = this.$session.get('auth_error');
             setTimeout(function () {
-                self.errors = "You're logged in somewhere else";
+                if(message === 'Unauthorized'){
+                    self.errors = "You're logged in somewhere else";
+                } else {
+                    self.errors = message;
+                }
                 self.$session.destroy();
             }, 2000);
         }

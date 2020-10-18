@@ -122,7 +122,9 @@ export default {
             lot_size: '',
             open_qty: '',
             dataVal: {},
-            errors: ''
+            errors: '',
+            min_order_qty: '',
+            min_lot_qty: ''
         }
     },
     components: {
@@ -166,10 +168,8 @@ export default {
                 return false;
             }
 
-            let new_open_qty = parseInt(this.order_qty) - parseInt(this.open_qty);
-
-            if(this.order_id !== '' && parseInt(this.order_qty) < new_open_qty) {
-                this.errors = 'Open Quantity is '+ new_open_qty+', Quantity reduction below the open quantity is not allowed.';
+            if(this.order_id !== '' && parseInt(this.order_qty) < this.min_order_qty) {
+                this.errors = 'Open Quantity is '+ this.open_qty +', Quantity reduction below the open quantity is not allowed.';
                 return false;
             }
 
@@ -193,7 +193,9 @@ export default {
                     order_type: this.orderType,
                     order_price: this.order_price,
                     order_qty: this.order_qty,
-                    lot_size: this.lot_size
+                    lot_size: this.lot_size,
+                    open_qty: this.open_qty,
+                    min_order_qty: this.min_order_qty
                 };
                 this.order_price = '';
                 this.order_qty = '';
@@ -229,9 +231,15 @@ export default {
             this.order_no = newVal.order_num;
             this.order_price = newVal.order_price;
             this.order_qty = newVal.order_qty_original;
-            this.lot_size = newVal.lot_size > newVal.qty && newVal.qty > 0 ? newVal.qty : newVal.lot_size;
+            this.lot_size = newVal.lot_size;
             this.open_qty = newVal.qty;
-        }
+            this.min_order_qty = parseInt(this.order_qty) - parseInt(this.open_qty);
+        },
+        /*order_qty: function (newVal, oldVal) {
+            // console.log('Prop changed: ', newVal, ' | was: ', oldVal)
+            let new_open = parseInt(newVal) - parseInt(this.min_order_qty);
+            this.lot_size = this.lot_size > new_open && new_open > 0 ? new_open : this.lot_size;
+        }*/
     }
 }
 </script>

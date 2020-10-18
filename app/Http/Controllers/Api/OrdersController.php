@@ -162,6 +162,7 @@ fun_check_order_status(tbl_orders.order_num) order_status');
             $order_qty = $request->has('order_qty') ? $request->order_qty : '';
             $lot_size = $request->has('lot_size') ? $request->lot_size : '';
             $is_cancel_order = $request->has('is_cancel_order') ? $request->is_cancel_order : false;
+            $min_order_qty = $request->has('min_order_qty') ? $request->min_order_qty : 0;
 
             $isSuccess = true;
 
@@ -176,6 +177,8 @@ fun_check_order_status(tbl_orders.order_num) order_status');
                 $isSuccess = Orders::where('order_id', '=', $order_id)
                     ->update(['order_qty_original' => $order_qty, 'order_date' => date('Y-m-d H:i:s')]);
             } else if (!empty($order_id)) {
+                $open_qty = $order_qty - $min_order_qty;
+                $lot_size = $lot_size > $open_qty && $open_qty > 0 ? $open_qty : $lot_size;
                 $isSuccess = Orders::where('order_id', '=', $order_id)
                     ->update(['order_price' => $order_price, 'order_qty_original' => $order_qty,
                         'lot_size' => $lot_size, 'order_date' => date('Y-m-d H:i:s')]);
