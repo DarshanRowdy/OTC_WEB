@@ -78,14 +78,20 @@ class AppController extends BaseApiController
             ];
             $this->checkValidate($request, $validFields);
             $mobile = $request->has('mobile') ? $request->mobile : '';
+            $checkMobile = Users::where('user_mobile', $mobile)->first();
+            if(empty($checkMobile)){
+                $this->_sendErrorResponse(404,'Mobile not registered');
+            }
             $otp = mt_rand(1000,9999);
             $url = 'https://2factor.in/API/V1/ce9cad9f-f750-11ea-9fa5-0200cd936042/SMS/'.$mobile.'/'.$otp.'/OTC_CAP';
             $sendOtp = Curl::to($url)->get();
+            $jsonOtp = json_decode($sendOtp);
             $user = Users::where('user_mobile', $mobile)->update(array('otp' => $otp));
-            if($user){
+            if($user && isset($jsonOtp->Status) && $jsonOtp->Status == 'Success'){
                 $this->_sendResponse($otp,'OTP send successfully');
+            } else {
+                $this->_sendErrorResponse(304,'OTP not send successfully');
             }
-            $this->_sendErrorResponse(404,'Mobile not registered');
         } catch (\Exception $exception){
             $this->_sendErrorResponse(500);
         }

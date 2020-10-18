@@ -92,7 +92,7 @@ export default {
         if (this.$session.exists()) {
             let message = this.$session.get('auth_error');
             setTimeout(function () {
-                self.errors = message;
+                self.errors = "You're logged in somewhere else";
                 self.$session.destroy();
             }, 2000);
         }

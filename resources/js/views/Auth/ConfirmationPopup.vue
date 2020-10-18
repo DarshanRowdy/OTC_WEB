@@ -32,7 +32,11 @@ export default {
     props: ['from_where'],
     methods: {
         close() {
-            this.$emit('close');
+            if(this.from_where === 'login'){
+                this.$emit('close');
+            } else {
+                this.$router.push("/login").catch(()=>{});
+            }
         },
     },
 };

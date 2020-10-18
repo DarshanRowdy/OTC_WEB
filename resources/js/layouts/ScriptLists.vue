@@ -2,9 +2,7 @@
     <div>
         <div class="left-wrp">
             <div class="search-section">
-                <form action="">
-                    <input v-model="search" placeholder="Search" type="text">
-                </form>
+                <input v-model="search" placeholder="Search" type="text">
             </div>
             <div class="circuit-list">
                 <ul id="scripts-listing">

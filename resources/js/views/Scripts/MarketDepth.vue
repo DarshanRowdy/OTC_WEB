@@ -7,7 +7,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <div class="col-sm-11 col-11 popup-header-left text-left">
-                                    <span><strong>{{ scriptValue.script_display_name }}</strong></span>
+                                    <span>{{ scriptValue.script_display_name }}</span>
                                 </div>
                                 <div class="col-sm-1 col-1 popup-header-right text-left">
                                     <a href="javascript:void(0)" class="close" @click="$router.go(-1)"> x</a>

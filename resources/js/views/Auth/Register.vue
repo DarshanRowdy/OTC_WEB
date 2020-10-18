@@ -41,6 +41,7 @@
                                 class="button btn btn-block login-btn"
                                 type="submit"
                                 :loading="isLoading"
+                                style="line-height: 1.5"
                             >Sign Up</VueLoadingButton>
                         </div>
                     </form>
@@ -121,38 +122,47 @@ export default {
             this.errors = '';
             if (!this.name) {
                 this.errors = 'Name is required.';
+                this.isLoading = false;
                 return false;
             }
             if (!this.mobile) {
                 this.errors = 'Mobile is required.';
+                this.isLoading = false;
                 return false;
             }
             if (this.mobile.length > 10 || this.mobile.length < 10) {
                 this.errors = 'Enter 10 digit mobile number.';
+                this.isLoading = false;
                 return false;
             }
             if (!this.email) {
                 this.errors = 'Email is required.';
+                this.isLoading = false;
                 return false;
             }
             if (!this.reg.test(this.email)) {
                 this.errors = 'Please enter valid Email.';
+                this.isLoading = false;
                 return false;
             }
             if (!this.password) {
                 this.errors = 'Password is required.';
+                this.isLoading = false;
                 return false;
             }
             if (this.password.length < 6) {
                 this.errors = 'Password must be at least 6 character.';
+                this.isLoading = false;
                 return false;
             }
             if (!this.confirm_password) {
                 this.errors = 'Confirm Password is required.';
+                this.isLoading = false;
                 return false;
             }
             if (this.password !== this.confirm_password) {
                 this.errors = 'Confirm Password not matched.';
+                this.isLoading = false;
                 return false;
             }
 

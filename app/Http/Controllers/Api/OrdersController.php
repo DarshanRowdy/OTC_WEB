@@ -95,7 +95,7 @@ fun_check_order_status(tbl_orders.order_num) order_status');
             $tbl_orders->selectRaw('tbl_orders.order_date time, fun_check_order_status(tbl_orders.order_num) order_status');
 
             $tbl_orders->selectSub(function ($query) {
-                $query->selectRaw('IFNULL(sum(closed_qty * deal_price) / sum(closed_qty),0)')
+                $query->selectRaw('FORMAT(IFNULL(sum(closed_qty * deal_price) / sum(closed_qty), 0), 2)')
                     ->from('tbl_assignments')
                     ->where('closed_qty', '>', 0)
                     ->whereColumn('order_number', '=', 'tbl_orders.order_num');
