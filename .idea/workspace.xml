@@ -15,6 +15,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ad78d497-6ee3-44fc-899a-1d01e02b08b4" name="Default Changelist" comment="final feedback phase - 6 (tooltip) remove green background">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/Scripts/Order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Scripts/Order.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -249,7 +250,9 @@
       <workItem from="1603041588367" duration="1746000" />
       <workItem from="1603043400883" duration="1402000" />
       <workItem from="1603049505404" duration="955000" />
-      <workItem from="1603051848532" duration="103000" />
+      <workItem from="1603051848532" duration="458000" />
+      <workItem from="1603104719159" duration="10000" />
+      <workItem from="1603128456518" duration="687000" />
     </task>
     <task id="LOCAL-00001" summary="first init commit">
       <created>1600007025647</created>
@@ -468,7 +471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603049846151</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="final feedback phase - 6 (tooltip) remove green background">
+      <created>1603052043541</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1603052043541</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

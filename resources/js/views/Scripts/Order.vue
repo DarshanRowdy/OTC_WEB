@@ -330,6 +330,10 @@ span {
     position: absolute;
 }
 
+.info-tool-tip-wrp .info-tool-tip .tooltiptext{
+    margin-left: -200px;
+}
+
 .info-tool-tip .tooltiptext {
     visibility: hidden;
     background-color: #555;
