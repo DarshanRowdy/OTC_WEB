@@ -34,6 +34,14 @@
                             <input type="password" name="confirm_password" v-model="confirm_password"
                                    id="confirm-password" class="form-control">
                         </div>
+                        <div class="form-group mb-4">
+                            <input type="checkbox" name="is_accepted" v-model="is_accepted"
+                            id="is_accepted">
+                            <label for="is_accepted">I accept the
+                                <a target="_blank" href="https://www.otccapital.in/terms-and-conditions"
+                                   class="text-reset1">Terms and Conditions</a>
+                            </label>
+                        </div>
                         <div class="popup-box">
 <!--                            <button class="button btn btn-block login-btn" type="submit">Sign Up</button>-->
                             <VueLoadingButton
@@ -88,7 +96,8 @@ export default {
             reg: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/,
             isSendOtpVisible: false,
             isSendVerifyOtp: false,
-            isConfirmation: false
+            isConfirmation: false,
+            is_accepted: false
         }
     },
     methods: {
@@ -165,13 +174,19 @@ export default {
                 this.isLoading = false;
                 return false;
             }
+            if(this.is_accepted === false){
+                this.errors = 'Kindly read and accept the Terms and Conditions.';
+                this.isLoading = false;
+                return false;
+            }
 
             if (this.errors === '') {
                 const data = {
                     name: this.name,
                     email: this.email,
                     mobile: this.mobile,
-                    password: this.password
+                    password: this.password,
+                    is_accepted: this.is_accepted
                 };
 
                 axios.post('/api/registration', data).then(response => {

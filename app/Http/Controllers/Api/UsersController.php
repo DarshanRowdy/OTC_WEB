@@ -31,8 +31,12 @@ class UsersController extends AppController
                 'mobile' => 'required|numeric|unique:users,user_mobile',
                 'email' => 'required|email',
                 'password' => 'required',
+                'is_accepted' => 'required'
             ];
-            $messages = [];
+            $messages = [
+                'is_accepted.required' => 'Kindly read and accept the Terms and Conditions.',
+                'mobile.unique' => 'Mobile already registered, kindly try to Login with OTP.'
+            ];
             $this->checkValidate($request,$validFields,$messages);
 
             $userObj = New Users();
@@ -43,6 +47,7 @@ class UsersController extends AppController
             $userObj->auth_token = $this->_generateToken();
             $userObj->user_status = 'inactive';
             $userObj->created_by = 'self';
+            $userObj->user_attribute_1 = $request->is_accepted == true ? 'YES' : 'NO';
             $userObj->last_updated_by = $userObj->created_by;
             if(!$userObj->save()){
                 $this->_sendErrorResponse(417,'user registration un-successfully');

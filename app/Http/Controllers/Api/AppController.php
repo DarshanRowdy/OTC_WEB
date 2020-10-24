@@ -16,6 +16,8 @@ use const http\Client\Curl\Versions\CURL;
 class AppController extends BaseApiController
 {
     public function init(){
+
+        dd(date('Y-m-H h:i:s'));
         $user = Auth::user();
 
         $response = ['user' => $user];

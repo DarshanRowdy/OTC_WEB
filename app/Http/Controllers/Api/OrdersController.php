@@ -70,7 +70,7 @@ fun_check_order_status(tbl_orders.order_num) order_status');
                 $query->orderBy($field,$order);
             });
             $arrTbl_Orders = $tbl_orders->paginate($limit);*/
-
+            $tbl_orders->orderByDesc('order_date');
             $arrTbl_Orders = $tbl_orders->get();
             $response = ['orders' => $arrTbl_Orders];
             $this->_sendResponse($response, 'orders listing Success');
@@ -130,6 +130,7 @@ fun_check_order_status(tbl_orders.order_num) order_status');
             });
             $arrTbl_Orders = $tbl_orders->paginate($limit);*/
 
+            $tbl_orders->orderByDesc('order_date');
             $arrTbl_Orders = $tbl_orders->get();
             $response = ['orders' => $arrTbl_Orders];
             $this->_sendResponse($response, 'past orders listing Success');
