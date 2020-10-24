@@ -13,14 +13,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad78d497-6ee3-44fc-899a-1d01e02b08b4" name="Default Changelist" comment="final feedback phase - 6 (tooltip) remove green background">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/AppController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/AppController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/OrdersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/OrdersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/UsersController.php" afterDir="false" />
+    <list default="true" id="ad78d497-6ee3-44fc-899a-1d01e02b08b4" name="Default Changelist" comment="New changes 22-oct">
       <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Auth/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Auth/Register.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,7 +255,7 @@
       <workItem from="1603471168278" duration="259000" />
       <workItem from="1603529292369" duration="336000" />
       <workItem from="1603539181705" duration="2994000" />
-      <workItem from="1603552122630" duration="696000" />
+      <workItem from="1603552122630" duration="1512000" />
     </task>
     <task id="LOCAL-00001" summary="first init commit">
       <created>1600007025647</created>
@@ -494,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603129166350</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="New changes 22-oct">
+      <created>1603573380377</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1603573380377</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -515,7 +516,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="otp and mail changes" />
     <MESSAGE value="email dynamic" />
     <MESSAGE value="master page management" />
     <MESSAGE value="order Buy and Sell" />
@@ -540,7 +540,8 @@
     <MESSAGE value="final feedback phase - 6 (tooltip)" />
     <MESSAGE value="final feedback phase - 6 (tooltip) remove green background" />
     <MESSAGE value="tooltip issue fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="tooltip issue fix" />
+    <MESSAGE value="New changes 22-oct" />
+    <option name="LAST_COMMIT_MESSAGE" value="New changes 22-oct" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600586242792">
@@ -551,11 +552,11 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1779" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1599672648337" />
-    <state x="1458" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1603037796199">
-      <screen x="1366" y="0" width="1366" height="728" />
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1603574440828">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1458" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1603037796199" />
-    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1601490149876" />
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1603574440828" />
     <state x="1829" y="118" key="FileChooserDialogImpl" timestamp="1600456421734">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
@@ -588,6 +589,10 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1883" y="287" key="NewPhpFileDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1599672166449" />
+    <state x="524" y="66" key="RollbackChangesDialog" timestamp="1603574263585">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="524" y="66" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1603574263585" />
     <state x="1550" y="8" key="SettingsEditor" timestamp="1600359862000">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
