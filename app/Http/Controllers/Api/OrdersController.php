@@ -194,6 +194,7 @@ fun_check_order_status(tbl_orders.order_num) order_status');
                 $orderObj->order_price = $order_price;
                 $orderObj->order_qty_original = $order_qty;
                 $orderObj->lot_size = $lot_size;
+                $orderObj->order_date = date('Y-m-d H:i:s');
                 $isSuccess = $orderObj->save();
             }
 
